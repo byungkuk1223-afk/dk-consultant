@@ -7,24 +7,24 @@ const historyItems = [
 function DKCircleIcon() {
   return (
     <div style={{
-      width: 56, height: 56, borderRadius: "50%",
+      width: 90, height: 90, borderRadius: "50%",
       border: "1px solid rgba(255,255,255,0.3)",
       display: "flex", flexDirection: "column",
       alignItems: "center", justifyContent: "center",
       background: "rgba(65,106,179,0.6)",
       margin: "0 auto",
-      gap: 1,
+      gap: 3,
     }}>
       <span style={{
-        fontSize: 12, fontWeight: 900, color: "#fff",
-        fontFamily: "'Lato', sans-serif",
-        letterSpacing: 0.5, lineHeight: 1,
-      }}>DK</span>
-      <span style={{
-        fontSize: 5.5, fontWeight: 300,
-        color: "rgba(255,255,255,0.8)",
+        fontSize: 20, fontWeight: 900, color: "#fff",
         fontFamily: "'Lato', sans-serif",
         letterSpacing: 1, lineHeight: 1,
+      }}>DK</span>
+      <span style={{
+        fontSize: 7, fontWeight: 300,
+        color: "rgba(255,255,255,0.8)",
+        fontFamily: "'Lato', sans-serif",
+        letterSpacing: 1.5, lineHeight: 1,
       }}>CONSULTANTS</span>
     </div>
   );
@@ -55,7 +55,7 @@ export default function HistorySection() {
             DK CONSULTANTS
           </p>
           <h2 style={{
-            fontSize: "clamp(38px, 5vw, 58px)",
+            fontSize: "clamp(28px, 3vw, 36px)",
             fontWeight: 400,
             fontFamily: "'Playfair Display', Georgia, serif",
             fontStyle: "italic",
@@ -71,7 +71,7 @@ export default function HistorySection() {
           {/* Line */}
           <div style={{
             position: "absolute",
-            top: 27,
+            top: 45,
             left: "16.5%",
             right: "16.5%",
             height: 1,
