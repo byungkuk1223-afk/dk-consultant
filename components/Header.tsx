@@ -32,7 +32,7 @@ export default function Header({ scrolled }: HeaderProps) {
           <img
             src="/logo.png"
             alt="DK Consultants"
-            style={{ height: 60, width: "auto", filter: "brightness(0) invert(1)" }}
+            style={{ height: 55, width: "auto" }}
           />
         </a>
 
