@@ -29,32 +29,11 @@ export default function Header({ scrolled }: HeaderProps) {
       >
         {/* Logo */}
         <a href="/" style={{ textDecoration: "none" }}>
-          <div style={{ lineHeight: 1.2 }}>
-            <div
-              style={{
-                fontSize: 17,
-                color: "#fff",
-                letterSpacing: 1.5,
-                fontFamily: "'Lato', sans-serif",
-              }}
-            >
-              <span style={{ fontWeight: 900 }}>DK</span>
-              <span style={{ fontWeight: 300 }}>CONSULTANTS</span>
-            </div>
-            <div
-              style={{
-                fontSize: 10,
-                color: "rgba(255,255,255,0.7)",
-                letterSpacing: 1,
-                fontWeight: 300,
-                fontStyle: "italic",
-                fontFamily: "'Lato', sans-serif",
-                marginTop: 2,
-              }}
-            >
-              Financial Advisor
-            </div>
-          </div>
+          <img
+            src="/logo.png"
+            alt="DK Consultants"
+            style={{ height: 40, width: "auto", filter: "brightness(0) invert(1)" }}
+          />
         </a>
 
         {/* Nav */}
