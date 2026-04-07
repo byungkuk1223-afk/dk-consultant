@@ -86,9 +86,9 @@ export default function CareerPage() {
           {/* Main heading */}
           <h2
             style={{
-              fontFamily: "'Lato', sans-serif",
+              fontFamily: "Georgia, serif",
               fontSize: 34,
-              fontWeight: 300,
+              fontWeight: 400,
               color: "#111",
               lineHeight: 1.5,
               margin: "0 0 18px 0",
