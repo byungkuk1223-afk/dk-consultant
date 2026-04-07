@@ -44,7 +44,8 @@ export default function CareerPage() {
             style={{
               position: "relative",
               zIndex: 1,
-              padding: "0 10%",
+              width: "100%",
+              textAlign: "center",
               color: "#fff",
             }}
           >
@@ -63,7 +64,7 @@ export default function CareerPage() {
               style={{
                 fontSize: 15,
                 fontWeight: 300,
-                margin: 0,
+                margin: "0 auto",
                 letterSpacing: 0.3,
                 maxWidth: 480,
                 lineHeight: 1.6,
@@ -87,11 +88,11 @@ export default function CareerPage() {
           {/* Main heading */}
           <h2
             style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: 34,
-              fontWeight: 400,
+              fontFamily: "'Lato', sans-serif",
+              fontSize: 24,
+              fontWeight: 700,
               color: "#111",
-              lineHeight: 1.4,
+              lineHeight: 1.5,
               margin: "0 0 18px 0",
               maxWidth: 680,
             }}

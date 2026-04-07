@@ -19,12 +19,12 @@ export default function Header({ scrolled }: HeaderProps) {
     >
       <div
         style={{
-          maxWidth: 1400,
-          margin: "0 auto",
-          padding: "18px 48px",
+          width: "100%",
+          padding: "18px 32px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          boxSizing: "border-box",
         }}
       >
         {/* Logo */}
@@ -32,7 +32,7 @@ export default function Header({ scrolled }: HeaderProps) {
           <img
             src="/logo.png"
             alt="DK Consultants"
-            style={{ height: 55, width: "auto" }}
+            style={{ height: 55, width: "auto", filter: "brightness(0) invert(1)" }}
           />
         </a>
 
