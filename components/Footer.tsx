@@ -11,24 +11,13 @@ export default function Footer() {
           <div>
             {/* Logo */}
             <div style={{ marginBottom: 20 }}>
-              <div style={{
-                fontSize: 18,
-                letterSpacing: 2,
-                fontFamily: "'Lato', sans-serif",
-                lineHeight: 1,
-              }}>
-                <span style={{ fontWeight: 900, color: "#ccc" }}>DK</span>
-                <span style={{ fontWeight: 300, color: "#888" }}>CONSULTANTS</span>
-              </div>
-              <div style={{
-                fontSize: 10, color: "#555",
-                letterSpacing: 1.2, fontWeight: 300,
-                fontStyle: "italic",
-                fontFamily: "'Lato', sans-serif",
-                marginTop: 4,
-              }}>
-                Financial Advisor
-              </div>
+              <a href="/" style={{ textDecoration: "none" }}>
+                <img
+                  src="/logo.png"
+                  alt="DK Consultants"
+                  style={{ height: 55, width: "auto", filter: "brightness(0) invert(1)" }}
+                />
+              </a>
             </div>
 
             {/* Contact Details */}
