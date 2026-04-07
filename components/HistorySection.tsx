@@ -7,13 +7,13 @@ const historyItems = [
 function HourglassCircleIcon() {
   return (
     <div style={{
-      width: 60, height: 60, borderRadius: "50%",
+      width: 30, height: 30, borderRadius: "50%",
       border: "1px solid rgba(255,255,255,0.3)",
       display: "flex", alignItems: "center", justifyContent: "center",
       background: "rgba(65,106,179,0.6)",
       margin: "0 auto",
     }}>
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M5 2h14"/>
         <path d="M5 22h14"/>
         <path d="M5 2c0 6 7 8 7 10S5 16 5 22"/>
