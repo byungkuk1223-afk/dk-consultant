@@ -101,8 +101,8 @@ export default function PeopleSection() {
               overflow: "hidden",
             }}>
               <div style={{
-                width: "100%", height: 220,
-                background: `#e8e8ee url('${p.img}') center top/cover no-repeat`,
+                width: "100%", height: 260,
+                background: `#e8e8ee url('${p.img}') center 10%/75% no-repeat`,
               }} />
               <div style={{ padding: "20px 28px 28px" }}>
                 <p style={{
