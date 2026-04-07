@@ -44,16 +44,28 @@ export default function CareerPage() {
             style={{
               position: "relative",
               zIndex: 1,
-              padding: "0 8%",
+              paddingLeft: "28%",
               color: "#fff",
             }}
           >
+            <h1
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: 50,
+                fontWeight: 400,
+                fontStyle: "italic",
+                margin: "0 0 14px 0",
+                letterSpacing: 0.5,
+              }}
+            >
+              Career
+            </h1>
             <p
               style={{
-                fontSize: 15,
+                fontSize: 14,
                 fontWeight: 300,
                 margin: 0,
-                letterSpacing: 0.3,
+                letterSpacing: 0.2,
                 lineHeight: 1.6,
               }}
             >
@@ -76,12 +88,12 @@ export default function CareerPage() {
           <h2
             style={{
               fontFamily: "'Playfair Display', serif",
-              fontSize: 30,
+              fontSize: 36,
               fontWeight: 400,
               color: "#111",
-              lineHeight: 1.45,
+              lineHeight: 1.4,
               margin: "0 0 18px 0",
-              maxWidth: 680,
+              maxWidth: 700,
             }}
           >
             DK Consultants recruits people<br />
