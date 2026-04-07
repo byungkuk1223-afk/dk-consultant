@@ -64,13 +64,12 @@ export default function ContactPage() {
             <button
               onClick={() => setActiveTab("contact")}
               style={{
-                flex: 1, padding: "14px 0", border: "none", cursor: "pointer",
+                flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
                 backgroundColor: activeTab === "contact" ? "#3a5585" : "#f0f0f0",
                 color: activeTab === "contact" ? "#fff" : "#555",
                 fontSize: 13, fontFamily: "'Open Sans', sans-serif",
                 fontWeight: 400, letterSpacing: 0.5,
                 display: "flex", alignItems: "center", justifyContent: "space-between",
-                padding: "14px 24px",
               }}
             >
               <span>Contact</span>
