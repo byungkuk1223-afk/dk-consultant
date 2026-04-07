@@ -102,7 +102,7 @@ export default function PeopleSection() {
             }}>
               <div style={{
                 width: "100%", height: 260,
-                background: `#e8e8ee url('${p.img}') center 10%/75% no-repeat`,
+                background: `#fff url('${p.img}') center 10%/75% no-repeat`,
               }} />
               <div style={{ padding: "20px 28px 28px" }}>
                 <p style={{
