@@ -50,11 +50,11 @@ export default function CareerPage() {
           >
             <h1
               style={{
-                fontFamily: "'Lato', sans-serif",
+                fontFamily: "Georgia, serif",
                 fontSize: 50,
-                fontWeight: 300,
+                fontWeight: 400,
                 margin: "0 0 14px 0",
-                letterSpacing: 2,
+                letterSpacing: 1,
               }}
             >
               Career
