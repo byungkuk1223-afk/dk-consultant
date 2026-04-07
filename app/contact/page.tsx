@@ -232,7 +232,7 @@ export default function ContactPage() {
                       </svg>
                     ),
                     label: "ADDRESS",
-                    value: "#303, Gana Plaza, 10-7,\nHwangsaeul-ro 258 beon-gil,\nBundang-gu, Seongnam-si,\nGyeonggi-do, Korea",
+                    value: "#303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil,\nBundang-gu, Seongnam-si, Gyeonggi-do, Korea",
                   },
                   {
                     icon: (
