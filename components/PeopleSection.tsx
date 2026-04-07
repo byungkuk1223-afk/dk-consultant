@@ -1,6 +1,6 @@
 const people = [
-  { name: "David Kim", title: "CEO / Founder", img: "/img/people_david.png", href: "/people" },
-  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/people_cheolsoo.png", href: "/people" },
+  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people" },
+  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people" },
 ];
 
 const quickLinks = [
@@ -94,32 +94,31 @@ export default function PeopleSection() {
           {people.map((p) => (
             <a key={p.name} href={p.href} style={{
               background: "#fff",
-              padding: "44px 28px 36px",
               textAlign: "center",
               textDecoration: "none",
               display: "block",
               boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
+              overflow: "hidden",
             }}>
               <div style={{
-                width: 88, height: 88, borderRadius: "50%",
-                margin: "0 auto 18px",
-                background: `#ccd url('${p.img}') center/cover no-repeat`,
-                overflow: "hidden",
+                width: "100%", height: 220,
+                background: `#e8e8ee url('${p.img}') center top/cover no-repeat`,
               }} />
-              <h4 style={{
-                fontSize: 15, fontWeight: 700,
-                fontFamily: "'Lato', sans-serif",
-                color: "#1a1a1a", marginBottom: 7,
-              }}>
-                {p.name}
-              </h4>
-              <p style={{
-                fontSize: 12,
-                fontFamily: "'Lato', sans-serif",
-                fontWeight: 300, color: "#416ab3",
-              }}>
-                {p.title}
-              </p>
+              <div style={{ padding: "20px 28px 28px" }}>
+                <p style={{
+                  fontSize: 11, fontFamily: "'Lato', sans-serif",
+                  fontWeight: 300, color: "#416ab3", marginBottom: 6,
+                }}>
+                  {p.title}
+                </p>
+                <h4 style={{
+                  fontSize: 16, fontWeight: 700,
+                  fontFamily: "'Lato', sans-serif",
+                  color: "#1a1a1a", margin: 0,
+                }}>
+                  {p.name}
+                </h4>
+              </div>
             </a>
           ))}
         </div>
