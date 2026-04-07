@@ -4,28 +4,21 @@ const historyItems = [
   { year: "2020", desc: "Achieved Financial Close for 200MW BESS project in Ireland" },
 ];
 
-function DKCircleIcon() {
+function HourglassCircleIcon() {
   return (
     <div style={{
       width: 90, height: 90, borderRadius: "50%",
       border: "1px solid rgba(255,255,255,0.3)",
-      display: "flex", flexDirection: "column",
-      alignItems: "center", justifyContent: "center",
+      display: "flex", alignItems: "center", justifyContent: "center",
       background: "rgba(65,106,179,0.6)",
       margin: "0 auto",
-      gap: 3,
     }}>
-      <span style={{
-        fontSize: 20, fontWeight: 900, color: "#fff",
-        fontFamily: "'Lato', sans-serif",
-        letterSpacing: 1, lineHeight: 1,
-      }}>DK</span>
-      <span style={{
-        fontSize: 7, fontWeight: 300,
-        color: "rgba(255,255,255,0.8)",
-        fontFamily: "'Lato', sans-serif",
-        letterSpacing: 1.5, lineHeight: 1,
-      }}>CONSULTANTS</span>
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 2h14"/>
+        <path d="M5 22h14"/>
+        <path d="M5 2c0 6 7 8 7 10S5 16 5 22"/>
+        <path d="M19 2c0 6-7 8-7 10s7 6 7 10"/>
+      </svg>
     </div>
   );
 }
@@ -57,7 +50,7 @@ export default function HistorySection() {
           <h2 style={{
             fontSize: "clamp(28px, 3vw, 36px)",
             fontWeight: 400,
-            fontFamily: "'Playfair Display', Georgia, serif",
+            fontFamily: "Georgia, serif",
             fontStyle: "italic",
             color: "#fff",
             letterSpacing: 0.5,
@@ -85,7 +78,7 @@ export default function HistorySection() {
           }}>
             {historyItems.map((item) => (
               <div key={item.year} style={{ padding: "0 30px" }}>
-                <DKCircleIcon />
+                <HourglassCircleIcon />
                 <h4 style={{
                   fontSize: 22, fontWeight: 700,
                   fontFamily: "'Lato', sans-serif",
