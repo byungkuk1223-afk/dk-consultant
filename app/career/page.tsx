@@ -139,7 +139,7 @@ export default function CareerPage() {
           <div style={{ maxWidth: 680, display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               { label: "Ms. Eunyoung Choi" },
-              { label: "Email Address:", value: "eychoi@dk-consultant.com" },
+              { label: "Email Address:", value: "ey.choi@dk-consultant.com" },
               { label: "Contact Number:", value: "+82 31 603 4845" },
             ].map((item, i) => (
               <div
