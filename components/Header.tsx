@@ -13,7 +13,7 @@ export default function Header({ scrolled }: HeaderProps) {
         left: 0,
         width: "100%",
         zIndex: 1000,
-        backgroundColor: scrolled ? "rgba(18,18,18,0.95)" : "rgba(0,0,0,0)",
+        backgroundColor: scrolled ? "rgba(58,85,133,0.97)" : "rgba(0,0,0,0)",
         transition: "background-color 0.3s ease",
       }}
     >
