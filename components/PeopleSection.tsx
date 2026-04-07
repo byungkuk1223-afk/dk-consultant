@@ -1,6 +1,6 @@
 const people = [
-  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people", imgPos: "center 45%", imgSize: "48%" },
-  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people", imgPos: "center 100%", imgSize: "55%" },
+  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people", imgPos: "center 45%", imgSize: "38%" },
+  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people", imgPos: "center 100%", imgSize: "45%" },
 ];
 
 const quickLinks = [
