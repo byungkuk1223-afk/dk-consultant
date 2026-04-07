@@ -53,7 +53,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p style={{ fontSize: 13, fontWeight: 300, margin: 0, letterSpacing: 0.2 }}>
-              We look forward to your <span style={{ color: "#a8b8d8" }}>inquiry</span>
+              We look forward to your inquiry
             </p>
           </div>
         </section>
