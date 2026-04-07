@@ -50,12 +50,11 @@ export default function CareerPage() {
           >
             <h1
               style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Lato', sans-serif",
                 fontSize: 50,
-                fontWeight: 400,
-                fontStyle: "italic",
+                fontWeight: 300,
                 margin: "0 0 14px 0",
-                letterSpacing: 0.5,
+                letterSpacing: 2,
               }}
             >
               Career
@@ -87,11 +86,11 @@ export default function CareerPage() {
           {/* Main heading */}
           <h2
             style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: 36,
-              fontWeight: 400,
+              fontFamily: "'Lato', sans-serif",
+              fontSize: 34,
+              fontWeight: 300,
               color: "#111",
-              lineHeight: 1.4,
+              lineHeight: 1.5,
               margin: "0 0 18px 0",
               maxWidth: 700,
             }}
