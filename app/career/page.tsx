@@ -110,7 +110,7 @@ export default function CareerPage() {
           />
 
           {/* Body text */}
-          <div style={{ maxWidth: 780, color: "#444", fontSize: 14, lineHeight: 1.9, fontWeight: 300 }}>
+          <div style={{ maxWidth: 780, color: "#444", fontSize: 14, lineHeight: 1.9, fontWeight: 400, fontFamily: "'Open Sans', sans-serif" }}>
             <p style={{ margin: "0 0 22px 0" }}>
               We invite the talents with MBA, CPA, CFA or equivalent experience with international banks,
               developers / investors / fund or similar financial and corporate advisory institutions.
@@ -150,6 +150,7 @@ export default function CareerPage() {
                   fontSize: 14,
                   color: "#333",
                   fontWeight: 400,
+                  fontFamily: "'Open Sans', sans-serif",
                   display: "flex",
                   alignItems: "center",
                   gap: 8,
