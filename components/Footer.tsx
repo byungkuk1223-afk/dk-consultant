@@ -1,8 +1,9 @@
 export default function Footer() {
   return (
     <footer>
-      <div style={{ background: "#1a1a1a", padding: "50px 32px" }}>
+      <div style={{ background: "#1a1a1a", padding: "50px 48px" }}>
         <div style={{
+          maxWidth: 1100, margin: "0 auto",
           display: "flex", alignItems: "flex-start",
           justifyContent: "space-between", gap: 40,
         }}>
