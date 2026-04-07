@@ -1,5 +1,5 @@
 const people = [
-  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people", imgPos: "center 10%", imgSize: "75%" },
+  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people", imgPos: "center 10%", imgSize: "62%" },
   { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people", imgPos: "center 100%", imgSize: "75%" },
 ];
 
