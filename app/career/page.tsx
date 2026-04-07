@@ -87,12 +87,13 @@ export default function CareerPage() {
           <h2
             style={{
               fontFamily: "Georgia, serif",
-              fontSize: 34,
+              fontSize: 26,
               fontWeight: 400,
               color: "#111",
               lineHeight: 1.5,
               margin: "0 0 18px 0",
               maxWidth: 700,
+              whiteSpace: "nowrap",
             }}
           >
             DK Consultants recruits people<br />
