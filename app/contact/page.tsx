@@ -160,13 +160,35 @@ export default function ContactPage() {
                     padding: "8px 10px", fontSize: 11, color: "#555", lineHeight: 1.7,
                     fontFamily: "'Open Sans', sans-serif",
                   }}>
-                    <p style={{ margin: "0 0 6px 0", fontWeight: 600, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
-                    <p style={{ margin: 0 }}>
-                      We, DK Consultants Co., Ltd. (www.dk-consultant.com, hereinafter referred to as the 'Company'), use our best efforts to protect your privacy and personal information.
-                      The Company processes personal information for the following purpose and does not use it for any other purposes: identifying and verifying clients in provision of
-                      services, prevention of unauthorized use, confirmation of intent to subscribe, restriction of subscription and number of subscriptions, preservation of records for
-                      dispute resolution, handling of complaints, and delivery of notifications.
-                    </p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
+                    <p style={{ margin: "0 0 10px 0" }}>We, DK Consultants Co., Ltd. (www.dk-consultant.com; hereinafter referred to as the 'Company'), use our best efforts to protect your privacy and personal information. The Company processes personal information for the following purpose and does not use it for any other purposes; identifying and verifying clients in provision of services pertinent to clients' needs and interest.</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Personal Information Processing and Retention Period</p>
+                    <p style={{ margin: "0 0 6px 0" }}>① The Company processes and retains personal information within the personal information retention period according to relevant laws or within the personal information retention period to which individuals consented when collecting their personal information.</p>
+                    <p style={{ margin: "0 0 10px 0" }}>② The retention period of the personal information processed by the Company is 5 years.</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Provision of Personal Information to a Third Party</p>
+                    <p style={{ margin: "0 0 10px 0" }}>The Company may provide the personal information to a third party only when it falls under the provisions specified in Article 17 and 18 of the Personal Information Act, such as when the subject of the information provides consent and where special rules exist in any relevant law.</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Outsourcing the Handling of Personal Information</p>
+                    <p style={{ margin: "0 0 6px 0" }}>① The Company may outsource the handling of personal information for efficient provision of services.</p>
+                    <p style={{ margin: "0 0 10px 0" }}>② When the Company provides personal data to a third party, the Company shall create and maintain a record of the provision in accordance with the provisions of Article 25 of the Act on the Protection of Personal Information. When concluding an outsourcing contract, the Company specifies in writing the matters concerning the technical and administrative protection measures, limitations on re-outsourcing, and liability for damages. Personal information is protected by all means and is under the strict supervision of the Company.</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Rights and Duties of a Subject Information</p>
+                    <p style={{ margin: "0 0 6px 0" }}>A subject of any personally identifiable information managed by the Company is entitled to the following rights regarding the protection of his/her personal information:</p>
+                    <p style={{ margin: "0 0 4px 0" }}>1) The right to request for the inspection of the personal information</p>
+                    <p style={{ margin: "0 0 4px 0" }}>2) The right to request for the correction of the personal information</p>
+                    <p style={{ margin: "0 0 4px 0" }}>3) The right to delete the personal information</p>
+                    <p style={{ margin: "0 0 10px 0" }}>4) The right to request for the suspension of the handling of the personal information</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Destruction of Personal Information</p>
+                    <p style={{ margin: "0 0 6px 0" }}>When DK Consultants Co., Ltd. has no further need to retain any personal information, such as when it fulfills the purpose of keeping such data or the retention period has passed, the Company will destroy the personal information without delay.</p>
+                    <p style={{ margin: "0 0 4px 0" }}>- Procedures of Destruction: After or as soon as we achieve the purpose of having personal information, we will immediately destroy such information; or move and store it in a separate database for some time specified by the internal policies and other laws and regulations before destruction.</p>
+                    <p style={{ margin: "0 0 10px 0" }}>- Deadline for Destruction: We destroy the personal information within five days upon reaching the end date of the retention period, or within five days from the date when the retention of the personal information is deemed unnecessary.</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Use of Cookies</p>
+                    <p style={{ margin: "0 0 10px 0" }}>We do not use cookies for storing and tracking any personally identifiable information.</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Privacy Officer</p>
+                    <p style={{ margin: "0 0 4px 0" }}>DK Consultants Co., Ltd. designates the following chief personal information manager to be in charge of the matters regarding personal information.</p>
+                    <p style={{ margin: "0 0 4px 0" }}>· Name: Jaegyung Pyun</p>
+                    <p style={{ margin: "0 0 4px 0" }}>· Title: Associate</p>
+                    <p style={{ margin: "0 0 10px 0" }}>· Contact: 031-603-4845, jg.pyun@dk-consultant.com</p>
+                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Changes to the Privacy Policy</p>
+                    <p style={{ margin: 0 }}>As per Article 29 of the Personal Information Protection Act, DK Consultants Co., Ltd. takes technical, administrative, and physical actions necessary to secure the safety of personal information. We designate a minimum number of staff members to manage personal information and have in place an internal plan for the safe management of personal information.</p>
                   </div>
                 </div>
 
@@ -193,24 +215,80 @@ export default function ContactPage() {
           )}
 
           {activeTab === "address" && (
-            <div style={{ maxWidth: 560, margin: "0 auto" }}>
-              <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0" }}>
+            <div>
+              <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0", textAlign: "center" }}>
                 Address &amp; Number
               </h2>
-              <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", marginBottom: 32 }} />
-              <div style={{ display: "flex", flexDirection: "column", gap: 16, fontSize: 14, color: "#444", lineHeight: 1.8 }}>
-                <div style={{ display: "flex", gap: 24 }}>
-                  <span style={{ minWidth: 80, color: "#888", fontSize: 12, letterSpacing: 0.5 }}>ADDRESS</span>
-                  <span>17F, 26, Teheran-ro 87-gil, Gangnam-gu, Seoul, Republic of Korea</span>
-                </div>
-                <div style={{ display: "flex", gap: 24 }}>
-                  <span style={{ minWidth: 80, color: "#888", fontSize: 12, letterSpacing: 0.5 }}>TEL</span>
-                  <span>+82 31 603 4845</span>
-                </div>
-                <div style={{ display: "flex", gap: 24 }}>
-                  <span style={{ minWidth: 80, color: "#888", fontSize: 12, letterSpacing: 0.5 }}>EMAIL</span>
-                  <span style={{ color: "#3a5585" }}>eychoi@dk-consultant.com</span>
-                </div>
+              <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", margin: "0 auto 48px" }} />
+
+              {/* Icons row */}
+              <div style={{ display: "flex", justifyContent: "center", gap: 80, marginBottom: 48 }}>
+                {[
+                  {
+                    icon: (
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3a5585" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        <circle cx="12" cy="9" r="2.5"/>
+                      </svg>
+                    ),
+                    label: "ADDRESS",
+                    value: "#303, Gana Plaza, 10-7,\nHwangsaeul-ro 258 beon-gil,\nBundang-gu, Seongnam-si,\nGyeonggi-do, Korea",
+                  },
+                  {
+                    icon: (
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3a5585" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                      </svg>
+                    ),
+                    label: "TEL",
+                    value: "+82.31.603.4845",
+                  },
+                  {
+                    icon: (
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3a5585" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="22 17 13 17"/>
+                        <polyline points="22 11 13 11"/>
+                        <polyline points="22 5 13 5"/>
+                        <path d="M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4"/>
+                        <line x1="9" y1="12" x2="9" y2="12"/>
+                      </svg>
+                    ),
+                    label: "FAX",
+                    value: "+82.31.603.0079",
+                  },
+                  {
+                    icon: (
+                      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3a5585" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                      </svg>
+                    ),
+                    label: "MAIL",
+                    value: "dkc_info@dk-consultant.com",
+                    isEmail: true,
+                  },
+                ].map((item) => (
+                  <div key={item.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, maxWidth: 160, textAlign: "center" }}>
+                    {item.icon}
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, color: "#333", fontFamily: "'Open Sans', sans-serif" }}>{item.label}</span>
+                    <span style={{ fontSize: 12, color: (item as any).isEmail ? "#3a5585" : "#555", lineHeight: 1.7, fontFamily: "'Open Sans', sans-serif", whiteSpace: "pre-line" }}>
+                      {item.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Google Map */}
+              <div style={{ width: "100%", height: 380 }}>
+                <iframe
+                  src="https://maps.google.com/maps?q=10-7+Hwangsaeul-ro+258beon-gil,+Bundang-gu,+Seongnam-si,+Gyeonggi-do&output=embed&z=15"
+                  width="100%"
+                  height="380"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           )}
