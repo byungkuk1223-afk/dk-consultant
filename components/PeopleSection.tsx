@@ -1,6 +1,6 @@
 const people = [
-  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people", imgFit: "cover" as const, imgPos: "center top" },
-  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people", imgFit: "cover" as const, imgPos: "center 20%" },
+  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people", imgFit: "cover" as const, imgPos: "center top", circleSize: 190 },
+  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people", imgFit: "cover" as const, imgPos: "center 20%", circleSize: 160 },
 ];
 
 const quickLinks = [
@@ -101,7 +101,7 @@ export default function PeopleSection() {
               padding: "40px 28px 32px",
             }}>
               <div style={{
-                width: 160, height: 160, borderRadius: "50%",
+                width: p.circleSize, height: p.circleSize, borderRadius: "50%",
                 margin: "0 auto 20px",
                 overflow: "hidden",
                 border: "1px solid #e0e0e0",
