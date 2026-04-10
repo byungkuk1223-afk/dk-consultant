@@ -87,8 +87,8 @@ export default function PeopleSection() {
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
-          gap: 20,
-          maxWidth: 700,
+          gap: 16,
+          maxWidth: 480,
           margin: "0 auto",
         }}>
           {people.map((p) => (
@@ -98,7 +98,7 @@ export default function PeopleSection() {
               textDecoration: "none",
               display: "block",
               boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
-              padding: "40px 28px 32px",
+              padding: "28px 20px 24px",
             }}>
               <div style={{
                 width: 110, height: 110, borderRadius: "50%",
