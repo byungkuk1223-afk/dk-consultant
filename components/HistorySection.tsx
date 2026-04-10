@@ -63,7 +63,7 @@ export default function HistorySection() {
           {/* Line */}
           <div style={{
             position: "absolute",
-            top: 45,
+            top: 15,
             left: "16.5%",
             right: "16.5%",
             height: 1,
