@@ -27,7 +27,7 @@ export default function HistorySection() {
   return (
     <section style={{
       background: "#2e3549",
-      backgroundImage: `linear-gradient(rgba(46,53,73,0.88), rgba(46,53,73,0.88)), url('/img/history_bg.jpg')`,
+      backgroundImage: `linear-gradient(rgba(46,53,73,0.95), rgba(46,53,73,0.95)), url('/img/history_bg.jpg')`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       padding: "90px 40px 110px",
