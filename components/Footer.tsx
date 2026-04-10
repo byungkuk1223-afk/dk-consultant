@@ -23,13 +23,13 @@ export default function Footer() {
 
             {/* Contact Details */}
             <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 10 }}>
-              <span style={{ fontSize: 12, color: "#555", fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.7 }}>
+              <span style={{ fontSize: 12, color: "#aaa", fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.7 }}>
                 Address. #303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea
               </span>
-              <span style={{ fontSize: 12, color: "#555", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
+              <span style={{ fontSize: 12, color: "#aaa", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
                 Tel. +82.31.603.4845 &nbsp;/&nbsp; Fax. +82.31.603.0079
               </span>
-              <span style={{ fontSize: 12, color: "#555", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
+              <span style={{ fontSize: 12, color: "#aaa", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
                 E-mail. dkc_info@dk-consultant.com
               </span>
             </div>
@@ -40,8 +40,8 @@ export default function Footer() {
             <a href="/privacy" style={{
               display: "inline-block",
               padding: "11px 26px",
-              border: "1px solid #3a3a3a",
-              color: "#777",
+              border: "1px solid #666",
+              color: "#aaa",
               textDecoration: "none",
               fontSize: 11,
               letterSpacing: 1.8,
@@ -51,12 +51,12 @@ export default function Footer() {
               transition: "border-color 0.2s, color 0.2s",
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#777";
-              (e.currentTarget as HTMLAnchorElement).style.color = "#ccc";
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#aaa";
+              (e.currentTarget as HTMLAnchorElement).style.color = "#fff";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#3a3a3a";
-              (e.currentTarget as HTMLAnchorElement).style.color = "#777";
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#666";
+              (e.currentTarget as HTMLAnchorElement).style.color = "#aaa";
             }}>
               Privacy Statement
             </a>
@@ -70,7 +70,7 @@ export default function Footer() {
         textAlign: "center",
         padding: "15px",
         fontSize: 11,
-        color: "#333",
+        color: "#888",
         fontFamily: "'Lato', sans-serif",
         fontWeight: 300,
         letterSpacing: 1,
