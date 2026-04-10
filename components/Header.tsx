@@ -14,7 +14,7 @@ export default function Header({ scrolled }: HeaderProps) {
         width: "100%",
         zIndex: 1000,
         backgroundColor: scrolled ? "rgba(58,85,133,0.97)" : "transparent",
-        backgroundImage: scrolled ? "none" : "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%)",
+        backgroundImage: scrolled ? "none" : "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%)",
         transition: "background-color 0.3s ease, background-image 0.3s ease",
       }}
     >
