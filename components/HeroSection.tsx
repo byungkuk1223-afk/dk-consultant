@@ -50,7 +50,7 @@ export default function HeroSection() {
           style={{
             position: "absolute",
             bottom: "22%",
-            left: "8%",
+            left: "30%",
             color: "#fff",
             zIndex: 10,
             maxWidth: 520,
