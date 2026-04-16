@@ -1,6 +1,6 @@
 const people = [
-  { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people", imgFit: "cover" as const, imgPos: "center top" },
-  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people", imgFit: "cover" as const, imgPos: "center 20%" },
+    { name: "David Kim", title: "CEO / Founder", img: "/img/david.png", href: "/people" },
+  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/chulsoo.png", href: "/people" },
 ];
 
 const quickLinks = [
@@ -87,8 +87,8 @@ export default function PeopleSection() {
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
-          gap: 20,
-          maxWidth: 700,
+          gap: 16,
+          maxWidth: 480,
           margin: "0 auto",
         }}>
           {people.map((p) => (
@@ -98,27 +98,29 @@ export default function PeopleSection() {
               textDecoration: "none",
               display: "block",
               boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
-              padding: "40px 28px 32px",
+              padding: "28px 20px 24px",
             }}>
               <div style={{
-                width: 160, height: 160, borderRadius: "50%",
+                width: 110, height: 110, borderRadius: "50%",
                 margin: "0 auto 20px",
                 overflow: "hidden",
-                border: "1px solid #e0e0e0",
+                border: "1px solid #c8d5eb",
+                background: "#dce6f5",
               }}>
                 <img src={p.img} alt={p.name} style={{
                   width: "100%", height: "100%",
-                  objectFit: p.imgFit, objectPosition: p.imgPos,
+                  objectFit: "cover",
+                  objectPosition: "center top",
                 }} />
               </div>
               <p style={{
-                fontSize: 11, fontFamily: "'Lato', sans-serif",
+                fontSize: 13, fontFamily: "'Lato', sans-serif",
                 fontWeight: 300, color: "#416ab3", marginBottom: 6,
               }}>
                 {p.title}
               </p>
               <h4 style={{
-                fontSize: 16, fontWeight: 700,
+                fontSize: 19, fontWeight: 700,
                 fontFamily: "'Lato', sans-serif",
                 color: "#1a1a1a", margin: 0,
               }}>

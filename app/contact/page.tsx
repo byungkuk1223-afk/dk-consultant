@@ -7,7 +7,9 @@ export default function ContactPage() {
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState<"contact" | "address">("contact");
   const [agreed, setAgreed] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", mobile: "", title: "", inquiry: "", safetyCode: "" });
+  const [form, setForm] = useState({ name: "", email: "", mobile: "", title: "", inquiry: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -15,24 +17,39 @@ export default function ContactPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  async function handleSubmit() {
+    if (!form.name || !form.email || !form.mobile || !form.title || !form.inquiry) {
+      setErrorMsg("필수 항목을 모두 입력해주세요."); return;
+    }
+    if (!agreed) {
+      setErrorMsg("개인정보 처리방침에 동의해주세요."); return;
+    }
+    setStatus("loading");
+    setErrorMsg("");
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+    if (res.ok) {
+      setStatus("success");
+      setForm({ name: "", email: "", mobile: "", title: "", inquiry: "" });
+      setAgreed(false);
+    } else {
+      const data = await res.json();
+      setErrorMsg(data.error || "전송 실패. 다시 시도해주세요.");
+      setStatus("error");
+    }
+  }
+
   const labelStyle: React.CSSProperties = {
-    width: 90,
-    minWidth: 90,
-    fontSize: 13,
-    color: "#444",
-    fontFamily: "'Open Sans', sans-serif",
-    paddingTop: 6,
+    width: 90, minWidth: 90, fontSize: 13, color: "#444",
+    fontFamily: "'Open Sans', sans-serif", paddingTop: 6,
   };
-
   const inputStyle: React.CSSProperties = {
-    border: "1px solid #ccc",
-    padding: "6px 10px",
-    fontSize: 13,
-    fontFamily: "'Open Sans', sans-serif",
-    outline: "none",
-    flex: 1,
+    border: "1px solid #ccc", padding: "6px 10px", fontSize: 13,
+    fontFamily: "'Open Sans', sans-serif", outline: "none", flex: 1,
   };
-
   const requiredStar: React.CSSProperties = { color: "#c00", marginRight: 2 };
 
   return (
@@ -61,32 +78,26 @@ export default function ContactPage() {
         {/* Tabs */}
         <div style={{ display: "flex", justifyContent: "center", marginTop: 0 }}>
           <div style={{ display: "flex", width: "52%", minWidth: 500 }}>
-            <button
-              onClick={() => setActiveTab("contact")}
-              style={{
-                flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
-                backgroundColor: activeTab === "contact" ? "#3a5585" : "#f0f0f0",
-                color: activeTab === "contact" ? "#fff" : "#555",
-                fontSize: 13, fontFamily: "'Open Sans', sans-serif",
-                fontWeight: 400, letterSpacing: 0.5,
-                display: "flex", alignItems: "center", justifyContent: "space-between",
-              }}
-            >
+            <button onClick={() => setActiveTab("contact")} style={{
+              flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
+              backgroundColor: activeTab === "contact" ? "#3a5585" : "#f0f0f0",
+              color: activeTab === "contact" ? "#fff" : "#555",
+              fontSize: 13, fontFamily: "'Open Sans', sans-serif",
+              fontWeight: 400, letterSpacing: 0.5,
+              display: "flex", alignItems: "center", justifyContent: "space-between",
+            }}>
               <span>Contact</span>
               <span style={{ fontSize: 16, opacity: 0.7 }}>›</span>
             </button>
-            <button
-              onClick={() => setActiveTab("address")}
-              style={{
-                flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
-                backgroundColor: activeTab === "address" ? "#3a5585" : "#f0f0f0",
-                color: activeTab === "address" ? "#fff" : "#555",
-                fontSize: 13, fontFamily: "'Open Sans', sans-serif",
-                fontWeight: 400, letterSpacing: 0.5,
-                display: "flex", alignItems: "center", justifyContent: "space-between",
-                marginLeft: 2,
-              }}
-            >
+            <button onClick={() => setActiveTab("address")} style={{
+              flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
+              backgroundColor: activeTab === "address" ? "#3a5585" : "#f0f0f0",
+              color: activeTab === "address" ? "#fff" : "#555",
+              fontSize: 13, fontFamily: "'Open Sans', sans-serif",
+              fontWeight: 400, letterSpacing: 0.5,
+              display: "flex", alignItems: "center", justifyContent: "space-between",
+              marginLeft: 2,
+            }}>
               <span>Address &amp; Number</span>
               <span style={{ fontSize: 16, opacity: 0.7 }}>›</span>
             </button>
@@ -103,114 +114,118 @@ export default function ContactPage() {
               </h2>
               <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", marginBottom: 32 }} />
 
-              {/* Form fields */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {/* Name */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <label style={labelStyle}><span style={requiredStar}>*</span>Name</label>
-                  <input style={{ ...inputStyle, width: 120, flex: "unset" }} value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
-                </div>
-                {/* Email */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <label style={labelStyle}><span style={requiredStar}>*</span>E-mail</label>
-                  <input style={{ ...inputStyle, width: 240, flex: "unset" }} type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
-                </div>
-                {/* Mobile */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <label style={labelStyle}><span style={requiredStar}>*</span>Mobile</label>
-                  <input style={{ ...inputStyle, width: 140, flex: "unset" }} value={form.mobile} onChange={e => setForm({ ...form, mobile: e.target.value })} />
-                </div>
-                {/* Title */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <label style={labelStyle}><span style={requiredStar}>*</span>Title</label>
-                  <input style={inputStyle} value={form.title} onChange={e => setForm({ ...form, title: e.target.value })} />
-                </div>
-                {/* Inquiry */}
-                <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginTop: 4 }}>
-                  <label style={{ ...labelStyle, paddingTop: 8 }}><span style={requiredStar}>*</span>Inquiry</label>
-                  <textarea
-                    style={{ ...inputStyle, height: 140, resize: "vertical", lineHeight: 1.6 }}
-                    value={form.inquiry}
-                    onChange={e => setForm({ ...form, inquiry: e.target.value })}
-                  />
-                </div>
-
-                {/* Safety code */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 6 }}>
-                  <label style={labelStyle}>Safety code</label>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <div style={{
-                      width: 80, height: 30, background: "linear-gradient(135deg, #ddd 0%, #bbb 100%)",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: 15, fontWeight: 700, color: "#333", letterSpacing: 4,
-                      fontFamily: "monospace", userSelect: "none", border: "1px solid #ccc",
-                    }}>
-                      DK8K3
-                    </div>
-                    <input style={{ ...inputStyle, width: 90, flex: "unset" }} placeholder="" value={form.safetyCode} onChange={e => setForm({ ...form, safetyCode: e.target.value })} />
-                    <span style={{ fontSize: 12, color: "#666" }}>Enter the numbers on the left.</span>
-                  </div>
-                </div>
-
-                {/* Privacy Statement */}
-                <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginTop: 6 }}>
-                  <label style={{ ...labelStyle, paddingTop: 6, lineHeight: 1.4 }}>Privacy<br />Statement</label>
-                  <div style={{
-                    flex: 1, height: 80, overflowY: "scroll", border: "1px solid #ccc",
-                    padding: "8px 10px", fontSize: 11, color: "#555", lineHeight: 1.7,
-                    fontFamily: "'Open Sans', sans-serif",
+              {status === "success" ? (
+                <div style={{
+                  padding: "32px 24px", textAlign: "center",
+                  border: "1px solid #c8d8c0", background: "#f4faf2", borderRadius: 2,
+                }}>
+                  <p style={{ fontSize: 15, color: "#2e6b2e", fontFamily: "'Open Sans', sans-serif", marginBottom: 8 }}>
+                    문의가 성공적으로 접수되었습니다.
+                  </p>
+                  <p style={{ fontSize: 13, color: "#666", fontFamily: "'Open Sans', sans-serif" }}>
+                    빠른 시일 내에 답변 드리겠습니다.
+                  </p>
+                  <button onClick={() => setStatus("idle")} style={{
+                    marginTop: 20, padding: "8px 28px", background: "#3a5585", color: "#fff",
+                    border: "none", fontSize: 13, cursor: "pointer", fontFamily: "'Open Sans', sans-serif",
                   }}>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
-                    <p style={{ margin: "0 0 10px 0" }}>We, DK Consultants Co., Ltd. (www.dk-consultant.com; hereinafter referred to as the 'Company'), use our best efforts to protect your privacy and personal information. The Company processes personal information for the following purpose and does not use it for any other purposes; identifying and verifying clients in provision of services pertinent to clients' needs and interest.</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Personal Information Processing and Retention Period</p>
-                    <p style={{ margin: "0 0 6px 0" }}>① The Company processes and retains personal information within the personal information retention period according to relevant laws or within the personal information retention period to which individuals consented when collecting their personal information.</p>
-                    <p style={{ margin: "0 0 10px 0" }}>② The retention period of the personal information processed by the Company is 5 years.</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Provision of Personal Information to a Third Party</p>
-                    <p style={{ margin: "0 0 10px 0" }}>The Company may provide the personal information to a third party only when it falls under the provisions specified in Article 17 and 18 of the Personal Information Act, such as when the subject of the information provides consent and where special rules exist in any relevant law.</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Outsourcing the Handling of Personal Information</p>
-                    <p style={{ margin: "0 0 6px 0" }}>① The Company may outsource the handling of personal information for efficient provision of services.</p>
-                    <p style={{ margin: "0 0 10px 0" }}>② When the Company provides personal data to a third party, the Company shall create and maintain a record of the provision in accordance with the provisions of Article 25 of the Act on the Protection of Personal Information. When concluding an outsourcing contract, the Company specifies in writing the matters concerning the technical and administrative protection measures, limitations on re-outsourcing, and liability for damages. Personal information is protected by all means and is under the strict supervision of the Company.</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Rights and Duties of a Subject Information</p>
-                    <p style={{ margin: "0 0 6px 0" }}>A subject of any personally identifiable information managed by the Company is entitled to the following rights regarding the protection of his/her personal information:</p>
-                    <p style={{ margin: "0 0 4px 0" }}>1) The right to request for the inspection of the personal information</p>
-                    <p style={{ margin: "0 0 4px 0" }}>2) The right to request for the correction of the personal information</p>
-                    <p style={{ margin: "0 0 4px 0" }}>3) The right to delete the personal information</p>
-                    <p style={{ margin: "0 0 10px 0" }}>4) The right to request for the suspension of the handling of the personal information</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Destruction of Personal Information</p>
-                    <p style={{ margin: "0 0 6px 0" }}>When DK Consultants Co., Ltd. has no further need to retain any personal information, such as when it fulfills the purpose of keeping such data or the retention period has passed, the Company will destroy the personal information without delay.</p>
-                    <p style={{ margin: "0 0 4px 0" }}>- Procedures of Destruction: After or as soon as we achieve the purpose of having personal information, we will immediately destroy such information; or move and store it in a separate database for some time specified by the internal policies and other laws and regulations before destruction.</p>
-                    <p style={{ margin: "0 0 10px 0" }}>- Deadline for Destruction: We destroy the personal information within five days upon reaching the end date of the retention period, or within five days from the date when the retention of the personal information is deemed unnecessary.</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Use of Cookies</p>
-                    <p style={{ margin: "0 0 10px 0" }}>We do not use cookies for storing and tracking any personally identifiable information.</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Privacy Officer</p>
-                    <p style={{ margin: "0 0 4px 0" }}>DK Consultants Co., Ltd. designates the following chief personal information manager to be in charge of the matters regarding personal information.</p>
-                    <p style={{ margin: "0 0 4px 0" }}>· Name: Jaegyung Pyun</p>
-                    <p style={{ margin: "0 0 4px 0" }}>· Title: Associate</p>
-                    <p style={{ margin: "0 0 10px 0" }}>· Contact: 031-603-4845, jg.pyun@dk-consultant.com</p>
-                    <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Changes to the Privacy Policy</p>
-                    <p style={{ margin: 0 }}>As per Article 29 of the Personal Information Protection Act, DK Consultants Co., Ltd. takes technical, administrative, and physical actions necessary to secure the safety of personal information. We designate a minimum number of staff members to manage personal information and have in place an internal plan for the safe management of personal information.</p>
-                  </div>
-                </div>
-
-                {/* Agree checkbox */}
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 6, paddingLeft: 102 }}>
-                  <input type="checkbox" id="agree" checked={agreed} onChange={e => setAgreed(e.target.checked)} style={{ width: 14, height: 14, cursor: "pointer" }} />
-                  <label htmlFor="agree" style={{ fontSize: 12, color: "#555", cursor: "pointer" }}>
-                    I agree to the terms of the <span style={{ color: "#3a5585", textDecoration: "underline" }}>Privacy Policy</span> Terms.
-                  </label>
-                </div>
-
-                {/* Submit */}
-                <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
-                  <button style={{
-                    backgroundColor: "#3a5585", color: "#fff", border: "none",
-                    padding: "10px 40px", fontSize: 13, cursor: "pointer",
-                    fontFamily: "'Open Sans', sans-serif", letterSpacing: 1,
-                  }}>
-                    Confirm
+                    새 문의 작성
                   </button>
                 </div>
-              </div>
+              ) : (
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {/* Name */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <label style={labelStyle}><span style={requiredStar}>*</span>Name</label>
+                    <input style={{ ...inputStyle, width: 120, flex: "unset" }} value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+                  </div>
+                  {/* Email */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <label style={labelStyle}><span style={requiredStar}>*</span>E-mail</label>
+                    <input style={{ ...inputStyle, width: 240, flex: "unset" }} type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
+                  </div>
+                  {/* Mobile */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <label style={labelStyle}><span style={requiredStar}>*</span>Mobile</label>
+                    <input style={{ ...inputStyle, width: 140, flex: "unset" }} value={form.mobile} onChange={e => setForm({ ...form, mobile: e.target.value })} />
+                  </div>
+                  {/* Title */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <label style={labelStyle}><span style={requiredStar}>*</span>Title</label>
+                    <input style={inputStyle} value={form.title} onChange={e => setForm({ ...form, title: e.target.value })} />
+                  </div>
+                  {/* Inquiry */}
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginTop: 4 }}>
+                    <label style={{ ...labelStyle, paddingTop: 8 }}><span style={requiredStar}>*</span>Inquiry</label>
+                    <textarea
+                      style={{ ...inputStyle, height: 140, resize: "vertical", lineHeight: 1.6 }}
+                      value={form.inquiry}
+                      onChange={e => setForm({ ...form, inquiry: e.target.value })}
+                    />
+                  </div>
+
+                  {/* Privacy Statement */}
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginTop: 6 }}>
+                    <label style={{ ...labelStyle, paddingTop: 6, lineHeight: 1.4 }}>Privacy<br />Statement</label>
+                    <div style={{
+                      flex: 1, height: 80, overflowY: "scroll", border: "1px solid #ccc",
+                      padding: "8px 10px", fontSize: 11, color: "#555", lineHeight: 1.7,
+                      fontFamily: "'Open Sans', sans-serif",
+                    }}>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
+                      <p style={{ margin: "0 0 10px 0" }}>We, DK Consultants Co., Ltd. (www.dk-consultant.com; hereinafter referred to as the 'Company'), use our best efforts to protect your privacy and personal information. The Company processes personal information for the following purpose and does not use it for any other purposes; identifying and verifying clients in provision of services pertinent to clients' needs and interest.</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Personal Information Processing and Retention Period</p>
+                      <p style={{ margin: "0 0 6px 0" }}>① The Company processes and retains personal information within the personal information retention period according to relevant laws or within the personal information retention period to which individuals consented when collecting their personal information.</p>
+                      <p style={{ margin: "0 0 10px 0" }}>② The retention period of the personal information processed by the Company is 5 years.</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Provision of Personal Information to a Third Party</p>
+                      <p style={{ margin: "0 0 10px 0" }}>The Company may provide the personal information to a third party only when it falls under the provisions specified in Article 17 and 18 of the Personal Information Act, such as when the subject of the information provides consent and where special rules exist in any relevant law.</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Outsourcing the Handling of Personal Information</p>
+                      <p style={{ margin: "0 0 6px 0" }}>① The Company may outsource the handling of personal information for efficient provision of services.</p>
+                      <p style={{ margin: "0 0 10px 0" }}>② When the Company provides personal data to a third party, the Company shall create and maintain a record of the provision in accordance with the provisions of Article 25 of the Act on the Protection of Personal Information.</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Rights and Duties of a Subject Information</p>
+                      <p style={{ margin: "0 0 4px 0" }}>1) The right to request for the inspection of the personal information</p>
+                      <p style={{ margin: "0 0 4px 0" }}>2) The right to request for the correction of the personal information</p>
+                      <p style={{ margin: "0 0 4px 0" }}>3) The right to delete the personal information</p>
+                      <p style={{ margin: "0 0 10px 0" }}>4) The right to request for the suspension of the handling of the personal information</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Destruction of Personal Information</p>
+                      <p style={{ margin: "0 0 10px 0" }}>When DK Consultants Co., Ltd. has no further need to retain any personal information, the Company will destroy the personal information without delay within five days.</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Privacy Officer</p>
+                      <p style={{ margin: "0 0 4px 0" }}>· Name: Jaegyung Pyun</p>
+                      <p style={{ margin: "0 0 4px 0" }}>· Title: Associate</p>
+                      <p style={{ margin: 0 }}>· Contact: 031-603-4845, jg.pyun@dk-consultant.com</p>
+                    </div>
+                  </div>
+
+                  {/* Agree checkbox */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 6, paddingLeft: 102 }}>
+                    <input type="checkbox" id="agree" checked={agreed} onChange={e => setAgreed(e.target.checked)} style={{ width: 14, height: 14, cursor: "pointer" }} />
+                    <label htmlFor="agree" style={{ fontSize: 12, color: "#555", cursor: "pointer" }}>
+                      I agree to the terms of the <span style={{ color: "#3a5585", textDecoration: "underline" }}>Privacy Policy</span> Terms.
+                    </label>
+                  </div>
+
+                  {/* Error message */}
+                  {errorMsg && (
+                    <p style={{ fontSize: 12, color: "#c00", paddingLeft: 102, marginTop: 4 }}>{errorMsg}</p>
+                  )}
+
+                  {/* Submit */}
+                  <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
+                    <button
+                      onClick={handleSubmit}
+                      disabled={status === "loading"}
+                      style={{
+                        backgroundColor: status === "loading" ? "#7a8faa" : "#3a5585",
+                        color: "#fff", border: "none",
+                        padding: "10px 40px", fontSize: 13, cursor: status === "loading" ? "not-allowed" : "pointer",
+                        fontFamily: "'Open Sans', sans-serif", letterSpacing: 1,
+                      }}
+                    >
+                      {status === "loading" ? "전송 중..." : "Confirm"}
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
