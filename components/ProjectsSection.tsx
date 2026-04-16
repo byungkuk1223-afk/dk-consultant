@@ -131,8 +131,8 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Read More Button */}
-        <div style={{ textAlign: "center", marginTop: 52 }}>
+        {/* Buttons */}
+        <div style={{ textAlign: "center", marginTop: 52, display: "flex", justifyContent: "center", gap: 16 }}>
           <a
             href="/projects"
             style={{
@@ -155,6 +155,32 @@ export default function ProjectsSection() {
             }
           >
             READ MORE
+          </a>
+          <a
+            href="/clients"
+            style={{
+              display: "inline-block",
+              padding: "14px 48px",
+              background: "transparent",
+              color: "#416ab3",
+              textDecoration: "none",
+              fontSize: 12,
+              fontWeight: 700,
+              fontFamily: "'Lato', sans-serif",
+              letterSpacing: 2,
+              border: "1px solid #416ab3",
+              transition: "background 0.3s, color 0.3s",
+            }}
+            onMouseEnter={(e) => {
+              (e.target as HTMLAnchorElement).style.background = "#416ab3";
+              (e.target as HTMLAnchorElement).style.color = "#fff";
+            }}
+            onMouseLeave={(e) => {
+              (e.target as HTMLAnchorElement).style.background = "transparent";
+              (e.target as HTMLAnchorElement).style.color = "#416ab3";
+            }}
+          >
+            CLIENTS
           </a>
         </div>
       </div>
