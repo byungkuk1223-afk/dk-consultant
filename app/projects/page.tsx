@@ -86,11 +86,16 @@ export default function ProjectsPage() {
     <>
       <Header scrolled={true} />
       <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff" }}>
-        {/* Page Header */}
-        <div style={{ background: "#1a2c4e", padding: "48px 40px 36px", textAlign: "center" }}>
-          <p style={{ fontSize: 11, letterSpacing: 3.5, color: "#8ca3c8", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 12 }}>DK CONSULTANTS</p>
-          <h1 style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 700, fontFamily: "'Playfair Display', Georgia, serif", color: "#fff", marginBottom: 12 }}>Projects</h1>
-          <p style={{ fontSize: 14, color: "#8ca3c8", fontFamily: "'Lato', sans-serif" }}>List of finished projects we helped establish</p>
+        {/* Page Hero */}
+        <div style={{
+          background: "linear-gradient(to right, rgba(20,30,60,0.55) 0%, rgba(20,30,60,0.3) 60%, rgba(20,30,60,0.15) 100%), url('/img/hero_bg.jpg') center/cover no-repeat",
+          padding: "100px 40px 80px",
+          textAlign: "center",
+          marginTop: -80,
+        }}>
+          <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
+          <h1 style={{ fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 700, fontFamily: "'Playfair Display', Georgia, serif", color: "#fff", letterSpacing: 0.5, marginBottom: 16 }}>Projects</h1>
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>List of finished projects we helped establish</p>
         </div>
 
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 80px" }}>

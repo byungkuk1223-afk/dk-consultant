@@ -55,13 +55,15 @@ export default function ClientsPage() {
   return (
     <>
       <Header scrolled={scrolled} />
+      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff" }}>
 
       {/* Page Hero */}
       <div
         style={{
-          background: "#416ab3",
-          padding: "110px 40px 50px",
+          background: "linear-gradient(to right, rgba(20,30,60,0.6) 0%, rgba(20,30,60,0.35) 60%, rgba(20,30,60,0.2) 100%), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80') center/cover no-repeat",
+          padding: "100px 40px 80px",
           textAlign: "center",
+          marginTop: -80,
         }}
       >
         <p
@@ -78,11 +80,12 @@ export default function ClientsPage() {
         </p>
         <h1
           style={{
-            fontSize: "clamp(28px, 4vw, 48px)",
+            fontSize: "clamp(28px, 4vw, 52px)",
             fontWeight: 700,
             fontFamily: "'Playfair Display', Georgia, serif",
             color: "#fff",
             letterSpacing: 0.5,
+            marginBottom: 16,
           }}
         >
           Clients
@@ -90,10 +93,9 @@ export default function ClientsPage() {
         <p
           style={{
             fontSize: 14,
-            color: "rgba(255,255,255,0.7)",
+            color: "rgba(255,255,255,0.75)",
             fontFamily: "'Lato', sans-serif",
             fontWeight: 300,
-            marginTop: 14,
           }}
         >
           Organizations and institutions we have proudly served
@@ -203,6 +205,7 @@ export default function ClientsPage() {
         </div>
       </div>
 
+      </main>
       <Footer />
     </>
   );
