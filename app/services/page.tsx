@@ -78,15 +78,17 @@ const healthcareBoxes = [
   },
 ];
 
-const CARD_W = 560;
 const CARD_GAP = 40;
-const VISIBLE = 2;
-const MAX_INDEX = healthcareBoxes.length - VISIBLE; // 3
 
 export default function ServicesPage() {
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState<"financial" | "healthcare">("financial");
   const [hcIndex, setHcIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const visible = isMobile ? 1 : 2;
+  const maxIndex = healthcareBoxes.length - visible;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 120);
@@ -94,8 +96,26 @@ export default function ServicesPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 860);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  useEffect(() => {
+    setHcIndex(0);
+  }, [isMobile]);
+
   const hcMove = (dir: number) => {
-    setHcIndex((prev) => Math.max(0, Math.min(prev + dir, MAX_INDEX)));
+    setHcIndex((prev) => Math.max(0, Math.min(prev + dir, maxIndex)));
+  };
+
+  const getStepPx = () => {
+    if (!sliderRef.current) return 0;
+    const slide = sliderRef.current.querySelector(".hc-slide") as HTMLElement;
+    if (!slide) return 0;
+    return slide.offsetWidth + CARD_GAP;
   };
 
   return (
@@ -218,6 +238,7 @@ export default function ServicesPage() {
 
           <div style={{ width: "100%", background: "#f8f8f8", paddingBottom: 100 }}>
             <div
+              className="fin-area"
               style={{
                 maxWidth: 1200,
                 margin: "0 auto",
@@ -230,6 +251,7 @@ export default function ServicesPage() {
               {financialBoxes.map((box) => (
                 <div
                   key={box.title}
+                  className="fin-box"
                   style={{
                     width: "48%",
                     background: "#fff",
@@ -324,22 +346,23 @@ export default function ServicesPage() {
 
           <div style={{ width: "100%", background: "#f8f8f8", padding: "60px 0 80px" }}>
             {/* Slider container */}
-            <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto" }}>
+            <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 30px" }}>
               {/* Track wrapper — clips overflow */}
-              <div style={{ overflow: "hidden" }}>
+              <div ref={sliderRef} style={{ overflow: "hidden" }}>
                 <div
                   style={{
                     display: "flex",
                     gap: CARD_GAP,
-                    transform: `translateX(-${hcIndex * (CARD_W + CARD_GAP)}px)`,
+                    transform: `translateX(-${hcIndex * getStepPx()}px)`,
                     transition: "transform 0.4s ease",
                   }}
                 >
                   {healthcareBoxes.map((box) => (
                     <div
                       key={box.title}
+                      className="hc-slide"
                       style={{
-                        flex: `0 0 ${CARD_W}px`,
+                        flex: isMobile ? "0 0 100%" : "0 0 calc(50% - 20px)",
                         background: "#fff",
                         border: "1px solid #e5e5e5",
                         boxShadow: "0 5px 10px rgba(0,0,0,0.08)",
@@ -456,7 +479,7 @@ export default function ServicesPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  opacity: hcIndex >= MAX_INDEX ? 0.3 : 1,
+                  opacity: hcIndex >= maxIndex ? 0.3 : 1,
                   transition: "opacity 0.2s",
                   zIndex: 10,
                 }}
@@ -469,10 +492,10 @@ export default function ServicesPage() {
 
             {/* Dot indicators */}
             <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 36 }}>
-              {Array.from({ length: MAX_INDEX + 1 }, (_, i) => i).map((i) => (
+              {Array.from({ length: maxIndex + 1 }, (_, i) => i).map((i) => (
                 <button
                   key={i}
-                  onClick={() => setHcIndex(Math.min(i, MAX_INDEX))}
+                  onClick={() => setHcIndex(Math.min(i, maxIndex))}
                   style={{
                     width: 10,
                     height: 10,
@@ -494,6 +517,15 @@ export default function ServicesPage() {
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;700;900&display=swap');
+        * { box-sizing: border-box; }
+        @media (max-width: 860px) {
+          .fin-box { width: 100% !important; margin-right: 0 !important; margin-bottom: 24px; min-height: auto !important; }
+          .fin-area { flex-wrap: wrap !important; padding: 0 16px 60px !important; }
+          .hc-slide { flex: 0 0 100% !important; }
+        }
+        @media (max-width: 560px) {
+          .fin-area { padding: 0 12px 40px !important; }
+        }
       `}</style>
     </>
   );
