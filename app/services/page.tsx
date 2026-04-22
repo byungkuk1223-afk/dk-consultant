@@ -469,7 +469,7 @@ export default function ServicesPage() {
 
             {/* Dot indicators */}
             <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 36 }}>
-              {healthcareBoxes.map((_, i) => (
+              {Array.from({ length: MAX_INDEX + 1 }, (_, i) => i).map((i) => (
                 <button
                   key={i}
                   onClick={() => setHcIndex(Math.min(i, MAX_INDEX))}
