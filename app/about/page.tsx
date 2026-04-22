@@ -78,7 +78,7 @@ export default function AboutPage() {
             {/* Corporate Structure Diagram */}
             <div style={{ marginBottom: 52, textAlign: "center" }}>
               <img
-                src="/img/corporate_structure.png"
+                src="/img/img_01_01_a_new2_n2.png"
                 alt="DK Consultants Corporate Structure"
                 style={{ maxWidth: "100%", height: "auto" }}
               />
