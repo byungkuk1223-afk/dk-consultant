@@ -1,73 +1,9 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const ALL_PROJECTS = [
-  { title: "Blue Ammonia Project in Canada", category: "Feasibility Study", region: "Northern America" },
-  { title: "SAF Development Project in Indonesia", category: "Feasibility Study", region: "Asia" },
-  { title: "Pharmaceutical Manufacturing Facility in Kyrgyzstan", category: "Business Development", region: "Asia" },
-  { title: "Pharmaceutical Manufacturing Facility in Uzbekistan", category: "Business Development (BOO)", region: "Asia" },
-  { title: "Green Hydrogen Development Project in Australia", category: "Feasibility Study", region: "Oceania" },
-  { title: "Solar Power Generation and Carbon Credit Acquisition Project", category: "Feasibility Study", region: "Asia" },
-  { title: "Green Hydrogen Ammonia Project in Dubai", category: "Feasibility Study", region: "Middle East·Africa" },
-  { title: "Green Hydrogen Ammonia Project in Western Australia", category: "Feasibility Study", region: "Oceania" },
-  { title: "Tashkent Medical Waste-to-Energy Project in Uzbekistan", category: "Feasibility Study", region: "Asia" },
-  { title: "Queensland Green Methanol Project in Australia", category: "Feasibility Study", region: "Oceania" },
-  { title: "BC Green Ammonia Project in Canada", category: "Feasibility Study", region: "Northern America" },
-  { title: "Newcastle Green Ammonia Project in Australia", category: "Feasibility Study", region: "Oceania" },
-  { title: "Uljin Nuclear Hydrogen Basic Plan in Korea", category: "Feasibility Study", region: "Asia" },
-  { title: "Dumai Refinery Project in Indonesia", category: "Feasibility Study", region: "Asia" },
-  { title: "BESS Construction Project in Ireland", category: "Feasibility Study", region: "Europe" },
-  { title: "Hai Lang FS Report Review in Vietnam", category: "Feasibility Study", region: "Asia" },
-  { title: "Financial Advisory Service in Korea", category: "Financial Advisory", region: "Asia" },
-  { title: "BESS Implementation Project in Ireland", category: "Feasibility Study", region: "Europe" },
-  { title: "Renewable Energy Complex Development Project in Australia", category: "Feasibility Study", region: "Oceania" },
-  { title: "Customs Container Inspection Facility Project in Sri Lanka", category: "Feasibility Study", region: "Asia" },
-  { title: "School PPP PKG III in Qatar", category: "Pre-feasibility Study", region: "Middle East·Africa" },
-  { title: "Sulawesi 30MW Small Hydropower Project in Indonesia", category: "Financial Advisory Services", region: "Asia" },
-  { title: "Alfonso el Sabio Solar PV in Spain", category: "Feasibility Study", region: "Europe" },
-  { title: "Battambang II Hydro Power Project in Cambodia", category: "Feasibility Study", region: "Asia" },
-  { title: "Duqm Green Ammonia Project in Oman", category: "Feasibility Study", region: "Middle East·Africa" },
-  { title: "Western Australia Green Ammonia Project in Australia", category: "Feasibility Study", region: "Oceania" },
-  { title: "Phou Ngoy Mekong Hydro Power Plant in Laos", category: "Feasibility Study", region: "Asia" },
-  { title: "School PPP PKG III in Qatar (Synergy Korea)", category: "Pre-feasibility Study", region: "Middle East·Africa" },
-  { title: "Texas Supercritical CO2 Power Plant in USA (Synergy Korea)", category: "Transaction Advisory Services", region: "Northern America" },
-  { title: "Gas To Power Project in Dominican Republic", category: "Feasibility Study", region: "Latin America" },
-  { title: "Gas To Power Project in Dominican Republic (Synergy Korea)", category: "Financial and Bid Advisory Service", region: "Latin America" },
-  { title: "Tashkent Landfill Gas to Energy and CDM Project in Uzbekistan", category: "Financial Advisory Services", region: "Asia" },
-  { title: "Anuradhapura Solar PV in Sri Lanka", category: "Feasibility Study", region: "Asia" },
-  { title: "Mubarek CHP Modernization in Uzbekistan (Synergy Korea)", category: "Financial and Transaction Advisory Services", region: "Asia" },
-  { title: "BESS Project in Ireland (Synergy Korea)", category: "Financial Advisory Services", region: "Europe" },
-  { title: "BESS Project in Ireland (Synergy Korea) - Commercial Operations Modeling", category: "Commercial Operations Modeling", region: "Europe" },
-  { title: "Nickel and Cobalt Smelter for PT BES in Indonesia (Synergy Korea)", category: "Bankable Feasibility Study, Financial Advisory Services", region: "Asia" },
-  { title: "CCGT in Limbe in Cameroon", category: "Feasibility Study", region: "Middle East·Africa" },
-  { title: "Long An Gas to Power in Vietnam", category: "Feasibility Study", region: "Asia" },
-  { title: "BOT-based Gas Supply Project in Indonesia", category: "Feasibility Study and Financial Advisory Services", region: "Asia" },
-  { title: "Hai Lang LNG to Power in Vietnam", category: "Feasibility Study", region: "Asia" },
-  { title: "District Cooling Project for South Saad Al Abdullah Smart City", category: "Feasibility Study", region: "Middle East·Africa" },
-  { title: "Development of Jurassic Production Facility 4&5 at North Kuwait", category: "Financial Advisory Services", region: "Middle East·Africa" },
-  { title: "Hydro Power Development in Upper Karnali River in Nepal", category: "Feasibility Study", region: "Asia" },
-  { title: "Development of Wanasari Port in Indonesia", category: "Establishment of Basic Plan and Feasibility Study", region: "Asia" },
-  { title: "Rajasthan Bio-Medical Cluster PPP in India", category: "Advisory Services, Research and Analysis for Business Development", region: "Asia" },
-  { title: "Bali Ngurah Rai Int'l Airport City-Air Terminal and LRT Development", category: "Financial Analysis", region: "Asia" },
-  { title: "IWP in UAE", category: "Bid strategy and simulation for UAE IWP", region: "Middle East·Africa" },
-  { title: "Annual Financial Advisory", category: "Financial Advisory", region: "Etc." },
-  { title: "Philippines Batangas Gas-to-Power", category: "Feasibility Study", region: "Asia" },
-  { title: "Philippines Ministry of Defense Solar Power", category: "Philippine Power Market Review, Financial Advisory Services", region: "Asia" },
-  { title: "Karbala Solar PV Farm", category: "Financial Feasibility and Bankability Studies", region: "Middle East·Africa" },
-  { title: "Bidding Strategy for Hospital PPP Project", category: "Bidding Strategy including Bankable Project Structuring", region: "Etc." },
-  { title: "Modernization of District Heating Systems in Uzbekistan", category: "Feasibility Study, Financial Advisory", region: "Asia" },
-  { title: "Mymensingh Solar Park", category: "M&A Valuation and Due Diligence Support", region: "Asia" },
-  { title: "Dhaka West IPP Diesel Power Plant", category: "Financial Advisory Services", region: "Asia" },
-  { title: "Kyrgyzstan State Medical Academy Hospital Project in Bishkek", category: "Feasibility Study Covering Hospital Planning, Revenue Model, HIS and Financing Structure", region: "Asia" },
-  { title: "Tarija National Cardiac Center", category: "Social / Economic Cost Benefit Analysis", region: "Latin America" },
-  { title: "Strategy for Construction-based Healthcare package in Overseas", category: "Strategy for Overseas Healthcare Business and Development of Opportunities & Target countries", region: "Etc." },
-  { title: "KSP for Public Infrastructure in Thailand", category: "Prioritization Guideline for Public Infrastructure Projects", region: "Asia" },
-  { title: "Dharmais National Cancer Center", category: "Feasibility Study including Hospital Planning and Payment structure", region: "Asia" },
-  { title: "Iran Saveh and Zahedan CCGT", category: "Bankability Study & Non Traditional Financing Advisory", region: "Middle East·Africa" },
-  { title: "PCPC Aramco Cogeneration Projects", category: "Arbitration Advisory Services", region: "Middle East·Africa" },
-];
+import { projects } from "@/data/projects";
 
 const REGIONS = ["All", "Asia", "Middle East·Africa", "Europe", "Oceania", "Latin America", "Northern America", "Etc."];
 const PER_PAGE = 15;
@@ -75,12 +11,19 @@ const PER_PAGE = 15;
 export default function ProjectsPage() {
   const [activeRegion, setActiveRegion] = useState("All");
   const [page, setPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
-  const filtered = activeRegion === "All" ? ALL_PROJECTS : ALL_PROJECTS.filter(p => p.region === activeRegion);
+  const filtered = projects.filter(p => {
+    const matchRegion = activeRegion === "All" || p.region === activeRegion;
+    const matchSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchRegion && matchSearch;
+  });
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const handleRegion = (r: string) => { setActiveRegion(r); setPage(1); };
+  const handleSearch = (e: React.FormEvent) => { e.preventDefault(); setPage(1); };
 
   return (
     <>
@@ -109,6 +52,43 @@ export default function ProjectsPage() {
             ))}
           </div>
 
+          {/* Search Bar */}
+          <form onSubmit={handleSearch} style={{ display: "flex", gap: 0, marginBottom: 24 }}>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={e => { setSearchQuery(e.target.value); setPage(1); }}
+              placeholder="Search projects..."
+              style={{
+                flex: 1,
+                padding: "10px 16px",
+                fontSize: 13,
+                fontFamily: "'Lato', sans-serif",
+                border: "1px solid #ddd",
+                borderRight: "none",
+                outline: "none",
+                color: "#333",
+                background: "#fff",
+              }}
+            />
+            <button
+              type="submit"
+              style={{
+                padding: "10px 20px",
+                fontSize: 13,
+                fontFamily: "'Lato', sans-serif",
+                fontWeight: 600,
+                background: "#416ab3",
+                color: "#fff",
+                border: "1px solid #416ab3",
+                cursor: "pointer",
+                letterSpacing: 0.5,
+              }}
+            >
+              Search
+            </button>
+          </form>
+
           {/* Region Filter */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }}>
             {REGIONS.map(r => (
@@ -125,8 +105,10 @@ export default function ProjectsPage() {
           {/* Table */}
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <tbody>
-              {paginated.map((p, i) => (
-                <tr key={i} style={{ borderTop: "1px solid #e5e7eb", cursor: "pointer" }}
+              {paginated.map((p) => (
+                <tr key={p.id}
+                  onClick={() => router.push(`/projects/${p.id}`)}
+                  style={{ borderTop: "1px solid #e5e7eb", cursor: "pointer" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#f8f9fc")}
                   onMouseLeave={e => (e.currentTarget.style.background = "")}>
                   <td style={{ padding: "18px 16px" }}>
