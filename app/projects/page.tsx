@@ -85,7 +85,7 @@ function ProjectsContent() {
                 padding: "10px 20px",
                 fontSize: 13,
                 fontFamily: "'Lato', sans-serif",
-                fontWeight: 600,
+                fontWeight: 400,
                 background: "#416ab3",
                 color: "#fff",
                 border: "1px solid #416ab3",
@@ -101,7 +101,7 @@ function ProjectsContent() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }}>
             {REGIONS.map(r => (
               <button key={r} onClick={() => updateParams({ region: r, page: "1" })}
-                style={{ padding: "7px 18px", fontSize: 12, fontFamily: "'Lato', sans-serif", fontWeight: 500, border: "1px solid", borderColor: activeRegion === r ? "#416ab3" : "#ddd", background: activeRegion === r ? "#416ab3" : "#fff", color: activeRegion === r ? "#fff" : "#555", cursor: "pointer", borderRadius: 2, transition: "all 0.2s" }}>
+                style={{ padding: "7px 18px", fontSize: 12, fontFamily: "'Lato', sans-serif", fontWeight: 400, border: "1px solid", borderColor: activeRegion === r ? "#416ab3" : "#ddd", background: activeRegion === r ? "#416ab3" : "#fff", color: activeRegion === r ? "#fff" : "#555", cursor: "pointer", borderRadius: 2, transition: "all 0.2s" }}>
                 {r}
               </button>
             ))}
@@ -120,7 +120,7 @@ function ProjectsContent() {
                   onMouseEnter={e => (e.currentTarget.style.background = "#f8f9fc")}
                   onMouseLeave={e => (e.currentTarget.style.background = "")}>
                   <td style={{ padding: "18px 16px" }}>
-                    <div style={{ fontSize: 15, fontWeight: 600, fontFamily: "'Lato', sans-serif", color: "#1a1a1a", marginBottom: 4 }}>{p.title}</div>
+                    <div style={{ fontSize: 14, fontWeight: 400, fontFamily: "'Lato', sans-serif", color: "#1a1a1a", marginBottom: 4 }}>{p.title}</div>
                     <div style={{ fontSize: 12, color: "#999", fontFamily: "'Lato', sans-serif" }}>{p.category}</div>
                   </td>
                   <td style={{ padding: "18px 16px", textAlign: "right", color: "#416ab3", fontSize: 18 }}>›</td>
@@ -131,13 +131,13 @@ function ProjectsContent() {
 
           {/* Pagination */}
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 6, marginTop: 40 }}>
-            <button onClick={() => updateParams({ page: "1" })} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>«</button>
-            <button onClick={() => updateParams({ page: String(page - 1) })} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>‹</button>
+            <button onClick={() => updateParams({ page: "1" })} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, fontFamily: "'Lato', sans-serif", fontWeight: 400, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>«</button>
+            <button onClick={() => updateParams({ page: String(page - 1) })} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, fontFamily: "'Lato', sans-serif", fontWeight: 400, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>‹</button>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
-              <button key={n} onClick={() => updateParams({ page: String(n) })} style={{ padding: "6px 12px", fontSize: 13, border: "1px solid", borderColor: page === n ? "#416ab3" : "#ddd", background: page === n ? "#416ab3" : "#fff", color: page === n ? "#fff" : "#555", cursor: "pointer" }}>{n}</button>
+              <button key={n} onClick={() => updateParams({ page: String(n) })} style={{ padding: "6px 12px", fontSize: 13, fontFamily: "'Lato', sans-serif", fontWeight: 400, border: "1px solid", borderColor: page === n ? "#416ab3" : "#ddd", background: page === n ? "#416ab3" : "#fff", color: page === n ? "#fff" : "#555", cursor: "pointer" }}>{n}</button>
             ))}
-            <button onClick={() => updateParams({ page: String(page + 1) })} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>›</button>
-            <button onClick={() => updateParams({ page: String(totalPages) })} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>»</button>
+            <button onClick={() => updateParams({ page: String(page + 1) })} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, fontFamily: "'Lato', sans-serif", fontWeight: 400, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>›</button>
+            <button onClick={() => updateParams({ page: String(totalPages) })} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, fontFamily: "'Lato', sans-serif", fontWeight: 400, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>»</button>
           </div>
         </div>
       </main>
