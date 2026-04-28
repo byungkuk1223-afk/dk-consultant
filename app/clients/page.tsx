@@ -152,7 +152,7 @@ export default function ClientsPage() {
           </h2>
 
           {/* Logo Rows */}
-          <div style={{ width: "100%" }}>
+          <div style={{ overflowX: "auto" }}>
             {ROWS.map((row, rowIdx) => {
               const count = row.images.length;
               const cellW = 162;
@@ -163,13 +163,12 @@ export default function ClientsPage() {
                 <div
                   key={rowIdx}
                   style={{
-                    width: count === 7 ? "100%" : rowWidth,
+                    width: rowWidth,
                     margin: "0 auto",
                     display: "flex",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                     gap: gap,
                     marginBottom: gap,
-                    justifyContent: count === 7 ? "center" : "flex-start",
                   }}
                 >
                   {row.images.map((src, imgIdx) => (
