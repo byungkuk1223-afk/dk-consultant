@@ -33,11 +33,9 @@ export default function HeroSection() {
         {slides.map((slide, i) => (
           <div
             key={i}
-            onClick={() => (window.location.href = slide.href)}
             style={{
               position: "absolute",
               inset: 0,
-              cursor: "pointer",
               opacity: activeSlide === i ? 1 : 0,
               transition: "opacity 1.2s ease",
               background: `linear-gradient(to right, rgba(20,30,60,0.45) 0%, rgba(20,30,60,0.15) 60%, rgba(20,30,60,0.05) 100%), url('${slide.bg}') center/cover no-repeat`,
@@ -99,7 +97,7 @@ export default function HeroSection() {
         >
           {[
             {
-              href: "/services/financial",
+              href: "/services",
               icon: (
                 <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
                   <rect x="3" y="7" width="32" height="24" rx="2" stroke="#416ab3" strokeWidth="1.5" fill="none" />
@@ -112,7 +110,7 @@ export default function HeroSection() {
               desc: "Global influence, local expertise and making values real; we transform opportunities into tangible reality.",
             },
             {
-              href: "/services/healthcare",
+              href: "/services",
               icon: (
                 <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
                   <rect x="5" y="12" width="28" height="20" rx="2" stroke="#416ab3" strokeWidth="1.5" fill="none" />

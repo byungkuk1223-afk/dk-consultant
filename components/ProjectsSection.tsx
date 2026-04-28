@@ -4,21 +4,21 @@ const projects = [
     title: "Modernization of District Heating Systems in …",
     category: "Feasibility Study, Financial Advisory",
     img: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80",
-    href: "#",
+    href: "/projects/51",
   },
   {
     id: 50,
     title: "Battambang II Hydro Power Project in Cambodia",
     category: "Feasibility Study",
     img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-    href: "#",
+    href: "/projects/50",
   },
   {
     id: 48,
     title: "Western Australia Green Ammonia Project in Au…",
     category: "Feasibility Study",
     img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    href: "#",
+    href: "/projects/48",
   },
 ];
 
