@@ -139,7 +139,7 @@ export default function Header({ scrolled }: HeaderProps) {
         .nav-dropdown {
           display: none;
           position: absolute;
-          top: calc(100% + 14px);
+          top: 100%;
           left: 50%;
           transform: translateX(-50%);
           background: #fff;
@@ -147,6 +147,7 @@ export default function Header({ scrolled }: HeaderProps) {
           box-shadow: 0 6px 24px rgba(0,0,0,0.12);
           list-style: none;
           padding: 8px 0;
+          padding-top: 22px;
           z-index: 200;
         }
         .nav-dropdown li a {
