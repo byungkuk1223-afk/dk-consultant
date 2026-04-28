@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+/* 버튼·입력 요소 폰트 상속 (브라우저 기본값 무시) */
+button, input, select, textarea, a {
+  font-family: inherit;
+}
+
 /* ── About-section shared styles ─────────────────────────────── */
 
 /* Sub tab */
