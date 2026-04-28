@@ -6,6 +6,94 @@
   box-sizing: border-box;
 }
 
+/* ── About-section shared styles ─────────────────────────────── */
+
+/* Sub tab */
+#dk-sub-tab li {
+  cursor: pointer; float: left; width: 25%; height: 90px;
+  line-height: 90px; padding: 0 30px; font-size: 18px;
+  font-family: 'Raleway', sans-serif; box-sizing: border-box;
+  background: url('/img/sub_tab_arrow_on.png') right 30px top 40px no-repeat;
+  color: #333;
+}
+#dk-sub-tab li:hover {
+  background: #416ab3 url('/img/sub_tab_arrow.png') right 30px top 40px no-repeat;
+  color: #fff;
+}
+#dk-sub-tab li.on {
+  background: #416ab3 url('/img/sub_tab_arrow.png') right 30px top 40px no-repeat;
+  color: #fff;
+}
+
+/* Content area */
+.dk-sub { width: 100%; overflow: hidden; font-family: 'Lato', sans-serif; font-size: 17px; font-weight: 500; line-height: 30px; color: #777; }
+.dk-center { width: 1200px; margin: 80px auto; padding-top: 50px; }
+.dk-sub-t { color: #000; font-size: 40px; line-height: 55px; font-family: 'Libre Baskerville', Georgia, serif; margin-bottom: 45px; padding-bottom: 20px; font-weight: normal; background: url('/img/title_bg_n.jpg') left bottom no-repeat; }
+.dk-sub-t-c { text-align: center; color: #000; font-size: 40px; font-family: 'Libre Baskerville', Georgia, serif; height: 70px; margin-bottom: 50px; font-weight: normal; background: url('/img/title_bg_n.jpg') center bottom no-repeat; }
+.dk-bg-a { width: 100%; background-color: #fafafa; overflow: hidden; }
+
+/* Sector gallery (About page) */
+.dk-gall { width: 100%; overflow: hidden; margin-bottom: 50px; padding: 0; list-style: none; }
+.dk-gall li { float: left; width: 18.4%; height: 220px; margin-right: 2%; margin-bottom: 2%; border: 1px solid #ddd; border-radius: 10px; background-color: #fff; box-shadow: 0 5px 5px rgba(0,0,0,.1); }
+.dk-gall li:nth-child(5n) { margin-right: 0; }
+.dk-gall .gi { width: 100%; height: 120px; background-color: #fafafa; border-top-left-radius: 10px; border-top-right-radius: 10px; background-size: cover; background-position: center; }
+.dk-gall .gt { width: 100%; height: 100px; text-align: center; display: table; }
+.dk-gall .gt p { display: table-cell; vertical-align: middle; text-align: center; color: #111; padding: 0 20px; line-height: 25px; font-size: 17px; font-weight: 500; }
+
+/* Overview section (About page) */
+.dk-sec { width: 100%; overflow: hidden; }
+.dk-sec .t { float: left; width: 250px; margin-right: 50px; color: #416ab3; font-size: 30px; line-height: 40px; font-weight: 900; font-family: 'Libre Baskerville', Georgia, serif; }
+.dk-sec .c { float: left; width: calc(100% - 300px); }
+.dk-sec .list { list-style: none; padding: 0; margin: 0; }
+.dk-sec .list li { width: 100%; overflow: hidden; background: url('/img/title_bg_n.jpg') left top 11px no-repeat; background-size: 5px 5px; padding-bottom: 15px; line-height: 27px; padding-left: 18px; }
+.dk-bb { width: 100%; overflow: hidden; border-bottom: 1px dotted #ddd; padding-bottom: 50px; margin-bottom: 50px; }
+
+/* History (About page) */
+.dk-hist-wrap { width: 100%; overflow: hidden; background: url('/img/bg_line_history_new3.png') center repeat; }
+.dk-hist-entry { width: 100%; overflow: hidden; }
+.dk-hist-entry .blank { width: calc(50% - 9px); }
+.dk-hist-entry .con { width: calc(50% + 9px); padding-bottom: 50px; }
+.dk-hist-entry.left .blank { float: left; }
+.dk-hist-entry.left .con { float: left; background: url('/img/dot_history_new2.png') left top no-repeat; padding-left: 50px; box-sizing: border-box; }
+.dk-hist-entry.left .con h4 { float: left; color: #416ab3; width: 100px; font-family: 'Libre Baskerville', Georgia, serif; font-size: 25px; }
+.dk-hist-entry.left .con ul { float: left; width: calc(100% - 100px); list-style: none; padding: 0; margin: 0; }
+.dk-hist-entry.left .con li { width: 100%; overflow: hidden; background: url('/img/title_bg_n.jpg') left top 11px no-repeat; background-size: 5px 5px; padding-bottom: 15px; line-height: 27px; padding-left: 18px; color: #333; }
+.dk-hist-entry.right .blank { float: right; }
+.dk-hist-entry.right .con { float: right; background: url('/img/dot_history_new2.png') right top no-repeat; padding-right: 50px; box-sizing: border-box; }
+.dk-hist-entry.right .con h4 { float: right; color: #416ab3; width: 100px; font-family: 'Libre Baskerville', Georgia, serif; font-size: 25px; text-align: right; }
+.dk-hist-entry.right .con ul { float: right; width: calc(100% - 100px); list-style: none; padding: 0; margin: 0; }
+.dk-hist-entry.right .con li { width: 100%; overflow: hidden; background: url('/img/title_bg_n.jpg') right top 11px no-repeat; background-size: 5px 5px; padding-bottom: 15px; line-height: 27px; padding-right: 18px; color: #333; text-align: right; }
+
+/* PPP icons */
+.dk-icons { width: 100%; overflow: hidden; padding-top: 50px; list-style: none; }
+.dk-icons li { float: left; width: 11.1111%; padding: 0 15px; }
+.dk-icons .icon { width: 100%; text-align: center; }
+.dk-icons .text { width: 100%; text-align: center; color: #416ab3; font-weight: 700; line-height: 24px; padding-top: 15px; }
+
+/* PPP step process */
+.dk-steps { width: 100%; overflow: hidden; padding-top: 80px; list-style: none; }
+.dk-steps li { float: left; width: 16.666%; text-align: center; background: url('/img/bg_line_01_02_new2.png') center top 82px no-repeat; }
+.dk-steps .no { color: #416ab3; padding-bottom: 15px; font-family: 'Libre Baskerville', Georgia, serif; }
+.dk-steps .no b { font-size: 35px; display: block; }
+.dk-steps .text { padding: 0 20px; line-height: 24px; text-align: center; color: #000; background: url('/img/dot_history_new2.png') center top no-repeat; padding-top: 35px; }
+
+/* PPP list */
+.dk-list { width: 100%; overflow: hidden; padding-top: 80px; list-style: none; }
+.dk-list li { width: 100%; overflow: hidden; padding: 25px 30px 25px 45px; border-radius: 5px; border: 1px solid #e5e5e5; background: url('/img/title_bg_n.jpg') left 30px top 38px no-repeat; background-size: 5px 5px; margin-bottom: 10px; background-color: #fff; box-shadow: 0 5px 5px rgba(0,0,0,.1); }
+
+/* Healthcare two-column section */
+.dk-hc-sec { width: 100%; overflow: hidden; margin-bottom: 110px; }
+.dk-hc-sec .img { float: left; width: 48%; height: 300px; background-color: #fafafa; background-size: cover; background-position: center; }
+.dk-hc-sec .text-left { float: left; width: 48%; margin-left: 4%; }
+.dk-hc-sec .text-right { float: left; width: 48%; margin-right: 4%; }
+
+/* People cards */
+.dk-people { width: 100%; background-color: #fafafa; overflow: hidden; padding: 40px 0 0 0; }
+.dk-people ul { padding: 20px 0; overflow: hidden; list-style: none; }
+.dk-people li { float: left; width: 260px; height: 300px; margin: 0 20px 40px 20px; border: 1px solid #e5e5e5; background-color: #fff; text-align: center; box-shadow: 8px 8px 8px rgba(0,0,0,.1); }
+.dk-people .name { text-align: center; color: #aaa; font-size: 14px; line-height: 18px; padding-top: 30px; }
+.dk-people .name p { color: #000; font-family: 'Libre Baskerville', Georgia, serif; font-size: 20px; padding-top: 10px; }
+
 /* 링크 기본 색상 리셋 */
 a {
   color: inherit;

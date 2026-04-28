@@ -1,139 +1,89 @@
 "use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AboutHero from "@/components/AboutHero";
 
-const SIDEBAR_LINKS = [
-  { label: "About DK Consultants", href: "/about", active: false },
-  { label: "PPP Unit", href: "/ppp", active: true },
-  { label: "Healthcare Unit", href: "/healthcare", active: false },
-  { label: "Our People", href: "/people", active: false },
+const ICONS = [
+  { img: "/img/icon_01_02_new2_a.png", label: "Government Advisory" },
+  { img: "/img/icon_01_02_new2_b.png", label: "Project Finance & Bid Advisory" },
+  { img: "/img/icon_01_02_new2_c.png", label: "Financial Due Diligence" },
+  { img: "/img/icon_01_02_new2_d.png", label: "Mergers & Acquisitions" },
+  { img: "/img/icon_01_02_new2_e.png", label: "Financial Restructuring" },
+  { img: "/img/icon_01_02_new2_f.png", label: "Financial Model Review" },
+  { img: "/img/icon_01_02_new2_g.png", label: "ECA Advisory & Fund Raising" },
+  { img: "/img/icon_01_02_new2_h.png", label: "DIF Advisory & Fund Raising" },
+  { img: "/img/icon_01_02_new2_i.png", label: "Training" },
 ];
 
-const SERVICES = [
-  "Government Advisory",
-  "Project Finance & Bid Advisory",
-  "Financial Due Diligence",
-  "Mergers & Acquisitions",
-  "Financial Restructuring",
-  "Financial Model Review",
-  "ECA Advisory & Fund Raising",
-  "DIF Advisory & Fund Raising",
-  "Training",
+const STEPS = [
+  { n: "01", text: "Project Milestones​" },
+  { n: "02", text: "Project Initial Evaluation" },
+  { n: "03", text: "Commercial Proposal and Negotiation​" },
+  { n: "04", text: "Financial Close" },
+  { n: "05", text: "Start of Operations" },
+  { n: "06", text: "End of Project Term" },
 ];
 
-const STAGES = [
-  { step: "01", title: "Initial Evaluation", desc: "Assessment of project viability and preliminary feasibility analysis" },
-  { step: "02", title: "Commercial Proposal & Negotiation", desc: "Structuring commercial terms and negotiating key agreements with stakeholders" },
-  { step: "03", title: "Feasibility Study & Financial Modeling", desc: "In-depth feasibility studies and financial model development" },
-  { step: "04", title: "Financial Structuring", desc: "Optimal capital structure design and debt/equity arrangement" },
-  { step: "05", title: "Debt Syndication & Financial Close", desc: "Coordinating lenders and achieving financial close" },
-  { step: "06", title: "Operations & Project Conclusion", desc: "Ongoing advisory support through operations commencement and project conclusion" },
+const LIST_ITEMS = [
+  "​DK Consultants' work scope runs the gamut from Project Development to Financial Advisory​",
+  "DK Consultants advises clients at every stage of project development including feasibility study, financial structuring, financial modelling, debt raising/syndication, bid management, contract negotiations, and financing document negotiation​",
+  "DK Consultants provides conventional and/or innovative solutions to clients across sectors and geographies seeking to restructure their borrowings​",
+  "​DK Consultants' key services for project feasibility study include investment advisory, due diligence and risk analysis​",
 ];
 
 export default function PppPage() {
   return (
     <>
       <Header scrolled={true} />
-      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff" }}>
+      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff", minWidth: 1200 }}>
+        <AboutHero active="ppp" />
 
-        {/* Page Header */}
-        <div style={{ background: "#1a2c4e", padding: "48px 40px 36px", textAlign: "center" }}>
-          <p style={{ fontSize: 11, letterSpacing: 3.5, color: "#8ca3c8", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 12 }}>DK CONSULTANTS</p>
-          <h1 style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 700, fontFamily: "'Playfair Display', Georgia, serif", color: "#fff", marginBottom: 12 }}>PPP Unit</h1>
-          <p style={{ fontSize: 14, color: "#8ca3c8", fontFamily: "'Lato', sans-serif" }}>Professional knowledge meets social needs</p>
-        </div>
+        <div className="dk-sub">
 
-        {/* Content Area with Sidebar */}
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 40px 80px", display: "flex", gap: 48, alignItems: "flex-start" }}>
+          {/* PPP Unit intro + icons */}
+          <div className="dk-center">
+            <div className="dk-sub-t">PPP Unit​</div>
 
-          {/* Left Sidebar */}
-          <aside style={{ width: 210, flexShrink: 0 }}>
-            <div style={{ background: "#1a2c4e", padding: "14px 20px" }}>
-              <p style={{ fontSize: 13, fontWeight: 700, fontFamily: "'Lato', sans-serif", color: "#fff", margin: 0, letterSpacing: 0.5 }}>About Us</p>
-            </div>
-            <nav style={{ border: "1px solid #e5e7eb", borderTop: "none" }}>
-              {SIDEBAR_LINKS.map(link => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  style={{
-                    display: "block",
-                    fontSize: 13,
-                    fontFamily: "'Lato', sans-serif",
-                    color: link.active ? "#416ab3" : "#555",
-                    fontWeight: link.active ? 700 : 400,
-                    textDecoration: "none",
-                    padding: "11px 16px",
-                    borderBottom: "1px solid #e5e7eb",
-                    background: link.active ? "#f0f4fb" : "#fff",
-                    borderLeft: link.active ? "3px solid #416ab3" : "3px solid transparent",
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-          </aside>
+            Consultants at DK Consultants​ are project finance and infrastructure advisory professionals with an average over 20 years of experience in the field of structuring and financing projects covering all regions.{" "}
+            &ldquo;DK Consultants&rdquo; has managed and led projects related to various aspects of financial advisory services including bid advisory, financial due diligence, asset valuation and debt restructuring.​
 
-          {/* Main Content */}
-          <div style={{ flex: 1, minWidth: 0 }}>
-
-            {/* Intro */}
-            <div style={{ marginBottom: 48 }}>
-              <h2 style={{ fontSize: 22, fontWeight: 700, fontFamily: "'Playfair Display', Georgia, serif", color: "#1a2c4e", marginBottom: 24 }}>PPP Unit</h2>
-              <p style={{ fontSize: 15, lineHeight: 1.9, color: "#444", fontFamily: "'Lato', sans-serif", marginBottom: 20 }}>
-                Consultants at DK Consultants are project finance and infrastructure advisory professionals with an average over 20 years of experience in the field of structuring and financing projects covering all regions. Our PPP Unit delivers comprehensive advisory services across the full project development lifecycle — from initial evaluation through to financial close and operations commencement.
-              </p>
-            </div>
-
-            {/* Core Competencies Diagram */}
-            <div style={{ marginBottom: 52, textAlign: "center" }}>
-              <h3 style={{ fontSize: 16, fontWeight: 700, fontFamily: "'Lato', sans-serif", color: "#1a2c4e", marginBottom: 28, letterSpacing: 0.5, textTransform: "uppercase" }}>Core Competencies &amp; Capability Statement</h3>
-              <img
-                src="/img/ppp_risk_diagram.png"
-                alt="PPP Unit - Risk Identification and Management"
-                style={{ maxWidth: "100%", height: "auto" }}
-              />
-            </div>
-
-            {/* Service Areas */}
-            <div style={{ marginBottom: 72 }}>
-              <h3 style={{ fontSize: 16, fontWeight: 700, fontFamily: "'Lato', sans-serif", color: "#1a2c4e", marginBottom: 28, letterSpacing: 0.5, textTransform: "uppercase" }}>Core Service Areas</h3>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
-                {SERVICES.map((s, i) => (
-                  <div key={i} style={{ background: "#f2f3f5", padding: "20px 24px", display: "flex", alignItems: "center", gap: 14 }}>
-                    <span style={{ width: 32, height: 32, borderRadius: "50%", background: "#416ab3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                      <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#fff", display: "block" }} />
-                    </span>
-                    <span style={{ fontSize: 14, fontFamily: "'Lato', sans-serif", color: "#333", fontWeight: 500, lineHeight: 1.4 }}>{s}</span>
+            <ul className="dk-icons">
+              {ICONS.map(icon => (
+                <li key={icon.label}>
+                  <div className="icon">
+                    <img src={icon.img} alt={icon.label} />
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Project Development Stages */}
-            <div>
-              <h3 style={{ fontSize: 16, fontWeight: 700, fontFamily: "'Lato', sans-serif", color: "#1a2c4e", marginBottom: 32, letterSpacing: 0.5, textTransform: "uppercase" }}>Project Development Framework</h3>
-              <div style={{ position: "relative" }}>
-                <div style={{ position: "absolute", left: 20, top: 0, bottom: 0, width: 2, background: "#e5e7eb" }} />
-                <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-                  {STAGES.map((stage, i) => (
-                    <div key={i} style={{ display: "flex", gap: 32, paddingLeft: 56, paddingBottom: 36, position: "relative" }}>
-                      <div style={{ position: "absolute", left: 0, top: 4, width: 40, height: 40, borderRadius: "50%", background: "#416ab3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                        <span style={{ color: "#fff", fontSize: 12, fontWeight: 700, fontFamily: "'Lato', sans-serif" }}>{stage.step}</span>
-                      </div>
-                      <div>
-                        <h4 style={{ fontSize: 15, fontWeight: 700, fontFamily: "'Lato', sans-serif", color: "#1a2c4e", marginBottom: 6 }}>{stage.title}</h4>
-                        <p style={{ fontSize: 14, fontFamily: "'Lato', sans-serif", color: "#666", lineHeight: 1.7, margin: 0 }}>{stage.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
+                  <div className="text">{icon.label}</div>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          {/* Core Competencies section */}
+          <div className="dk-bg-a">
+            <div className="dk-center">
+              <div className="dk-sub-t">Core Competencies &amp; Capability Statement​</div>
+              <div style={{ textAlign: "center" }}>
+                <img src="/img/img_01_02_new2_a_n1.png" alt="Core Competencies" style={{ maxWidth: "100%", height: "auto" }} />
+              </div>
+
+              <ul className="dk-steps">
+                {STEPS.map(s => (
+                  <li key={s.n}>
+                    <p className="no">STEP<b>{s.n}</b></p>
+                    <p className="text">{s.text}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="dk-list">
+                {LIST_ITEMS.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
         </div>
       </main>
       <Footer />
