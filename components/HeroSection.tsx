@@ -60,7 +60,7 @@ export default function HeroSection() {
             style={{
               fontSize: "clamp(34px, 4vw, 56px)",
               fontWeight: 700,
-              fontFamily: "'Playfair Display', Georgia, serif",
+              fontFamily: "'Libre Baskerville', Georgia, serif",
               lineHeight: 1.2,
               marginBottom: 18,
               color: "#fff",

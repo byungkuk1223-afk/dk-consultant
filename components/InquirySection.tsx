@@ -16,7 +16,7 @@ export default function InquirySection() {
         style={{
           fontSize: "clamp(26px, 3vw, 42px)",
           fontWeight: 700,
-          fontFamily: "'Playfair Display', Georgia, serif",
+          fontFamily: "'Libre Baskerville', Georgia, serif",
           marginBottom: 26,
           letterSpacing: 0.3,
           color: "#fff",

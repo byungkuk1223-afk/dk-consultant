@@ -13,7 +13,7 @@ export default function PrivacyPage() {
   }, []);
 
   const sectionTitle: React.CSSProperties = {
-    fontFamily: "'Open Sans', sans-serif",
+    fontFamily: "'Lato', sans-serif",
     fontSize: 13,
     fontWeight: 700,
     color: "#222",
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
   };
 
   const body: React.CSSProperties = {
-    fontFamily: "'Open Sans', sans-serif",
+    fontFamily: "'Lato', sans-serif",
     fontSize: 12,
     color: "#555",
     lineHeight: 1.85,
@@ -42,10 +42,10 @@ export default function PrivacyPage() {
             filter: "brightness(0.38)",
           }} />
           <div style={{ position: "relative", zIndex: 1, paddingLeft: "38%", color: "#fff" }}>
-            <h1 style={{ fontFamily: "Georgia, serif", fontSize: 44, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 0.5 }}>
+            <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 44, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 0.5 }}>
               Privacy
             </h1>
-            <p style={{ fontSize: 13, fontWeight: 300, margin: 0, fontFamily: "'Open Sans', sans-serif" }}>
+            <p style={{ fontSize: 13, fontWeight: 300, margin: 0, fontFamily: "'Lato', sans-serif" }}>
               Details of our guided approach
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
         {/* Content */}
         <section style={{ padding: "70px 10%", maxWidth: 1400, margin: "0 auto", boxSizing: "border-box" }}>
           <div style={{ maxWidth: 700 }}>
-            <h2 style={{ fontFamily: "Georgia, serif", fontSize: 28, fontWeight: 400, color: "#111", margin: "0 0 14px 0" }}>
+            <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 28, fontWeight: 400, color: "#111", margin: "0 0 14px 0" }}>
               Privacy Statement
             </h2>
             <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", marginBottom: 36 }} />

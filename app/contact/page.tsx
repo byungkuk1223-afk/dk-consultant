@@ -44,18 +44,18 @@ export default function ContactPage() {
 
   const labelStyle: React.CSSProperties = {
     width: 90, minWidth: 90, fontSize: 13, color: "#444",
-    fontFamily: "'Open Sans', sans-serif", paddingTop: 6,
+    fontFamily: "'Lato', sans-serif", paddingTop: 6,
   };
   const inputStyle: React.CSSProperties = {
     border: "1px solid #ccc", padding: "6px 10px", fontSize: 13,
-    fontFamily: "'Open Sans', sans-serif", outline: "none", flex: 1,
+    fontFamily: "'Lato', sans-serif", outline: "none", flex: 1,
   };
   const requiredStar: React.CSSProperties = { color: "#c00", marginRight: 2 };
 
   return (
     <>
       <Header scrolled={scrolled} />
-      <main style={{ fontFamily: "'Open Sans', sans-serif" }}>
+      <main style={{ fontFamily: "'Lato', sans-serif" }}>
 
         {/* Hero */}
         <section style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", display: "flex", alignItems: "center" }}>
@@ -66,7 +66,7 @@ export default function ContactPage() {
             filter: "brightness(0.45)",
           }} />
           <div style={{ position: "relative", zIndex: 1, paddingLeft: "35%", color: "#fff" }}>
-            <h1 style={{ fontFamily: "Georgia, serif", fontSize: 42, fontWeight: 400, margin: "0 0 12px 0", letterSpacing: 0.5 }}>
+            <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 42, fontWeight: 400, margin: "0 0 12px 0", letterSpacing: 0.5 }}>
               Contact Us
             </h1>
             <p style={{ fontSize: 13, fontWeight: 300, margin: 0, letterSpacing: 0.2 }}>
@@ -82,7 +82,7 @@ export default function ContactPage() {
               flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
               backgroundColor: activeTab === "contact" ? "#3a5585" : "#f0f0f0",
               color: activeTab === "contact" ? "#fff" : "#555",
-              fontSize: 13, fontFamily: "'Open Sans', sans-serif",
+              fontSize: 13, fontFamily: "'Lato', sans-serif",
               fontWeight: 400, letterSpacing: 0.5,
               display: "flex", alignItems: "center", justifyContent: "space-between",
             }}>
@@ -93,7 +93,7 @@ export default function ContactPage() {
               flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
               backgroundColor: activeTab === "address" ? "#3a5585" : "#f0f0f0",
               color: activeTab === "address" ? "#fff" : "#555",
-              fontSize: 13, fontFamily: "'Open Sans', sans-serif",
+              fontSize: 13, fontFamily: "'Lato', sans-serif",
               fontWeight: 400, letterSpacing: 0.5,
               display: "flex", alignItems: "center", justifyContent: "space-between",
               marginLeft: 2,
@@ -109,7 +109,7 @@ export default function ContactPage() {
 
           {activeTab === "contact" && (
             <div style={{ maxWidth: 560, margin: "0 auto" }}>
-              <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0" }}>
+              <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0" }}>
                 Contact
               </h2>
               <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", marginBottom: 32 }} />
@@ -119,15 +119,15 @@ export default function ContactPage() {
                   padding: "32px 24px", textAlign: "center",
                   border: "1px solid #c8d8c0", background: "#f4faf2", borderRadius: 2,
                 }}>
-                  <p style={{ fontSize: 15, color: "#2e6b2e", fontFamily: "'Open Sans', sans-serif", marginBottom: 8 }}>
+                  <p style={{ fontSize: 15, color: "#2e6b2e", fontFamily: "'Lato', sans-serif", marginBottom: 8 }}>
                     문의가 성공적으로 접수되었습니다.
                   </p>
-                  <p style={{ fontSize: 13, color: "#666", fontFamily: "'Open Sans', sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#666", fontFamily: "'Lato', sans-serif" }}>
                     빠른 시일 내에 답변 드리겠습니다.
                   </p>
                   <button onClick={() => setStatus("idle")} style={{
                     marginTop: 20, padding: "8px 28px", background: "#3a5585", color: "#fff",
-                    border: "none", fontSize: 13, cursor: "pointer", fontFamily: "'Open Sans', sans-serif",
+                    border: "none", fontSize: 13, cursor: "pointer", fontFamily: "'Lato', sans-serif",
                   }}>
                     새 문의 작성
                   </button>
@@ -170,7 +170,7 @@ export default function ContactPage() {
                     <div style={{
                       flex: 1, height: 80, overflowY: "scroll", border: "1px solid #ccc",
                       padding: "8px 10px", fontSize: 11, color: "#555", lineHeight: 1.7,
-                      fontFamily: "'Open Sans', sans-serif",
+                      fontFamily: "'Lato', sans-serif",
                     }}>
                       <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
                       <p style={{ margin: "0 0 10px 0" }}>We, DK Consultants Co., Ltd. (www.dk-consultant.com; hereinafter referred to as the 'Company'), use our best efforts to protect your privacy and personal information. The Company processes personal information for the following purpose and does not use it for any other purposes; identifying and verifying clients in provision of services pertinent to clients' needs and interest.</p>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                         backgroundColor: status === "loading" ? "#7a8faa" : "#3a5585",
                         color: "#fff", border: "none",
                         padding: "10px 40px", fontSize: 13, cursor: status === "loading" ? "not-allowed" : "pointer",
-                        fontFamily: "'Open Sans', sans-serif", letterSpacing: 1,
+                        fontFamily: "'Lato', sans-serif", letterSpacing: 1,
                       }}
                     >
                       {status === "loading" ? "전송 중..." : "Confirm"}
@@ -231,7 +231,7 @@ export default function ContactPage() {
 
           {activeTab === "address" && (
             <div>
-              <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0", textAlign: "center" }}>
                 Address &amp; Number
               </h2>
               <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", margin: "0 auto 48px" }} />
@@ -285,8 +285,8 @@ export default function ContactPage() {
                 ].map((item) => (
                   <div key={item.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, maxWidth: 160, textAlign: "center" }}>
                     {item.icon}
-                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, color: "#333", fontFamily: "'Open Sans', sans-serif" }}>{item.label}</span>
-                    <span style={{ fontSize: 12, color: (item as any).isEmail ? "#3a5585" : "#555", lineHeight: 1.7, fontFamily: "'Open Sans', sans-serif", whiteSpace: "pre-line" }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, color: "#333", fontFamily: "'Lato', sans-serif" }}>{item.label}</span>
+                    <span style={{ fontSize: 12, color: (item as any).isEmail ? "#3a5585" : "#555", lineHeight: 1.7, fontFamily: "'Lato', sans-serif", whiteSpace: "pre-line" }}>
                       {item.value}
                     </span>
                   </div>

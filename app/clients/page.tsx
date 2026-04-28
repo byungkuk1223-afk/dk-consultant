@@ -82,7 +82,7 @@ export default function ClientsPage() {
           style={{
             fontSize: "clamp(28px, 4vw, 52px)",
             fontWeight: 700,
-            fontFamily: "'Playfair Display', Georgia, serif",
+            fontFamily: "'Libre Baskerville', Georgia, serif",
             color: "#fff",
             letterSpacing: 0.5,
             marginBottom: 16,

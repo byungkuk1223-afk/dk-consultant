@@ -51,7 +51,7 @@ export default function HistorySection() {
           <h2 style={{
             fontSize: "clamp(28px, 3vw, 36px)",
             fontWeight: 400,
-            fontFamily: "Georgia, serif",
+            fontFamily: "'Libre Baskerville', Georgia, serif",
             fontStyle: "italic",
             color: "#fff",
             letterSpacing: 0.5,

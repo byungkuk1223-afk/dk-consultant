@@ -45,7 +45,7 @@ export default function ProjectsSection() {
             style={{
               fontSize: "clamp(30px, 3.5vw, 46px)",
               fontWeight: 700,
-              fontFamily: "'Playfair Display', Georgia, serif",
+              fontFamily: "'Libre Baskerville', Georgia, serif",
               color: "#1a1a1a",
               letterSpacing: 0.5,
             }}

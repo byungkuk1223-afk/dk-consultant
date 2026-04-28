@@ -48,7 +48,7 @@ export default function ProjectDetailPage() {
           marginTop: -80,
         }}>
           <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
-          <h1 style={{ fontSize: "clamp(20px, 2.8vw, 38px)", fontWeight: 700, fontFamily: "'Playfair Display', Georgia, serif", color: "#fff", letterSpacing: 0.5, maxWidth: 860, margin: "0 auto 16px" }}>{project.title}</h1>
+          <h1 style={{ fontSize: "clamp(20px, 2.8vw, 38px)", fontWeight: 700, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", letterSpacing: 0.5, maxWidth: 860, margin: "0 auto 16px" }}>{project.title}</h1>
           {d?.sector && <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>{d.sector} · {project.region}</p>}
         </div>
 
@@ -96,7 +96,7 @@ export default function ProjectDetailPage() {
           {/* CTA */}
           <div style={{ background: "#416ab3", borderRadius: 4, padding: "36px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
             <div>
-              <h3 style={{ fontSize: 18, fontWeight: 700, fontFamily: "'Playfair Display', Georgia, serif", color: "#fff", marginBottom: 8 }}>Interested in a similar project?</h3>
+              <h3 style={{ fontSize: 18, fontWeight: 700, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", marginBottom: 8 }}>Interested in a similar project?</h3>
               <p style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>Contact us to discuss how we can support your next initiative.</p>
             </div>
             <Link href="/contact" style={{ whiteSpace: "nowrap", padding: "12px 28px", background: "#fff", color: "#416ab3", fontSize: 13, fontWeight: 700, fontFamily: "'Lato', sans-serif", textDecoration: "none", borderRadius: 2, letterSpacing: 0.5 }}>

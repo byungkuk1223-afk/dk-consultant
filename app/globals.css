@@ -12,7 +12,7 @@
 #dk-sub-tab li {
   cursor: pointer; float: left; width: 25%; height: 90px;
   line-height: 90px; padding: 0 30px; font-size: 18px;
-  font-family: 'Raleway', sans-serif; box-sizing: border-box;
+  font-family: 'Lato', sans-serif; box-sizing: border-box;
   background: url('/img/sub_tab_arrow_on.png') right 30px top 40px no-repeat;
   color: #333;
 }

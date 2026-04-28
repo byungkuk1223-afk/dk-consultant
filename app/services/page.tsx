@@ -152,7 +152,7 @@ export default function ServicesPage() {
               color: "#fff",
               fontSize: 55,
               fontWeight: "normal",
-              fontFamily: "'Libre Baskerville', serif",
+              fontFamily: "'Libre Baskerville', Georgia, serif",
               lineHeight: 1.2,
             }}
           >
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                 border: "none",
                 cursor: "pointer",
                 fontSize: 18,
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'Lato', sans-serif",
                 fontWeight: activeTab === tab ? 700 : 400,
                 background: activeTab === tab ? "#416ab3" : "#fff",
                 color: activeTab === tab ? "#fff" : "#333",
@@ -220,7 +220,7 @@ export default function ServicesPage() {
                 style={{
                   color: "#000",
                   fontSize: 40,
-                  fontFamily: "'Libre Baskerville', serif",
+                  fontFamily: "'Libre Baskerville', Georgia, serif",
                   fontWeight: "normal",
                   borderBottom: "2px solid #ddd",
                   paddingBottom: 20,
@@ -276,7 +276,7 @@ export default function ServicesPage() {
                       fontWeight: 900,
                       padding: "30px 50px",
                       color: "#000",
-                      fontFamily: "'Libre Baskerville', serif",
+                      fontFamily: "'Libre Baskerville', Georgia, serif",
                     }}
                   >
                     {box.title}
@@ -327,7 +327,7 @@ export default function ServicesPage() {
                 style={{
                   color: "#000",
                   fontSize: 40,
-                  fontFamily: "'Libre Baskerville', serif",
+                  fontFamily: "'Libre Baskerville', Georgia, serif",
                   fontWeight: "normal",
                   borderBottom: "2px solid #ddd",
                   paddingBottom: 20,
@@ -383,7 +383,7 @@ export default function ServicesPage() {
                           fontWeight: 900,
                           padding: "30px 50px 10px",
                           color: "#000",
-                          fontFamily: "'Libre Baskerville', serif",
+                          fontFamily: "'Libre Baskerville', Georgia, serif",
                         }}
                       >
                         {box.title}

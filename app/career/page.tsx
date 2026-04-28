@@ -50,7 +50,7 @@ export default function CareerPage() {
           >
             <h1
               style={{
-                fontFamily: "Georgia, serif",
+                fontFamily: "'Libre Baskerville', Georgia, serif",
                 fontSize: 50,
                 fontWeight: 400,
                 margin: "0 0 14px 0",
@@ -86,7 +86,7 @@ export default function CareerPage() {
           {/* Main heading */}
           <h2
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "'Libre Baskerville', Georgia, serif",
               fontSize: 26,
               fontWeight: 400,
               color: "#111",
@@ -111,7 +111,7 @@ export default function CareerPage() {
           />
 
           {/* Body text */}
-          <div style={{ maxWidth: 780, color: "#444", fontSize: 14, lineHeight: 1.9, fontWeight: 400, fontFamily: "'Open Sans', sans-serif" }}>
+          <div style={{ maxWidth: 780, color: "#444", fontSize: 14, lineHeight: 1.9, fontWeight: 400, fontFamily: "'Lato', sans-serif" }}>
             <p style={{ margin: "0 0 22px 0" }}>
               We invite the talents with MBA, CPA, CFA or equivalent experience with international banks,
               developers / investors / fund or similar financial and corporate advisory institutions.
@@ -151,7 +151,7 @@ export default function CareerPage() {
                   fontSize: 14,
                   color: "#333",
                   fontWeight: 400,
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "'Lato', sans-serif",
                   display: "flex",
                   alignItems: "center",
                   gap: 8,
