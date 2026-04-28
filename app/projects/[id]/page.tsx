@@ -84,7 +84,7 @@ export default function ProjectDetailPage() {
             {d?.hasImage && (
               <div style={{ position: "relative", minHeight: 320, background: "#f4f4f4", borderRadius: 4, overflow: "hidden" }}>
                 <Image
-                  src={`/img/projects/${project.id}.${d?.imgExt ?? 'jpg'}`}
+                  src={d.imgUrl ?? `/img/projects/${project.id}.${d?.imgExt ?? 'jpg'}`}
                   alt={project.title}
                   fill
                   style={{ objectFit: "cover" }}

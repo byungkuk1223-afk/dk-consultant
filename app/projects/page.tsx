@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projects } from "@/data/projects";
@@ -8,11 +8,22 @@ import { projects } from "@/data/projects";
 const REGIONS = ["All", "Asia", "Middle East·Africa", "Europe", "Oceania", "Latin America", "Northern America", "Etc."];
 const PER_PAGE = 15;
 
-export default function ProjectsPage() {
-  const [activeRegion, setActiveRegion] = useState("All");
-  const [page, setPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState("");
+function ProjectsContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const activeRegion = searchParams.get("region") ?? "All";
+  const page = Number(searchParams.get("page") ?? "1");
+  const searchQuery = searchParams.get("q") ?? "";
+
+  function updateParams(updates: Record<string, string>) {
+    const params = new URLSearchParams(searchParams.toString());
+    Object.entries(updates).forEach(([k, v]) => {
+      if (v && v !== "All" && v !== "1" && v !== "") params.set(k, v);
+      else params.delete(k);
+    });
+    router.replace(`/projects?${params.toString()}`, { scroll: false });
+  }
 
   const filtered = projects.filter(p => {
     const matchRegion = activeRegion === "All" || p.region === activeRegion;
@@ -21,9 +32,6 @@ export default function ProjectsPage() {
   });
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
-
-  const handleRegion = (r: string) => { setActiveRegion(r); setPage(1); };
-  const handleSearch = (e: React.FormEvent) => { e.preventDefault(); setPage(1); };
 
   return (
     <>
@@ -53,11 +61,11 @@ export default function ProjectsPage() {
           </div>
 
           {/* Search Bar */}
-          <form onSubmit={handleSearch} style={{ display: "flex", gap: 0, marginBottom: 24 }}>
+          <form onSubmit={e => { e.preventDefault(); updateParams({ q: searchQuery, page: "1" }); }} style={{ display: "flex", gap: 0, marginBottom: 24 }}>
             <input
               type="text"
               value={searchQuery}
-              onChange={e => { setSearchQuery(e.target.value); setPage(1); }}
+              onChange={e => updateParams({ q: e.target.value, page: "1" })}
               placeholder="Search projects..."
               style={{
                 flex: 1,
@@ -92,7 +100,7 @@ export default function ProjectsPage() {
           {/* Region Filter */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }}>
             {REGIONS.map(r => (
-              <button key={r} onClick={() => handleRegion(r)}
+              <button key={r} onClick={() => updateParams({ region: r, page: "1" })}
                 style={{ padding: "7px 18px", fontSize: 12, fontFamily: "'Lato', sans-serif", fontWeight: 500, border: "1px solid", borderColor: activeRegion === r ? "#416ab3" : "#ddd", background: activeRegion === r ? "#416ab3" : "#fff", color: activeRegion === r ? "#fff" : "#555", cursor: "pointer", borderRadius: 2, transition: "all 0.2s" }}>
                 {r}
               </button>
@@ -123,17 +131,25 @@ export default function ProjectsPage() {
 
           {/* Pagination */}
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 6, marginTop: 40 }}>
-            <button onClick={() => setPage(1)} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>«</button>
-            <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>‹</button>
+            <button onClick={() => updateParams({ page: "1" })} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>«</button>
+            <button onClick={() => updateParams({ page: String(page - 1) })} disabled={page === 1} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === 1 ? "default" : "pointer", color: page === 1 ? "#ccc" : "#555" }}>‹</button>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
-              <button key={n} onClick={() => setPage(n)} style={{ padding: "6px 12px", fontSize: 13, border: "1px solid", borderColor: page === n ? "#416ab3" : "#ddd", background: page === n ? "#416ab3" : "#fff", color: page === n ? "#fff" : "#555", cursor: "pointer" }}>{n}</button>
+              <button key={n} onClick={() => updateParams({ page: String(n) })} style={{ padding: "6px 12px", fontSize: 13, border: "1px solid", borderColor: page === n ? "#416ab3" : "#ddd", background: page === n ? "#416ab3" : "#fff", color: page === n ? "#fff" : "#555", cursor: "pointer" }}>{n}</button>
             ))}
-            <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>›</button>
-            <button onClick={() => setPage(totalPages)} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>»</button>
+            <button onClick={() => updateParams({ page: String(page + 1) })} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>›</button>
+            <button onClick={() => updateParams({ page: String(totalPages) })} disabled={page === totalPages} style={{ padding: "6px 10px", fontSize: 13, border: "1px solid #ddd", background: "#fff", cursor: page === totalPages ? "default" : "pointer", color: page === totalPages ? "#ccc" : "#555" }}>»</button>
           </div>
         </div>
       </main>
       <Footer />
     </>
+  );
+}
+
+export default function ProjectsPage() {
+  return (
+    <Suspense>
+      <ProjectsContent />
+    </Suspense>
   );
 }
