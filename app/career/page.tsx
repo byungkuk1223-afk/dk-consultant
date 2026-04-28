@@ -165,7 +165,7 @@ export default function CareerPage() {
                       <span style={{ color: "#3a5585" }}>{item.value}</span>
                     </>
                   ) : (
-                    <span style={{ fontWeight: 500 }}>{item.label}</span>
+                    <span style={{ fontWeight: 400 }}>{item.label}</span>
                   )}
                 </span>
               </div>

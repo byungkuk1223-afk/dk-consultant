@@ -273,7 +273,7 @@ export default function ServicesPage() {
                   <p
                     style={{
                       fontSize: 22,
-                      fontWeight: 900,
+                      fontWeight: 700,
                       padding: "30px 50px",
                       color: "#000",
                       fontFamily: "'Libre Baskerville', Georgia, serif",
@@ -380,7 +380,7 @@ export default function ServicesPage() {
                       <p
                         style={{
                           fontSize: 22,
-                          fontWeight: 900,
+                          fontWeight: 700,
                           padding: "30px 50px 10px",
                           color: "#000",
                           fontFamily: "'Libre Baskerville', Georgia, serif",

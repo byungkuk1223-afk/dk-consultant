@@ -172,24 +172,24 @@ export default function ContactPage() {
                       padding: "8px 10px", fontSize: 11, color: "#555", lineHeight: 1.7,
                       fontFamily: "'Lato', sans-serif",
                     }}>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
                       <p style={{ margin: "0 0 10px 0" }}>We, DK Consultants Co., Ltd. (www.dk-consultant.com; hereinafter referred to as the 'Company'), use our best efforts to protect your privacy and personal information. The Company processes personal information for the following purpose and does not use it for any other purposes; identifying and verifying clients in provision of services pertinent to clients' needs and interest.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Personal Information Processing and Retention Period</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Personal Information Processing and Retention Period</p>
                       <p style={{ margin: "0 0 6px 0" }}>① The Company processes and retains personal information within the personal information retention period according to relevant laws or within the personal information retention period to which individuals consented when collecting their personal information.</p>
                       <p style={{ margin: "0 0 10px 0" }}>② The retention period of the personal information processed by the Company is 5 years.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Provision of Personal Information to a Third Party</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Provision of Personal Information to a Third Party</p>
                       <p style={{ margin: "0 0 10px 0" }}>The Company may provide the personal information to a third party only when it falls under the provisions specified in Article 17 and 18 of the Personal Information Act, such as when the subject of the information provides consent and where special rules exist in any relevant law.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Outsourcing the Handling of Personal Information</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Outsourcing the Handling of Personal Information</p>
                       <p style={{ margin: "0 0 6px 0" }}>① The Company may outsource the handling of personal information for efficient provision of services.</p>
                       <p style={{ margin: "0 0 10px 0" }}>② When the Company provides personal data to a third party, the Company shall create and maintain a record of the provision in accordance with the provisions of Article 25 of the Act on the Protection of Personal Information.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Rights and Duties of a Subject Information</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Rights and Duties of a Subject Information</p>
                       <p style={{ margin: "0 0 4px 0" }}>1) The right to request for the inspection of the personal information</p>
                       <p style={{ margin: "0 0 4px 0" }}>2) The right to request for the correction of the personal information</p>
                       <p style={{ margin: "0 0 4px 0" }}>3) The right to delete the personal information</p>
                       <p style={{ margin: "0 0 10px 0" }}>4) The right to request for the suspension of the handling of the personal information</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Destruction of Personal Information</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Destruction of Personal Information</p>
                       <p style={{ margin: "0 0 10px 0" }}>When DK Consultants Co., Ltd. has no further need to retain any personal information, the Company will destroy the personal information without delay within five days.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 600, color: "#3a5585" }}>Privacy Officer</p>
+                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Privacy Officer</p>
                       <p style={{ margin: "0 0 4px 0" }}>· Name: Jaegyung Pyun</p>
                       <p style={{ margin: "0 0 4px 0" }}>· Title: Associate</p>
                       <p style={{ margin: 0 }}>· Contact: 031-603-4845, jg.pyun@dk-consultant.com</p>
