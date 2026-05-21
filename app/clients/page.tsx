@@ -85,8 +85,8 @@ export default function ClientsPage() {
       </section>
 
       {/* Projects / Clients Sub-Nav */}
-      <div style={{ background: "#2c4a7c", borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "flex" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
+        <div style={{ display: "flex", gap: 24, borderBottom: "1px solid #e5e7eb" }}>
           {[
             { label: "Projects", href: "/projects" },
             { label: "Clients", href: "/clients" },
@@ -95,16 +95,13 @@ export default function ClientsPage() {
               key={tab.label}
               href={tab.href}
               style={{
-                display: "inline-block",
-                padding: "14px 28px",
-                color: tab.href === "/clients" ? "#fff" : "rgba(255,255,255,0.6)",
-                fontFamily: "'Lato', sans-serif",
-                fontSize: 13,
+                fontSize: 14,
                 fontWeight: tab.href === "/clients" ? 700 : 400,
-                letterSpacing: 1,
+                fontFamily: "'Lato', sans-serif",
+                color: tab.href === "/clients" ? "#416ab3" : "#666",
                 textDecoration: "none",
-                borderBottom: tab.href === "/clients" ? "2px solid #fff" : "2px solid transparent",
-                transition: "color 0.2s",
+                paddingBottom: 12,
+                borderBottom: tab.href === "/clients" ? "2px solid #416ab3" : "2px solid transparent",
               }}
             >
               {tab.label}
