@@ -69,7 +69,7 @@ export default function ClientsPage() {
         <div style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: "url('/img/hero_bg.jpg')",
+          backgroundImage: "url('/img/crane.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "brightness(0.45)",
