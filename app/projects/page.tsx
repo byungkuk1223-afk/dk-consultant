@@ -1,6 +1,6 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projects } from "@/data/projects";
@@ -11,6 +11,13 @@ const PER_PAGE = 15;
 function ProjectsContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const activeRegion = searchParams.get("region") ?? "All";
   const page = Number(searchParams.get("page") ?? "1");
@@ -35,19 +42,35 @@ function ProjectsContent() {
 
   return (
     <>
-      <Header scrolled={true} />
-      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff" }}>
+      <Header scrolled={scrolled} />
+      <main style={{ minHeight: "100vh", background: "#fff" }}>
         {/* Page Hero */}
-        <div style={{
-          background: "linear-gradient(to right, rgba(20,30,60,0.55) 0%, rgba(20,30,60,0.3) 60%, rgba(20,30,60,0.15) 100%), url('/img/hero_bg.jpg') center/cover no-repeat",
-          padding: "100px 40px 80px",
-          textAlign: "center",
-          marginTop: -80,
+        <section style={{
+          position: "relative",
+          width: "100%",
+          height: 380,
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
         }}>
-          <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
-          <h2 style={{ fontSize: 55, fontWeight: "normal", fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", lineHeight: 1.2, marginBottom: 16 }}>Projects</h2>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>List of finished projects we helped establish</p>
-        </div>
+          <div style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/img/hero_bg.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "brightness(0.45)",
+          }} />
+          <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
+            <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
+            <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 55, fontWeight: "normal", lineHeight: 1.2, margin: "0 0 14px 0" }}>
+              Projects
+            </h2>
+            <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6, fontFamily: "'Lato', sans-serif" }}>
+              List of finished projects we helped establish
+            </p>
+          </div>
+        </section>
 
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 80px" }}>
           {/* Sub Nav */}

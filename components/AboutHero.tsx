@@ -13,29 +13,66 @@ export default function AboutHero({ active }: { active: "about" | "ppp" | "healt
       {/* Hero banner */}
       <div
         style={{
+          position: "relative",
           width: "100%",
           minWidth: 1200,
-          height: 600,
-          color: "#fff",
-          backgroundImage: "url('/img/sf_01_bg_n.jpg')",
-          backgroundPosition: "center top",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
+          height: 380,
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
         }}
       >
-        <div style={{ width: 1200, margin: "0 auto", fontFamily: "'Lato', sans-serif", fontSize: 18 }}>
-          <h2 style={{ fontSize: 55, fontWeight: "normal", fontFamily: "'Libre Baskerville', Georgia, serif", paddingTop: 220 }}>
+        {/* Background image with brightness overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/img/sf_01_bg_n.jpg')",
+            backgroundPosition: "center top",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            filter: "brightness(0.45)",
+          }}
+        />
+        {/* Overlay text */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            paddingLeft: "28%",
+            color: "#fff",
+            fontFamily: "'Lato', sans-serif",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: 50,
+              fontWeight: 400,
+              fontFamily: "'Libre Baskerville', Georgia, serif",
+              margin: "0 0 14px 0",
+              letterSpacing: 1,
+            }}
+          >
             About Us
           </h2>
-          Professional knowledge meets social needs
+          <p
+            style={{
+              fontSize: 18,
+              fontWeight: 300,
+              margin: 0,
+              letterSpacing: 0.2,
+              lineHeight: 1.6,
+            }}
+          >
+            Professional knowledge meets social needs
+          </p>
         </div>
       </div>
 
       {/* Sub tab navigation */}
       <div
         id="dk-sub-tab"
-        style={{ width: "100%", height: 90, position: "absolute", left: 0, top: 550, zIndex: 10 }}
+        style={{ width: "100%", height: 90, position: "absolute", left: 0, top: 330, zIndex: 10 }}
       >
         <div style={{ width: 1200, height: 90, backgroundColor: "#fff", margin: "0 auto", boxShadow: "5px 5px 5px rgba(0,0,0,.1)", borderRadius: 3, overflow: "hidden" }}>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, overflow: "hidden" }}>
