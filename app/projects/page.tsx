@@ -1,6 +1,6 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projects } from "@/data/projects";
@@ -11,6 +11,13 @@ const PER_PAGE = 15;
 function ProjectsContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const activeRegion = searchParams.get("region") ?? "All";
   const page = Number(searchParams.get("page") ?? "1");
@@ -35,8 +42,8 @@ function ProjectsContent() {
 
   return (
     <>
-      <Header scrolled={true} />
-      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff" }}>
+      <Header scrolled={scrolled} />
+      <main style={{ minHeight: "100vh", background: "#fff" }}>
         {/* Page Hero */}
         <section style={{
           position: "relative",
@@ -45,7 +52,6 @@ function ProjectsContent() {
           overflow: "hidden",
           display: "flex",
           alignItems: "center",
-          marginTop: -80,
         }}>
           <div style={{
             position: "absolute",
@@ -56,7 +62,7 @@ function ProjectsContent() {
             filter: "brightness(0.45)",
           }} />
           <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
-            <h1 style={{ fontFamily: "Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
+            <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
               Projects
             </h1>
             <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
