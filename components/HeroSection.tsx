@@ -13,13 +13,13 @@ export default function HeroSection() {
 
   const slides = [
     {
-      href: "/services/financial",
+      href: "/services",
       title: "Financial Advisory & Project Development",
       desc: "Global influence, local expertise and making values real; we transform opportunities into tangible reality.",
       bg: "/img/hero_bg.jpg",
     },
     {
-      href: "/services/healthcare",
+      href: "/services",
       title: "Healthcare Advisory",
       desc: "We are committed to providing a stable long-term guidance for your Healthcare infrastructure projects.",
       bg: "/img/hero_bg2.jpg",

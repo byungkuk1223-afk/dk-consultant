@@ -45,7 +45,7 @@ function ProjectsContent() {
           marginTop: -80,
         }}>
           <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
-          <h1 style={{ fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 700, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", letterSpacing: 0.5, marginBottom: 16 }}>Projects</h1>
+          <h2 style={{ fontSize: 55, fontWeight: "normal", fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", lineHeight: 1.2, marginBottom: 16 }}>Projects</h2>
           <p style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>List of finished projects we helped establish</p>
         </div>
 

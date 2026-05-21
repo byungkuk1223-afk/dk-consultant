@@ -64,8 +64,8 @@ export default function Header({ scrolled }: HeaderProps) {
                 label: "SERVICES",
                 href: "/services",
                 sub: [
-                  { label: "Financial Advisory", href: "/services/financial" },
-                  { label: "Healthcare Advisory", href: "/services/healthcare" },
+                  { label: "Financial Advisory", href: "/services" },
+                  { label: "Healthcare Advisory", href: "/services" },
                 ],
               },
               {

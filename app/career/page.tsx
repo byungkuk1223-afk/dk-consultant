@@ -48,17 +48,17 @@ export default function CareerPage() {
               color: "#fff",
             }}
           >
-            <h1
+            <h2
               style={{
                 fontFamily: "'Libre Baskerville', Georgia, serif",
-                fontSize: 50,
-                fontWeight: 400,
+                fontSize: 55,
+                fontWeight: "normal",
+                lineHeight: 1.2,
                 margin: "0 0 14px 0",
-                letterSpacing: 1,
               }}
             >
               Career
-            </h1>
+            </h2>
             <p
               style={{
                 fontSize: 14,
@@ -87,13 +87,13 @@ export default function CareerPage() {
           <h2
             style={{
               fontFamily: "'Libre Baskerville', Georgia, serif",
-              fontSize: 26,
-              fontWeight: 400,
-              color: "#111",
-              lineHeight: 1.5,
+              fontSize: 40,
+              fontWeight: "normal",
+              color: "#000",
+              lineHeight: 1.3,
               margin: "0 0 18px 0",
-              maxWidth: 700,
-              whiteSpace: "nowrap",
+              borderBottom: "2px solid #ddd",
+              paddingBottom: 20,
             }}
           >
             DK Consultants recruits people<br />
@@ -111,7 +111,7 @@ export default function CareerPage() {
           />
 
           {/* Body text */}
-          <div style={{ maxWidth: 780, color: "#444", fontSize: 14, lineHeight: 1.9, fontWeight: 400, fontFamily: "'Lato', sans-serif" }}>
+          <div style={{ maxWidth: 780, color: "#777", fontSize: 17, lineHeight: "30px", fontWeight: 400, fontFamily: "'Lato', sans-serif" }}>
             <p style={{ margin: "0 0 22px 0" }}>
               We invite the talents with MBA, CPA, CFA or equivalent experience with international banks,
               developers / investors / fund or similar financial and corporate advisory institutions.

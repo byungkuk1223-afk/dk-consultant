@@ -66,10 +66,10 @@ export default function ContactPage() {
             filter: "brightness(0.45)",
           }} />
           <div style={{ position: "relative", zIndex: 1, paddingLeft: "35%", color: "#fff" }}>
-            <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 42, fontWeight: 400, margin: "0 0 12px 0", letterSpacing: 0.5 }}>
+            <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 55, fontWeight: "normal", lineHeight: 1.2, margin: "0 0 12px 0" }}>
               Contact Us
-            </h1>
-            <p style={{ fontSize: 13, fontWeight: 300, margin: 0, letterSpacing: 0.2 }}>
+            </h2>
+            <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, fontFamily: "'Lato', sans-serif" }}>
               We look forward to your inquiry
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
 
           {activeTab === "contact" && (
             <div style={{ maxWidth: 560, margin: "0 auto" }}>
-              <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0" }}>
+              <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 40, fontWeight: "normal", color: "#000", margin: "0 0 12px 0", borderBottom: "2px solid #ddd", paddingBottom: 20 }}>
                 Contact
               </h2>
               <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", marginBottom: 32 }} />
@@ -231,7 +231,7 @@ export default function ContactPage() {
 
           {activeTab === "address" && (
             <div>
-              <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 26, fontWeight: 400, color: "#111", margin: "0 0 12px 0", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 40, fontWeight: "normal", color: "#000", margin: "0 0 12px 0", borderBottom: "2px solid #ddd", paddingBottom: 20 }}>
                 Address &amp; Number
               </h2>
               <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", margin: "0 auto 48px" }} />

@@ -78,18 +78,18 @@ export default function ClientsPage() {
         >
           DK CONSULTANTS
         </p>
-        <h1
+        <h2
           style={{
-            fontSize: "clamp(28px, 4vw, 52px)",
-            fontWeight: 700,
+            fontSize: 55,
+            fontWeight: "normal",
             fontFamily: "'Libre Baskerville', Georgia, serif",
             color: "#fff",
-            letterSpacing: 0.5,
+            lineHeight: 1.2,
             marginBottom: 16,
           }}
         >
           Clients
-        </h1>
+        </h2>
         <p
           style={{
             fontSize: 14,
@@ -140,12 +140,11 @@ export default function ClientsPage() {
             style={{
               fontSize: 40,
               fontFamily: "'Libre Baskerville', Georgia, serif",
-              fontWeight: 400,
+              fontWeight: "normal",
               color: "#000",
-              lineHeight: "55px",
-              marginBottom: 45,
+              marginBottom: 20,
               paddingBottom: 20,
-              borderBottom: "2px solid #e0e0e0",
+              borderBottom: "2px solid #ddd",
             }}
           >
             Clients
