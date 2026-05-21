@@ -84,9 +84,9 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      {/* Projects / Clients Sub-Nav */}
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
-        <div style={{ display: "flex", gap: 24, borderBottom: "1px solid #e5e7eb" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 0" }}>
+        {/* Projects / Clients Sub-Nav */}
+        <div style={{ display: "flex", gap: 24, marginBottom: 32, borderBottom: "1px solid #e5e7eb", paddingBottom: 0 }}>
           {[
             { label: "Projects", href: "/projects" },
             { label: "Clients", href: "/clients" },
