@@ -48,7 +48,7 @@ export default function AboutHero({ active }: { active: "about" | "ppp" | "healt
             style={{
               fontSize: 50,
               fontWeight: 400,
-              fontFamily: "Georgia, serif",
+              fontFamily: "'Libre Baskerville', Georgia, serif",
               margin: "0 0 14px 0",
               letterSpacing: 1,
             }}
@@ -57,7 +57,7 @@ export default function AboutHero({ active }: { active: "about" | "ppp" | "healt
           </h2>
           <p
             style={{
-              fontSize: 14,
+              fontSize: 18,
               fontWeight: 300,
               margin: 0,
               letterSpacing: 0.2,

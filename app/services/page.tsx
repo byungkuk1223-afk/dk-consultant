@@ -120,34 +120,49 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Header scrolled={true} />
+      <Header scrolled={scrolled} />
 
       {/* Hero */}
-      <section style={{
-        position: "relative",
-        width: "100%",
-        height: 380,
-        overflow: "hidden",
-        display: "flex",
-        alignItems: "center",
-      }}>
-        <div style={{
-          position: "absolute",
-          inset: 0,
+      <div
+        style={{
+          width: "100%",
+          height: 600,
+          position: "relative",
           backgroundImage: "url('/img-financial-2.png')",
           backgroundSize: "cover",
           backgroundPosition: "center top",
-          filter: "brightness(0.45)",
-        }} />
-        <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
-          <h1 style={{ fontFamily: "Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
+          display: "flex",
+          alignItems: "flex-end",
+          paddingBottom: 80,
+        }}
+      >
+        <div style={{ position: "absolute", inset: 0, background: "rgba(11,31,58,0.72)" }} />
+        <div
+          style={{
+            position: "relative",
+            maxWidth: 1200,
+            margin: "0 auto",
+            width: "100%",
+            padding: "0 24px",
+            paddingTop: 220,
+          }}
+        >
+          <h2
+            style={{
+              color: "#fff",
+              fontSize: 55,
+              fontWeight: "normal",
+              fontFamily: "'Libre Baskerville', Georgia, serif",
+              lineHeight: 1.2,
+            }}
+          >
             Services
-          </h1>
-          <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
+          </h2>
+          <p style={{ color: "#fff", fontSize: 18, fontFamily: "'Lato', sans-serif", marginTop: 10, opacity: 0.85 }}>
             Details of our guided approach
           </p>
         </div>
-      </section>
+      </div>
 
       {/* Tab Bar */}
       <div style={{ width: "100%", background: "#f0f0f0", position: "relative", zIndex: 100 }}>

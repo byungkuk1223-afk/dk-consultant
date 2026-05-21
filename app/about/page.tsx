@@ -46,7 +46,6 @@ export default function AboutPage() {
 
         <div className="dk-sub">
 
-
           {/* About text */}
           <div className="dk-center">
             <div className="dk-sub-t">About DK Consultants</div>

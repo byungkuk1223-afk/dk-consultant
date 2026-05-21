@@ -1,36 +1,73 @@
 "use client";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function CareerPage() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <Header scrolled={true} />
-      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff", fontFamily: "'Lato', sans-serif" }}>
+      <Header scrolled={scrolled} />
+      <main style={{ fontFamily: "'Lato', sans-serif" }}>
 
         {/* Hero Section */}
-        <section style={{
-          position: "relative",
-          width: "100%",
-          height: 380,
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          marginTop: -80,
-        }}>
-          <div style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80')",
-            backgroundSize: "cover",
-            backgroundPosition: "center 30%",
-            filter: "brightness(0.45)",
-          }} />
-          <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
-            <h1 style={{ fontFamily: "Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
+        <section
+          style={{
+            position: "relative",
+            width: "100%",
+            height: 380,
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          {/* Background image */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage: "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80')",
+              backgroundSize: "cover",
+              backgroundPosition: "center 30%",
+              filter: "brightness(0.45)",
+            }}
+          />
+          {/* Overlay text */}
+          <div
+            style={{
+              position: "relative",
+              zIndex: 1,
+              paddingLeft: "28%",
+              color: "#fff",
+            }}
+          >
+            <h1
+              style={{
+                fontFamily: "'Libre Baskerville', Georgia, serif",
+                fontSize: 50,
+                fontWeight: 400,
+                margin: "0 0 14px 0",
+                letterSpacing: 1,
+              }}
+            >
               Career
             </h1>
-            <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
+            <p
+              style={{
+                fontSize: 14,
+                fontWeight: 300,
+                margin: 0,
+                letterSpacing: 0.2,
+                lineHeight: 1.6,
+              }}
+            >
               DK Consultants recruits people who have potential to grow into a global leader.
             </p>
           </div>
