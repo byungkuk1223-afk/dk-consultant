@@ -62,11 +62,10 @@ function ProjectsContent() {
             filter: "brightness(0.45)",
           }} />
           <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
-            <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
-            <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 55, fontWeight: "normal", lineHeight: 1.2, margin: "0 0 14px 0" }}>
+            <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
               Projects
-            </h2>
-            <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6, fontFamily: "'Lato', sans-serif" }}>
+            </h1>
+            <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
               List of finished projects we helped establish
             </p>
           </div>

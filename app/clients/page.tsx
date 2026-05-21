@@ -55,52 +55,34 @@ export default function ClientsPage() {
   return (
     <>
       <Header scrolled={scrolled} />
-      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff" }}>
+      <main style={{ minHeight: "100vh", background: "#fff" }}>
 
       {/* Page Hero */}
-      <div
-        style={{
-          background: "linear-gradient(to right, rgba(20,30,60,0.6) 0%, rgba(20,30,60,0.35) 60%, rgba(20,30,60,0.2) 100%), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80') center/cover no-repeat",
-          padding: "100px 40px 80px",
-          textAlign: "center",
-          marginTop: -80,
-        }}
-      >
-        <p
-          style={{
-            fontSize: 11,
-            letterSpacing: 3.5,
-            color: "rgba(255,255,255,0.6)",
-            textTransform: "uppercase",
-            fontFamily: "'Lato', sans-serif",
-            marginBottom: 14,
-          }}
-        >
-          DK CONSULTANTS
-        </p>
-        <h2
-          style={{
-            fontSize: 55,
-            fontWeight: "normal",
-            fontFamily: "'Libre Baskerville', Georgia, serif",
-            color: "#fff",
-            lineHeight: 1.2,
-            marginBottom: 16,
-          }}
-        >
-          Clients
-        </h2>
-        <p
-          style={{
-            fontSize: 14,
-            color: "rgba(255,255,255,0.75)",
-            fontFamily: "'Lato', sans-serif",
-            fontWeight: 300,
-          }}
-        >
-          Organizations and institutions we have proudly served
-        </p>
-      </div>
+      <section style={{
+        position: "relative",
+        width: "100%",
+        height: 380,
+        overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
+      }}>
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: "url('/img/hero_bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.45)",
+        }} />
+        <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
+          <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
+            Clients
+          </h1>
+          <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
+            Organizations and institutions we have proudly served
+          </p>
+        </div>
+      </section>
 
       {/* Projects / Clients Sub-Nav */}
       <div style={{ background: "#2c4a7c", borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
