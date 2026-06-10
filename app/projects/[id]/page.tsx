@@ -60,7 +60,6 @@ export default function ProjectDetailPage() {
             filter: "brightness(0.45)",
           }} />
           <div style={{ position: "relative", zIndex: 1, textAlign: "center", color: "#fff", padding: "0 40px" }}>
-            <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
             <h1 style={{ fontSize: "clamp(20px, 2.8vw, 38px)", fontWeight: 700, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", letterSpacing: 0.5, maxWidth: 860, margin: "0 auto 16px" }}>{project.title}</h1>
             {d?.sector && <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>{d.sector} · {project.region}</p>}
           </div>
