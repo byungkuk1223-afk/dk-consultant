@@ -1,5 +1,6 @@
 "use client";
 import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
@@ -8,12 +9,20 @@ import { projects } from "@/data/projects";
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const project = projects.find((p) => p.id === Number(id));
 
   if (!project) {
     return (
       <>
-        <Header scrolled={true} />
+        <Header scrolled={scrolled} />
         <main style={{ paddingTop: 80, minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <div style={{ textAlign: "center" }}>
             <p style={{ fontSize: 16, color: "#999", fontFamily: "'Lato', sans-serif" }}>Project not found.</p>
@@ -38,18 +47,23 @@ export default function ProjectDetailPage() {
 
   return (
     <>
-      <Header scrolled={true} />
-      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff" }}>
+      <Header scrolled={scrolled} />
+      <main style={{ minHeight: "100vh", background: "#fff" }}>
         {/* Hero */}
-        <div style={{
-          background: "linear-gradient(to right, rgba(20,30,60,0.55) 0%, rgba(20,30,60,0.3) 60%, rgba(20,30,60,0.15) 100%), url('/img/hero_bg.jpg') center/cover no-repeat",
-          padding: "100px 40px 80px",
-          textAlign: "center",
-          marginTop: -80,
-        }}>
-          <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
-          <h1 style={{ fontSize: "clamp(20px, 2.8vw, 38px)", fontWeight: 700, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", letterSpacing: 0.5, maxWidth: 860, margin: "0 auto 16px" }}>{project.title}</h1>
-          {d?.sector && <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>{d.sector} · {project.region}</p>}
+        <div style={{ position: "relative", width: "100%", height: 380, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url('/img/crane.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "brightness(0.45)",
+          }} />
+          <div style={{ position: "relative", zIndex: 1, textAlign: "center", color: "#fff", padding: "0 40px" }}>
+            <p style={{ fontSize: 11, letterSpacing: 3.5, color: "rgba(255,255,255,0.6)", textTransform: "uppercase", fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>DK CONSULTANTS</p>
+            <h1 style={{ fontSize: "clamp(20px, 2.8vw, 38px)", fontWeight: 700, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#fff", letterSpacing: 0.5, maxWidth: 860, margin: "0 auto 16px" }}>{project.title}</h1>
+            {d?.sector && <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>{d.sector} · {project.region}</p>}
+          </div>
         </div>
 
         <div style={{ maxWidth: 980, margin: "0 auto", padding: "60px 40px 100px" }}>
