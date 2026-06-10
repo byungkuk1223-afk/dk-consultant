@@ -1,13 +1,22 @@
 "use client";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AboutHero from "@/components/AboutHero";
 
 export default function HealthcarePage() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <Header scrolled={true} />
-      <main style={{ paddingTop: 80, minHeight: "100vh", background: "#fff", minWidth: 1200 }}>
+      <Header scrolled={scrolled} />
+      <main style={{ minHeight: "100vh", background: "#fff", minWidth: 1200 }}>
         <AboutHero active="healthcare" />
 
         <div className="dk-sub">
