@@ -122,104 +122,74 @@ export default function ServicesPage() {
     <>
       <Header scrolled={scrolled} />
 
-      {/* Hero */}
-      <section
-        style={{
-          position: "relative",
-          width: "100%",
-          height: 380,
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: "url('/img-financial-2.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center 30%",
-            filter: "brightness(0.45)",
-          }}
-        />
-        <div
+      {/* Hero + Tab wrapper */}
+      <div style={{ position: "relative" }}>
+        {/* Hero */}
+        <section
           style={{
             position: "relative",
-            zIndex: 1,
-            paddingLeft: "28%",
-            color: "#fff",
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: "Georgia, serif",
-              fontSize: 50,
-              fontWeight: 400,
-              margin: "0 0 14px 0",
-              letterSpacing: 1,
-            }}
-          >
-            Services
-          </h2>
-          <p
-            style={{
-              fontSize: 14,
-              fontWeight: 300,
-              margin: 0,
-              letterSpacing: 0.2,
-              lineHeight: 1.6,
-            }}
-          >
-            Details of our guided approach
-          </p>
-        </div>
-      </section>
-
-      {/* Tab Bar */}
-      <div style={{ width: "100%", background: "#f0f0f0", position: "relative", zIndex: 100 }}>
-        <div
-          style={{
-            maxWidth: 1200,
-            margin: "0 auto",
+            width: "100%",
+            height: 380,
+            overflow: "hidden",
             display: "flex",
-            background: "#fff",
-            boxShadow: "5px 5px 5px rgba(0,0,0,0.1)",
-            borderRadius: 3,
+            alignItems: "center",
           }}
         >
-          {(["financial", "healthcare"] as const).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage: "url('/img-financial-2.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center 30%",
+              filter: "brightness(0.45)",
+            }}
+          />
+          <div
+            style={{
+              position: "relative",
+              zIndex: 1,
+              paddingLeft: "28%",
+              color: "#fff",
+            }}
+          >
+            <h2
               style={{
-                flex: 1,
-                height: 90,
-                border: "none",
-                cursor: "pointer",
-                fontSize: 18,
-                fontFamily: "'Lato', sans-serif",
-                fontWeight: activeTab === tab ? 700 : 400,
-                background: activeTab === tab ? "#416ab3" : "#fff",
-                color: activeTab === tab ? "#fff" : "#333",
-                transition: "background 0.2s, color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                if (activeTab !== tab) {
-                  (e.currentTarget as HTMLButtonElement).style.background = "#416ab3";
-                  (e.currentTarget as HTMLButtonElement).style.color = "#fff";
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (activeTab !== tab) {
-                  (e.currentTarget as HTMLButtonElement).style.background = "#fff";
-                  (e.currentTarget as HTMLButtonElement).style.color = "#333";
-                }
+                fontFamily: "Georgia, serif",
+                fontSize: 50,
+                fontWeight: 400,
+                margin: "0 0 14px 0",
+                letterSpacing: 1,
               }}
             >
-              {tab === "financial" ? "Financial Advisory" : "Healthcare Advisory"}
-            </button>
-          ))}
+              Services
+            </h2>
+            <p
+              style={{
+                fontSize: 14,
+                fontWeight: 300,
+                margin: 0,
+                letterSpacing: 0.2,
+                lineHeight: 1.6,
+              }}
+            >
+              Details of our guided approach
+            </p>
+          </div>
+        </section>
+
+        {/* Tab Bar — About US 동일 양식 */}
+        <div id="dk-sub-tab" style={{ width: "100%", height: 90, position: "absolute", left: 0, top: 330, zIndex: 10 }}>
+          <div style={{ width: 1200, height: 90, backgroundColor: "#fff", margin: "0 auto", boxShadow: "5px 5px 5px rgba(0,0,0,.1)", borderRadius: 3, overflow: "hidden" }}>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, overflow: "hidden" }}>
+              <li style={{ width: "50%" }} className={activeTab === "financial" ? "on" : ""} onClick={() => setActiveTab("financial")}>
+                Financial Advisory
+              </li>
+              <li style={{ width: "50%" }} className={activeTab === "healthcare" ? "on" : ""} onClick={() => setActiveTab("healthcare")}>
+                Healthcare Advisory
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
