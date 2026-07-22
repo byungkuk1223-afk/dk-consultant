@@ -7,38 +7,38 @@ import Footer from "@/components/Footer";
 const ROWS = [
   {
     images: [
-      "https://dk-consultant.com/sub/img/img_04_02_1_1.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_1_2.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_1_3.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_1_4.jpg",
+      "/img/img_04_02_1_1.jpg",
+      "/img/img_04_02_1_2.jpg",
+      "/img/img_04_02_1_3.jpg",
+      "/img/img_04_02_1_4.jpg",
     ],
   },
   {
     images: [
-      "https://dk-consultant.com/sub/img/img_04_02_2_1.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_2_2.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_2_3.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_2_4.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_2_5.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_2_6.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_2_7.jpg",
+      "/img/img_04_02_2_1.jpg",
+      "/img/img_04_02_2_2.jpg",
+      "/img/img_04_02_2_3.jpg",
+      "/img/img_04_02_2_4.jpg",
+      "/img/img_04_02_2_5.jpg",
+      "/img/img_04_02_2_6.jpg",
+      "/img/img_04_02_2_7.jpg",
     ],
   },
   {
     images: [
-      "https://dk-consultant.com/sub/img/img_04_02_3_1.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_3_2.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_3_3.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_3_4.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_3_5.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_3_6.jpg",
+      "/img/img_04_02_3_1.jpg",
+      "/img/img_04_02_3_2.jpg",
+      "/img/img_04_02_3_3.jpg",
+      "/img/img_04_02_3_4.jpg",
+      "/img/img_04_02_3_5.jpg",
+      "/img/img_04_02_3_6.jpg",
     ],
   },
   {
     images: [
-      "https://dk-consultant.com/sub/img/img_04_02_4_1.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_4_2.jpg",
-      "https://dk-consultant.com/sub/img/img_04_02_4_3.jpg",
+      "/img/img_04_02_4_1.jpg",
+      "/img/img_04_02_4_2.jpg",
+      "/img/img_04_02_4_3.jpg",
     ],
   },
 ];
