@@ -63,7 +63,7 @@ export default function AboutPage() {
             <div className="dk-center">
               <div className="dk-sub-t">Corporate Structure Services​</div>
               <div style={{ textAlign: "center" }}>
-                <img src="/img/img_01_01_a_new2_n2.png" alt="Corporate Structure" style={{ maxWidth: "100%", height: "auto" }} />
+                <img src="/img/img_01_01_a_new2_n2.png" alt="Corporate Structure" style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }} />
               </div>
             </div>
           </div>

@@ -57,7 +57,7 @@ export default function HealthcarePage() {
               <div className="dk-sub-t"> Objective of DK Consultants Healthcare​</div>
               DK Consultants Healthcare is aiming to support in the development of healthcare facilities worldwide encompassing facility establishment and O&amp;M planning, medical equipment and Hospital Information System procurement, and medical &amp; operational staff training.​<br /><br /><br />
               <div style={{ textAlign: "center" }}>
-                <img src="/img/img_01_03_new2_a_n3.png" alt="Healthcare Objective" style={{ maxWidth: "100%", height: "auto" }} />
+                <img src="/img/img_01_03_new2_a_n3.png" alt="Healthcare Objective" style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }} />
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function HealthcarePage() {
               <li>​Specialists from key professions have joined DK Consultants Healthcare and can develop the business models, and project opportunities from their previous experiences</li>
             </ul>
             <div style={{ textAlign: "center" }}>
-              <img src="/img/img_01_03_new2_b1.png" alt="Healthcare Capabilities" style={{ maxWidth: "100%", height: "auto" }} />
+              <img src="/img/img_01_03_new2_b1.png" alt="Healthcare Capabilities" style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }} />
             </div>
           </div>
 

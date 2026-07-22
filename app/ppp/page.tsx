@@ -73,7 +73,7 @@ export default function PppPage() {
             <div className="dk-center">
               <div className="dk-sub-t">Core Competencies &amp; Capability Statement​</div>
               <div style={{ textAlign: "center" }}>
-                <img src="/img/img_01_02_new2_a_n1.png" alt="Core Competencies" style={{ maxWidth: "100%", height: "auto" }} />
+                <img src="/img/img_01_02_new2_a_n1.png" alt="Core Competencies" style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }} />
               </div>
 
               <ul className="dk-steps">
