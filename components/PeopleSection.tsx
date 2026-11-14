@@ -105,7 +105,7 @@ export default function PeopleSection() {
                 margin: "0 auto 20px",
                 overflow: "hidden",
                 border: "1px solid #c8d5eb",
-                background: "#dce6f5",
+                background: "#fff",
               }}>
                 <img src={p.img} alt={p.name} style={{
                   width: "100%", height: "100%",
