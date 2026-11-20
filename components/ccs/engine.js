@@ -360,8 +360,15 @@ export function createCcsEngine(canvas, opts) {
     st.calls.forEach((c, i) => {
       const s0 = (st.converge ? 0.9 : 3.0) + i * 0.15, q = ease(ramp(t, s0, 0.55)), qa = ease(ramp(t, s0 + 0.35, 0.4));
       if (q <= 0) return;
-      const A = P(c.at), d = DIRS[c.dir] || DIRS.ne, L = Math.hypot(d[0], d[1]);
-      const len1 = 34, len2 = 24, sx = d[0] >= 0 ? 1 : -1;
+      const A = P(c.at);
+      let d = DIRS[c.dir] || DIRS.ne;
+      ctx.font = "600 12.5px Lato, 'Helvetica Neue', Arial, sans-serif";
+      const lw = ctx.measureText(c.text).width + 12;
+      const len1 = 34, len2 = 24;
+      // keep the label on the canvas: flip sides when it would run off an edge
+      if (d[0] >= 0 && A[0] + len1 + len2 + lw + 12 > W) d = [-Math.abs(d[0]) || -1, d[1]];
+      else if (d[0] < 0 && A[0] - len1 - len2 - lw - 12 < 0) d = [Math.abs(d[0]) || 1, d[1]];
+      const L = Math.hypot(d[0], d[1]), sx = d[0] >= 0 ? 1 : -1;
       const B = [A[0] + (d[0] / L) * len1, A[1] + (d[1] / L) * len1], C = [B[0] + sx * len2, B[1]];
       ctx.strokeStyle = rgba(INK, 0.72); ctx.lineWidth = 0.9;
       ctx.fillStyle = rgba(INK, 0.9); ctx.beginPath(); ctx.arc(A[0], A[1], 2.3, 0, Math.PI * 2); ctx.fill();
