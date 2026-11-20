@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { IMG } from "@/data/images";
 import PageHero, { sx } from "@/components/PageHero";
 import { MARKET_PAGES } from "@/data/site";
 import { projects, marketOf } from "@/data/projects";
@@ -18,8 +19,8 @@ export default function MarketsPage() {
   return (
     <>
       <Header scrolled={scrolled} />
-      <PageHero title="Markets" subtitle="Power generation, carbon capture, and environmental and industrial infrastructure." bg="/img/power_hero.jpg" />
-      <div style={{ ...sx.wrap, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 22 }}>
+      <PageHero title="Markets" subtitle="Power generation, carbon capture, and environmental and industrial infrastructure." bg={IMG.markets} />
+      <div className="rg" style={{ ...sx.wrap, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 22 }}>
         {MARKET_PAGES.map((m) => (
           <Link key={m.slug} href={`/markets/${m.slug}`} style={{ display: "block", border: "1px solid #e5e7eb", background: "#fff" }}>
             <div style={{ height: 180, backgroundImage: `url('${m.img}')`, backgroundSize: "cover", backgroundPosition: "center" }} />

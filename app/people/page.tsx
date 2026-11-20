@@ -94,12 +94,11 @@ export default function PeoplePage() {
   return (
     <>
       <Header scrolled={scrolled} />
-      <main style={{ minHeight: "100vh", background: "#fff", minWidth: 1200 }}>
+      <main style={{ minHeight: "100vh", background: "#fff" }}>
         <AboutHero active="people" />
 
         <div className="dk-sub">
           <div className="dk-center">
-            <div className="dk-sub-t">Our People</div>
             Leaders, discipline engineers, and financial advisors in one team. Power plant and process engineers review the plant,
             the capture facility, and the interfaces between them; the commercial and financial team carries the same baseline into
             the project agreements and the financing.
@@ -107,10 +106,10 @@ export default function PeoplePage() {
 
           <div style={{ background: "#fafafa", padding: "10px 0 60px" }}>
             {GROUPS.map((g) => (
-              <div key={g.title} style={{ width: 1200, margin: "0 auto", paddingTop: 50 }}>
+              <div key={g.title} style={{ maxWidth: 1200, margin: "0 auto", padding: "50px 24px 0" }}>
                 <p style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 26, color: "#0b2545", marginBottom: 6 }}>{g.title}</p>
                 <p style={{ fontSize: 15, color: "#777", marginBottom: 24 }}>{g.intro}</p>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 22 }}>
+                <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 22 }}>
                   {g.people.map((p) => <Card key={p.name} p={p} />)}
                 </div>
               </div>

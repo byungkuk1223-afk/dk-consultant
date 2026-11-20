@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { IMG } from "@/data/images";
 import PageHero from "@/components/PageHero";
 import { Intro, Matrix, Steps, Tiers } from "@/components/services/Sections";
 
@@ -21,7 +22,7 @@ export default function DeliveryPage() {
       <PageHero
         title="How We Deliver"
         subtitle="One project director, one baseline, and a review discipline that every deliverable passes before it reaches the owner."
-        bg="/img/power_plant.jpg"
+        bg={IMG.delivery}
       />
 
       <Intro

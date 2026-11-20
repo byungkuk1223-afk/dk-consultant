@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { projects, marketOf, statusOf, servicesOf, type Project } from "@/data/projects";
 import { profileFor } from "@/data/projectProfiles";
 import { marketBySlug, marketSlugOf, serviceBySlug } from "@/data/site";
+import { projectImg } from "@/data/images";
 
 const F = "'Lato', sans-serif";
 const SERIF = "'Libre Baskerville', Georgia, serif";
@@ -16,8 +17,7 @@ const p: React.CSSProperties = { fontSize: 15.5, lineHeight: "27px", color: "#3a
 
 // Heroes use the market's photograph: the legacy per-project images are small and some are illustrative, not of the project.
 function imgOf(pr: Project) {
-  const slug = marketSlugOf(marketOf(pr));
-  return (slug && marketBySlug(slug)?.img) || "/img/power_hero.jpg";
+  return projectImg(pr);
 }
 
 export default function ProjectDetailPage() {
@@ -91,7 +91,7 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* Body */}
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "56px 24px 40px", display: "grid", gridTemplateColumns: "minmax(0, 1fr) 340px", gap: 56 }}>
+        <div className="rg" style={{ maxWidth: 1200, margin: "0 auto", padding: "56px 24px 40px", display: "grid", gridTemplateColumns: "minmax(0, 1fr) 340px", gap: 56 }}>
           <div>
             <p style={{ fontSize: 19, lineHeight: "31px", color: "#0b2545", fontFamily: SERIF, marginBottom: 34 }}>
               {pf ? pf.summary : `${project.category}${d?.client ? ` for ${d.client}` : ""}${d?.country ? ` in ${d.country}` : ""}.`}
@@ -120,7 +120,7 @@ export default function ProjectDetailPage() {
             {pf?.challenge && (
               <section style={{ marginBottom: 34 }}>
                 <p style={label}>CASE STUDY</p>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", border: "1px solid #e5e7eb" }}>
+                <div className="rg" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", border: "1px solid #e5e7eb" }}>
                   {[["The challenge", pf.challenge], ["The solution", pf.solution], ["The result", pf.result]].map(([h, t], i) => (
                     <div key={h} style={{ padding: "20px 20px", borderLeft: i ? "1px solid #e5e7eb" : "none", background: i === 2 ? "#f4f7fb" : "#fff" }}>
                       <p style={{ fontSize: 11.5, letterSpacing: 2, color: "#0b2545", fontWeight: 700, fontFamily: F, marginBottom: 10 }}>{h?.toUpperCase()}</p>
@@ -177,7 +177,7 @@ export default function ProjectDetailPage() {
           <div style={{ background: "#f6f8fb", padding: "46px 0 60px" }}>
             <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
               <p style={label}>RELATED PROJECTS · {market.toUpperCase()}</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+              <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
                 {related.map((r) => {
                   const rp = profileFor(r.id);
                   return (

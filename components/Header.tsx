@@ -1,57 +1,12 @@
 "use client";
+import { useState } from "react";
 
 interface HeaderProps {
   scrolled: boolean;
   solid?: boolean;
 }
 
-export default function Header({ scrolled, solid }: HeaderProps) {
-  const filled = scrolled || !!solid;
-  return (
-    <header
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        zIndex: 1000,
-        backgroundColor: filled ? (solid && !scrolled ? "#0b2545" : "rgba(58,85,133,0.97)") : "transparent",
-        backgroundImage: filled ? "none" : "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%)",
-        transition: "background-color 0.3s ease, background-image 0.3s ease",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          padding: "18px 32px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          boxSizing: "border-box",
-        }}
-      >
-        {/* Logo */}
-        <a href="/" style={{ textDecoration: "none" }}>
-          <img
-            src="/logo-wordmark.png"
-            alt="DK Consultants"
-            style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)" }}
-          />
-        </a>
-
-        {/* Nav */}
-        <nav>
-          <ul
-            style={{
-              display: "flex",
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-              gap: 48,
-              alignItems: "center",
-            }}
-          >
-            {[
+const MENU = [
               {
                 label: "MARKETS",
                 href: "/markets",
@@ -85,14 +40,62 @@ export default function Header({ scrolled, solid }: HeaderProps) {
                 label: "ABOUT",
                 href: "/about",
                 sub: [
-                  { label: "About DK Consultants", href: "/about" },
+                  { label: "Who We Are", href: "/about" },
                   { label: "How We Deliver", href: "/delivery" },
                   { label: "Our People", href: "/people" },
-                  { label: "Healthcare Unit", href: "/healthcare" },
                 ],
               },
               { label: "CAREERS", href: "/career", sub: [] },
-            ].map((item) => (
+            ];
+
+export default function Header({ scrolled, solid }: HeaderProps) {
+  const [open, setOpen] = useState(false);
+  const filled = scrolled || !!solid || open;
+  return (
+    <header
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        zIndex: 1000,
+        backgroundColor: filled ? (solid && !scrolled ? "#0b2545" : "rgba(58,85,133,0.97)") : "transparent",
+        backgroundImage: filled ? "none" : "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%)",
+        transition: "background-color 0.3s ease, background-image 0.3s ease",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          padding: "18px clamp(20px, 3vw, 32px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          boxSizing: "border-box",
+        }}
+      >
+        {/* Logo */}
+        <a href="/" style={{ textDecoration: "none" }}>
+          <img
+            src="/logo-wordmark.png"
+            alt="DK Consultants"
+            style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)" }}
+          />
+        </a>
+
+        {/* Nav */}
+        <nav className="hdr-nav">
+          <ul
+            style={{
+              display: "flex",
+              listStyle: "none",
+              margin: 0,
+              padding: 0,
+              gap: 48,
+              alignItems: "center",
+            }}
+          >
+            {MENU.map((item) => (
               <li key={item.label} className="nav-item" style={{ position: "relative" }}>
                 <a
                   href={item.href}
@@ -125,6 +128,7 @@ export default function Header({ scrolled, solid }: HeaderProps) {
         {/* Contact Button */}
         <a
           href="/contact"
+          className="hdr-contact"
           style={{
             color: "#fff",
             padding: "9px 22px",
@@ -147,6 +151,9 @@ export default function Header({ scrolled, solid }: HeaderProps) {
         >
           CONTACT
         </a>
+        <button className="hdr-burger" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>
+          <span /><span /><span />
+        </button>
       </div>
 
       <style>{`
@@ -181,6 +188,17 @@ export default function Header({ scrolled, solid }: HeaderProps) {
           color: #416ab3;
         }
       `}</style>
+      <nav className={`hdr-mobile${open ? " open" : ""}`}>
+        {MENU.map((item) => (
+          <div key={item.label} className="grp">
+            <a href={item.href}>{item.label}</a>
+            {item.sub.length > 0 && (
+              <div className="sub">{item.sub.map((x) => <a key={x.href} href={x.href}>{x.label}</a>)}</div>
+            )}
+          </div>
+        ))}
+        <div className="grp"><a href="/contact">CONTACT</a></div>
+      </nav>
     </header>
   );
 }

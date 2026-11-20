@@ -1,33 +1,15 @@
 "use client";
 
 export default function PageHero({ title, subtitle, bg }: { title: string; subtitle: string; bg: string }) {
+  // Title starts on the same left edge as the page body (1200px container with 24px gutters).
   return (
-    <section
-      style={{
-        position: "relative",
-        width: "100%",
-        height: 380,
-        overflow: "hidden",
-        display: "flex",
-        alignItems: "center",
-        background: "#0b2545",
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `url('${bg}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center 30%",
-          filter: "brightness(0.45)",
-        }}
-      />
-      <div style={{ position: "relative", zIndex: 1, paddingLeft: "max(24px, calc((100% - 1200px) / 2))", color: "#fff", maxWidth: 1000 }}>
-        <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 46, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
+    <section className="page-hero" style={{ position: "relative", width: "100%", minHeight: 380, overflow: "hidden", display: "flex", alignItems: "center", background: "#0b2545" }}>
+      <div style={{ position: "absolute", inset: 0, backgroundImage: `url('${bg}')`, backgroundSize: "cover", backgroundPosition: "center 40%", filter: "brightness(0.45)" }} />
+      <div style={{ position: "relative", zIndex: 1, width: "100%", maxWidth: 1200, margin: "0 auto", padding: "110px 24px 56px", color: "#fff" }}>
+        <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.2, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 0.5, maxWidth: 900 }}>
           {title}
         </h1>
-        <p style={{ fontSize: 17, fontWeight: 300, margin: 0, lineHeight: 1.6, fontFamily: "'Lato', sans-serif" }}>{subtitle}</p>
+        <p style={{ fontSize: 17, fontWeight: 300, margin: 0, lineHeight: 1.6, fontFamily: "'Lato', sans-serif", maxWidth: 820 }}>{subtitle}</p>
       </div>
     </section>
   );

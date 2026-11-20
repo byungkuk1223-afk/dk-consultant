@@ -43,7 +43,7 @@ export default function AboutPage() {
   return (
     <>
       <Header scrolled={scrolled} />
-      <main style={{ minHeight: "100vh", background: "#fff", minWidth: 1200 }}>
+      <main style={{ minHeight: "100vh", background: "#fff" }}>
         <AboutHero active="about" />
 
         <div className="dk-sub">
@@ -68,11 +68,11 @@ export default function AboutPage() {
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <div style={{ background: "#0b2545", color: "#fff", padding: "18px 40px", fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 22 }}>DK Consultants</div>
                 <div style={{ width: 1, height: 30, background: "#9aa9bd" }} />
-                <div style={{ display: "grid", gridTemplateColumns: "3fr 1fr", gap: 30, width: "100%" }}>
+                <div className="rg" style={{ display: "grid", gridTemplateColumns: "3fr 1fr", gap: 30, width: "100%" }}>
                   <div style={{ border: "1px solid #c8d5eb", background: "#fff", padding: 24 }}>
                     <p style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 20, color: "#0b2545", marginBottom: 6 }}>Power Plant &amp; Environment Practice</p>
                     <p style={{ fontSize: 15, color: "#777", lineHeight: "24px", marginBottom: 18 }}>Owner-side integrated advisory toward the investment decision, financial close, and execution readiness</p>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+                    <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
                       {[
                         { t: "Technical & Engineering Management", i: ["Feasibility integration", "Engineering coordination", "Technology and equipment evaluation", "EPC procurement support", "Scope, interface, and cost control"] },
                         { t: "Commercial & Contract Advisory", i: ["Project structuring and risk allocation", "PPA / offtake strategy", "EPC and major supply agreements", "O&M arrangements", "Alignment of project agreements"] },
@@ -88,7 +88,6 @@ export default function AboutPage() {
                   <div style={{ border: "1px solid #e5e5e5", background: "#fff", padding: 24 }}>
                     <p style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 20, color: "#0b2545", marginBottom: 6 }}>Healthcare Unit</p>
                     <p style={{ fontSize: 15, color: "#777", lineHeight: "24px" }}>A separate business unit, formed in 2019, for hospital and pharmaceutical projects.</p>
-                    <p style={{ marginTop: 12 }}><a href="/healthcare" style={{ color: "#416ab3", fontWeight: 700, fontSize: 14 }}>Healthcare Unit &rarr;</a></p>
                   </div>
                 </div>
               </div>

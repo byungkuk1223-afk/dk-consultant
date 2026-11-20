@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { IMG } from "@/data/images";
+import PageHero from "@/components/PageHero";
 
 export default function CareerPage() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,61 +19,7 @@ export default function CareerPage() {
       <Header scrolled={scrolled} />
       <main style={{ fontFamily: "'Lato', sans-serif" }}>
 
-        {/* Hero Section */}
-        <section
-          style={{
-            position: "relative",
-            width: "100%",
-            height: 380,
-            overflow: "hidden",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          {/* Background image */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage: "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80')",
-              backgroundSize: "cover",
-              backgroundPosition: "center 30%",
-              filter: "brightness(0.45)",
-            }}
-          />
-          {/* Overlay text */}
-          <div
-            style={{
-              position: "relative",
-              zIndex: 1,
-              paddingLeft: "28%",
-              color: "#fff",
-            }}
-          >
-            <h2
-              style={{
-                fontFamily: "'Libre Baskerville', Georgia, serif",
-                fontSize: 55,
-                fontWeight: "normal",
-                lineHeight: 1.2,
-                margin: "0 0 14px 0",
-              }}
-            >
-              Career
-            </h2>
-            <p
-              style={{
-                fontSize: 14,
-                fontWeight: 300,
-                margin: 0,
-                letterSpacing: 0.2,
-                lineHeight: 1.6,
-              }}
-            >
-              DK Consultants recruits people who have potential to grow into a global leader.
-            </p>
-          </div>
-        </section>
+        <PageHero title="Careers" subtitle="DK Consultants recruits people who have potential to grow into a global leader." bg={IMG.careers} />
 
         {/* Content Section */}
         <section

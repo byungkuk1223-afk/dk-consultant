@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { IMG } from "@/data/images";
 import PageHero, { sx } from "@/components/PageHero";
 
 type Item = { tag: string; title: string; facts: string[]; people: string[]; note?: string };
@@ -74,7 +75,7 @@ export default function TeamExperiencePage() {
       <PageHero
         title="Team Experience"
         subtitle="Plants our people engineered, built, and commissioned before they joined DKC."
-        bg="/img/power_hero.jpg"
+        bg={IMG.teamExperience}
       />
 
       <section>
@@ -89,7 +90,7 @@ export default function TeamExperiencePage() {
             <a href="/projects" style={{ color: "#416ab3", fontWeight: 700 }}>DKC&apos;s own projects</a>.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 30 }}>
+          <div className="rg" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 30 }}>
             {ITEMS.map((it) => (
               <div key={it.title} style={{ background: "#fff", border: "1px solid #e5e7eb", borderTop: "4px solid #0b2545", padding: "24px 26px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)" }}>
                 <p style={{ fontSize: 11, letterSpacing: 2, color: "#0e7c86", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 8 }}>

@@ -1,81 +1,38 @@
+// Site footer: address, link columns, and a bottom row with copyright and the privacy policy link.
+const F = "'Lato', sans-serif";
+const COLS = [
+  { t: "Markets", l: [["Power Generation", "/markets/power-generation"], ["Carbon Capture & Low-Carbon Fuels", "/markets/carbon-capture"], ["Environmental Infrastructure", "/markets/environmental-infrastructure"], ["Industrial & Infrastructure", "/markets/industrial-infrastructure"]] },
+  { t: "Services", l: [["Engineering Management", "/services/engineering"], ["Commercial & Contract Advisory", "/services/commercial"], ["Financial Advisory", "/services/financial"], ["Feasibility & Development", "/services/development"]] },
+  { t: "Company", l: [["Who We Are", "/about"], ["How We Deliver", "/delivery"], ["Our People", "/people"], ["Projects", "/projects"], ["Clients", "/clients"], ["Careers", "/career"], ["Contact", "/contact"]] },
+];
+
 export default function Footer() {
   return (
-    <footer>
-      <div style={{ background: "#1a1a1a", padding: "50px 48px" }}>
-        <div style={{
-          maxWidth: 1100, margin: "0 auto",
-          display: "flex", alignItems: "flex-start",
-          justifyContent: "space-between", gap: 40,
-        }}>
-
-          {/* Logo & Contact Info */}
-          <div>
-            {/* Logo */}
-            <div style={{ marginBottom: 20 }}>
-              <a href="/" style={{ textDecoration: "none" }}>
-                <img
-                  src="/logo-wordmark.png"
-                  alt="DK Consultants"
-                  style={{ height: 26, width: "auto", filter: "brightness(0) invert(1)" }}
-                />
-              </a>
-            </div>
-
-            {/* Contact Details */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 10 }}>
-              <span style={{ fontSize: 12, color: "#aaa", fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.7 }}>
-                Address. #303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea
-              </span>
-              <span style={{ fontSize: 12, color: "#aaa", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
-                Tel. +82.31.603.4845 &nbsp;/&nbsp; Fax. +82.31.603.0079
-              </span>
-              <span style={{ fontSize: 12, color: "#aaa", fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
-                E-mail. dkc_info@dk-consultant.com
-              </span>
-            </div>
-          </div>
-
-          {/* Privacy Button */}
-          <div style={{ paddingTop: 4, flexShrink: 0 }}>
-            <a href="/privacy" style={{
-              display: "inline-block",
-              padding: "11px 26px",
-              border: "1px solid #666",
-              color: "#aaa",
-              textDecoration: "none",
-              fontSize: 11,
-              letterSpacing: 1.8,
-              fontFamily: "'Lato', sans-serif",
-              fontWeight: 400,
-              textTransform: "uppercase",
-              transition: "border-color 0.2s, color 0.2s",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#aaa";
-              (e.currentTarget as HTMLAnchorElement).style.color = "#fff";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#666";
-              (e.currentTarget as HTMLAnchorElement).style.color = "#aaa";
-            }}>
-              Privacy Statement
-            </a>
-          </div>
+    <footer style={{ background: "#14171c", color: "#aab1bb", fontFamily: F }}>
+      <div className="rg" style={{ maxWidth: 1200, margin: "0 auto", padding: "56px 24px 40px", display: "grid", gridTemplateColumns: "minmax(0,1.4fr) repeat(3, minmax(0,1fr))", gap: 36 }}>
+        <div>
+          <a href="/"><img src="/logo-wordmark.png" alt="DK Consultants" style={{ height: 26, width: "auto", filter: "brightness(0) invert(1)", marginBottom: 20 }} /></a>
+          <p style={{ fontSize: 13, lineHeight: 1.8, fontWeight: 300 }}>
+            #303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil,<br />Bundang-gu, Seongnam-si, Gyeonggi-do, Korea
+          </p>
+          <p style={{ fontSize: 13, lineHeight: 1.8, fontWeight: 300, marginTop: 8 }}>
+            Tel. +82 31 603 4845 · Fax. +82 31 603 0079<br />dkc_info@dk-consultant.com
+          </p>
         </div>
+        {COLS.map((c) => (
+          <div key={c.t}>
+            <p style={{ color: "#fff", fontSize: 12, letterSpacing: 1.8, fontWeight: 700, marginBottom: 14 }}>{c.t.toUpperCase()}</p>
+            {c.l.map(([label, href]) => (
+              <a key={href} href={href} className="ft-link" style={{ display: "block", fontSize: 13.5, lineHeight: "26px" }}>{label}</a>
+            ))}
+          </div>
+        ))}
       </div>
-
-      {/* Copyright bar */}
-      <div style={{
-        background: "#111",
-        textAlign: "center",
-        padding: "15px",
-        fontSize: 11,
-        color: "#888",
-        fontFamily: "'Lato', sans-serif",
-        fontWeight: 300,
-        letterSpacing: 1,
-      }}>
-        COPYRIGHT (C) DK CONSULTANTS. ALL RIGHTS RESERVED.
+      <div style={{ borderTop: "1px solid #262b33" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "18px 24px", display: "flex", flexWrap: "wrap", gap: 18, fontSize: 12, color: "#7d8591" }}>
+          <span>© {new Date().getFullYear()} DK Consultants Co., Ltd. All rights reserved.</span>
+          <a href="/privacy" className="ft-link">Privacy Policy</a>
+        </div>
       </div>
     </footer>
   );

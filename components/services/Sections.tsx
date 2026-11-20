@@ -15,7 +15,7 @@ export function Intro({ statement, why, outcomes }: { statement: string; why: st
     <section>
       <div style={{ ...WRAP, paddingBottom: 40 }}>
         <p style={{ fontSize: 24, lineHeight: "36px", fontFamily: SERIF, color: NAVY, maxWidth: 940, marginBottom: 34 }}>{statement}</p>
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1.4fr) minmax(0,1fr)", gap: 56 }}>
+        <div className="rg" style={{ display: "grid", gridTemplateColumns: "minmax(0,1.4fr) minmax(0,1fr)", gap: 56 }}>
           <div>
             <p style={EYEBROW}>WHY IT MATTERS</p>
             {why.map((t) => <p key={t} style={{ ...BODY, marginBottom: 14 }}>{t}</p>)}
@@ -42,7 +42,7 @@ export function Capabilities({ title, items }: { title: string; items: { t: stri
       <div style={WRAP}>
         <p style={EYEBROW}>WHAT WE DO</p>
         <h2 style={H2}>{title}</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18, marginTop: 10 }}>
+        <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18, marginTop: 10 }}>
           {items.map((c, i) => (
             <div key={c.t} style={{ background: "#fff", border: "1px solid #e3e8ef", padding: "22px 22px 24px" }}>
               <p style={{ fontFamily: SERIF, fontSize: 15, color: TEAL, marginBottom: 10 }}>{String(i + 1).padStart(2, "0")}</p>
@@ -63,7 +63,7 @@ export function Steps({ title, intro, steps, eyebrow = "HOW WE WORK", labels = [
         <p style={EYEBROW}>{eyebrow}</p>
         <h2 style={H2}>{title}</h2>
         {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 26 }}>{intro}</p>}
-        <div style={{ display: "grid", gridTemplateColumns: `repeat(${steps.length}, 1fr)`, borderTop: `3px solid ${NAVY}` }}>
+        <div className="rg" style={{ display: "grid", gridTemplateColumns: `repeat(${steps.length}, 1fr)`, borderTop: `3px solid ${NAVY}` }}>
           {steps.map((s, i) => (
             <div key={s.t} style={{ padding: "20px 18px 6px", borderLeft: i ? "1px solid #e3e8ef" : "none", position: "relative" }}>
               <span style={{ position: "absolute", top: -9, left: i ? 18 : 0, width: 15, height: 15, borderRadius: "50%", background: "#fff", border: `3px solid ${NAVY}` }} />
@@ -89,7 +89,7 @@ export function Matrix({ eyebrow, title, intro, head, rows, note }: { eyebrow: s
         <p style={EYEBROW}>{eyebrow}</p>
         <h2 style={H2}>{title}</h2>
         {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 22 }}>{intro}</p>}
-        <div style={{ background: "#fff", border: "1px solid #e3e8ef" }}>
+        <div className="rscroll"><div style={{ background: "#fff", border: "1px solid #e3e8ef", minWidth: 760 }}>
           <div style={{ display: "grid", gridTemplateColumns: `1.1fr repeat(${head.length - 1}, 1fr)`, background: NAVY }}>
             {head.map((h) => <p key={h} style={{ color: "#fff", fontFamily: F, fontSize: 11.5, letterSpacing: 1.4, fontWeight: 700, padding: "13px 16px" }}>{h.toUpperCase()}</p>)}
           </div>
@@ -100,7 +100,7 @@ export function Matrix({ eyebrow, title, intro, head, rows, note }: { eyebrow: s
               ))}
             </div>
           ))}
-        </div>
+        </div></div>
         {note && <p style={{ fontFamily: F, fontSize: 13.5, color: "#6b7580", marginTop: 12 }}>{note}</p>}
       </div>
     </section>
@@ -114,7 +114,7 @@ export function Tiers({ eyebrow, title, intro, tiers, tint }: { eyebrow: string;
         <p style={EYEBROW}>{eyebrow}</p>
         <h2 style={H2}>{title}</h2>
         {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 24 }}>{intro}</p>}
-        <div style={{ display: "grid", gridTemplateColumns: `repeat(${tiers.length}, 1fr)`, gap: 18 }}>
+        <div className="rg" style={{ display: "grid", gridTemplateColumns: `repeat(${tiers.length}, 1fr)`, gap: 18 }}>
           {tiers.map((t) => (
             <div key={t.t} style={{ border: "1px solid #e3e8ef", borderTop: `3px solid ${TEAL}`, padding: "20px 22px 22px" }}>
               <p style={{ fontFamily: F, fontSize: 11.5, letterSpacing: 1.8, color: TEAL, fontWeight: 700, marginBottom: 8 }}>{t.k}</p>

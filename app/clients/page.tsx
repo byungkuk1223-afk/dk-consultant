@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { IMG } from "@/data/images";
+import PageHero from "@/components/PageHero";
 
 const ROWS = [
   {
@@ -57,32 +59,7 @@ export default function ClientsPage() {
       <Header scrolled={scrolled} />
       <main style={{ minHeight: "100vh", background: "#fff" }}>
 
-      {/* Page Hero */}
-      <section style={{
-        position: "relative",
-        width: "100%",
-        height: 380,
-        overflow: "hidden",
-        display: "flex",
-        alignItems: "center",
-      }}>
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "url('/img/crane.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "brightness(0.45)",
-        }} />
-        <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
-          <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
-            Clients
-          </h1>
-          <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
-            Organizations and institutions we have proudly served
-          </p>
-        </div>
-      </section>
+      <PageHero title="Clients" subtitle="Organizations and institutions we have proudly served" bg={IMG.clients} />
 
       {/* Clients Logo Grid */}
       <div style={{ background: "#fafafa", padding: "80px 40px 100px" }}>

@@ -57,7 +57,7 @@ export default function MarketPage() {
 
       {/* Market context */}
       <section>
-        <div style={{ ...WRAP, display: "grid", gridTemplateColumns: pov.stats.length ? "minmax(0,1.6fr) minmax(0,1fr)" : "1fr", gap: 56 }}>
+        <div className="rg" style={{ ...WRAP, display: "grid", gridTemplateColumns: pov.stats.length ? "minmax(0,1.6fr) minmax(0,1fr)" : "1fr", gap: 56 }}>
           <div>
             <p style={EYEBROW}>MARKET CONTEXT</p>
             <h2 style={{ fontSize: 30, lineHeight: "40px", fontFamily: SERIF, fontWeight: 400, color: NAVY, marginBottom: 22 }}>{pov.headline}</h2>
@@ -83,7 +83,7 @@ export default function MarketPage() {
           <p style={EYEBROW}>OUR POINT OF VIEW</p>
           <h2 style={{ fontSize: 30, lineHeight: "38px", fontFamily: SERIF, fontWeight: 400, color: NAVY, marginBottom: 28 }}>What we see in {m.name.toLowerCase()} projects</h2>
           {pov.views.map((v, i) => (
-            <div key={v.t} style={{ display: "grid", gridTemplateColumns: "80px minmax(0,0.9fr) minmax(0,1.6fr)", gap: 28, padding: "26px 0", borderTop: "1px solid #dde3ea" }}>
+            <div key={v.t} className="rg" style={{ display: "grid", gridTemplateColumns: "80px minmax(0,0.9fr) minmax(0,1.6fr)", gap: 28, padding: "26px 0", borderTop: "1px solid #dde3ea" }}>
               <p style={{ fontFamily: SERIF, fontSize: 30, color: TEAL, lineHeight: 1 }}>{String(i + 1).padStart(2, "0")}</p>
               <p style={{ fontFamily: SERIF, fontSize: 20, lineHeight: "28px", color: NAVY }}>{v.t}</p>
               <p style={{ ...BODY, marginBottom: 0 }}>{v.d}</p>
@@ -94,7 +94,7 @@ export default function MarketPage() {
 
       {/* What lenders test + how DKC helps */}
       <section>
-        <div style={{ ...WRAP, display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: 48 }}>
+        <div className="rg" style={{ ...WRAP, display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: 48 }}>
           <div>
             <p style={EYEBROW}>WHAT LENDERS AND INVESTORS TEST</p>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -127,7 +127,7 @@ export default function MarketPage() {
                 All {inMarket.length} {m.name} projects →
               </Link>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
+            <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
               {selected.map((p) => {
                 const pf = profileFor(p.id)!;
                 return (

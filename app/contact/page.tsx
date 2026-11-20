@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { IMG } from "@/data/images";
+import PageHero from "@/components/PageHero";
 
 export default function ContactPage() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,27 +59,11 @@ export default function ContactPage() {
       <Header scrolled={scrolled} />
       <main style={{ fontFamily: "'Lato', sans-serif" }}>
 
-        {/* Hero */}
-        <section style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", display: "flex", alignItems: "center" }}>
-          <div style={{
-            position: "absolute", inset: 0,
-            backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')",
-            backgroundSize: "cover", backgroundPosition: "center 40%",
-            filter: "brightness(0.45)",
-          }} />
-          <div style={{ position: "relative", zIndex: 1, paddingLeft: "35%", color: "#fff" }}>
-            <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 55, fontWeight: "normal", lineHeight: 1.2, margin: "0 0 12px 0" }}>
-              Contact Us
-            </h2>
-            <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, fontFamily: "'Lato', sans-serif" }}>
-              We look forward to your inquiry
-            </p>
-          </div>
-        </section>
+        <PageHero title="Contact Us" subtitle="We look forward to your inquiry" bg={IMG.contact} />
 
         {/* Tabs */}
         <div style={{ display: "flex", justifyContent: "center", marginTop: 0 }}>
-          <div style={{ display: "flex", width: "52%", minWidth: 500 }}>
+          <div style={{ display: "flex", width: "min(100%, 640px)" }}>
             <button onClick={() => setActiveTab("contact")} style={{
               flex: 1, padding: "14px 24px", border: "none", cursor: "pointer",
               backgroundColor: activeTab === "contact" ? "#3a5585" : "#f0f0f0",
@@ -105,14 +91,10 @@ export default function ContactPage() {
         </div>
 
         {/* Content */}
-        <section style={{ padding: "60px 10%", maxWidth: 1400, margin: "0 auto", boxSizing: "border-box" }}>
+        <section style={{ padding: "60px 24px", maxWidth: 1400, margin: "0 auto", boxSizing: "border-box" }}>
 
           {activeTab === "contact" && (
             <div style={{ maxWidth: 560, margin: "0 auto" }}>
-              <h2 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 40, fontWeight: "normal", color: "#000", margin: "0 0 12px 0", borderBottom: "2px solid #ddd", paddingBottom: 20 }}>
-                Contact
-              </h2>
-              <div style={{ width: 36, height: 2, backgroundColor: "#3a5585", marginBottom: 32 }} />
 
               {status === "success" ? (
                 <div style={{
@@ -120,16 +102,16 @@ export default function ContactPage() {
                   border: "1px solid #c8d8c0", background: "#f4faf2", borderRadius: 2,
                 }}>
                   <p style={{ fontSize: 15, color: "#2e6b2e", fontFamily: "'Lato', sans-serif", marginBottom: 8 }}>
-                    문의가 성공적으로 접수되었습니다.
+                    Thank you. Your inquiry has been received.
                   </p>
                   <p style={{ fontSize: 13, color: "#666", fontFamily: "'Lato', sans-serif" }}>
-                    빠른 시일 내에 답변 드리겠습니다.
+                    We will reply as soon as possible.
                   </p>
                   <button onClick={() => setStatus("idle")} style={{
                     marginTop: 20, padding: "8px 28px", background: "#3a5585", color: "#fff",
                     border: "none", fontSize: 13, cursor: "pointer", fontFamily: "'Lato', sans-serif",
                   }}>
-                    새 문의 작성
+                    New inquiry
                   </button>
                 </div>
               ) : (
@@ -166,33 +148,18 @@ export default function ContactPage() {
 
                   {/* Privacy Statement */}
                   <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginTop: 6 }}>
-                    <label style={{ ...labelStyle, paddingTop: 6, lineHeight: 1.4 }}>Privacy<br />Statement</label>
+                    <label style={{ ...labelStyle, paddingTop: 6, lineHeight: 1.4 }}>Privacy</label>
                     <div style={{
-                      flex: 1, height: 80, overflowY: "scroll", border: "1px solid #ccc",
+                      flex: 1, height: 120, overflowY: "auto", border: "1px solid #ccc",
                       padding: "8px 10px", fontSize: 11, color: "#555", lineHeight: 1.7,
                       fontFamily: "'Lato', sans-serif",
                     }}>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Purpose of Personal Information Processing</p>
-                      <p style={{ margin: "0 0 10px 0" }}>We, DK Consultants Co., Ltd. (www.dk-consultant.com; hereinafter referred to as the 'Company'), use our best efforts to protect your privacy and personal information. The Company processes personal information for the following purpose and does not use it for any other purposes; identifying and verifying clients in provision of services pertinent to clients' needs and interest.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Personal Information Processing and Retention Period</p>
-                      <p style={{ margin: "0 0 6px 0" }}>① The Company processes and retains personal information within the personal information retention period according to relevant laws or within the personal information retention period to which individuals consented when collecting their personal information.</p>
-                      <p style={{ margin: "0 0 10px 0" }}>② The retention period of the personal information processed by the Company is 5 years.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Provision of Personal Information to a Third Party</p>
-                      <p style={{ margin: "0 0 10px 0" }}>The Company may provide the personal information to a third party only when it falls under the provisions specified in Article 17 and 18 of the Personal Information Act, such as when the subject of the information provides consent and where special rules exist in any relevant law.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Outsourcing the Handling of Personal Information</p>
-                      <p style={{ margin: "0 0 6px 0" }}>① The Company may outsource the handling of personal information for efficient provision of services.</p>
-                      <p style={{ margin: "0 0 10px 0" }}>② When the Company provides personal data to a third party, the Company shall create and maintain a record of the provision in accordance with the provisions of Article 25 of the Act on the Protection of Personal Information.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Rights and Duties of a Subject Information</p>
-                      <p style={{ margin: "0 0 4px 0" }}>1) The right to request for the inspection of the personal information</p>
-                      <p style={{ margin: "0 0 4px 0" }}>2) The right to request for the correction of the personal information</p>
-                      <p style={{ margin: "0 0 4px 0" }}>3) The right to delete the personal information</p>
-                      <p style={{ margin: "0 0 10px 0" }}>4) The right to request for the suspension of the handling of the personal information</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Destruction of Personal Information</p>
-                      <p style={{ margin: "0 0 10px 0" }}>When DK Consultants Co., Ltd. has no further need to retain any personal information, the Company will destroy the personal information without delay within five days.</p>
-                      <p style={{ margin: "0 0 8px 0", fontWeight: 700, color: "#3a5585" }}>Privacy Officer</p>
-                      <p style={{ margin: "0 0 4px 0" }}>· Name: Jaegyung Pyun</p>
-                      <p style={{ margin: "0 0 4px 0" }}>· Title: Associate</p>
-                      <p style={{ margin: 0 }}>· Contact: 031-603-4845, jg.pyun@dk-consultant.com</p>
+                      <p style={{ margin: "0 0 6px 0" }}><b>Purpose:</b> to receive and answer your inquiry.</p>
+                      <p style={{ margin: "0 0 6px 0" }}><b>Items:</b> name, e-mail, mobile number, inquiry title and content.</p>
+                      <p style={{ margin: "0 0 6px 0" }}><b>Retention:</b> five years from receipt, then destroyed.</p>
+                      <p style={{ margin: "0 0 6px 0" }}><b>Overseas processing:</b> the form is delivered through Vercel Inc. and Resend (United States).</p>
+                      <p style={{ margin: "0 0 6px 0" }}>You may refuse consent; in that case, please contact us by e-mail or telephone instead of this form.</p>
+                      <p style={{ margin: 0 }}>Full details: <a href="/privacy" style={{ color: "#3a5585", textDecoration: "underline" }}>Privacy Policy</a></p>
                     </div>
                   </div>
 
@@ -200,7 +167,7 @@ export default function ContactPage() {
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 6, paddingLeft: 102 }}>
                     <input type="checkbox" id="agree" checked={agreed} onChange={e => setAgreed(e.target.checked)} style={{ width: 14, height: 14, cursor: "pointer" }} />
                     <label htmlFor="agree" style={{ fontSize: 12, color: "#555", cursor: "pointer" }}>
-                      I agree to the terms of the <span style={{ color: "#3a5585", textDecoration: "underline" }}>Privacy Policy</span> Terms.
+                      I agree to the collection and use of my personal information as described above.
                     </label>
                   </div>
 
@@ -221,7 +188,7 @@ export default function ContactPage() {
                         fontFamily: "'Lato', sans-serif", letterSpacing: 1,
                       }}
                     >
-                      {status === "loading" ? "전송 중..." : "Confirm"}
+                      {status === "loading" ? "Sending..." : "Confirm"}
                     </button>
                   </div>
                 </div>

@@ -3,6 +3,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { IMG } from "@/data/images";
+import PageHero from "@/components/PageHero";
 import { projects, MARKETS, marketOf, statusOf } from "@/data/projects";
 import { caseStudies } from "@/data/projectProfiles";
 
@@ -47,32 +49,7 @@ function ProjectsContent() {
     <>
       <Header scrolled={scrolled} />
       <main style={{ minHeight: "100vh", background: "#fff" }}>
-        {/* Page Hero */}
-        <section style={{
-          position: "relative",
-          width: "100%",
-          height: 380,
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-        }}>
-          <div style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: "url('/img/crane.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "brightness(0.45)",
-          }} />
-          <div style={{ position: "relative", zIndex: 1, paddingLeft: "28%", color: "#fff" }}>
-            <h1 style={{ fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 50, fontWeight: 400, margin: "0 0 14px 0", letterSpacing: 1 }}>
-              Projects
-            </h1>
-            <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
-              Mandates DKC has delivered in its own name or with Synergy Korea. For the plants our people delivered before joining DKC, see Team Experience.
-            </p>
-          </div>
-        </section>
+        <PageHero title="Projects" subtitle="Mandates DKC has delivered in its own name or with Synergy Korea. For the plants our people delivered before joining DKC, see Team Experience." bg={IMG.projects} />
 
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 80px" }}>
 
@@ -80,7 +57,7 @@ function ProjectsContent() {
           {activeRegion === "All" && activeMarket === "All" && !searchQuery && page === 1 && (
             <div style={{ marginBottom: 44 }}>
               <p style={{ fontSize: 12, letterSpacing: 2.5, color: "#416ab3", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>FEATURED CASE STUDIES</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+              <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
                 {caseStudies.map(c => {
                   const p = projects.find(x => x.id === c.id);
                   return (

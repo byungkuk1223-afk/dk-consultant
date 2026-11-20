@@ -75,7 +75,7 @@ export default function ServicePage() {
           ) : (
             <>
               <p style={sx.label}>SELECTED PROJECTS</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
+              <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}>
                 {featured.map((p) => (
                   <Link key={p.id} href={`/projects/${p.id}`} style={{ display: "block", background: "#fff", border: "1px solid #e5e7eb", padding: "18px 18px 20px" }}>
                     <p style={{ fontSize: 15.5, lineHeight: "22px", fontFamily: "'Libre Baskerville', Georgia, serif", color: "#0b2545", marginBottom: 8 }}>{profileFor(p.id)?.headline ?? p.title}</p>
