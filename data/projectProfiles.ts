@@ -161,7 +161,7 @@ export const profiles: ProjectProfile[] = [
     id: 25,
     tag: "LNG-to-power",
     headline: "Long An I and II LNG-to-power, Vietnam",
-    location: "Can Giuoc district, Long An province, Vietnam",
+    location: "Can Giuoc district, Long An province (now part of Tay Ninh province), Vietnam",
     capacity: "3,000 MW (Long An I and II, 1,500 MW each)",
     delivered: "With Synergy Korea",
     summary: "DKC carried the financing and project development workstreams of KEXIM's feasibility study for the Long An I and II LNG-to-power plants.",
@@ -417,7 +417,7 @@ export const profiles: ProjectProfile[] = [
     "tag": "Solar PV",
     "headline": "Kochkor solar power, Kyrgyzstan",
     "location": "Kochkor district, Naryn region, Kyrgyzstan",
-    "capacity": "300 MWp (DC)",
+    "capacity": "300 MWp DC (study basis)",
     "delivered": "DKC",
     "summary": "DKC carried out KEITI's feasibility study for the 300 MWp Kochkor solar power project in Kyrgyzstan.",
     "about": [
@@ -928,7 +928,7 @@ export const profiles: ProjectProfile[] = [
     "delivered": "DKC",
     "summary": "DKC carried out KEITI's feasibility study for a hybrid project in Ireland combining 63.2 MW of battery storage with a synchronous condenser, the Shannonbridge B grid-stabilization plant.",
     "about": [
-      "Shannonbridge B in County Offaly is Ireland's first hybrid grid-stabilization plant combining a synchronous condenser with a battery energy storage system. The 63.2 MW station couples a generator with a flywheel storing 4,000 MVA·s of rotational energy, providing inertia, with a battery that can supply up to 160 MWh. According to Hanwha, the project company is owned 80% by Hanwha Energy and 20% by Javah Energy and was developed with Irish developer Lumcloon Energy. Groundbreaking took place in September 2022, and the Taoiseach officially opened the plant on March 6, 2026.",
+      "Shannonbridge B in County Offaly is Ireland's first hybrid grid-stabilization plant combining a synchronous condenser with a battery energy storage system. The 63.2 MW station couples a generator with a flywheel storing 4,000 MVA·s of rotational energy, providing inertia, with a battery that can supply up to 160 MWh. Groundbreaking took place in September 2022, and the Taoiseach officially opened the plant on March 6, 2026.",
       "The plant serves EirGrid's growing need for system services. Under its DS3 program, EirGrid raised the limit on instantaneous non-synchronous generation, such as wind and solar, from 50% to 75% by March 2022, and it is working toward 95%. Operating at those levels requires inertia and fast frequency response that conventional power stations used to supply."
     ],
     "role": "Feasibility study for KEITI.",
@@ -1097,7 +1097,7 @@ export const profiles: ProjectProfile[] = [
     "tag": "Hydropower",
     "headline": "Battambang II hydropower, Cambodia",
     "location": "Battambang province, Cambodia",
-    "capacity": "30 MW",
+    "capacity": "approx. 30 MW (study basis)",
     "delivered": "DKC",
     "summary": "DKC carried out KIND's feasibility study for the 30 MW Battambang II hydropower project in Cambodia.",
     "about": [
@@ -1751,7 +1751,7 @@ export const profiles: ProjectProfile[] = [
     "delivered": "DKC",
     "summary": "DKC's Healthcare Unit prepared a bidding strategy for KHIDI on hospital PPP projects in Kyrgyzstan and Kazakhstan, including bankable project structuring.",
     "about": [
-      "Kazakhstan has pursued private investment in hospitals under its PPP Development Program. In December 2016 the Asian Development Bank agreed to advise the Ministry of Health and Social Development on a bankable PPP structure for a 300-bed teaching hospital in Karaganda. In October 2024 a 630-bed multidisciplinary hospital in Kokshetau closed a €365 million financing package arranged with EBRD support, described as the first healthcare PPP in Kazakhstan and Central Asia.",
+      "Kazakhstan has used public-private partnerships to build new hospitals under its PPP Development Program, and in October 2024 the first healthcare PPP in Kazakhstan and Central Asia closed its financing with EBRD support.",
       "In the Kyrgyz Republic, the first-ever PPP, prepared with IFC support in 2017, was in healthcare: a private operator was to open four dialysis centers in major cities, including Bishkek, covering about 75 percent of the population. At the time, only about 20 percent of people who needed dialysis could obtain it through public health centers, which faced outdated facilities and shortages of equipment and expertise."
     ],
     "role": "Bidding strategy including bankable project structuring, for KHIDI (DKC Healthcare Unit).",
@@ -1765,10 +1765,6 @@ export const profiles: ProjectProfile[] = [
     "result": "Bidding strategy and project structuring recommendations delivered to KHIDI (August to November 2019).",
     "relevance": "Hospital PPPs in emerging markets succeed only if the payment mechanism and risk allocation are acceptable to lenders.",
     "refs": [
-      {
-        "label": "ADB — ADB to support development of Karaganda teaching hospital PPP (Dec 2016)",
-        "url": "https://www.adb.org/news/adb-support-development-karaganda-teaching-hospital-ppp"
-      },
       {
         "label": "EBRD — EBRD supports first healthcare-sector PPP in Central Asia (Oct 2024)",
         "url": "https://www.ebrd.com/home/news-and-events/news/2024/ebrd-supports-first-healthcaresector-ppp-in-central-asia.html"
@@ -1945,7 +1941,7 @@ export const profiles: ProjectProfile[] = [
     "summary": "DKC's Healthcare Unit developed an overseas healthcare business strategy for KHIDI on construction-based healthcare packages in Indonesia, Kyrgyzstan, Kazakhstan, and Uzbekistan.",
     "about": [
       "Several of the countries covered have opened hospital development to private partners. Uzbekistan adopted a presidential decision on public-private partnership in healthcare in April 2019, allowing the Ministry of Health to contract private partners for 3 to 49 years to design, build, and operate clinics, with land, buildings, and equipment passing to the state at the end of the term. In May 2023 IFC agreed to structure a PPP for new multispecialty hospitals in the Samarkand, Jizzakh, and Kashkadarya regions.",
-      "In Kazakhstan, the Asian Development Bank agreed in December 2016 to advise the Ministry of Health and Social Development on a bankable PPP structure for a 300-bed teaching hospital in Karaganda, as part of the country's PPP Development Program. In October 2024 a 630-bed multidisciplinary hospital in Kokshetau closed a €365 million financing package arranged with EBRD support, described as the first healthcare PPP in Kazakhstan and Central Asia."
+      "Kazakhstan has used public-private partnerships to build new hospitals under its PPP Development Program, and in October 2024 the first healthcare PPP in Kazakhstan and Central Asia closed its financing with EBRD support."
     ],
     "role": "Overseas healthcare business strategy for KHIDI (DKC Healthcare Unit).",
     "scope": [
@@ -1965,10 +1961,6 @@ export const profiles: ProjectProfile[] = [
       {
         "label": "IFC — IFC assists Uzbekistan to modernize healthcare services through public-private partnership (May 2023)",
         "url": "https://www.ifc.org/en/pressroom/2023/ifc-assists-uzbekistan-to-modernize-healthcare-services-through-public-private-partnership"
-      },
-      {
-        "label": "ADB — ADB to support development of Karaganda teaching hospital PPP (Dec 2016)",
-        "url": "https://www.adb.org/news/adb-support-development-karaganda-teaching-hospital-ppp"
       },
       {
         "label": "EBRD — EBRD supports first healthcare-sector PPP in Central Asia (Oct 2024)",

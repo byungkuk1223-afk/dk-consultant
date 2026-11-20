@@ -58,7 +58,7 @@ export const projects: Project[] = [
     title: "Kochkor Solar Power in Kyrgyzstan",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"capacity":"300 MWp (DC)","sector":"Renewables","country":"Kyrgyzstan","client":"KEITI","time":"2025.09~2026.06"},
+    detail: {"capacity":"300 MWp DC (study basis)","sector":"Renewables","country":"Kyrgyzstan","client":"KEITI","time":"2025.09~2026.06"},
   },
   // ── Page 1 (63 ~ 49) ──────────────────────────────────────
   {
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     title: "Newcastle Green Ammonia Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"Carbon Credit","sector":"Renewables","country":"Australia","client":"KIND","time":"2023.11~2024.05","hasImage":true,"imgExt":"png"},
+    detail: {"sector":"Renewables","country":"Australia","client":"KIND","time":"2023.11~2024.05","hasImage":true,"imgExt":"png"},
   },
   {
     id: 51,
@@ -229,7 +229,7 @@ export const projects: Project[] = [
     title: "Battambang II Hydro Power Project in Cambodia",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"capacity":"30MW","sector":"Renewables","country":"Cambodia","client":"KIND","time":"2022.08~2023.01","hasImage":true,"imgExt":"jpg"},
+    detail: {"capacity":"approx. 30 MW (study basis)","sector":"Renewables","country":"Cambodia","client":"KIND","time":"2022.08~2023.01","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 39,
@@ -394,7 +394,7 @@ export const projects: Project[] = [
     title: "IWP in UAE",
     category: "Bid Strategy and Simulation",
     region: "Middle East·Africa",
-    detail: {"capacity":"200 MIFD","sector":"Water","country":"UAE","client":"Samsung Engineering","time":"2019","hasImage":true,"imgExt":"png"},
+    detail: {"capacity":"200 MIGD","sector":"Water","country":"UAE","client":"Samsung Engineering","time":"2019","hasImage":true,"imgExt":"png"},
   },
   {
     id: 15,
