@@ -29,7 +29,7 @@ export default function DeliveryPage() {
         statement="DKC organizes its work by project stage. Each stage closes with a decision that the owner takes, and every deliverable that supports it has passed DKC's review."
         why={[
           "A large power or environmental project involves the owner, an advisor on the owner's side, an independent owner's engineer, contractors, and lenders, each with a different job at each stage. Projects slip when those roles blur, or when a decision is taken before the work behind it is complete.",
-          "DKC keeps the roles explicit: the owner decides, DKC coordinates and advises on the owner's side, the owner's engineer reviews independently, and the contractors execute.",
+          "DKC keeps the roles explicit: the owner decides; DKC manages the engineering on the owner's side, from the feasibility study through design, construction, and commissioning; the contractors design and build; and an independent engineer appointed by the lenders reviews the project for them. DKC does not review its own work.",
         ]}
         outcomes={[
           "A single point of accountability to the owner",
@@ -42,12 +42,12 @@ export default function DeliveryPage() {
       <Matrix
         eyebrow="ROLES BY PROJECT STAGE"
         title="Who does what, from feasibility to commercial operation"
-        intro="The owner's decision closes each stage. The owner's engineer is appointed once the design basis is in development and reviews independently from then on."
+        intro="The owner's decision closes each stage. DKC sets the technical baseline in the feasibility study and manages the engineering against it through procurement, construction, and commissioning. The independent engineer reports to the lenders."
         head={["Party", "Feasibility / BFS", "FEL3 / pre-NTP", "LNTP / procurement", "Financial close", "Execution to COD"]}
         rows={[
           ["Owner — decides and approves", "Approves feasibility and BFS basis", "Approves design basis; releases EPC tender", "Awards EPC; authorizes long-lead procurement", "Signs agreements; closes financing", "Approves changes; accepts the plant"],
-          ["DKC — integrated advisor", "Design and cost review; functional specifications; base-case model", "Design firm management; owner's requirements; tender packages", "Bid evaluation; EPC negotiation support; model updated with bids", "PPA / EPC terms; CP checklist; final model; lender coordination", "Submittal review; cost, schedule, and change control; punch list"],
-          ["Independent owner's engineer", "—", "Reviews BFS and design basis", "Independent review of design and procurement", "Technical due diligence for lenders", "Independent oversight of construction"],
+          ["DKC — owner-side engineering manager and advisor", "Leads the bankable feasibility study: design basis, cost estimate, market, contracts, and financial model", "Design firm management; owner's requirements; tender packages", "Bid evaluation; EPC negotiation support; model updated with bids", "PPA / EPC terms; CP checklist; final model; lender coordination", "Design and submittal review; interface control; construction monitoring; commissioning and performance-test witnessing; cost, schedule, and change control"],
+          ["Independent engineer (lenders')", "Independent review of the feasibility study, where appointed", "Reviews the design basis and specifications for the lenders", "Independent review of design and procurement", "Technical due diligence for lenders", "Independent oversight of construction"],
           ["EPC / EPCM contractors", "—", "Bids against tender packages", "Critical engineering; long-lead orders", "Contract and price input", "Detailed design, construction, commissioning"],
         ]}
         note="BFS = bankable feasibility study; FEL = front-end loading; NTP / LNTP = (limited) notice to proceed; CP = condition precedent; COD = commercial operation date."
@@ -96,7 +96,18 @@ export default function DeliveryPage() {
         tiers={[
           { k: "LEVEL 1", t: "Discipline review", d: "Third-party deliverables are reviewed by DKC's discipline leads and checked against the interface register." },
           { k: "LEVEL 2", t: "Originator, checker, approver", d: "DKC's own documents pass a second professional's check and a director's approval; each issued model carries the cost-estimate revision it reflects." },
-          { k: "LEVEL 3", t: "Independent owner's engineer", d: "At the gates the owner sets, an independent owner's engineer reviews and reports directly to the owner." },
+          { k: "LEVEL 3", t: "Independent engineer", d: "At the gates the owner or the lenders set, an independent engineer reviews the work and reports directly to them." },
+        ]}
+      />
+
+      <Tiers
+        eyebrow="INDEPENDENCE"
+        title="How we keep owner-side advice independent"
+        intro="DKC also advises contractors and equipment suppliers on other projects, and many of our engineers come from EPC contractors. These rules keep that experience from becoming a conflict."
+        tiers={[
+          { k: "ONE SIDE PER PROJECT", t: "No work for bidders on the same project", d: "Once DKC acts for an owner, it does not advise any bidder, contractor, or supplier on that project." },
+          { k: "DISCLOSURE", t: "Prior relationships disclosed", d: "Before an engagement starts, DKC discloses any prior work for, or recent employment with, parties likely to bid or supply, and the owner decides how to handle it." },
+          { k: "SEPARATE REVIEW", t: "No review of our own work", d: "Independent review of DKC's studies is carried out by an engineer outside DKC, appointed by the owner or the lenders." },
         ]}
       />
 

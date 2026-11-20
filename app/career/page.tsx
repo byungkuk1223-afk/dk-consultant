@@ -2,12 +2,40 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { IMG } from "@/data/images";
 import PageHero from "@/components/PageHero";
+import { IMG } from "@/data/images";
+
+const F = "'Lato', sans-serif";
+const SERIF = "'Libre Baskerville', Georgia, serif";
+const NAVY = "#0b2545";
+const TEAL = "#0e7c86";
+const EYEBROW: React.CSSProperties = { fontSize: 11.5, letterSpacing: 2.4, color: TEAL, fontWeight: 700, fontFamily: F, marginBottom: 12 };
+
+const ROLES = [
+  {
+    t: "Process and CCS engineers",
+    d: "Review capture technology, host-plant integration, CO₂ compression and conditioning, and heat and mass balances; check licensor and contractor deliverables against the owner's requirements.",
+    q: "Chemical or process engineering; experience in gas processing, carbon capture, or chemical plant design or commissioning.",
+  },
+  {
+    t: "Power plant discipline engineers",
+    d: "Mechanical, electrical, instrumentation and controls, and civil engineers who review design, follow construction, and witness commissioning and performance tests on the owner's side.",
+    q: "Design, EPC, or commissioning experience on thermal or combined cycle power plants.",
+  },
+  {
+    t: "Project controls and cost",
+    d: "Cost estimates from feasibility to EPC award, schedule control, change management, and progress reporting to owners and lenders.",
+    q: "Cost estimating or planning on power, process, or infrastructure projects.",
+  },
+  {
+    t: "Commercial and financial advisory",
+    d: "Financial models, feasibility studies, contract and risk allocation reviews, and lender materials, in Korean and English.",
+    q: "Project finance, transaction advisory, or development experience; MBA, CPA, or CFA welcome.",
+  },
+];
 
 export default function CareerPage() {
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", onScroll);
@@ -17,107 +45,60 @@ export default function CareerPage() {
   return (
     <>
       <Header scrolled={scrolled} />
-      <main style={{ fontFamily: "'Lato', sans-serif" }}>
+      <main>
+        <PageHero title="Careers" subtitle="Engineers and advisors who want to see power and carbon capture projects through, on the owner's side." bg={IMG.careers} />
 
-        <PageHero title="Careers" subtitle="DK Consultants recruits people who have potential to grow into a global leader." bg={IMG.careers} />
+        <section>
+          <div className="rg" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 24px", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.4fr)", gap: 56 }}>
+            <div>
+              <p style={EYEBROW}>WORKING AT DKC</p>
+              <h2 style={{ fontFamily: SERIF, fontSize: "clamp(24px, 2.6vw, 30px)", lineHeight: 1.3, fontWeight: 400, color: NAVY }}>
+                Engineering, contracts, and finance in one team
+              </h2>
+            </div>
+            <div>
+              <p style={{ fontFamily: F, fontSize: 16, lineHeight: "28px", color: "#3d4752", marginBottom: 14 }}>
+                At DKC, engineers work beside contract and finance specialists on the same projects. A design decision is tested for its
+                effect on cost, the contracts, and the financing before it is made, and the people who make it see the project through
+                procurement, construction, and commissioning.
+              </p>
+              <p style={{ fontFamily: F, fontSize: 16, lineHeight: "28px", color: "#3d4752" }}>
+                Our senior engineers have built and commissioned power plants and a commercial CO₂ capture plant. Experienced engineers
+                joining us work with them directly, on projects in North America, Asia, the Middle East, and Australia.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        {/* Content Section */}
-        <section
-          style={{
-            backgroundColor: "#fff",
-            padding: "80px 10% 100px",
-            maxWidth: 1400,
-            margin: "0 auto",
-            boxSizing: "border-box",
-          }}
-        >
-          {/* Main heading */}
-          <h2
-            style={{
-              fontFamily: "'Libre Baskerville', Georgia, serif",
-              fontSize: 40,
-              fontWeight: "normal",
-              color: "#000",
-              lineHeight: 1.3,
-              margin: "0 0 18px 0",
-              borderBottom: "2px solid #ddd",
-              paddingBottom: 20,
-            }}
-          >
-            DK Consultants recruits people<br />
-            who have potential to grow into a global leader.
-          </h2>
-
-          {/* Blue underline */}
-          <div
-            style={{
-              width: 40,
-              height: 3,
-              backgroundColor: "#3a5585",
-              marginBottom: 40,
-            }}
-          />
-
-          {/* Body text */}
-          <div style={{ maxWidth: 780, color: "#777", fontSize: 17, lineHeight: "30px", fontWeight: 400, fontFamily: "'Lato', sans-serif" }}>
-            <p style={{ margin: "0 0 22px 0" }}>
-              We invite the talents with MBA, CPA, CFA or equivalent experience with international banks,
-              developers / investors / fund or similar financial and corporate advisory institutions.
-              We appreciate your interest in infrastructure / project finance.
-            </p>
-            <p style={{ margin: "0 0 22px 0" }}>
-              You are exposed to, or if not will be trained in, high-end, complex financial models.
-              You will analyze key business drivers and conduct scenario and sensitivity analysis to
-              ensure compliance with project documents and applicable accounting &amp; financial principles.
-              The job will include the preparation of reports, information memoranda, presentations
-              both in Korean and in English.
-            </p>
-            <p style={{ margin: "0 0 22px 0" }}>
-              Client interaction and business development are also critical components of the job.
-              You will interact and engage with client teams to understand their requirements and respond
-              to the client&apos;s changing needs and priorities under the guidance of team lead.
-              We expect that you have strong analytical skills, writing/speaking fluency in both Korean
-              and English, and commanding knowledge in MS Office.
-            </p>
-            <p style={{ margin: "0 0 32px 0" }}>
-              For further information about DK Consultants and for your resume, please contact:
+        <section style={{ background: "#f6f8fb" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "56px 24px 64px" }}>
+            <p style={EYEBROW}>WHO WE ARE LOOKING FOR</p>
+            <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0,1fr))", gap: 18 }}>
+              {ROLES.map((r) => (
+                <div key={r.t} style={{ background: "#fff", border: "1px solid #e3e8ef", borderTop: `3px solid ${NAVY}`, padding: "22px 24px" }}>
+                  <p style={{ fontFamily: SERIF, fontSize: 19, color: NAVY, marginBottom: 10 }}>{r.t}</p>
+                  <p style={{ fontFamily: F, fontSize: 14.5, lineHeight: "23px", color: "#3d4752", marginBottom: 12 }}>{r.d}</p>
+                  <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, fontWeight: 700, color: "#8a94a0", marginBottom: 4 }}>BACKGROUND</p>
+                  <p style={{ fontFamily: F, fontSize: 14, lineHeight: "22px", color: "#55606d" }}>{r.q}</p>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontFamily: F, fontSize: 14.5, color: "#55606d", marginTop: 18, lineHeight: "23px" }}>
+              All roles require professional English and Korean; site visits and international travel are part of the work.
             </p>
           </div>
+        </section>
 
-          {/* Contact Cards */}
-          <div style={{ maxWidth: 680, display: "flex", flexDirection: "column", gap: 10 }}>
-            {[
-              { label: "Ms. Eunyoung Choi" },
-              { label: "Email Address:", value: "ey.choi@dk-consultant.com" },
-              { label: "Contact Number:", value: "+82 31 603 4845" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  backgroundColor: "#f5f6f8",
-                  padding: "16px 24px",
-                  fontSize: 14,
-                  color: "#333",
-                  fontWeight: 400,
-                  fontFamily: "'Lato', sans-serif",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 8,
-                }}
-              >
-                <span style={{ color: "#3a5585", marginRight: 6 }}>•</span>
-                <span>
-                  {item.value ? (
-                    <>
-                      <span style={{ fontWeight: 400 }}>{item.label} </span>
-                      <span style={{ color: "#3a5585" }}>{item.value}</span>
-                    </>
-                  ) : (
-                    <span style={{ fontWeight: 400 }}>{item.label}</span>
-                  )}
-                </span>
-              </div>
-            ))}
+        <section>
+          <div className="rstack" style={{ maxWidth: 1200, margin: "0 auto", padding: "48px 24px 64px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
+            <div>
+              <p style={EYEBROW}>APPLY</p>
+              <p style={{ fontFamily: SERIF, fontSize: 21, color: NAVY, lineHeight: "30px" }}>Send your CV and a short note on the projects you have worked on.</p>
+            </div>
+            <div style={{ fontFamily: F, fontSize: 15, lineHeight: "26px", color: "#3d4752" }}>
+              <p><b>Ms. Eun Young Choi</b>, Managing Director</p>
+              <p><a href="mailto:ey.choi@dk-consultant.com" style={{ color: "#416ab3", fontWeight: 700 }}>ey.choi@dk-consultant.com</a> · +82 31 603 4845</p>
+            </div>
           </div>
         </section>
       </main>

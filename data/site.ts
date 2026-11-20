@@ -27,9 +27,9 @@ export const SERVICES: { slug: ServiceSlug; title: string; short: string; lead: 
   },
   {
     slug: "development",
-    title: "Feasibility & Project Development",
-    short: "Feasibility studies that carry a project to an investment decision: market, technical, financial, legal, and tax.",
-    lead: "Feasibility studies that carry a project to an investment decision.",
+    title: "Bankable Feasibility & Project Development",
+    short: "Bankable feasibility studies that tell owners, lenders, and public financiers whether a project can be built and financed.",
+    lead: "Bankable feasibility studies led and integrated by DKC: engineering, cost, market, contracts, and finance on one baseline.",
     img: "/img/site/svc-development.jpg",
   },
 ];

@@ -97,9 +97,9 @@ export function WhoWeAre() {
         </div>
         <div>
           <p style={{ fontFamily: F, fontSize: 16.5, lineHeight: "29px", color: "#3d4752", marginBottom: 16 }}>
-            DK Consultants is a Korean project development advisor. Our Power Plant &amp; Environment practice puts senior power
-            plant and process engineers in the same team as contract and project finance specialists, working for the project
-            owner rather than for a contractor or a lender.
+            DK Consultants works for project owners. Our Power Plant &amp; Environment practice manages the engineering of power and
+            carbon capture projects from the design basis through construction and commissioning, with power plant and process
+            engineers who have built such plants working in the same team as contract and project finance specialists.
           </p>
           <p style={{ fontFamily: F, fontSize: 16.5, lineHeight: "29px", color: "#3d4752", marginBottom: 22 }}>
             Since 2016 we have advised Korean public financiers, agencies, utilities, and EPC contractors on power, low-carbon

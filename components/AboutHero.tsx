@@ -4,7 +4,7 @@ import { IMG } from "@/data/images";
 
 // About-section pages use the same page hero as the rest of the site (no sub-tab bar; the ABOUT menu links the pages).
 const HEADS = {
-  about: { title: "Who We Are", subtitle: "A project development advisor working on the owner's side" },
+  about: { title: "Who We Are", subtitle: "Owner-side engineering management and advisory for power and carbon capture projects" },
   people: { title: "Our People", subtitle: "Leaders, discipline engineers, and financial advisors in one team" },
   ppp: { title: "About DK Consultants", subtitle: "A project development advisor working on the owner's side" },
 };

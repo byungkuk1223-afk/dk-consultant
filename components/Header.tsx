@@ -24,7 +24,7 @@ const MENU = [
                   { label: "Engineering Management & Technical Advisory", href: "/services/engineering" },
                   { label: "Commercial & Contract Advisory", href: "/services/commercial" },
                   { label: "Financial Advisory & Capital Raising", href: "/services/financial" },
-                  { label: "Feasibility & Project Development", href: "/services/development" },
+                  { label: "Bankable Feasibility & Project Development", href: "/services/development" },
                 ],
               },
               {

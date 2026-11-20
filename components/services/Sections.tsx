@@ -294,38 +294,45 @@ export function DevelopmentSection() {
   return (
     <>
       <Intro
-        statement="DKC's feasibility studies carry a project to an investment decision: the market, the technical concept, the financial case, and the legal and tax position, assessed together."
+        statement="A bankable feasibility study answers one question for owners, lenders, and public financiers: can this project be built, operated, and financed on the terms assumed? DKC leads the study and is accountable for that answer."
         why={[
-          "Most of DKC's mandates since 2016 have been feasibility studies commissioned by Korean public financiers and agencies — KEXIM, KIND, and KEITI — and by Korean utilities and EPC contractors assessing participation in overseas projects.",
-          "Each study is built on one model from the first assumptions, so that the participation decision, and any later financing, rests on numbers that have already been tested.",
+          "Feasibility and bankability work is the core of DKC's track record. Since 2016, most of our mandates have been feasibility studies, and most of those were commissioned by Korea's public financiers and agencies: KEXIM, Korea's export credit agency, KIND, and KEITI. These institutions use the studies to decide whether to lend to, invest in, or support a project, so the work is written for a credit decision, not for promotion.",
+          "A study is bankable only when its engineering, cost estimate, schedule, market case, contract structure, and financial model agree with each other. DKC's role is to lead and integrate those workstreams on one baseline. Engineering deliverables are prepared by DKC's discipline leads and, where the scope requires, by specialist design firms working under DKC's coordination; the result is then open to review by an independent engineer acting for the owner or the lenders.",
         ]}
         outcomes={[
-          "A priced, risk-tested basis for the participation or investment decision",
-          "A project structure and partnership strategy that lenders can follow",
-          "A financial model that carries forward into financing",
-          "Delivery within fixed public-sector study timetables",
-        ]}
-      />
-      <Capabilities
-        title="Feasibility and project development"
-        items={[
-          { t: "Pre-feasibility and feasibility", d: "Studies from screening to full feasibility, for public financiers, agencies, utilities, and EPC contractors." },
-          { t: "Market and offtake", d: "Demand, market, and offtake analysis, including carbon credit and low-carbon fuel markets." },
-          { t: "Technical concept review", d: "Project configuration, technology options, and cost basis reviewed with DKC's engineering leads." },
-          { t: "Financial and economic analysis", d: "Project financial model, economic cost-benefit analysis, and sensitivity cases." },
-          { t: "Legal, tax, and permitting", d: "Legal and tax review and the permitting path in the host country." },
-          { t: "Structuring and partnership", d: "PPP and project structure, risk allocation, and partnership strategy for participation." },
+          "A design basis, cost estimate, and schedule that an independent engineer can test",
+          "A market and offtake case with stated sources and downside cases",
+          "A contract structure and risk allocation that lenders can follow",
+          "A financial model and financing plan built on the same numbers",
+          "A risk register and the conditions the project must meet before financing",
         ]}
       />
       <Matrix
-        eyebrow="WHAT A STUDY COVERS"
-        title="Four workstreams, one model"
-        head={["Workstream", "Questions answered", "Typical outputs"]}
+        eyebrow="WHAT A BANKABLE STUDY CONTAINS"
+        title="Each part of the study, who prepares it, and what DKC does"
+        intro="A bankable feasibility study is a multi-discipline deliverable. This is how the work is divided on a power or carbon capture project."
+        head={["Study component", "What lenders and financiers look for", "Prepared by", "DKC's role"]}
         rows={[
-          ["Market", "Is there demand and a creditworthy offtaker at a viable price?", "Market and offtake analysis; price and volume cases"],
-          ["Technical", "Is the configuration sound, and what will it cost to build and run?", "Concept review; CAPEX / OPEX basis; schedule"],
-          ["Financial", "Does the project earn its cost of capital, and can it carry debt?", "Financial model; sensitivities; financing options"],
-          ["Legal and tax", "Can the project be structured, permitted, and taxed as planned?", "Legal and tax review; structure and risk allocation"],
+          ["Design basis and technical concept", "Proven configuration; performance and guarantees consistent with the tariff", "DKC discipline leads; specialist design firms and technology suppliers for process and equipment data", "Sets the design basis; reviews and integrates all technical inputs"],
+          ["Capital and operating cost estimate", "Estimate class and contingency appropriate to the stage; EPC and O&M budget quotes", "DKC project controls and cost lead, with supplier and contractor budget quotes", "Builds and owns the estimate; reconciles it with the model"],
+          ["Schedule and execution plan", "Credible path to commercial operation; long-lead items identified", "DKC construction planning and execution leads", "Prepares the schedule and execution strategy"],
+          ["Market and offtake", "Creditworthy offtake; price and volume cases with downside", "DKC market and financial team", "Prepares the market and offtake analysis"],
+          ["Contracts and risk allocation", "Each risk placed with the party best able to carry it", "DKC commercial team, with the owner's legal counsel", "Prepares the contract structure and risk matrix"],
+          ["Financial model and financing plan", "Debt capacity, coverage ratios, and sensitivities on audited logic", "DKC financial team", "Builds the model and the financing plan"],
+          ["Permitting, environmental, and legal", "A permitting path and no unpriced legal or environmental exposure", "Specialist consultants and counsel in the host country", "Scopes, coordinates, and reflects their findings in the study"],
+          ["Independent review", "An engineer independent of the study team confirms its conclusions", "Independent engineer for the owner or the lenders", "Supports the review and closes its comments"],
+        ]}
+        note="Specialist firms and counsel are engaged for each project according to its location and technology."
+      />
+      <Matrix
+        eyebrow="TRACK RECORD"
+        title="Feasibility studies across four markets"
+        head={["Market", "Examples of DKC feasibility work", "Commissioned by"]}
+        rows={[
+          ["Carbon capture and low-carbon fuels", "Blue ammonia with carbon capture, Alberta (lead consultant); green hydrogen and ammonia in Oman, the UAE, Australia, and Canada", "KIND, KEITI, KEXIM"],
+          ["Power generation", "LNG-to-power and gas-to-power in Vietnam, Cameroon, the Philippines, and the Dominican Republic; solar and battery storage in the US, Ireland, and Australia", "KEXIM, KIND, KOGAS, KEITI"],
+          ["Environmental infrastructure", "District heating modernization in Uzbekistan; medical waste-to-energy in Tashkent", "KEXIM, KEITI"],
+          ["Industrial and infrastructure", "Refinery upgrade at Dumai, Indonesia; container inspection facility BOT, Sri Lanka", "KEXIM, KIND"],
         ]}
       />
     </>
