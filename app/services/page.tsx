@@ -1,94 +1,42 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHero, { Bullets, Table, sx } from "@/components/PageHero";
 
-const financialBoxes = [
-  {
-    img: "/img-financial-2.png",
-    title: "Project Development",
-    items: [
-      "Pre-Feasibility Study",
-      "Feasibility Study",
-      "Financial Modeling",
-      "Economic Cost/Benefit and Impact Analysis",
-      "Risk Analysis and Mitigation Plan",
-      "Project Structuring and Options Analysis",
-      "Partnership Strategy",
-      "Financing Strategy",
-      "Negotiation Support",
-    ],
-  },
-  {
-    img: "/img-financial-1.png",
-    title: "Financial Advisory",
-    items: [
-      "Bid Advisory",
-      "Debt Advisory",
-      "Due Diligence",
-      "Capital Structuring",
-      "Financial Modeling and Audit",
-      "Project Feasibility Analysis",
-      "Mergers and Acquisitions",
-      "Financial Restructuring",
-    ],
-  },
+const NAV = [
+  { id: "engineering", label: "Engineering Management" },
+  { id: "commercial", label: "Commercial & Contract" },
+  { id: "financial", label: "Financial Advisory" },
+  { id: "development", label: "Project Development" },
+  { id: "markets", label: "Markets" },
 ];
 
-const healthcareBoxes = [
+const MARKETS = [
   {
-    img: "/img-hc-planning.png",
-    title: "Medical Planning",
-    subtitle: "We provide detailed and specific plans for hospital development, according to clients' requirements.",
-    items: ["Market Study", "Hospital Plan", "Medical Staff Plan"],
+    title: "Power Generation",
+    text: "Coal- and gas-fired power, hydropower, solar, and battery storage: design basis, EPC scope, commissioning review, and the financing case.",
+    img: "/img/img_gall_01_01_new2_a.jpg",
   },
   {
-    img: "/img-hc-equipment.png",
-    title: "Medical Equipment",
-    subtitle: "We allocate appropriate medical equipment pertinent to personalized medical plans.",
-    items: [
-      "Current Condition of Medical Equipment",
-      "Loading and Installation Plan",
-      "Monitoring and Evaluation",
-      "Management Plan",
-      "Designing Plan",
-      "Training Plan",
-    ],
+    title: "Carbon Capture & Low-Carbon Fuels",
+    text: "Post-combustion capture at the host plant, blue and green ammonia, and hydrogen: technology screening, host-plant integration, and the CCS-linked revenue case.",
+    img: "/img/img_gall_01_01_new2_c.jpg",
   },
   {
-    img: "/img-hc-operation.png",
-    title: "Operation & Management",
-    subtitle:
-      "Our healthcare projects aim to provide first class medical care, offering a comprehensive structure plan for hospital's internal management.",
-    items: ["Hospital Management Plan", "Manpower Supply Plan", "Maintenance Plan"],
+    title: "Environmental Infrastructure",
+    text: "Waste-to-energy, landfill gas, district heating and cooling: tariff and gate-fee structure, carbon credit revenues, and PPP structure.",
+    img: "/img/img_gall_01_01_new2_d.jpg",
   },
   {
-    img: "/img-hc-his.png",
-    title: "Hospital Information System",
-    subtitle:
-      "We provide an integration of strategic planning in HIS development, especially in EMR, CPOE and ENR.",
-    items: ["Analysis of Current HIS", "HIS Development and Customization", "Monitoring and Evaluation"],
-  },
-  {
-    img: "/img-hc-training.png",
-    title: "Education & Training",
-    subtitle:
-      "Our training services augment the efficacy of any medical services by establishing a dynamic educational environment for both medical and administrative staffs.",
-    items: ["Training Program Development", "Program Arrangement"],
+    title: "Industrial & Infrastructure",
+    text: "Refineries, smelters, ports, and public infrastructure: market, financing structure, contract structure, and bankability.",
+    img: "/img/img_gall_01_01_new2_f.jpg",
   },
 ];
-
-const CARD_GAP = 40;
 
 export default function ServicesPage() {
   const [scrolled, setScrolled] = useState(false);
-  const [activeTab, setActiveTab] = useState<"financial" | "healthcare">("financial");
-  const [hcIndex, setHcIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const sliderRef = useRef<HTMLDivElement>(null);
-
-  const visible = isMobile ? 1 : 2;
-  const maxIndex = healthcareBoxes.length - visible;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 120);
@@ -96,419 +44,197 @@ export default function ServicesPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth <= 860);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  useEffect(() => {
-    setHcIndex(0);
-  }, [isMobile]);
-
-  const hcMove = (dir: number) => {
-    setHcIndex((prev) => Math.max(0, Math.min(prev + dir, maxIndex)));
-  };
-
-  const getStepPx = () => {
-    if (!sliderRef.current) return 0;
-    const slide = sliderRef.current.querySelector(".hc-slide") as HTMLElement;
-    if (!slide) return 0;
-    return slide.offsetWidth + CARD_GAP;
-  };
-
   return (
     <>
       <Header scrolled={scrolled} />
+      <PageHero
+        title="Services"
+        subtitle="One team, three workstreams: technical, commercial, and financial, on one project baseline."
+        bg="/img/power_towers.jpg"
+      />
 
-      {/* Hero + Tab wrapper */}
-      <div style={{ position: "relative" }}>
-        {/* Hero */}
-        <section
-          style={{
-            position: "relative",
-            width: "100%",
-            height: 380,
-            overflow: "hidden",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage: "url('/img-financial-2.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center 30%",
-              filter: "brightness(0.45)",
-            }}
-          />
-          <div
-            style={{
-              position: "relative",
-              zIndex: 1,
-              paddingLeft: "28%",
-              color: "#fff",
-            }}
-          >
-            <h2
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize: 50,
-                fontWeight: 400,
-                margin: "0 0 14px 0",
-                letterSpacing: 1,
-              }}
-            >
-              Services
-            </h2>
-            <p
-              style={{
-                fontSize: 14,
-                fontWeight: 300,
-                margin: 0,
-                letterSpacing: 0.2,
-                lineHeight: 1.6,
-              }}
-            >
-              Details of our guided approach
-            </p>
-          </div>
-        </section>
-
-        {/* Tab Bar — About US 동일 양식 */}
-        <div id="dk-sub-tab" style={{ width: "100%", height: 90, position: "absolute", left: 0, top: 330, zIndex: 10 }}>
-          <div style={{ width: 1200, height: 90, backgroundColor: "#fff", margin: "0 auto", boxShadow: "5px 5px 5px rgba(0,0,0,.1)", borderRadius: 3, overflow: "hidden" }}>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, overflow: "hidden" }}>
-              <li style={{ width: "50%" }} className={activeTab === "financial" ? "on" : ""} onClick={() => setActiveTab("financial")}>
-                Financial Advisory
-              </li>
-              <li style={{ width: "50%" }} className={activeTab === "healthcare" ? "on" : ""} onClick={() => setActiveTab("healthcare")}>
-                Healthcare Advisory
-              </li>
-            </ul>
-          </div>
+      {/* In-page navigation */}
+      <div style={{ background: "#fff", borderBottom: "1px solid #e5e7eb", position: "sticky", top: 64, zIndex: 50 }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", gap: 34, flexWrap: "wrap" }}>
+          {NAV.map((n) => (
+            <a key={n.id} href={`#${n.id}`} style={{ padding: "20px 0", fontSize: 14, color: "#416ab3", fontFamily: "'Lato', sans-serif", fontWeight: 700, letterSpacing: 0.5 }}>
+              {n.label}
+            </a>
+          ))}
         </div>
       </div>
 
-      {/* Financial Advisory Panel */}
-      {activeTab === "financial" && (
-        <>
-          <div style={{ background: "#fff" }}>
-            <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 24px 50px" }}>
-              <h2
-                style={{
-                  color: "#000",
-                  fontSize: 40,
-                  fontFamily: "'Libre Baskerville', Georgia, serif",
-                  fontWeight: "normal",
-                  borderBottom: "2px solid #ddd",
-                  paddingBottom: 20,
-                  marginBottom: 20,
-                }}
-              >
-                Financial Advisory
-              </h2>
-              <p style={{ color: "#777", fontSize: 17, lineHeight: "30px", fontFamily: "'Lato', sans-serif" }}>
-                We provide services across the full spectrum of the infrastructure cycle, from creating a need for
-                infrastructure to negotiating a successful transaction.
-              </p>
-            </div>
-          </div>
+      {/* Intro */}
+      <div style={{ ...sx.wrap, paddingBottom: 30 }}>
+        <p style={sx.lead}>
+          Large power projects reach financial close only when the technical scope, the project agreements, and the financing
+          plan agree. Run separately, the gaps between them surface late, in lender due diligence.
+        </p>
+        <p style={sx.p}>
+          DK Consultants works on the owner&apos;s side and holds all three workstreams in one team, with one baseline, one issue
+          register, and one decision schedule. A revised design basis changes CAPEX; CAPEX changes the tariff and the debt the
+          project can carry; and the agreements must then be realigned. DKC traces each change across the technical scope, the
+          project agreements, and the financial model before it reaches lenders. Clients engage DKC for one workstream or for all
+          three.
+        </p>
+      </div>
 
-          <div style={{ width: "100%", background: "#f8f8f8", paddingBottom: 100 }}>
-            <div
-              className="fin-area"
-              style={{
-                maxWidth: 1200,
-                margin: "0 auto",
-                display: "flex",
-                gap: "4%",
-                padding: "0 24px",
-                flexWrap: "wrap",
-              }}
-            >
-              {financialBoxes.map((box) => (
-                <div
-                  key={box.title}
-                  className="fin-box"
-                  style={{
-                    width: "48%",
-                    background: "#fff",
-                    border: "1px solid #e5e5e5",
-                    boxShadow: "0 5px 5px rgba(0,0,0,0.1)",
-                    overflow: "hidden",
-                    minHeight: 750,
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "100%",
-                      height: 250,
-                      backgroundImage: `url('${box.img}')`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  />
-                  <p
-                    style={{
-                      fontSize: 22,
-                      fontWeight: 700,
-                      padding: "30px 50px",
-                      color: "#000",
-                      fontFamily: "'Libre Baskerville', Georgia, serif",
-                    }}
-                  >
-                    {box.title}
-                  </p>
-                  <ul style={{ padding: "0 50px", listStyle: "none" }}>
-                    {box.items.map((item) => (
-                      <li
-                        key={item}
-                        style={{
-                          width: "100%",
-                          borderBottom: "1px dotted #ddd",
-                          fontSize: 15,
-                          padding: "12px 15px 12px 28px",
-                          color: "#555",
-                          position: "relative",
-                          lineHeight: "24px",
-                        }}
-                      >
-                        <span
-                          style={{
-                            position: "absolute",
-                            left: 10,
-                            top: 20,
-                            width: 6,
-                            height: 6,
-                            borderRadius: "50%",
-                            background: "#416ab3",
-                            display: "inline-block",
-                          }}
-                        />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </>
-      )}
+      {/* Engineering */}
+      <section id="engineering" style={{ background: "#f8f9fb", scrollMarginTop: 130 }}>
+        <div style={sx.wrap}>
+          <h2 style={sx.h2}>Engineering Management &amp; Technical Advisory</h2>
+          <p style={sx.lead}>
+            Owner-side engineering coordination and technical review for coal-fired power plants and carbon capture facilities,
+            with particular emphasis on integration across critical interfaces.
+          </p>
+          <p style={sx.p}>
+            DKC manages the engineering for the owner. It sets the design basis, coordinates the packages, reviews each deliverable,
+            and resolves the interfaces between them. Power plant engineers review the boiler, balance of plant, and host-plant
+            interfaces; process engineers review the capture process; and the financial team prices capture in the project model.
+            Specialist engineering firms carry out design, and an independent owner&apos;s engineer reviews at agreed gates.
+          </p>
+          <p style={sx.label}>WHAT DKC DOES ON A COAL-FIRED POWER AND CCS PROJECT</p>
+          <Table
+            head={["Service", "What it covers", "Lead discipline"]}
+            widths={["24%", "52%", "24%"]}
+            rows={[
+              ["Design basis and configuration", "Site, configuration, design basis, and cost estimate for the plant and boiler / CFBC; functional specifications", "Boiler; power plant / CCS integration; cost"],
+              ["Capture technology screening", "Capture technologies and configurations against host-plant constraints, performance, cost, and supplier guarantees", "CCS process"],
+              ["Host-plant integration and interfaces", "Steam, power, cooling water, and CO₂ battery limits between the plant and the capture facility", "Boiler; electrical; civil; CCS process"],
+              ["EPC scope, bids, and construction", "EPC scope and bid evaluation; contractor design review; commissioning and performance tests", "All disciplines; controls and cost"],
+              ["Economics of capture", "Capture cost and carbon-related revenues in the financial model, and their effect on tariff and bankability", "Financial advisory"],
+            ]}
+          />
+          <p style={sx.label}>POWER PLANT AND CARBON CAPTURE INTERFACES</p>
+          <img src="/img/brochure/interfaces.png" alt="Power plant and carbon capture interfaces" style={sx.img} />
+          <p style={sx.note}>Amber links change the host plant&apos;s net output, steam balance, and cost: the interfaces DKC resolves before EPC award.</p>
+          <p style={sx.label}>REVIEW LOOP FOR EVERY DELIVERABLE</p>
+          <p style={sx.p}>
+            Material review comments are tracked to resolution before deliverables are approved for their intended use.
+            Third-party deliverables go through discipline review, and DKC&apos;s own documents through originator, checker, and
+            approver. Each issued model carries the cost-estimate revision it reflects.
+          </p>
+          <img src="/img/brochure/review-loop.png" alt="Review loop for every deliverable" style={sx.img} />
+          <p style={sx.label}>WHO DELIVERS IT</p>
+          <p style={sx.p}>
+            Discipline leads from KEPCO E&amp;C&apos;s thermal power engineering (boiler / CFBC, electrical, civil, cost and schedule)
+            and from POSCO E&amp;C&apos;s power business (instrumentation and controls, environmental systems, OSBL integration,
+            constructability), with a process lead for gas processing and CCS, under one engineering coordinator.{" "}
+            <a href="/people" style={{ color: "#416ab3", fontWeight: 700 }}>Our people →</a>{" "}
+            <a href="/team-experience" style={{ color: "#416ab3", fontWeight: 700 }}>Team experience →</a>
+          </p>
+        </div>
+      </section>
 
-      {/* Healthcare Advisory Panel — Slider */}
-      {activeTab === "healthcare" && (
-        <>
-          <div style={{ background: "#fff" }}>
-            <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 24px 50px" }}>
-              <h2
-                style={{
-                  color: "#000",
-                  fontSize: 40,
-                  fontFamily: "'Libre Baskerville', Georgia, serif",
-                  fontWeight: "normal",
-                  borderBottom: "2px solid #ddd",
-                  paddingBottom: 20,
-                  marginBottom: 20,
-                }}
-              >
-                Healthcare Advisory
-              </h2>
-              <p style={{ color: "#777", fontSize: 17, lineHeight: "30px", fontFamily: "'Lato', sans-serif" }}>
-                We provide healthcare advisory services from hospital development to O&amp;M Planning, Hospital
-                Information System Planning and Education &amp; Training in order to help our client succeed in
-                healthcare business.
-              </p>
-            </div>
-          </div>
+      {/* Commercial */}
+      <section id="commercial" style={{ scrollMarginTop: 130 }}>
+        <div style={sx.wrap}>
+          <h2 style={sx.h2}>Commercial &amp; Contract Advisory</h2>
+          <p style={sx.lead}>Every project agreement is reviewed against the same technical baseline and the same financial model.</p>
+          <p style={sx.p}>
+            Each project agreement allocates risk, and the allocations must fit together. DKC reviews the PPA, EPC contract, equipment
+            and fuel supply, CO₂ transport and storage, and O&amp;M agreements against one risk allocation matrix. The project director
+            leads the review, discipline leads check the technical terms, and the financial team tests each allocation in the model.
+          </p>
+          <Bullets
+            items={[
+              "Risk allocation matrix and contract structure",
+              "Term sheet and draft review: techno-commercial review of each agreement",
+              "Negotiation support: positions and fallbacks, attendance with the owner and counsel",
+              "Back-to-back alignment check across all agreements, the model, and lender terms",
+            ]}
+          />
+          <p style={sx.label}>TECHNO-COMMERCIAL REVIEW BY AGREEMENT</p>
+          <Table
+            head={["Agreement", "Technical checks", "Commercial checks", "Financial link"]}
+            rows={[
+              ["Power purchase / offtake (PPA)", "Capacity, availability, dispatch, testing regime", "Tariff and indexation; change in law; termination", "Revenue and debt service cover"],
+              ["EPC contract", "Scope completeness; performance guarantees; completion tests", "Fixed price; completion date; LDs and caps; security", "CAPEX, drawdown, contingency"],
+              ["Equipment supply and long-term service", "Guaranteed output, heat rate, degradation", "Warranty; service fees; liability caps", "Major maintenance reserve; ECA eligibility"],
+              ["Fuel supply", "Fuel specification, delivery point, metering", "Volume commitment; price pass-through", "Fuel cost pass-through; working capital"],
+              ["CO₂ transport and storage", "CO₂ specification, pressure, delivery point", "Capacity, availability, and liability for stored CO₂", "Storage fees; carbon-related revenues"],
+              ["O&M agreement", "Scope split; availability and heat-rate KPIs", "Fee structure; bonus and LDs; step-in", "OPEX lines; operator incentives"],
+            ]}
+          />
+        </div>
+      </section>
 
-          <div style={{ width: "100%", background: "#f8f8f8", padding: "60px 0 80px" }}>
-            {/* Slider container */}
-            <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 30px" }}>
-              {/* Track wrapper — clips overflow */}
-              <div ref={sliderRef} style={{ overflow: "hidden" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: CARD_GAP,
-                    transform: `translateX(-${hcIndex * getStepPx()}px)`,
-                    transition: "transform 0.4s ease",
-                  }}
-                >
-                  {healthcareBoxes.map((box) => (
-                    <div
-                      key={box.title}
-                      className="hc-slide"
-                      style={{
-                        flex: isMobile ? "0 0 100%" : "0 0 calc(50% - 20px)",
-                        background: "#fff",
-                        border: "1px solid #e5e5e5",
-                        boxShadow: "0 5px 10px rgba(0,0,0,0.08)",
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: "100%",
-                          height: 250,
-                          backgroundImage: `url('${box.img}')`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                        }}
-                      />
-                      <p
-                        style={{
-                          fontSize: 22,
-                          fontWeight: 700,
-                          padding: "30px 50px 10px",
-                          color: "#000",
-                          fontFamily: "'Libre Baskerville', Georgia, serif",
-                        }}
-                      >
-                        {box.title}
-                      </p>
-                      <h4
-                        style={{
-                          color: "#aaa",
-                          fontSize: 15,
-                          lineHeight: "26px",
-                          fontWeight: "normal",
-                          padding: "8px 50px 20px",
-                          fontFamily: "'Lato', sans-serif",
-                        }}
-                      >
-                        {box.subtitle}
-                      </h4>
-                      <ul style={{ padding: "0 50px 30px", listStyle: "none" }}>
-                        {box.items.map((item) => (
-                          <li
-                            key={item}
-                            style={{
-                              width: "100%",
-                              borderBottom: "1px dotted #ddd",
-                              fontSize: 15,
-                              padding: "12px 15px 12px 28px",
-                              color: "#555",
-                              position: "relative",
-                              lineHeight: "24px",
-                            }}
-                          >
-                            <span
-                              style={{
-                                position: "absolute",
-                                left: 10,
-                                top: 20,
-                                width: 5,
-                                height: 5,
-                                borderRadius: "50%",
-                                background: "#416ab3",
-                                display: "inline-block",
-                              }}
-                            />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+      {/* Financial */}
+      <section id="financial" style={{ background: "#f8f9fb", scrollMarginTop: 130 }}>
+        <div style={sx.wrap}>
+          <h2 style={sx.h2}>Financial Advisory &amp; Capital Raising</h2>
+          <p style={sx.lead}>One financial model from the first assumptions to financial close.</p>
+          <p style={sx.p}>
+            The financial model is the common reference. It takes CAPEX and schedule from the technical workstream and tariff and
+            contract terms from the commercial workstream. DKC prepares the financing strategy, approaches investors, banks, ECAs,
+            and IFIs, and coordinates lenders&apos; due diligence through to financial close. Because the model is updated whenever
+            the design, the cost estimate, or a contract term changes, the information memorandum, the lenders&apos; due diligence,
+            and the finance documents all rest on the same numbers.
+          </p>
+          <Table
+            head={["Step", "DKC role", "Key outputs"]}
+            widths={["24%", "38%", "38%"]}
+            rows={[
+              ["1. Project inputs & financial model", "Collect technical and commercial inputs; build and maintain the model", "Assumptions book; base-case model; sensitivity cases"],
+              ["2. Financing strategy", "Compare funding structures; size debt and equity", "Financing plan; sources and uses; ECA / IFI map"],
+              ["3. Investor / lender engagement", "Prepare marketing materials; run outreach and Q&A", "Information memorandum; lender short list"],
+              ["4. Due diligence & term negotiation", "Coordinate lenders' advisors; manage the data room", "Due diligence tracker; negotiated term sheet"],
+              ["5. Documentation & financial close", "Support finance documents; track CPs to closing", "CP checklist; final audited model"],
+            ]}
+          />
+          <p style={sx.label}>ALSO</p>
+          <Bullets items={["Bid advisory and debt advisory", "Financial due diligence and financial model audit", "Capital structuring, mergers and acquisitions, and financial restructuring"]} />
+        </div>
+      </section>
+
+      {/* Development */}
+      <section id="development" style={{ scrollMarginTop: 130 }}>
+        <div style={sx.wrap}>
+          <h2 style={sx.h2}>Feasibility &amp; Project Development</h2>
+          <p style={sx.lead}>Feasibility studies that carry a project to an investment decision.</p>
+          <p style={sx.p}>
+            Most of DKC&apos;s mandates since 2016 have been feasibility studies commissioned by Korean public financiers and
+            agencies (KEXIM, KIND, KEITI) and by Korean utilities and EPC contractors assessing overseas projects. Each study covers
+            the market, technical, financial, and legal and tax analysis needed for an investment decision.
+          </p>
+          <Bullets
+            items={[
+              "Pre-feasibility, feasibility, and bankable feasibility studies",
+              "Market, demand, and offtake analysis",
+              "Economic cost-benefit and impact analysis",
+              "Risk analysis and mitigation plan",
+              "Project structuring, PPP structure, and partnership strategy",
+            ]}
+          />
+          <p style={sx.p}>
+            <a href="/projects" style={{ color: "#416ab3", fontWeight: 700 }}>See DKC projects →</a>
+          </p>
+        </div>
+      </section>
+
+      {/* Markets */}
+      <section id="markets" style={{ background: "#f8f9fb", scrollMarginTop: 130 }}>
+        <div style={sx.wrap}>
+          <h2 style={sx.h2}>Markets We Serve</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+            {MARKETS.map((m) => (
+              <div key={m.title} style={{ background: "#fff", border: "1px solid #e5e7eb", boxShadow: "0 4px 10px rgba(0,0,0,0.05)" }}>
+                <div style={{ height: 140, backgroundImage: `url('${m.img}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
+                <div style={{ padding: "18px 18px 22px" }}>
+                  <p style={{ fontSize: 17, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#000", marginBottom: 10 }}>{m.title}</p>
+                  <p style={{ fontSize: 14, color: "#666", lineHeight: "22px", fontFamily: "'Lato', sans-serif" }}>{m.text}</p>
                 </div>
               </div>
-
-              {/* Prev button */}
-              <button
-                onClick={() => hcMove(-1)}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: -22,
-                  transform: "translateY(-50%)",
-                  width: 44,
-                  height: 44,
-                  borderRadius: "50%",
-                  background: "#416ab3",
-                  border: "none",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  opacity: hcIndex === 0 ? 0.3 : 1,
-                  transition: "opacity 0.2s",
-                  zIndex: 10,
-                }}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round">
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-              </button>
-
-              {/* Next button */}
-              <button
-                onClick={() => hcMove(1)}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: -22,
-                  transform: "translateY(-50%)",
-                  width: 44,
-                  height: 44,
-                  borderRadius: "50%",
-                  background: "#416ab3",
-                  border: "none",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  opacity: hcIndex >= maxIndex ? 0.3 : 1,
-                  transition: "opacity 0.2s",
-                  zIndex: 10,
-                }}
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Dot indicators */}
-            <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 36 }}>
-              {Array.from({ length: maxIndex + 1 }, (_, i) => i).map((i) => (
-                <button
-                  key={i}
-                  onClick={() => setHcIndex(Math.min(i, maxIndex))}
-                  style={{
-                    width: 10,
-                    height: 10,
-                    borderRadius: "50%",
-                    background: i === hcIndex ? "#416ab3" : "#ccc",
-                    border: "none",
-                    cursor: "pointer",
-                    padding: 0,
-                    transition: "background 0.2s",
-                  }}
-                />
-              ))}
-            </div>
+            ))}
           </div>
-        </>
-      )}
+          <p style={{ ...sx.note, marginTop: 24 }}>
+            Healthcare advisory is provided by DKC&apos;s separate{" "}
+            <a href="/healthcare" style={{ color: "#416ab3" }}>Healthcare Unit</a>.
+          </p>
+        </div>
+      </section>
 
       <Footer />
-
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;700;900&display=swap');
-        * { box-sizing: border-box; }
-        @media (max-width: 860px) {
-          .fin-box { width: 100% !important; margin-right: 0 !important; margin-bottom: 24px; min-height: auto !important; }
-          .fin-area { flex-wrap: wrap !important; padding: 0 16px 60px !important; }
-          .hc-slide { flex: 0 0 100% !important; }
-        }
-        @media (max-width: 560px) {
-          .fin-area { padding: 0 12px 40px !important; }
-        }
-      `}</style>
     </>
   );
 }

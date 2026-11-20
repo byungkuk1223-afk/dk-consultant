@@ -1,24 +1,24 @@
 const projects = [
   {
-    id: 51,
-    title: "Modernization of District Heating Systems in …",
-    category: "Feasibility Study, Financial Advisory",
-    img: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80",
-    href: "/projects/51",
+    id: 63,
+    title: "Blue Ammonia with Carbon Capture, Alberta, Canada",
+    category: "Feasibility Study · Lead Consultant",
+    img: "https://dk-consultant.com/data/file/04_01_new/1794350696_pFLMX7Jv_93b8c3350ac4cfd9def1ad57513f408c2c281bec.jpg",
+    href: "/projects/63",
   },
   {
-    id: 50,
-    title: "Battambang II Hydro Power Project in Cambodia",
+    id: 64,
+    title: "Solar PV & BESS Development, Texas, USA",
     category: "Feasibility Study",
-    img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-    href: "/projects/50",
+    img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+    href: "/projects/64",
   },
   {
-    id: 48,
-    title: "Western Australia Green Ammonia Project in Au…",
-    category: "Feasibility Study",
+    id: 23,
+    title: "Hai Lang 4,500 MW LNG-to-Power, Vietnam",
+    category: "Feasibility Study · Financing Structure",
     img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    href: "/projects/48",
+    href: "/projects/23",
   },
 ];
 

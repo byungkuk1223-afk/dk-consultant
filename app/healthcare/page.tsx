@@ -74,6 +74,27 @@ export default function HealthcarePage() {
             </div>
           </div>
 
+          {/* Healthcare advisory services (moved from the Services page) */}
+          <div className="dk-bg-a">
+            <div className="dk-center">
+              <div className="dk-sub-t">Healthcare Advisory Services</div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 18 }}>
+                {[
+                  { t: "Medical Planning", i: ["Market Study", "Hospital Plan", "Medical Staff Plan"] },
+                  { t: "Medical Equipment", i: ["Current Condition Review", "Loading and Installation Plan", "Monitoring and Evaluation", "Management and Training Plan"] },
+                  { t: "Operation & Management", i: ["Hospital Management Plan", "Manpower Supply Plan", "Maintenance Plan"] },
+                  { t: "Hospital Information System", i: ["Analysis of Current HIS", "HIS Development and Customization", "Monitoring and Evaluation"] },
+                  { t: "Education & Training", i: ["Training Program Development", "Program Arrangement"] },
+                ].map(c => (
+                  <div key={c.t} style={{ background: "#fff", border: "1px solid #e5e5e5", padding: "20px 18px", boxShadow: "0 5px 5px rgba(0,0,0,.06)" }}>
+                    <p style={{ color: "#416ab3", fontWeight: 700, fontSize: 16, lineHeight: "22px", marginBottom: 10 }}>{c.t}</p>
+                    {c.i.map(x => <p key={x} style={{ fontSize: 14, lineHeight: "23px", color: "#555" }}>· {x}</p>)}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </main>
       <Footer />

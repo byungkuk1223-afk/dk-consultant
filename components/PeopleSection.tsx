@@ -1,12 +1,18 @@
-const people = [
-    { name: "David Kim", title: "CEO / Founder", img: "/img/people_img_c.png", href: "/people" },
-  { name: "Cheolsoo Kim", title: "CEO / Healthcare Business Unit", img: "/img/people_img_new2_b.png", href: "/people" },
+const people: { name: string; title: string; img?: string; href: string }[] = [
+  { name: "David Kim", title: "Founder & CEO · Project Director", img: "/img/people_img_c.png", href: "/people" },
+  { name: "Dong Woon Kim", title: "Vice Chairman · PP/CCUS Integration Lead", href: "/people" },
+  { name: "Sang Choi", title: "Executive Director · Engineering Coordinator", href: "/people" },
+  { name: "Jong Sang Lee", title: "Executive Director · Commercial Review & Coordination Lead", img: "/img/people_img_new2_a.png", href: "/people" },
 ];
+
+function initials(name: string) {
+  return name.split(" ").filter(Boolean).map(w => w[0]).join("").slice(0, 3);
+}
 
 const quickLinks = [
   { label: "About DKC", href: "/about", icon: <ChartIcon /> },
-  { label: "PPP Unit", href: "/ppp", icon: <BuildingIcon /> },
-  { label: "Healthcare Unit", href: "/healthcare", icon: <HeartIcon /> },
+  { label: "Services", href: "/services", icon: <BuildingIcon /> },
+  { label: "How We Deliver", href: "/delivery", icon: <HeartIcon /> },
   { label: "Address & Number", href: "/contact", icon: <MapIcon /> },
 ];
 
@@ -79,16 +85,16 @@ export default function PeopleSection() {
             color: "#1a1a1a",
             letterSpacing: 0.5,
           }}>
-            Senior Management
+            Leadership
           </h2>
         </div>
 
         {/* People Cards */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
+          gridTemplateColumns: "repeat(4, 1fr)",
           gap: 16,
-          maxWidth: 480,
+          maxWidth: 1000,
           margin: "0 auto",
         }}>
           {people.map((p) => (
@@ -107,11 +113,18 @@ export default function PeopleSection() {
                 border: "1px solid #c8d5eb",
                 background: "#fff",
               }}>
-                <img src={p.img} alt={p.name} style={{
-                  width: "100%", height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center top",
-                }} />
+                {p.img ? (
+                  <img src={p.img} alt={p.name} style={{
+                    width: "100%", height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                  }} />
+                ) : (
+                  <div style={{
+                    width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center",
+                    fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 30, color: "#416ab3", background: "#eef2f9",
+                  }}>{initials(p.name)}</div>
+                )}
               </div>
               <p style={{
                 fontSize: 13, fontFamily: "'Lato', sans-serif",

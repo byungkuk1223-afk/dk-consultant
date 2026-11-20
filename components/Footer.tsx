@@ -14,9 +14,9 @@ export default function Footer() {
             <div style={{ marginBottom: 20 }}>
               <a href="/" style={{ textDecoration: "none" }}>
                 <img
-                  src="/logo.png"
+                  src="/logo-wordmark.png"
                   alt="DK Consultants"
-                  style={{ height: 55, width: "auto", filter: "brightness(0) invert(1)" }}
+                  style={{ height: 26, width: "auto", filter: "brightness(0) invert(1)" }}
                 />
               </a>
             </div>

@@ -1,10 +1,9 @@
 "use client";
 
 const TABS = [
-  { label: "About DK Consultants​", href: "/about", key: "about" },
-  { label: "PPP Unit", href: "/ppp", key: "ppp" },
-  { label: "Healthcare Unit", href: "/healthcare", key: "healthcare" },
+  { label: "About DK Consultants", href: "/about", key: "about" },
   { label: "Our People", href: "/people", key: "people" },
+  { label: "Healthcare Unit", href: "/healthcare", key: "healthcare" },
 ];
 
 export default function AboutHero({ active }: { active: "about" | "ppp" | "healthcare" | "people" }) {
@@ -64,7 +63,7 @@ export default function AboutHero({ active }: { active: "about" | "ppp" | "healt
               lineHeight: 1.6,
             }}
           >
-            Professional knowledge meets social needs
+            A project development advisor working on the owner&apos;s side
           </p>
         </div>
       </div>
@@ -80,6 +79,7 @@ export default function AboutHero({ active }: { active: "about" | "ppp" | "healt
               <li
                 key={tab.key}
                 className={tab.key === active ? "on" : ""}
+                style={{ width: `${100 / TABS.length}%` }}
                 onClick={() => { window.location.href = tab.href; }}
               >
                 {tab.label}

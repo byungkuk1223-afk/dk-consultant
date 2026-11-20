@@ -66,7 +66,7 @@ function ProjectsContent() {
               Projects
             </h1>
             <p style={{ fontSize: 14, fontWeight: 300, margin: 0, letterSpacing: 0.2, lineHeight: 1.6 }}>
-              List of finished projects we helped establish
+              Mandates DKC has delivered in its own name or with Synergy Korea. For the plants our people delivered before joining DKC, see Team Experience.
             </p>
           </div>
         </section>

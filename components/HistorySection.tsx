@@ -1,7 +1,7 @@
 const historyItems = [
-  { year: "2022", desc: "Relocation of Office to Pangyo", filled: true },
-  { year: "2021", desc: "Executed school PPP feasibility study for Qatar", filled: false },
-  { year: "2020", desc: "Achieved Financial Close for 200MW BESS project in Ireland", filled: false },
+  { year: "2026", desc: "Engineering management and owner-side review added to the service line", filled: true },
+  { year: "2025", desc: "Led the Alberta blue ammonia and carbon capture feasibility study", filled: false },
+  { year: "2021", desc: "Financing study for the 4,500 MW Hai Lang LNG-to-power complex, Vietnam", filled: false },
 ];
 
 function HourglassCircleIcon({ filled }: { filled: boolean }) {

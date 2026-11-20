@@ -31,9 +31,9 @@ export default function Header({ scrolled }: HeaderProps) {
         {/* Logo */}
         <a href="/" style={{ textDecoration: "none" }}>
           <img
-            src="/logo.png"
+            src="/logo-wordmark.png"
             alt="DK Consultants"
-            style={{ height: 55, width: "auto", filter: "brightness(0) invert(1)" }}
+            style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)" }}
           />
         </a>
 
@@ -55,24 +55,28 @@ export default function Header({ scrolled }: HeaderProps) {
                 href: "/about",
                 sub: [
                   { label: "About DK Consultants", href: "/about" },
-                  { label: "PPP Unit", href: "/ppp" },
-                  { label: "Healthcare Unit", href: "/healthcare" },
                   { label: "Our People", href: "/people" },
+                  { label: "Healthcare Unit", href: "/healthcare" },
                 ],
               },
               {
                 label: "SERVICES",
                 href: "/services",
                 sub: [
-                  { label: "Financial Advisory", href: "/services" },
-                  { label: "Healthcare Advisory", href: "/services" },
+                  { label: "Engineering Management & Technical Advisory", href: "/services#engineering" },
+                  { label: "Commercial & Contract Advisory", href: "/services#commercial" },
+                  { label: "Financial Advisory & Capital Raising", href: "/services#financial" },
+                  { label: "Feasibility & Project Development", href: "/services#development" },
+                  { label: "Markets We Serve", href: "/services#markets" },
                 ],
               },
+              { label: "HOW WE DELIVER", href: "/delivery", sub: [] },
               {
                 label: "PROJECTS",
                 href: "/projects",
                 sub: [
-                  { label: "Projects", href: "/projects" },
+                  { label: "DKC Projects", href: "/projects" },
+                  { label: "Team Experience", href: "/team-experience" },
                   { label: "Clients", href: "/clients" },
                 ],
               },
