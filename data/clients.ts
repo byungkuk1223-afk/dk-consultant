@@ -1,6 +1,6 @@
 // Clients page: organizations DKC has advised, grouped by client type.
 // `match` lists the client names used in data/projects.ts, so each card shows the mandates on record.
-// Clients with a logo but no mandate in data/projects.ts are shown without a mandate list.
+// Organizations without a mandate in data/projects.ts are listed in OTHER_CLIENTS.
 
 export interface Client {
   name: string;
@@ -39,9 +39,6 @@ export const CLIENT_GROUPS: ClientGroup[] = [
     clients: [
       { name: "Korea Gas Corporation (KOGAS)", logo: L("2_4"), about: "Korea's state-owned natural gas company, active in LNG import, supply, and overseas gas and power projects.", match: ["KOGAS"] },
       { name: "Hanwha Energy", logo: L("3_1"), about: "Energy company of the Hanwha Group developing renewable energy, storage, and power projects in Korea and overseas.", match: ["Hanwha Energy"] },
-      { name: "Korea Electric Power Corporation (KEPCO)", logo: L("2_2"), about: "Korea's state-owned electric utility." },
-      { name: "Korea District Heating Corporation", logo: L("2_1"), about: "Korea's largest district heating and cooling provider." },
-      { name: "Korea Western Power", logo: L("2_5"), about: "Power generation subsidiary of KEPCO." },
       { name: "Sejin G&E", about: "Korean environmental energy company.", match: ["Sejin G&E"] },
     ],
   },
@@ -55,7 +52,6 @@ export const CLIENT_GROUPS: ClientGroup[] = [
       { name: "SK ecoplant", logo: L("3_6"), about: "Engineering and environmental infrastructure company of the SK Group.", match: ["SK ecoplant"] },
       { name: "Hanwha Power Systems", logo: L("3_2"), about: "Hanwha Group company supplying compressors and power systems, including supercritical CO₂ power technology.", match: ["Hanwha Power Systems"] },
       { name: "Sae-A STX Entech", logo: L("3_4"), about: "Korean plant engineering and construction company.", match: ["Sae-A STX Entech"] },
-      { name: "POSCO E&C", logo: L("3_3"), about: "Engineering and construction company of the POSCO Group." },
       { name: "Korea Railroad Technical Corporation (KRTC)", logo: L("2_6"), about: "Korean railway engineering and consulting company.", match: ["KRTC (Korean Railroad Technical Corporation)"] },
       { name: "Dohwa Engineering", about: "Korean engineering consultancy for water, energy, and infrastructure.", match: ["Dohwa Engineering"] },
       { name: "Samil PwC", about: "Korean member firm of the PwC network.", match: ["Samil PwC", "Daeyoung Engineering, Samil PwC"] },
@@ -70,9 +66,17 @@ export const CLIENT_GROUPS: ClientGroup[] = [
     clients: [
       { name: "PT Angkasa Jaya Mulia", about: "Indonesian sponsor of a nickel and cobalt processing project.", match: ["PT Angkasa Jaya Mulia"] },
       { name: "PT Aldaberta", about: "Indonesian project sponsor (engagement through Synergy Korea).", match: ["Synergy Korea, for PT Aldaberta"] },
-      { name: "Batulicin Enam Sembilan", logo: L("2_7"), about: "Indonesian industrial group." },
       { name: "SCL Healthcare", logo: L("4_2"), about: "Korean healthcare group.", match: ["SCL Healthcare"] },
-      { name: "Yonsei University Health System (Severance)", logo: L("4_3"), about: "Korean university hospital system." },
     ],
   },
+];
+
+// Organizations DKC has worked with outside the mandates listed on this site (shown as a logo section).
+export const OTHER_CLIENTS: Client[] = [
+  { name: "Korea Electric Power Corporation (KEPCO)", logo: L("2_2"), about: "Korea's state-owned electric utility." },
+  { name: "Korea District Heating Corporation", logo: L("2_1"), about: "Korea's largest district heating and cooling provider." },
+  { name: "Korea Western Power", logo: L("2_5"), about: "Power generation subsidiary of KEPCO." },
+  { name: "POSCO E&C", logo: L("3_3"), about: "Engineering and construction company of the POSCO Group." },
+  { name: "Batulicin Enam Sembilan", logo: L("2_7"), about: "Indonesian industrial group." },
+  { name: "Yonsei University Health System (Severance)", logo: L("4_3"), about: "Korean university hospital system." },
 ];

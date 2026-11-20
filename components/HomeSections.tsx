@@ -6,7 +6,7 @@ import { IMG, projectImg } from "@/data/images";
 import { SERVICES, MARKET_PAGES } from "@/data/site";
 import { projects } from "@/data/projects";
 import { caseStudies } from "@/data/projectProfiles";
-import { CLIENT_GROUPS } from "@/data/clients";
+import { CLIENT_GROUPS, OTHER_CLIENTS } from "@/data/clients";
 
 const F = "'Lato', sans-serif";
 const SERIF = "'Libre Baskerville', Georgia, serif";
@@ -71,7 +71,7 @@ export function KeyFigures() {
     { v: "2016", t: "Founded in Korea, in partnership with Synergy Consulting from the start" },
     { v: String(projects.length), t: "Advisory mandates delivered by DKC and Synergy Korea" },
     { v: String(countries()), t: "Countries in which those mandates are located" },
-    { v: String(CLIENT_GROUPS.flatMap((g) => g.clients).length), t: "Public and private clients, including KEXIM, KIND, KEITI, and KOGAS" },
+    { v: String(CLIENT_GROUPS.flatMap((g) => g.clients).length + OTHER_CLIENTS.length), t: "Public and private clients, including KEXIM, KIND, KEITI, and KOGAS" },
   ];
   return (
     <section style={{ background: "#fff", borderBottom: "1px solid #e8ecf1" }}>

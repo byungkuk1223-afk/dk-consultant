@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import { IMG } from "@/data/images";
-import { CLIENT_GROUPS, type Client } from "@/data/clients";
+import { CLIENT_GROUPS, OTHER_CLIENTS, type Client } from "@/data/clients";
 import { projects, type Project } from "@/data/projects";
 import { profileFor } from "@/data/projectProfiles";
 
@@ -74,7 +74,7 @@ export default function ClientsPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const all = CLIENT_GROUPS.flatMap((g) => g.clients);
+  const all = [...CLIENT_GROUPS.flatMap((g) => g.clients), ...OTHER_CLIENTS];
   const withMandates = projects.filter((p) => all.some((c) => c.match?.includes(p.detail?.client ?? ""))).length;
   const repeat = all.filter((c) => mandatesOf(c).length > 1).length;
 
@@ -91,7 +91,7 @@ export default function ClientsPage() {
           </p>
           {[
             { v: all.length, t: "Clients" },
-            { v: withMandates, t: "Mandates on record with these clients" },
+            { v: withMandates, t: "Mandates" },
             { v: repeat, t: "Clients with more than one mandate" },
           ].map((x) => (
             <div key={x.t} style={{ borderLeft: `3px solid ${TEAL}`, paddingLeft: 16 }}>
@@ -123,6 +123,23 @@ export default function ClientsPage() {
           </div>
         </section>
       ))}
+
+      <section style={{ background: CLIENT_GROUPS.length % 2 === 0 ? "#f6f8fb" : "#fff" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "56px 24px 64px" }}>
+          <p style={EYEBROW}>ALSO</p>
+          <h2 style={{ fontFamily: SERIF, fontSize: "clamp(22px, 2.4vw, 28px)", lineHeight: 1.3, fontWeight: 400, color: NAVY, marginBottom: 24 }}>Other organizations we have worked with</h2>
+          <div className="rg logo-grid" style={{ display: "grid", gridTemplateColumns: "repeat(6, minmax(0,1fr))", gap: 14 }}>
+            {OTHER_CLIENTS.map((c) => (
+              <div key={c.name} style={{ background: "#fff", border: "1px solid #e3e8ef", padding: "16px 14px 14px", textAlign: "center" }}>
+                <div style={{ height: 64, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10 }}>
+                  {c.logo && <img src={c.logo} alt={c.name} style={{ maxHeight: 54, maxWidth: "90%", objectFit: "contain" }} />}
+                </div>
+                <p style={{ fontFamily: F, fontSize: 12.5, lineHeight: "17px", color: "#55606d" }}>{c.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>

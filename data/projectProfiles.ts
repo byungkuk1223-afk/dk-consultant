@@ -217,6 +217,26 @@ export const profiles: ProjectProfile[] = [
   },
   // ───────────── all other projects (case-study format; about/refs from public sources only, empty where none found)
   {
+    "id": 69,
+    "tag": "Green hydrogen and ammonia",
+    "headline": "Pre-feasibility study for green hydrogen and ammonia, Dubai",
+    "location": "Dubai, United Arab Emirates",
+    "delivered": "With Synergy Korea",
+    "summary": "DKC carried out the market analysis for KEITI's pre-feasibility study on a green hydrogen and ammonia plant in Dubai, ahead of the full feasibility study in 2024.",
+    "about": [],
+    "role": "Market analysis within KEITI's pre-feasibility study, led by Synergy Korea.",
+    "scope": [
+      "Green hydrogen and ammonia market analysis",
+      "Demand and offtake outlook",
+      "Price assumptions for the study"
+    ],
+    "challenge": "KEITI needed an early view of whether a green hydrogen and ammonia plant in Dubai had a market, before committing to a full feasibility study.",
+    "solution": "Within the pre-feasibility study led by Synergy Korea, DKC analyzed the market for green hydrogen and ammonia: demand, likely offtakers, and price assumptions.",
+    "result": "Market analysis delivered for KEITI's pre-feasibility study (July 2023 to January 2024). KEITI's full feasibility study followed in 2024.",
+    "relevance": "A market screen before a full study keeps owners from spending on projects that have no buyer.",
+    "refs": []
+  },
+  {
     "id": 68,
     "tag": "Waste-to-energy",
     "headline": "Yen Binh waste-to-energy, Vietnam",
@@ -455,7 +475,7 @@ export const profiles: ProjectProfile[] = [
     ],
     "challenge": "KEITI needed a feasibility study on a green hydrogen and ammonia plant in Dubai, combining 1,200 MW of renewables with 600 MW of electrolysis, to assess whether it could be delivered and financed.",
     "solution": "DKC carried out the feasibility study, reviewing the market for green ammonia, the project's economics, and the main risks across power supply, production, and offtake.",
-    "result": "Feasibility study delivered to KEITI.",
+    "result": "Feasibility study delivered to KEITI (June to December 2024).",
     "relevance": "Integrated renewables-to-ammonia projects tie several risks into one revenue line, and owners need them assessed together.",
     "refs": []
   },
@@ -543,7 +563,7 @@ export const profiles: ProjectProfile[] = [
     ],
     "challenge": "KEXIM needed a feasibility study on a 210,000 t/yr green ammonia project in British Columbia, to inform its view of the project's financing case.",
     "solution": "DKC carried out the feasibility study, reviewing the market for green ammonia exports, the project's economics, and the risks a lender would weigh.",
-    "result": "Feasibility study delivered to KEXIM.",
+    "result": "Feasibility study delivered to KEXIM (December 2023 to December 2024).",
     "relevance": "Canadian ammonia exports to Asia depend on power, logistics, and offtake lining up, which a feasibility study must test together.",
     "refs": []
   },
@@ -610,38 +630,6 @@ export const profiles: ProjectProfile[] = [
       {
         "label": "Asia Economy — Draft industrial complex plan and impact assessments released by LH and Gyeongbuk Development Corporation (Dec 2025)",
         "url": "https://www.asiae.co.kr/en/article/2025120216592438918"
-      }
-    ]
-  },
-  {
-    "id": 49,
-    "tag": "Battery storage",
-    "headline": "Shannonbridge B battery storage and grid stabilization, Ireland",
-    "location": "Shannonbridge, County Offaly, Ireland",
-    "capacity": "63.2 MW battery storage with synchronous condenser",
-    "delivered": "DKC",
-    "summary": "DKC carried out KEITI's feasibility study for a 63.2 MW battery storage construction project in Ireland, the Shannonbridge B hybrid grid-stabilization plant.",
-    "about": [
-      "Shannonbridge B in County Offaly is a hybrid grid-stabilization plant that combines a battery energy storage system of about 63 MW and 160 MWh with a synchronous condenser and flywheel, providing inertia and other system services to EirGrid. It is held through a special purpose vehicle owned 80% by Hanwha Energy and 20% by Javah Energy, developed with Irish developer Lumcloon Energy. Groundbreaking took place in September 2022, with an investment of about US$122.5 million. The plant was officially opened by the Taoiseach on 6 March 2026."
-    ],
-    "role": "Feasibility study for KEITI.",
-    "scope": [
-      "Market and grid services revenue review",
-      "Project financial model",
-      "Risk and sensitivity analysis"
-    ],
-    "challenge": "KEITI needed a feasibility study on a 63.2 MW battery storage construction project in Ireland, where revenue depends on grid system services rather than energy sales alone.",
-    "solution": "DKC's feasibility study reviewed the Irish system services market, modeled the project's revenues and costs, and tested the main risks and sensitivities.",
-    "result": "Feasibility study delivered to KEITI (May 2023 to March 2024).",
-    "relevance": "Storage revenues built on grid services, assessed the way an owner and its lenders need to see them.",
-    "refs": [
-      {
-        "label": "Hanwha — Hanwha Energy promotes third energy storage system (ESS) project in Ireland (Oct 2022)",
-        "url": "https://www.hanwha.com/en/news_and_media/press_release/hanwha-energy-promotes-third-energye-storage-system-ess-project-in-ireland.html"
-      },
-      {
-        "label": "University of Limerick — Official reopening of a power station, 6th March 2026",
-        "url": "https://www.ul.ie/scieng/schools-and-departments/school-natural-sciences/department-physics/news/official-reopening-of-a-power-station-6th-march-2026"
       }
     ]
   },
@@ -773,35 +761,6 @@ export const profiles: ProjectProfile[] = [
     "refs": []
   },
   {
-    "id": 43,
-    "tag": "Education PPP",
-    "headline": "Qatar Schools PPP, Package 3",
-    "location": "Qatar",
-    "capacity": "14 schools",
-    "delivered": "DKC",
-    "summary": "DKC carried out a pre-feasibility study for Samil PwC on the third package of Qatar's schools public-private partnership program, covering 14 schools.",
-    "about": [
-      "In February 2021 Qatar's Ministry of Commerce and Industry, with the Ministry of Education and Higher Education and the Public Works Authority (Ashghal), announced the third package of the Qatar Schools Public-Private Partnership Development Program and invited expressions of interest.",
-      "The package covers 14 schools: four secondary, five preparatory, and four primary schools, and one school for students with special needs. The private partner would design, build, and finance the schools, demolish vacated school buildings, and operate and maintain the facilities over a 25-year term, after which the assets transfer to the public authority."
-    ],
-    "role": "Pre-feasibility study for Samil PwC.",
-    "scope": [
-      "Pre-feasibility study",
-      "PPP structure review",
-      "Preliminary financial analysis"
-    ],
-    "challenge": "Samil PwC needed an early assessment of the third package of Qatar's schools PPP program, a 25-year design, build, finance, operate, and maintain concession for 14 schools.",
-    "solution": "DKC carried out the pre-feasibility study, reviewing the PPP structure and the preliminary economics of the package.",
-    "result": "Pre-feasibility study delivered to Samil PwC.",
-    "relevance": "Availability-based social infrastructure PPPs are won or lost on long-term operating and lifecycle costs, which need to be understood before bidding.",
-    "refs": [
-      {
-        "label": "Qatar News Agency — Third package of Qatar Public Private Partnership Schools Development Program announced (Feb 2021)",
-        "url": "https://www.qna.org.qa/en/News-Area/News/2021-02/22/0049-third-package-of-qatar-public-private-partnership-schools-development-program-announced"
-      }
-    ]
-  },
-  {
     "id": 42,
     "tag": "Hydropower",
     "headline": "Sulawesi 30 MW small hydropower, Indonesia",
@@ -828,7 +787,7 @@ export const profiles: ProjectProfile[] = [
     "headline": "Alfonso el Sabio solar PV, Spain",
     "location": "Spain",
     "capacity": "600 MW",
-    "delivered": "DKC",
+    "delivered": "With Synergy Korea",
     "summary": "DKC carried out KEITI's feasibility study for the 600 MW Alfonso el Sabio solar PV project in Spain.",
     "about": [],
     "role": "Feasibility study for KEITI.",
@@ -885,28 +844,6 @@ export const profiles: ProjectProfile[] = [
     "solution": "DKC carried out the feasibility study, reviewing the export market for green ammonia, the project's economics, and its main risks.",
     "result": "Feasibility study delivered to KEITI (engagement November 2021 to July 2022).",
     "relevance": "Export-scale green ammonia in the Gulf competes on power cost and offtake, both of which need testing before an owner commits.",
-    "refs": []
-  },
-  {
-    "id": 38,
-    "tag": "Green ammonia",
-    "headline": "Green ammonia project, Western Australia",
-    "location": "Western Australia",
-    "capacity": "1,200 kt/yr green ammonia (3.4 kt/day)",
-    "delivered": "DKC",
-    "summary": "DKC carried out KEITI's feasibility study on a green ammonia project in Western Australia.",
-    "about": [],
-    "role": "Feasibility study for KEITI.",
-    "scope": [
-      "Feasibility study",
-      "Market review",
-      "Financial analysis",
-      "Risk review"
-    ],
-    "challenge": "KEITI needed a feasibility study on a green ammonia project in Western Australia, to assess whether it could be delivered and financed.",
-    "solution": "DKC carried out the feasibility study, reviewing the export market for green ammonia, the project's economics, and its main risks.",
-    "result": "Feasibility study delivered to KEITI (engagement July to December 2022).",
-    "relevance": "Export-scale green ammonia depends on renewable power, port access, and offtake lining up, which a feasibility study must test together.",
     "refs": []
   },
   {
@@ -1164,7 +1101,7 @@ export const profiles: ProjectProfile[] = [
     "headline": "District cooling for South Saad Al Abdullah smart city, Kuwait",
     "location": "South Saad Al Abdullah City, Kuwait",
     "capacity": "About 228,500 RT across six plants",
-    "delivered": "DKC",
+    "delivered": "With Synergy Korea",
     "summary": "DKC carried out KEXIM's feasibility study on district cooling for the South Saad Al Abdullah smart city in Kuwait, totaling about 228,500 refrigeration tons across six plants.",
     "about": [
       "South Saad Al Abdullah is a new residential city on the outskirts of Kuwait City, developed by Kuwait's Public Authority for Housing Welfare (PAHW) as the country's first smart city, with Korean participation including Korea Land and Housing Corporation (LH). As reported in 2024, it covers about 64 square kilometers with some 24,508 housing units across five residential areas, and completion is expected in late 2027.",
@@ -1594,7 +1531,7 @@ export const profiles: ProjectProfile[] = [
     ],
     "challenge": "Under the Knowledge Sharing Program, Thailand sought guidance on how to rank competing public infrastructure projects so that investment goes to those with the strongest case.",
     "solution": "DKC prepared a guideline setting out how public infrastructure projects can be assessed and prioritized.",
-    "result": "Prioritization guideline delivered to KEXIM for the KSP (September to November 2018).",
+    "result": "Prioritization guideline delivered to KEXIM for the KSP (July to November 2018).",
     "relevance": "Owners in the public sector need a consistent basis for deciding which projects proceed first.",
     "refs": []
   },

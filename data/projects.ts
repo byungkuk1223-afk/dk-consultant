@@ -29,9 +29,16 @@ export interface Project {
 // ──────────────────────────────────────────────────────────────
 // 프로젝트 데이터
 // 새 프로젝트 추가 시 이 배열 맨 앞에 항목을 추가하세요.
-// id는 현재 최댓값(68)보다 1 큰 숫자를 사용하세요.
+// id는 현재 최댓값(69)보다 1 큰 숫자를 사용하세요.
 // ──────────────────────────────────────────────────────────────
 export const projects: Project[] = [
+  {
+    id: 69,
+    title: "Green Hydrogen and Ammonia Pre-Feasibility Study in Dubai (with Synergy Korea)",
+    category: "Pre-feasibility Study: Market Analysis",
+    region: "Middle East·Africa",
+    detail: {"sector":"Renewables","country":"UAE","client":"KEITI","time":"2023.07~2024.01"},
+  },
   {
     id: 66,
     title: "Townsville BESS in Queensland, Australia",
@@ -87,7 +94,7 @@ export const projects: Project[] = [
     title: "Green Hydrogen Development Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"3000000t/year","sector":"Renewables","country":"Australia","client":"KEITI","time":"2024.11~2025.07","hasImage":true,"imgExt":"png"},
+    detail: {"sector":"Renewables","country":"Australia","client":"KEITI","time":"2024.11~2025.07","hasImage":true,"imgExt":"png"},
   },
   {
     id: 58,
@@ -101,14 +108,14 @@ export const projects: Project[] = [
     title: "Green Hydrogen Ammonia Project in Dubai",
     category: "Feasibility Study",
     region: "Middle East·Africa",
-    detail: {"capacity":"Electrolysis: 600MW, Renewable: 1,200MW, Green Hydrogen: 37000/year, Green Ammonia 200000t/year","sector":"Renewables","country":"UAE","client":"KEITI","time":"2024.06~","hasImage":true,"imgExt":"png"},
+    detail: {"capacity":"Electrolysis: 600MW, Renewable: 1,200MW, Green Hydrogen: 37000/year, Green Ammonia 200000t/year","sector":"Renewables","country":"UAE","client":"KEITI","time":"2024.06~2024.12","hasImage":true,"imgExt":"png"},
   },
   {
     id: 56,
     title: "Green Hydrogen Ammonia Project in Western Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"Electrolysis: 1.1GW, Renewable: 1.9 GW, Green Ammonia 500000t/year","sector":"Renewables","country":"Australia","client":"KEXIM","time":"2024.05~","hasImage":true,"imgExt":"png"},
+    detail: {"capacity":"Electrolysis: 1.1GW, Renewable: 1.9 GW, Green Ammonia 500000t/year","sector":"Renewables","country":"Australia","client":"KEXIM","time":"2024.05~2025.04","hasImage":true,"imgExt":"png"},
   },
   {
     id: 55,
@@ -129,14 +136,14 @@ export const projects: Project[] = [
     title: "BC Green Ammonia Project in Canada",
     category: "Feasibility Study",
     region: "Northern America",
-    detail: {"capacity":"Electrolysis: 255MW,  230MW, Green Hydrogen: 37,815TPA, Green Ammonia: 210,000 TPA","sector":"Renewables","country":"Canada","client":"KEXIM","time":"2023.12~2024.10","hasImage":true,"imgExt":"png"},
+    detail: {"capacity":"Electrolysis: 255MW,  230MW, Green Hydrogen: 37,815TPA, Green Ammonia: 210,000 TPA","sector":"Renewables","country":"Canada","client":"KEXIM","time":"2023.12~2024.12","hasImage":true,"imgExt":"png"},
   },
   {
     id: 52,
     title: "Newcastle Green Ammonia Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"Carbon Credit","sector":"Renewables","country":"Australia","client":"KIND","time":"2023.11~2024.04","hasImage":true,"imgExt":"png"},
+    detail: {"capacity":"Carbon Credit","sector":"Renewables","country":"Australia","client":"KIND","time":"2023.11~2024.05","hasImage":true,"imgExt":"png"},
   },
   {
     id: 51,
@@ -158,13 +165,6 @@ export const projects: Project[] = [
     category: "Feasibility Study: Market, Financing Structure, Legal and Tax",
     region: "Asia",
     detail: {"capacity":"Existing refinery, approx. 170,000 bpd","sector":"Petro-Chemical","country":"Indonesia","client":"KEXIM","time":"2023.05~2024.05","hasImage":true,"imgExt":"png"},
-  },
-  {
-    id: 49,
-    title: "BESS Construction Project in Ireland",
-    category: "Feasibility Study",
-    region: "Europe",
-    detail: {"capacity":"63.2MW","sector":"Renewables","country":"Ireland","client":"KEITI","time":"2023.05~2024.03","hasImage":true,"imgExt":"png"},
   },
 
   // ── Page 2 (48 ~ 34) ──────────────────────────────────────
@@ -211,13 +211,6 @@ export const projects: Project[] = [
     detail: {"sector":"Infrastructure","country":"Sri Lanka","client":"KIND","time":"2022.04~2022.11","hasImage":true,"imgExt":"png"},
   },
   {
-    id: 43,
-    title: "School PPP PKG III in Qatar",
-    category: "Pre-feasibility Study",
-    region: "Middle East·Africa",
-    detail: {"capacity":"14 School","sector":"Education","country":"Qatar","client":"Samil PwC","time":"2021.10~2022","hasImage":true,"imgExt":"png"},
-  },
-  {
     id: 42,
     title: "Sulawesi 30MW Small Hydropower Project in Indonesia",
     category: "Financial, Tax, and Legal Review",
@@ -229,7 +222,7 @@ export const projects: Project[] = [
     title: "Alfonso el Sabio Solar PV in Spain",
     category: "Feasibility Study",
     region: "Europe",
-    detail: {"capacity":"600MW","sector":"Renewables","country":"Spain","client":"KEITI","time":"2022.02~2022.08","hasImage":true,"imgExt":"jpg"},
+    detail: {"capacity":"600MW","sector":"Renewables","country":"Spain","client":"KEITI","time":"2022.04~2022.10","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 40,
@@ -243,14 +236,7 @@ export const projects: Project[] = [
     title: "Duqm Green Ammonia Project in Oman",
     category: "Feasibility Study",
     region: "Middle East·Africa",
-    detail: {"capacity":"1200 kton/yr (3.4 kton/day)","sector":"Renewables","country":"Oman","client":"KEITI","time":"2021.11~2022.08","hasImage":true,"imgExt":"jpg"},
-  },
-  {
-    id: 38,
-    title: "Western Australia Green Ammonia Project in Australia",
-    category: "Feasibility Study",
-    region: "Oceania",
-    detail: {"capacity":"1200 kton/yr (3.4 kton/day)","sector":"Renewables","country":"Australia","client":"KEITI","time":"2022.07~2022.12","hasImage":true,"imgExt":"jpg"},
+    detail: {"capacity":"1200 kton/yr (3.4 kton/day)","sector":"Renewables","country":"Oman","client":"KEITI","time":"2021.11~2022.07","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 37,
@@ -364,7 +350,7 @@ export const projects: Project[] = [
     title: "District Cooling Project for South Saad Al Abdullah Smart City",
     category: "Feasibility Study",
     region: "Middle East·Africa",
-    detail: {"capacity":"~228,500 RT (Total 6 plants)","sector":"Smart City","country":"Kuwait","client":"KEXIM","time":"2020~2021"},
+    detail: {"capacity":"~228,500 RT (Total 6 plants)","sector":"Smart City","country":"Kuwait","client":"KEXIM","time":"2020.12~2021.08"},
   },
   {
     id: 21,
@@ -385,7 +371,7 @@ export const projects: Project[] = [
     title: "Development of Wanasari Port in Indonesia",
     category: "Establishment of Basic Plan and Feasibility Study",
     region: "Asia",
-    detail: {"sector":"Port","country":"Indonesia","client":"Daeyoung Engineering, Samil PwC","time":"2020~2021","hasImage":true,"imgExt":"png"},
+    detail: {"sector":"Port","country":"Indonesia","client":"Daeyoung Engineering, Samil PwC","time":"2020.08~2021.05","hasImage":true,"imgExt":"png"},
   },
 
   // ── Page 4 (18 ~ 4) ───────────────────────────────────────
@@ -492,7 +478,7 @@ export const projects: Project[] = [
     title: "KSP for Public Infrastructure in Thailand",
     category: "Prioritization Guideline for Public Infrastructure Projects",
     region: "Asia",
-    detail: {"sector":"Infrastructure","country":"Thailand","client":"KEXIM","time":"2018.09~2018.11","hasImage":true,"imgExt":"jpg"},
+    detail: {"sector":"Infrastructure","country":"Thailand","client":"KEXIM","time":"2018.07~2018.11","hasImage":true,"imgExt":"jpg"},
   },
 
   // ── Page 5 (3 ~ 1) ────────────────────────────────────────
