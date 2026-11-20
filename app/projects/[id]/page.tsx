@@ -84,7 +84,7 @@ export default function ProjectDetailPage() {
             <p style={{ fontSize: 12, letterSpacing: 2.4, fontWeight: 700, fontFamily: F, color: "rgba(255,255,255,0.8)", marginBottom: 12 }}>
               <Link href="/projects" style={{ color: "inherit" }}>PROJECTS</Link>
               {mslug && <> &nbsp;/&nbsp; <Link href={`/markets/${mslug}`} style={{ color: "inherit" }}>{market.toUpperCase()}</Link></>}
-              {pf?.caseStudy && <span style={{ marginLeft: 12, border: "1px solid rgba(255,255,255,.7)", padding: "2px 8px" }}>CASE STUDY</span>}
+              {pf?.caseStudy && <span style={{ marginLeft: 12, border: "1px solid rgba(255,255,255,.7)", padding: "2px 8px" }}>FEATURED</span>}
             </p>
             <h1 style={{ fontSize: "clamp(26px, 3vw, 40px)", fontWeight: 400, fontFamily: SERIF, lineHeight: 1.2, maxWidth: 900 }}>{pf?.headline ?? project.title}</h1>
           </div>

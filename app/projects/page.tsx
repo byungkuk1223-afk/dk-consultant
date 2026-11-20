@@ -56,7 +56,7 @@ function ProjectsContent() {
           {/* Featured case studies */}
           {activeRegion === "All" && activeMarket === "All" && !searchQuery && page === 1 && (
             <div style={{ marginBottom: 44 }}>
-              <p style={{ fontSize: 12, letterSpacing: 2.5, color: "#416ab3", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>FEATURED CASE STUDIES</p>
+              <p style={{ fontSize: 12, letterSpacing: 2.5, color: "#416ab3", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>FEATURED PROJECTS</p>
               <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
                 {caseStudies.map(c => {
                   const p = projects.find(x => x.id === c.id);
@@ -151,7 +151,7 @@ function ProjectsContent() {
                   <td style={{ padding: "18px 10px", fontSize: 12, color: "#777", fontFamily: "'Lato', sans-serif", whiteSpace: "nowrap" }}>{p.detail?.time}</td>
                   <td style={{ padding: "18px 10px", whiteSpace: "nowrap" }}>
                     {statusOf(p) === "Ongoing" && <span style={{ fontSize: 10.5, letterSpacing: 1, color: "#0e7c86", border: "1px solid #0e7c86", padding: "2px 7px", fontFamily: "'Lato', sans-serif", fontWeight: 700 }}>ONGOING</span>}
-                    {caseStudies.some(c => c.id === p.id) && <span style={{ fontSize: 10.5, letterSpacing: 1, color: "#0b2545", border: "1px solid #0b2545", padding: "2px 7px", marginLeft: 6, fontFamily: "'Lato', sans-serif", fontWeight: 700 }}>CASE STUDY</span>}
+                    {caseStudies.some(c => c.id === p.id) && <span style={{ fontSize: 10.5, letterSpacing: 1, color: "#0b2545", border: "1px solid #0b2545", padding: "2px 7px", marginLeft: 6, fontFamily: "'Lato', sans-serif", fontWeight: 700 }}>FEATURED</span>}
                   </td>
                   <td style={{ padding: "18px 16px", textAlign: "right", color: "#416ab3", fontSize: 18 }}>›</td>
                 </tr>
