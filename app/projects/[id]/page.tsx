@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { projects } from "@/data/projects";
+import { projects, marketOf, statusOf } from "@/data/projects";
+import { caseStudyFor } from "@/data/caseStudies";
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
@@ -35,13 +36,18 @@ export default function ProjectDetailPage() {
   }
 
   const d = project.detail;
+  const cs = caseStudyFor(project.id);
   const infoRows = [
+    cs && { label: "Location", value: cs.location },
+    cs && { label: "Delivered", value: cs.delivered },
     d?.capacity && { label: "Capacity", value: d.capacity },
     d?.sector && { label: "Sector", value: d.sector },
     d?.country && { label: "Country", value: d.country },
     d?.client && { label: "Client", value: d.client },
     d?.time && { label: "Period", value: d.time },
     { label: "Our Role", value: project.category },
+    { label: "Market", value: marketOf(project) },
+    { label: "Status", value: statusOf(project) },
     { label: "Region", value: project.region },
   ].filter(Boolean) as { label: string; value: string }[];
 
@@ -105,6 +111,34 @@ export default function ProjectDetailPage() {
               </div>
             )}
           </div>
+
+          {/* Case study (brochure Part B) */}
+          {cs && (
+            <div style={{ marginBottom: 56 }}>
+              <p style={{ fontSize: 12, letterSpacing: 2.5, color: "#0e7c86", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 10 }}>CASE STUDY · {cs.tag.toUpperCase()}</p>
+              <h2 style={{ fontSize: 26, lineHeight: "34px", fontFamily: "'Libre Baskerville', Georgia, serif", fontWeight: 400, color: "#0b2545", marginBottom: 18 }}>{cs.headline}</h2>
+              <p style={{ fontSize: 12, letterSpacing: 2, color: "#416ab3", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 8 }}>PROJECT HIGHLIGHTS</p>
+              <ul style={{ margin: "0 0 26px 18px", fontFamily: "'Lato', sans-serif", fontSize: 15, color: "#333", lineHeight: "26px" }}>
+                {cs.highlights.map(h => <li key={h}>{h}</li>)}
+              </ul>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 0, border: "1px solid #e5e7eb" }}>
+                {[["The challenge", cs.challenge], ["The solution", cs.solution], ["The result", cs.result]].map(([h, t], i) => (
+                  <div key={h} style={{ padding: "20px 22px", borderLeft: i ? "1px solid #e5e7eb" : "none", background: i === 2 ? "#f4f7fb" : "#fff" }}>
+                    <p style={{ fontSize: 11.5, letterSpacing: 2, color: "#0b2545", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 10 }}>{h.toUpperCase()}</p>
+                    <p style={{ fontSize: 14.5, lineHeight: "24px", color: "#444", fontFamily: "'Lato', sans-serif" }}>{t}</p>
+                    {i === 1 && cs.scope && (
+                      <ul style={{ margin: "10px 0 0 18px", fontSize: 14, lineHeight: "23px", color: "#444", fontFamily: "'Lato', sans-serif" }}>
+                        {cs.scope.map(s => <li key={s}>{s}</li>)}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p style={{ marginTop: 14, fontSize: 14, color: "#555", fontFamily: "'Lato', sans-serif" }}>
+                <b style={{ color: "#0e7c86", letterSpacing: 1, fontSize: 12 }}>WHAT IT MEANS FOR CLIENTS&nbsp;&nbsp;</b>{cs.relevance}
+              </p>
+            </div>
+          )}
 
           {/* CTA */}
           <div style={{ background: "#416ab3", borderRadius: 4, padding: "36px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>

@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <Header scrolled={scrolled} />
+      <Header scrolled={scrolled} solid />
       <main>
         <HeroSection />
         <ProjectsSection />

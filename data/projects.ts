@@ -87,7 +87,7 @@ export const projects: Project[] = [
     title: "Green Hydrogen Development Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"3000000t/year","sector":"Renewables","country":"Australia","client":"KEITI","time":"24.11.01~","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_Eipyv5Fw_82c342ee21852b98681dcd6f368bd6f81727cee5.png"},
+    detail: {"capacity":"3000000t/year","sector":"Renewables","country":"Australia","client":"KEITI","time":"2024.11~2025.07","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_Eipyv5Fw_82c342ee21852b98681dcd6f368bd6f81727cee5.png"},
   },
   {
     id: 58,
@@ -294,7 +294,7 @@ export const projects: Project[] = [
     title: "Tashkent Landfill Gas to Energy and CDM Project in Uzbekistan",
     category: "Financial Advisory Services",
     region: "Asia",
-    detail: {"capacity":"16MW landfill gas power + 720 kton/yr CDM","sector":"Renewables","country":"Uzbekistan","client":"Sejin G&E","time":"2021.08~","hasImage":true,"imgExt":"png"},
+    detail: {"capacity":"16MW landfill gas power + 720 kton/yr CDM","sector":"Renewables","country":"Uzbekistan","client":"Sejin G&E","time":"2021.08~2022.04","hasImage":true,"imgExt":"png"},
   },
   {
     id: 31,
@@ -511,3 +511,32 @@ export const projects: Project[] = [
     detail: {"capacity":"876 MW","sector":"Power","country":"Saudi Arabia","client":"Samsung Engineering","time":"2017.07","hasImage":true,"imgExt":"png"},
   },
 ];
+
+// ──────────────────────────────────────────────────────────────
+// Markets and status for the Projects filters (same four markets as the Services page)
+// ──────────────────────────────────────────────────────────────
+export const MARKETS = [
+  "Power Generation",
+  "Carbon Capture & Low-Carbon Fuels",
+  "Environmental Infrastructure",
+  "Industrial & Infrastructure",
+  "Healthcare",
+] as const;
+export type Market = (typeof MARKETS)[number];
+
+export function marketOf(p: Project): Market {
+  const t = (p.title + " " + (p.detail?.sector ?? "")).toLowerCase();
+  if (/health|hospital|medical center|cardiac|cancer|pharma|bio-medical/.test(t) && !/waste/.test(t)) return "Healthcare";
+  if (/hydrogen|ammonia|methanol|saf |ccs|carbon capture/.test(t)) return "Carbon Capture & Low-Carbon Fuels";
+  if (/waste|landfill|district|heating|cooling|chp|dhp|water|iwp/.test(t)) return "Environmental Infrastructure";
+  if (/power|solar|hydro|bess|battery|ccgt|gas to power|gas-to-power|lng|cogeneration|renewable|sco2/.test(t)) return "Power Generation";
+  return "Industrial & Infrastructure";
+}
+
+/** "Ongoing" only for recent open-ended periods (e.g. "2026.04~"); older open entries are not asserted as ongoing. */
+export function statusOf(p: Project): "Ongoing" | "Completed" {
+  const t = p.detail?.time ?? "";
+  const y = Number((t.match(/^(\d{2,4})/) ?? ["", "0"])[1]);
+  const year = y < 100 ? 2000 + y : y;
+  return t.trim().endsWith("~") && year >= 2025 ? "Ongoing" : "Completed";
+}

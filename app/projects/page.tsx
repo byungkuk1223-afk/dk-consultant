@@ -3,7 +3,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { projects } from "@/data/projects";
+import { projects, MARKETS, marketOf, statusOf } from "@/data/projects";
+import { caseStudies } from "@/data/caseStudies";
 
 const REGIONS = ["All", "Asia", "Middle East·Africa", "Europe", "Oceania", "Latin America", "Northern America", "Etc."];
 const PER_PAGE = 15;
@@ -20,6 +21,7 @@ function ProjectsContent() {
   }, []);
 
   const activeRegion = searchParams.get("region") ?? "All";
+  const activeMarket = searchParams.get("market") ?? "All";
   const page = Number(searchParams.get("page") ?? "1");
   const searchQuery = searchParams.get("q") ?? "";
 
@@ -35,7 +37,8 @@ function ProjectsContent() {
   const filtered = projects.filter(p => {
     const matchRegion = activeRegion === "All" || p.region === activeRegion;
     const matchSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchRegion && matchSearch;
+    const matchMarket = activeMarket === "All" || marketOf(p) === activeMarket;
+    return matchRegion && matchSearch && matchMarket;
   });
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
@@ -82,6 +85,25 @@ function ProjectsContent() {
             ))}
           </div>
 
+          {/* Featured case studies */}
+          {activeRegion === "All" && activeMarket === "All" && !searchQuery && page === 1 && (
+            <div style={{ marginBottom: 44 }}>
+              <p style={{ fontSize: 12, letterSpacing: 2.5, color: "#416ab3", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 14 }}>FEATURED CASE STUDIES</p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+                {caseStudies.map(c => {
+                  const p = projects.find(x => x.id === c.id);
+                  return (
+                    <a key={c.id} href={`/projects/${c.id}`} style={{ display: "block", background: "#fff", border: "1px solid #e5e7eb", borderTop: "4px solid #0b2545", padding: "18px 18px 20px", textDecoration: "none" }}>
+                      <p style={{ fontSize: 10.5, letterSpacing: 1.8, color: "#0e7c86", fontWeight: 700, fontFamily: "'Lato', sans-serif", marginBottom: 8 }}>{c.tag.toUpperCase()}</p>
+                      <p style={{ fontSize: 15, lineHeight: "21px", fontFamily: "'Libre Baskerville', Georgia, serif", color: "#0b2545", marginBottom: 10 }}>{c.headline}</p>
+                      <p style={{ fontSize: 12, color: "#888", fontFamily: "'Lato', sans-serif" }}>{p?.detail?.client} · {p?.detail?.time}</p>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Search Bar */}
           <form onSubmit={e => { e.preventDefault(); updateParams({ q: searchQuery, page: "1" }); }} style={{ display: "flex", gap: 0, marginBottom: 24 }}>
             <input
@@ -119,8 +141,20 @@ function ProjectsContent() {
             </button>
           </form>
 
+          {/* Market Filter */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 10, alignItems: "center" }}>
+            <span style={{ fontSize: 11, letterSpacing: 1.5, color: "#999", fontFamily: "'Lato', sans-serif", width: 70 }}>MARKET</span>
+            {["All", ...MARKETS].map(m => (
+              <button key={m} onClick={() => updateParams({ market: m, page: "1" })}
+                style={{ padding: "7px 16px", fontSize: 12, fontFamily: "'Lato', sans-serif", border: "1px solid", borderColor: activeMarket === m ? "#0b2545" : "#ddd", background: activeMarket === m ? "#0b2545" : "#fff", color: activeMarket === m ? "#fff" : "#555", cursor: "pointer", borderRadius: 2 }}>
+                {m}
+              </button>
+            ))}
+          </div>
+
           {/* Region Filter */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32, alignItems: "center" }}>
+            <span style={{ fontSize: 11, letterSpacing: 1.5, color: "#999", fontFamily: "'Lato', sans-serif", width: 70 }}>REGION</span>
             {REGIONS.map(r => (
               <button key={r} onClick={() => updateParams({ region: r, page: "1" })}
                 style={{ padding: "7px 18px", fontSize: 12, fontFamily: "'Lato', sans-serif", fontWeight: 400, border: "1px solid", borderColor: activeRegion === r ? "#416ab3" : "#ddd", background: activeRegion === r ? "#416ab3" : "#fff", color: activeRegion === r ? "#fff" : "#555", cursor: "pointer", borderRadius: 2, transition: "all 0.2s" }}>
@@ -144,6 +178,12 @@ function ProjectsContent() {
                   <td style={{ padding: "18px 16px" }}>
                     <div style={{ fontSize: 14, fontWeight: 400, fontFamily: "'Lato', sans-serif", color: "#1a1a1a", marginBottom: 4 }}>{p.title}</div>
                     <div style={{ fontSize: 12, color: "#999", fontFamily: "'Lato', sans-serif" }}>{p.category}</div>
+                  </td>
+                  <td style={{ padding: "18px 10px", fontSize: 12, color: "#777", fontFamily: "'Lato', sans-serif", whiteSpace: "nowrap" }}>{marketOf(p)}</td>
+                  <td style={{ padding: "18px 10px", fontSize: 12, color: "#777", fontFamily: "'Lato', sans-serif", whiteSpace: "nowrap" }}>{p.detail?.time}</td>
+                  <td style={{ padding: "18px 10px", whiteSpace: "nowrap" }}>
+                    {statusOf(p) === "Ongoing" && <span style={{ fontSize: 10.5, letterSpacing: 1, color: "#0e7c86", border: "1px solid #0e7c86", padding: "2px 7px", fontFamily: "'Lato', sans-serif", fontWeight: 700 }}>ONGOING</span>}
+                    {caseStudies.some(c => c.id === p.id) && <span style={{ fontSize: 10.5, letterSpacing: 1, color: "#0b2545", border: "1px solid #0b2545", padding: "2px 7px", marginLeft: 6, fontFamily: "'Lato', sans-serif", fontWeight: 700 }}>CASE STUDY</span>}
                   </td>
                   <td style={{ padding: "18px 16px", textAlign: "right", color: "#416ab3", fontSize: 18 }}>›</td>
                 </tr>

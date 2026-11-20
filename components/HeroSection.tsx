@@ -1,88 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
+import CcsHero from "@/components/ccs/CcsHero";
 
 export default function HeroSection() {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % 2);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const slides = [{ bg: "/img/power_hero.jpg" }, { bg: "/img/power_plant.jpg" }];
-
   return (
     <section>
-      {/* Main Hero */}
-      <div style={{ position: "relative", width: "100%", height: "100vh", overflow: "hidden" }}>
-        {slides.map((slide, i) => (
-          <div
-            key={i}
-            style={{
-              position: "absolute",
-              inset: 0,
-              opacity: activeSlide === i ? 1 : 0,
-              transition: "opacity 1.2s ease",
-              background: `linear-gradient(to right, rgba(11,37,69,0.72) 0%, rgba(11,37,69,0.45) 55%, rgba(11,37,69,0.15) 100%), url('${slide.bg}') center/cover no-repeat`,
-            }}
-          />
-        ))}
+      <CcsHero />
 
-        {/* Hero Text - bottom left */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "22%",
-            left: "30%",
-            color: "#fff",
-            zIndex: 10,
-            maxWidth: 640,
-          }}
-        >
-          <p
-            style={{
-              fontSize: 12,
-              letterSpacing: 3,
-              fontFamily: "'Lato', sans-serif",
-              fontWeight: 700,
-              color: "rgba(255,255,255,0.85)",
-              marginBottom: 16,
-            }}
-          >
-            POWER PLANT &amp; ENVIRONMENT
-          </p>
-          <h1
-            style={{
-              fontSize: "clamp(32px, 3.6vw, 50px)",
-              fontWeight: 700,
-              fontFamily: "'Libre Baskerville', Georgia, serif",
-              lineHeight: 1.2,
-              marginBottom: 18,
-              color: "#fff",
-            }}
-          >
-            Advancing power and environmental projects, from vision to execution
-          </h1>
-          <p
-            style={{
-              fontSize: 15,
-              fontFamily: "'Lato', sans-serif",
-              fontWeight: 300,
-              color: "rgba(255,255,255,0.9)",
-              lineHeight: 1.85,
-              letterSpacing: 0.3,
-            }}
-          >
-            Owner-side engineering management, commercial structuring, and project finance in one team,
-            on one project baseline.
-          </p>
-        </div>
-      </div>
-
-      {/* Service Cards - overlapping the hero bottom */}
-      <div style={{ background: "#f2f3f5", paddingBottom: 60 }}>
+      {/* Service cards */}
+      <div style={{ background: "#f2f3f5", padding: "56px 0 60px" }}>
         <div
           style={{
             maxWidth: 1140,
@@ -90,7 +15,6 @@ export default function HeroSection() {
             display: "grid",
             gridTemplateColumns: "1fr 1fr 1fr",
             gap: 0,
-            transform: "translateY(-72px)",
             boxShadow: "0 8px 40px rgba(0,0,0,0.10)",
           }}
         >

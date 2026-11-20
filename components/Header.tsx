@@ -2,9 +2,11 @@
 
 interface HeaderProps {
   scrolled: boolean;
+  solid?: boolean;
 }
 
-export default function Header({ scrolled }: HeaderProps) {
+export default function Header({ scrolled, solid }: HeaderProps) {
+  const filled = scrolled || !!solid;
   return (
     <header
       style={{
@@ -13,8 +15,8 @@ export default function Header({ scrolled }: HeaderProps) {
         left: 0,
         width: "100%",
         zIndex: 1000,
-        backgroundColor: scrolled ? "rgba(58,85,133,0.97)" : "transparent",
-        backgroundImage: scrolled ? "none" : "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%)",
+        backgroundColor: filled ? (solid && !scrolled ? "#0b2545" : "rgba(58,85,133,0.97)") : "transparent",
+        backgroundImage: filled ? "none" : "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%)",
         transition: "background-color 0.3s ease, background-image 0.3s ease",
       }}
     >
