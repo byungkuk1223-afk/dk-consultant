@@ -1,1 +1,214 @@
-{"slug":"industrial-infrastructure","dek":"","keyFigures":[],"sections":[],"regional":[],"implications":[],"sources":[]}
+{
+  "slug": "industrial-infrastructure",
+  "dek": "Industrial and infrastructure investment is being shaped by supply security as much as by demand growth. Refining capacity is moving to Asia, critical minerals processing remains concentrated in a few countries, and private investment in emerging-market infrastructure has recovered. Export credit and development finance institutions are carrying a growing share of the risk in all three.",
+  "keyFigures": [
+    {
+      "v": "USD 100.7 bn",
+      "n": "Private investment commitments in infrastructure in low- and middle-income countries, 2024, up 16% on 2023",
+      "src": "World Bank, PPI 2024 Annual Report (2025)",
+      "url": "https://ppi.worldbank.org/content/dam/PPI/documents/PPI-2024-Annual-Report-Interactive.pdf"
+    },
+    {
+      "v": "1 in 3",
+      "n": "Share of 2024 private infrastructure projects in low- and middle-income countries supported by development and export finance institutions",
+      "src": "World Bank, PPI 2024 Annual Report (2025)",
+      "url": "https://ppi.worldbank.org/content/dam/PPI/documents/PPI-2024-Annual-Report-Interactive.pdf"
+    },
+    {
+      "v": "USD 231 bn",
+      "n": "Record medium- and long-term new business by Berne Union export credit members, 2025",
+      "src": "OeKB, on Berne Union data (2026)",
+      "url": "https://www.oekb.at/en/oekb-group/news-und-wissen/news/2026/bu-spring-meeting.html"
+    },
+    {
+      "v": "2.6 of 3.9 Mt",
+      "n": "Indonesia's share of world nickel mine production, 2025 estimate",
+      "src": "USGS, Mineral Commodity Summaries 2026 (2026)",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-nickel.pdf"
+    },
+    {
+      "v": "4.2 vs 1.6 mb/d",
+      "n": "New global refining capacity expected by 2030, against closures",
+      "src": "IEA, Oil 2025 (2025)",
+      "url": "https://iea.org/reports/oil-2025/executive-summary"
+    },
+    {
+      "v": "-9%",
+      "n": "Change in critical minerals investment in 2025, the first decline after several years of growth",
+      "src": "IEA, Global Critical Minerals Outlook 2026 (2026)",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary"
+    }
+  ],
+  "sections": [
+    {
+      "h": "Refining capacity is moving to Asia while product demand levels off",
+      "paras": [
+        "The IEA expects 4.2 mb/d of new refining capacity worldwide by 2030, partly offset by 1.6 mb/d of closures. Most of the growth is in Asia, especially China and India, and most of the closures are at high-cost plants in Europe and on the US West Coast. Demand for refined products is projected to peak in 2027 at 86.3 mb/d, only 710 kb/d above 2024. Gasoline and diesel use is falling faster than naphtha and jet fuel use is rising, and petrochemical growth relies mostly on natural gas liquids rather than refinery output. As a result, a refinery upgrade has to earn its return on margins and product yield, not on volume growth. Decarbonization adds a second test: the IEA expects refineries and industrial facilities to use 2.5 Mt of low-emissions hydrogen by 2030, about 60% of committed production. Refiners are now among the main buyers for clean hydrogen projects."
+      ],
+      "cites": [
+        1,
+        2
+      ]
+    },
+    {
+      "h": "Critical minerals processing remains concentrated, and governments are paying to diversify it",
+      "paras": [
+        "The top three refining countries' average share of key energy minerals rose from around 82% in 2020 to 86% in 2024, and the IEA projects only a marginal decline by 2035. Its 2026 outlook finds the single leading refiner's average share at 72% in 2025. Indonesia, for nickel, and China, for most other energy minerals, accounted for over three-quarters of refined supply growth in the past two years. The number of mineral tariff codes under Chinese export controls has tripled since 2023. Investment has not followed the policy priority. Critical minerals investment fell 9% in 2025, and lithium companies cut spending by roughly 40%. Public money is filling part of the gap. Advanced-economy public finance commitments reached about USD 65 billion in 2025, roughly four times the 2023 level, although disbursements lag. The IEA describes the extra cost of diversified supply as a mineral security premium. It can be paid through contracts for difference, price floors, offtake backstops and stockpiles."
+      ],
+      "cites": [
+        3,
+        4
+      ]
+    },
+    {
+      "h": "Indonesia's nickel expansion has run ahead of the market",
+      "paras": [
+        "Indonesia produced an estimated 2.6 Mt of the world's 3.9 Mt of mined nickel in 2025, after a further 13% increase as new operations ramped up, according to the USGS. Elsewhere, supply contracted: Australian output fell an estimated 54% as several mines moved to care and maintenance, and Philippine output fell 24%. The International Nickel Study Group has recorded a primary nickel surplus every year since 2022, reaching 182,000 tonnes in 2024 and 189,000 tonnes in the first nine months of 2025. The average LME cash price fell an estimated 11% in 2025. For new processing capacity, this means lower prices and a harder test of where a plant sits on the cost curve. The IEA's finding that almost all recent nickel refining growth came from the leading supplier also explains why buyers and governments outside Indonesia are offering support for alternative supply. Each new project needs a clear view of which buyers it serves and under what sourcing rules."
+      ],
+      "cites": [
+        5,
+        4
+      ]
+    },
+    {
+      "h": "Private infrastructure investment has recovered, led by energy, with transport rebounding",
+      "paras": [
+        "The World Bank's PPI database recorded USD 100.7 billion of private investment commitments across 315 infrastructure projects in low- and middle-income countries in 2024. That is 16% more than in 2023 and the first year above USD 100 billion since the pandemic. Energy took USD 67.9 billion across 217 projects. Transport commitments rose 49% from their lowest level in two decades, to USD 20.6 billion across 38 projects, but remain below the five-year average. Higher transport totals in earlier years came largely from big road PPPs in China and India. Ports remain one of the easiest entry points for private capital. In 2024, Equatorial Guinea and Guyana each recorded their first private infrastructure transaction in over a decade, and both were port modernization projects. East Asia and Pacific accounted for the largest regional share of commitments, led by China, Malaysia and the Philippines."
+      ],
+      "cites": [
+        6
+      ]
+    },
+    {
+      "h": "Export credit and development finance carry a growing share of the debt",
+      "paras": [
+        "Development and export finance institutions supported one in three private infrastructure projects in low- and middle-income countries in 2024. They provided USD 12.6 billion of direct debt, twice the 2023 figure. In the Middle East and North Africa, seven of eight projects had their backing. Export credit is growing too. Berne Union members wrote a record USD 231 billion of medium- and long-term business in 2025, increasingly in very large transactions. For the first time, new medium- and long-term business in developed markets exceeded that in developing economies. The Berne Union reports that combined new commitments in renewables and energy rose 29% to USD 28.8 billion. The 2023 modernization of the OECD Arrangement extended maximum repayment terms to 22 years for climate-related projects, including CO2 capture and storage, clean hydrogen and ammonia, and clean energy minerals and ores, and to 15 years for most other projects. Longer export-credit tenors make these assets easier to finance."
+      ],
+      "cites": [
+        6,
+        8,
+        9,
+        7,
+        10
+      ]
+    }
+  ],
+  "regional": [
+    {
+      "region": "Southeast Asia / Indonesia",
+      "text": "Indonesia supplied about two-thirds of the world's mined nickel in 2025 and led growth in refined nickel. Further expansion now faces a market in surplus since 2022 and lower prices. The region also leads emerging-market private infrastructure investment. In 2024, East Asia and Pacific accounted for the largest share of commitments, and the Philippines, Viet Nam, Indonesia and Cambodia all recorded transactions. Only 10 of the region's 99 projects had development or export finance support, which the World Bank attributes to strong domestic lenders."
+    },
+    {
+      "region": "Australia",
+      "text": "Low nickel prices pushed Australian mine output down an estimated 54% in 2025 as several mines moved to care and maintenance. The government has responded with an A$1.2 billion Critical Minerals Strategic Reserve, run by Export Finance Australia under legislation passed in 2026. Its initial focus is antimony, gallium and rare earth elements, and its tools include fixed- or floating-price offtake, loans, guarantees, equity and contracts for difference."
+    },
+    {
+      "region": "North America",
+      "text": "The IEA expects closures of high-cost refineries in Europe and on the US West Coast as new capacity comes on in Asia. In minerals, the United States has had no primary nickel refinery since 1985. Three companies are considering or developing nickel refinery projects in Missouri, Oklahoma and Texas, and two nickel mine projects have been added to the federal permitting dashboard. Export credit business is following demand into developed markets."
+    },
+    {
+      "region": "Middle East",
+      "text": "Private infrastructure investment in the Middle East and North Africa fell in 2024, and nearly every project that did close depended on development and export finance institutions: seven of the region's eight projects had their support. The region is also a major producer of hydrogen for refining and fertilizers, and the 2026 supply disruption showed how much downstream industry elsewhere depends on it."
+    },
+    {
+      "region": "Northeast Asia (Korea)",
+      "text": "The Export-Import Bank of Korea lent a record 87 trillion won in 2025. It plans to allocate a further 100 trillion won to large strategic projects in defense, nuclear power and infrastructure, alongside support for companies expanding into the Global South and Europe. For overseas projects with Korean contractors or equipment, Korean policy finance is a central part of the debt structure."
+    }
+  ],
+  "implications": [
+    {
+      "t": "Make the market case before the engineering case",
+      "d": "Refined product demand peaks around 2027 in the IEA's outlook, and the nickel market has been in surplus since 2022. Upgrade and processing projects need a margin case, a cost-curve position and a downside case that hold without volume growth. Lenders will test these first. A feasibility study that treats demand as given, rather than as the first question, will not hold up in lender due diligence."
+    },
+    {
+      "t": "Design for ECA and DFI eligibility from day one",
+      "d": "With one in three emerging-market infrastructure projects supported by development and export finance institutions, and OECD tenors of up to 22 years for eligible climate-related assets, debt capacity depends on meeting each agency's content, environmental and social, and procurement rules. These are easier to build in at feasibility than to retrofit at financing."
+    },
+    {
+      "t": "Treat supply-security policy as a revenue source",
+      "d": "Price floors, contracts for difference, offtake backstops and strategic reserves are becoming part of critical minerals financing. Sponsors outside the dominant supplier countries should identify which government programs could underpin their offtake, and model the project both with and without that support. Support terms can change with budgets and elections, so lenders will discount revenue that depends on them."
+    },
+    {
+      "t": "Expect lenders to examine sourcing and traceability",
+      "d": "Export controls on minerals have widened, and buyer-country sourcing rules are tightening. Processing projects will be asked where their feedstock comes from, who owns the plant, and whether the product qualifies under buyers' sourcing rules. These questions affect both the product's price and its eligibility for financing. They are best answered in the feasibility study, not during lender due diligence."
+    },
+    {
+      "t": "Use PPP structures where public payment carries the risk",
+      "d": "Transport and port PPPs are recovering. Their bankability still rests on the strength of the public counterparty, payment security and termination compensation. These need to be settled before procurement, especially in markets where development finance is the main source of long-tenor debt. Where the counterparty's credit is weak, multilateral guarantees or political risk cover can close the gap."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Oil 2025: Executive Summary",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://iea.org/reports/oil-2025/executive-summary"
+    },
+    {
+      "label": "Global Hydrogen Review 2026: Executive Summary",
+      "publisher": "International Energy Agency",
+      "year": "2026",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/executive-summary"
+    },
+    {
+      "label": "Global Critical Minerals Outlook 2025: Executive Summary",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary"
+    },
+    {
+      "label": "Global Critical Minerals Outlook 2026: Executive Summary",
+      "publisher": "International Energy Agency",
+      "year": "2026",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary"
+    },
+    {
+      "label": "Mineral Commodity Summaries 2026: Nickel",
+      "publisher": "U.S. Geological Survey",
+      "year": "2026",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-nickel.pdf"
+    },
+    {
+      "label": "Private Participation in Infrastructure (PPI) 2024 Annual Report",
+      "publisher": "World Bank",
+      "year": "2025",
+      "url": "https://ppi.worldbank.org/content/dam/PPI/documents/PPI-2024-Annual-Report-Interactive.pdf"
+    },
+    {
+      "label": "Market trends: Energy, security, and pressure on claims ratios",
+      "publisher": "Berne Union",
+      "year": "2026",
+      "url": "https://berneunion.org/Articles/Details/1004/Market-trends-Energy-security-and-pressure-on-claims-ratios"
+    },
+    {
+      "label": "Berne Union Spring Meeting 2026",
+      "publisher": "OeKB (Oesterreichische Kontrollbank)",
+      "year": "2026",
+      "url": "https://www.oekb.at/en/oekb-group/news-und-wissen/news/2026/bu-spring-meeting.html"
+    },
+    {
+      "label": "State of the Industry Report 2025",
+      "publisher": "Berne Union",
+      "year": "2026",
+      "url": "https://berneunion.org/Articles/Details/1019/State-of-the-Industry-Report-2025-Published"
+    },
+    {
+      "label": "OECD members agree on EU initiative to modernise export credits",
+      "publisher": "European Commission, DG Trade",
+      "year": "2023",
+      "url": "https://policy.trade.ec.europa.eu/news/oecd-members-agree-eu-initiative-modernise-export-credits-2023-04-03_en"
+    },
+    {
+      "label": "Korea Eximbank CEO highlights market diversification, shared growth",
+      "publisher": "The Korea Herald",
+      "year": "2026",
+      "url": "https://www.koreaherald.com/article/10674669"
+    },
+    {
+      "label": "Critical Minerals Strategic Reserve",
+      "publisher": "Export Finance Australia",
+      "year": "2026",
+      "url": "https://www.exportfinance.gov.au/strategic-reserve/"
+    }
+  ]
+}

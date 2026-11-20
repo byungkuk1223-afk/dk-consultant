@@ -1,1 +1,224 @@
-{"slug":"carbon-capture","dek":"","keyFigures":[],"sections":[],"regional":[],"implications":[],"sources":[]}
+{
+  "slug": "carbon-capture",
+  "dek": "Operating carbon capture capacity keeps rising, and the transport and storage networks it depends on are now being built. But the development pipeline is being repriced against what revenue support projects can actually secure. In low-carbon hydrogen and ammonia, investment is going to projects with firm buyers and long-term price support, and policy in Japan, Korea and Europe now decides which of those buyers exist.",
+  "keyFigures": [
+    {
+      "v": "113",
+      "n": "Commercial CCS projects in operation worldwide, as at 31 July 2026",
+      "src": "Global CCS Institute, Global Status of CCS 2026 (2026)",
+      "url": "https://www.globalccsinstitute.com/global-status-of-ccs/"
+    },
+    {
+      "v": "68 / 56 Mtpa",
+      "n": "CO2 capture capacity in operation / under construction",
+      "src": "Global CCS Institute, Global Status of CCS 2026 (2026)",
+      "url": "https://www.globalccsinstitute.com/global-status-of-ccs/"
+    },
+    {
+      "v": "> USD 15 bn",
+      "n": "Commercial debt raised for CCUS over the past two years, around 85% of it in the UK",
+      "src": "IEA, CCUS commentary (2026)",
+      "url": "https://www.iea.org/commentaries/policy-and-financing-momentum-sustain-ccus-progress-despite-setbacks"
+    },
+    {
+      "v": "27 Mt",
+      "n": "Announced low-emissions hydrogen production for 2030, down about a quarter in a year",
+      "src": "IEA, Global Hydrogen Review 2026 (2026)",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/executive-summary"
+    },
+    {
+      "v": "USD 6.8 bn",
+      "n": "Japanese price-gap support awarded to two US blue ammonia supply projects, about 35% of the JPY 3 trillion program",
+      "src": "Wood Mackenzie (2026)",
+      "url": "https://www.woodmac.com/press-releases/japan-hydrogen-cfd-2025/"
+    },
+    {
+      "v": "50 Mt/yr",
+      "n": "EU target for CO2 injection capacity by 2030, assigned to oil and gas producers",
+      "src": "European Commission (2025)",
+      "url": "https://climate.ec.europa.eu/eu-action/industrial-carbon-management/eus-2030-carbon-storage-target_en"
+    }
+  ],
+  "sections": [
+    {
+      "h": "Capacity is growing, but the pipeline is being repriced around revenue certainty",
+      "paras": [
+        "The Global CCS Institute counts 113 commercial CCS projects in operation, with 68 Mtpa of operating capture capacity and 56 Mtpa under construction. Below that, the pipeline is shifting. The IEA puts total potential capture capacity at around 425 Mt, and much of it has moved back toward 2035. Projects in power and heavy industry often face capture costs above the USD 85 per tonne US tax credit, and several have been delayed or cancelled. Low-cost capture at fertilizer and bioethanol plants in North America has kept moving. Financing has followed the same line. The IEA reports more than USD 15 billion of commercial debt raised over two years, almost all of it in markets where governments carry part of the risk, and around 85% of it in the UK. Lenders have shown they will finance capture and storage once the revenue mechanism and the storage liability are clear."
+      ],
+      "cites": [
+        1,
+        2
+      ]
+    },
+    {
+      "h": "Support is moving from grants to tax credits, contracts for difference and obligations",
+      "paras": [
+        "Policy support has become more durable, and it now comes in more forms. In the United States, the July 2025 budget law kept the 45Q credit at USD 85 per tonne for point-source capture with geological storage, kept transferability, and gave CO2 that is used or injected for enhanced oil recovery the same value as CO2 that is stored. Canada's CCUS investment tax credit of 50% on capture equipment and 37.5% on transport, storage and use equipment now applies at full rates until the end of 2035. Europe has used regulation instead of subsidy. The Net-Zero Industry Act requires 44 oil and gas producers to provide at least 50 Mt a year of CO2 injection capacity by 2030. Since 1 January 2026, CBAM has applied in its definitive regime to imports of cement, steel, aluminum, fertilizers, electricity and hydrogen, so the carbon content of these products now has a direct cost at the EU border."
+      ],
+      "cites": [
+        5,
+        6,
+        7,
+        9,
+        8
+      ]
+    },
+    {
+      "h": "Low-emissions hydrogen is consolidating around projects with firm buyers",
+      "paras": [
+        "Low-emissions hydrogen production grew 20% in 2025 to almost 1 Mt, and the IEA expects it to pass 1% of global output for the first time in 2026. The forward pipeline has shrunk. Announced projects for 2030 fell to 27 Mt, and committed projects plus those with strong potential to operate by 2030 fell from 10 Mt to just above 6 Mt. A further 22 Mt in announced projects is at risk unless it reaches FID by early 2027. Demand is the constraint. New offtake agreements stayed at around 1.7 Mt in 2025, and only about 20% of the newly signed volumes carried firm contractual commitments. Electrolysis capacity doubled to more than 4 GW, with China behind nearly three-quarters of new installations. Even so, the IEA expects low-emissions hydrogen to cost more than fossil-based hydrogen in most of the world. Projects that reach financing are those where a buyer or a public price-support scheme takes on that cost gap."
+      ],
+      "cites": [
+        3
+      ]
+    },
+    {
+      "h": "Northeast Asian demand is real, but it is set by specific and changing programs",
+      "paras": [
+        "Japan has become the main source of long-term price support for imported low-carbon ammonia. In its first international awards, the JPY 3 trillion price-gap scheme supported two projects that will import about 772,000 tonnes a year of blue ammonia from the Blue Point project in Louisiana from 2030–2031. Wood Mackenzie estimates these awards at about USD 6.8 billion over 15 years, around 35% of the program. The ammonia will be co-fired mainly at coal plants operated by JERA and Hokkaido Electric. The structure combines US 45Q support with a Japanese contract for difference. Korea shows how quickly this demand can change. Its first clean hydrogen power auction in 2024 produced a single award of 750 GWh, with the other bids above the government's price ceiling. The Korea Power Exchange cancelled the second round in October 2025, and the environment minister said coal-ammonia co-firing should be discontinued, consistent with a pledge to end coal power by 2040."
+      ],
+      "cites": [
+        10,
+        11
+      ]
+    },
+    {
+      "h": "The Middle East disruption has exposed how concentrated hydrogen-derived supply is",
+      "paras": [
+        "The 2026 conflict in the Middle East showed how much of the hydrogen-derived commodity market depends on one region. According to the IEA, the region accounts for around one-sixth of global hydrogen production, close to 17% of methanol production and over one-quarter of global ammonia trade. Urea prices doubled between January and May 2026. For importers, especially in South Asia and Africa, these figures make supply security, not only emissions, a reason to back low-emissions ammonia and methanol produced elsewhere. For project developers, the disruption strengthens the case for diversified supply but does not remove the cost gap. Buyers who pay a premium for security of supply still expect long-term contracts, credible certification of carbon intensity, and fixed delivery terms. Projects that can offer them from stable jurisdictions are better placed to secure offtake than when buyers judged them on emissions alone."
+      ],
+      "cites": [
+        3
+      ]
+    },
+    {
+      "h": "Transport and storage has become the critical path",
+      "paras": [
+        "Capture is no longer the only constraint. The Global CCS Institute counts 266 dedicated CO2 transport and storage projects, 32% of all projects it tracks. Storage capacity in the IEA's project database grew by around 25% in the latest update, faster than capture. Governments are writing the rules that make storage a commercial service. Japan's CCS Business Act is fully in effect, with nine Advanced CCS Projects and a target of 6–12 million tonnes a year in the early 2030s. Indonesia's 2024 presidential regulation allows up to 30% of a storage site's capacity to be used for imported CO2. Cross-border chains remain slower to close. The IEA reports that momentum on cross-border CO2 shipping in Southeast Asia has softened. For emitters, the availability, price and liability terms of storage are now as decisive as the choice of capture technology."
+      ],
+      "cites": [
+        1,
+        2,
+        12
+      ]
+    }
+  ],
+  "regional": [
+    {
+      "region": "North America",
+      "text": "The Americas host 63 operating CCS projects and 18 under construction, more than any other region. The US 45Q credit is unchanged at USD 85 per tonne for point-source capture, and utilization and EOR now earn the same value as storage. Canada's investment tax credit applies at full rates until 2035. Storage capacity has grown, but capture has been slowed by pauses, withdrawn federal grants and delayed hydrogen-linked projects. Low-cost capture at fertilizer and ethanol plants continues to advance."
+    },
+    {
+      "region": "Europe",
+      "text": "Europe has 15 CCS projects operating and 21 under construction. Its policy combines obligations with carbon pricing. Oil and gas producers must deliver 50 Mt a year of injection capacity by 2030, and CBAM has applied to imports of hydrogen and fertilizers since January 2026. Cement capture projects have reached FID under carbon contracts for difference, and the UK accounts for most commercial CCUS debt raised. Several UK hydrogen-linked projects and Swedish BECCS projects were cancelled or delayed in 2025."
+    },
+    {
+      "region": "Middle East",
+      "text": "Gulf states are building large CCS hubs. The Middle East and Africa region has five projects operating and five under construction. The region is also a major supplier of hydrogen-based commodities, with around one-sixth of global hydrogen production and over a quarter of ammonia trade. The 2026 disruption raised urea prices sharply. That has made Gulf supply a security question for importers and, for Gulf producers, increased the value of certified low-carbon output under long-term contracts."
+    },
+    {
+      "region": "Southeast Asia",
+      "text": "Southeast Asia used about 4 Mt of hydrogen in 2024, 35% of it in Indonesia, and ammonia production accounts for nearly half of that demand. The IEA expects 480 ktpa of low-emissions production in the region by 2030, but only 6% of it has reached FID. Indonesia allows up to 30% of storage capacity to be used for imported CO2, and its ministry estimates 573 Gt of saline-aquifer storage. Cross-border CO2 shipping in the region has lost momentum."
+    },
+    {
+      "region": "Northeast Asia",
+      "text": "Japan is the main source of long-term demand. Its price-gap scheme has funded ammonia imports from the United States for co-firing, and its CCS Business Act supports nine advanced storage projects targeting 6–12 Mt a year in the early 2030s. Korea is moving away from ammonia co-firing. After one 750 GWh award in 2024 and the cancellation of the 2025 round, the environment minister has said coal-ammonia co-firing should be discontinued, in line with a pledge to end coal power by 2040."
+    }
+  ],
+  "implications": [
+    {
+      "t": "Size the project to the support it can secure",
+      "d": "Capture costs in power and heavy industry often exceed the support available, and the IEA's 2030 pipeline has shifted toward 2035. Owners should build the financial model on the tax credit, contract for difference or obligation the project can actually secure, and test whether the project still works if that support is cut or arrives late. Lenders have financed CCUS where governments carry part of the risk. They are unlikely to finance it where policy carries no such commitment."
+    },
+    {
+      "t": "Firm offtake before scale",
+      "d": "Only about one-fifth of the hydrogen offtake volumes signed in 2025 were firm commitments. For low-carbon ammonia and hydrogen, debt depends on take-or-pay terms, price indexation and certification of carbon intensity. A project that can combine a producer-country incentive, such as 45Q, with a buyer-country contract for difference, as Japan's first international awards did, has a stronger case for financing."
+    },
+    {
+      "t": "Treat storage access as a contract, not an assumption",
+      "d": "As dedicated transport and storage networks expand, emitters will negotiate capacity, CO2 specification, availability and long-term liability with third-party operators. These terms belong in the financing case from the start, and the gaps between them need to be closed before the capture plant's EPC award. Where storage is provided by a third party, lenders will look for capacity reservation, remedies for outages and a clear transfer of long-term liability."
+    },
+    {
+      "t": "Track buyer-country policy as a project risk",
+      "d": "Korea went from launching a clean hydrogen power auction in 2024 to cancelling its second round in 2025, and its environment minister has said coal-ammonia co-firing should be discontinued. Export projects that depend on Asian power-sector demand need to show which buyers they serve under each policy outcome, and who carries the volume risk if a program changes."
+    },
+    {
+      "t": "Price border carbon costs into export economics",
+      "d": "With CBAM now charging for embedded emissions in hydrogen, fertilizers, steel and cement entering the EU, the product's carbon intensity becomes part of its price. Feasibility studies for export-oriented plants should model that charge, and the cost of verifying it, as an explicit line item. Buyers in Japan and Korea will apply their own carbon-intensity tests, so one product may need to pass several certification regimes."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Global Status of CCS 2026",
+      "publisher": "Global CCS Institute",
+      "year": "2026",
+      "url": "https://www.globalccsinstitute.com/global-status-of-ccs/"
+    },
+    {
+      "label": "Policy and financing momentum sustain CCUS progress despite setbacks",
+      "publisher": "International Energy Agency",
+      "year": "2026",
+      "url": "https://www.iea.org/commentaries/policy-and-financing-momentum-sustain-ccus-progress-despite-setbacks"
+    },
+    {
+      "label": "Global Hydrogen Review 2026: Executive Summary",
+      "publisher": "International Energy Agency",
+      "year": "2026",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/executive-summary"
+    },
+    {
+      "label": "Global Hydrogen Review 2025: Executive Summary",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2025/executive-summary"
+    },
+    {
+      "label": "U.S. preserves and increases 45Q credit in One Big Beautiful Bill Act",
+      "publisher": "Global CCS Institute",
+      "year": "2025",
+      "url": "https://www.globalccsinstitute.com/u-s-preserves-and-increases-45q-credit-in-one-big-beautiful-bill-act/"
+    },
+    {
+      "label": "Federal CCUS investment tax credit (Department of Finance news release)",
+      "publisher": "Government of Canada",
+      "year": "2024",
+      "url": "https://www.canada.ca/en/department-finance/news/2024/08/deputy-prime-minister-visits-the-polaris-carbon-capture-project-to-highlight-the-federal-ccus-investment-tax-credit.html"
+    },
+    {
+      "label": "Canada's 2025 Budget Implementation Bill No. 1 receives Royal Assent",
+      "publisher": "EY Global Tax News",
+      "year": "2026",
+      "url": "https://taxnews.ey.com/news/2026-0752-canadas-2025-budget-implementation-bill-no-1-receives-royal-assent"
+    },
+    {
+      "label": "Carbon Border Adjustment Mechanism",
+      "publisher": "European Commission, DG Taxation and Customs Union",
+      "year": "2026",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en"
+    },
+    {
+      "label": "EU's 2030 carbon storage target",
+      "publisher": "European Commission, DG Climate Action",
+      "year": "2025",
+      "url": "https://climate.ec.europa.eu/eu-action/industrial-carbon-management/eus-2030-carbon-storage-target_en"
+    },
+    {
+      "label": "Japan hydrogen CfD awards (press release)",
+      "publisher": "Wood Mackenzie",
+      "year": "2026",
+      "url": "https://www.woodmac.com/press-releases/japan-hydrogen-cfd-2025/"
+    },
+    {
+      "label": "Korea Power Exchange's bid cancellation exacerbates concerns about clean hydrogen power market",
+      "publisher": "Korea JoongAng Daily",
+      "year": "2025",
+      "url": "https://www.koreajoongangdaily.com/business/korea-power-exchanges-bid-cancellation-exacerbates-concerns-about-clean-hydrogen-power-market/12036720"
+    },
+    {
+      "label": "Understanding carbon capture and storage in Indonesia",
+      "publisher": "Norton Rose Fulbright",
+      "year": "2025",
+      "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/0a53935e/understanding-carbon-capture-and-storage-in-indonesia"
+    }
+  ]
+}

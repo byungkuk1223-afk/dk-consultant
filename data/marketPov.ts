@@ -45,15 +45,14 @@ export const MARKET_POV: MarketPov[] = [
       "What separates a financeable capture project from a study is whether the plant, the capture facility, the CO₂ chain, and the revenue case have been designed together.",
     ],
     stats: [
-      { v: "77", n: "CCS facilities in operation (2025)", src: "Global CCS Institute" },
-      { v: "734", n: "CCS facilities in development (2025)", src: "Global CCS Institute" },
+      { v: "113", n: "CCS projects in operation (2026)", src: "Global CCS Institute" },
     ],
     views: [
       { t: "Capture is a host-plant problem first", d: "A post-combustion capture plant draws steam for solvent regeneration, power for fans, pumps, and compression, and cooling water, and it returns a lower net output. Those interfaces change the heat balance and the cost of every megawatt-hour, and they must be fixed before the EPC award, not after." },
       { t: "Technology risk lives in the guarantees", d: "Capture rate, energy penalty, solvent consumption, and availability are the numbers lenders will test. Technology screening has to compare suppliers on what they will guarantee at the project's scale, not only on what they have demonstrated." },
       { t: "The revenue case rests on policy, and must survive it", d: "Tax credits, carbon prices, and low-carbon product premiums carry the economics of capture. A bankable structure shows how the project performs if a policy changes, and who carries that risk." },
       { t: "The CO₂ chain needs its own contracts", d: "Transport and storage capacity, availability, CO₂ specification, and long-term liability for stored CO₂ have to be allocated between the emitter, the pipeline, and the storage operator. These agreements are as important to lenders as the power purchase agreement." },
-      { t: "Low-carbon fuels depend on the buyer's market", d: "For blue ammonia and hydrogen, the offtake often sits in another country, in markets such as Korea and Japan that are building demand for co-firing and clean power. The study has to price that offtake, the shipping, and the certification of the product's carbon intensity." },
+      { t: "Low-carbon fuels depend on the buyer's market", d: "For blue ammonia and hydrogen, the offtake often sits in another country, in markets such as Japan and Korea, where support schemes for clean hydrogen and ammonia are still being set and can change. The study has to price that offtake, the shipping, and the certification of the product's carbon intensity." },
     ],
     tests: [
       "Capture-rate and energy-penalty guarantees at the project's scale",
