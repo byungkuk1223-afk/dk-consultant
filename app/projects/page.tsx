@@ -75,15 +75,6 @@ function ProjectsContent() {
         </section>
 
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 80px" }}>
-          {/* Sub Nav */}
-          <div style={{ display: "flex", gap: 24, marginBottom: 32, borderBottom: "1px solid #e5e7eb", paddingBottom: 0 }}>
-            {["Projects", "Clients"].map(tab => (
-              <a key={tab} href={tab === "Clients" ? "/clients" : "/projects"}
-                style={{ fontSize: 14, fontWeight: tab === "Projects" ? 700 : 400, fontFamily: "'Lato', sans-serif", color: tab === "Projects" ? "#416ab3" : "#666", textDecoration: "none", paddingBottom: 12, borderBottom: tab === "Projects" ? "2px solid #416ab3" : "2px solid transparent" }}>
-                {tab}
-              </a>
-            ))}
-          </div>
 
           {/* Featured case studies */}
           {activeRegion === "All" && activeMarket === "All" && !searchQuery && page === 1 && (

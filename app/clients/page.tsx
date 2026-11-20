@@ -84,50 +84,10 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 0" }}>
-        {/* Projects / Clients Sub-Nav */}
-        <div style={{ display: "flex", gap: 24, marginBottom: 32, borderBottom: "1px solid #e5e7eb", paddingBottom: 0 }}>
-          {[
-            { label: "Projects", href: "/projects" },
-            { label: "Clients", href: "/clients" },
-          ].map((tab) => (
-            <a
-              key={tab.label}
-              href={tab.href}
-              style={{
-                fontSize: 14,
-                fontWeight: tab.href === "/clients" ? 700 : 400,
-                fontFamily: "'Lato', sans-serif",
-                color: tab.href === "/clients" ? "#416ab3" : "#666",
-                textDecoration: "none",
-                paddingBottom: 12,
-                borderBottom: tab.href === "/clients" ? "2px solid #416ab3" : "2px solid transparent",
-              }}
-            >
-              {tab.label}
-            </a>
-          ))}
-        </div>
-      </div>
-
       {/* Clients Logo Grid */}
       <div style={{ background: "#fafafa", padding: "80px 40px 100px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
-          {/* Section Title */}
-          <h2
-            style={{
-              fontSize: 40,
-              fontFamily: "'Libre Baskerville', Georgia, serif",
-              fontWeight: "normal",
-              color: "#000",
-              marginBottom: 20,
-              paddingBottom: 20,
-              borderBottom: "2px solid #ddd",
-            }}
-          >
-            Clients
-          </h2>
 
           {/* Logo Rows */}
           <div style={{ overflowX: "auto" }}>
