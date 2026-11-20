@@ -21,6 +21,9 @@ export interface ProjectProfile {
   result?: string;
   outcome?: string;
   relevance?: string;
+  sponsor?: string;
+  team?: { name: string; role: string }[];
+  nextStep?: string;
   refs: { label: string; url: string }[];
 }
 
@@ -323,23 +326,48 @@ export const profiles: ProjectProfile[] = [
   {
     "id": 64,
     "tag": "Solar and storage",
-    "headline": "Solar PV and battery storage development, Texas, USA",
-    "location": "Texas, USA",
+    "headline": "Utility-scale solar and battery storage, about 300 MW, Texas, USA",
+    "location": "Texas, USA (ERCOT market)",
     "capacity": "Solar PV approx. 300 MW with battery storage",
+    "sponsor": "Hyundai Motor Group",
     "delivered": "DKC",
-    "summary": "DKC carried out KEITI's feasibility study for a solar PV and battery storage development of about 300 MW in Texas.",
-    "about": [],
-    "role": "Feasibility study for KEITI.",
-    "scope": [
-      "Market and revenue analysis",
-      "Project financial model",
-      "Risk and sensitivity analysis"
+    "summary": "DKC carried out KEITI's feasibility study for a utility-scale solar development of about 300 MW in Texas, developed by Hyundai Motor Group. Joon Woong Kong, as Project Manager, led the commercial work: the PPA, the tax equity structure, and consultations with financial institutions.",
+    "about": [
+      "Hyundai Motor Group affiliates have become active developers and investors in utility-scale solar in Texas, partly to secure renewable power for the group's North American plants. Hyundai Engineering acquired the 200 MW (AC) Hillsboro solar project in Hill County from OCI Energy in 2024, signed about US$310 million of project financing, and broke ground in May 2026 for operation at the end of 2027. Hyundai E&C is an equity investor in the 350 MW Lucy solar project in Concho County, where construction began in January 2026. These are separate projects, cited here for context.",
+      "In Texas's ERCOT market, utility-scale solar projects typically sell their output under long-term physical or virtual power purchase agreements, and US renewable projects usually use federal tax credits through a tax equity partner. The offtake terms and the tax equity structure therefore decide how much debt a project can raise and what its sponsors earn."
     ],
-    "challenge": "KEITI needed a feasibility study on a solar PV development of about 300 MW with battery storage in Texas to inform Korean participation in the project.",
-    "solution": "DKC's feasibility study covered the market and revenue case for combined solar and storage, the project financial model, and the main risks and sensitivities.",
-    "result": "Feasibility study delivered to KEITI (November 2025 to June 2026).",
-    "relevance": "Solar and storage assessed together for a merchant-exposed US market, where revenue structure decides bankability.",
-    "refs": []
+    "role": "Feasibility study for KEITI, with Joon Woong Kong as Project Manager leading its commercial aspects.",
+    "scope": [
+      "Commercial review: market, revenue model, and capital and operating costs",
+      "Power purchase agreement (PPA) review",
+      "Structuring of the tax equity partner (TEP) arrangement",
+      "Consultations with financial institutions"
+    ],
+    "team": [
+      {
+        "name": "Joon Woong Kong",
+        "role": "Project Manager; led the commercial review, PPA review, tax equity structuring, and consultations with financial institutions"
+      }
+    ],
+    "challenge": "Before committing to the project, the developer needed to know whether its revenues, its offtake contract, and its use of US federal tax credits would support financing, and on what terms. The study, commissioned by KEITI, had to answer those questions within eight months.",
+    "solution": "DKC reviewed the market, the revenue model, and the costs; reviewed the PPA terms and their risks; set out how a tax equity partner would invest and share the project's tax benefits and cash flows; and consulted financial institutions on financing terms.",
+    "result": "Feasibility study completed (November 2025 to June 2026).",
+    "nextStep": "Based on the study's results, the Membership Interest Purchase Agreement (MIPA), under which the equity interest in the project company is acquired, is expected to be executed by the end of 2026.",
+    "relevance": "US renewable projects are financed on their offtake and tax-credit structures; testing both before the equity commitment is what makes the investment bankable.",
+    "refs": [
+      {
+        "label": "PV Tech — OCI Energy sells 260MW ERCOT solar plant to Hyundai Engineering (2024)",
+        "url": "https://www.pv-tech.org/oci-energy-sells-260mw-ercot-solar-plant-hyundai-engineering"
+      },
+      {
+        "label": "Hyundai Motor Group — Hyundai Engineering signs PF agreement for US solar power plant",
+        "url": "https://www.hyundaimotorgroup.com/ko/news/hyundai-engineering-us-solar-power-pf-financing-agreement"
+      },
+      {
+        "label": "PV Tech — Korean-led consortium begins construction at 350MW solar PV plant in Texas (2026)",
+        "url": "https://www.pv-tech.org/korean-led-consortium-begins-construction-at-350mw-solar-pv-plant-in-texas/"
+      }
+    ]
   },
   {
     "id": 62,

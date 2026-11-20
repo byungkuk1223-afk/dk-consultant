@@ -76,7 +76,8 @@ export default function ClientsPage() {
 
   const all = [...CLIENT_GROUPS.flatMap((g) => g.clients), ...OTHER_CLIENTS];
   const withMandates = projects.filter((p) => all.some((c) => c.match?.includes(p.detail?.client ?? ""))).length;
-  const repeat = all.filter((c) => mandatesOf(c).length > 1).length;
+  const repeatIds = new Set(all.filter((c) => mandatesOf(c).length > 1).flatMap((c) => mandatesOf(c).map((p) => p.id)));
+  const repeatShare = withMandates ? Math.round((repeatIds.size / withMandates) * 100) : 0;
 
   return (
     <>
@@ -92,7 +93,7 @@ export default function ClientsPage() {
           {[
             { v: all.length, t: "Clients" },
             { v: withMandates, t: "Mandates" },
-            { v: repeat, t: "Clients with more than one mandate" },
+            { v: `${repeatShare}%`, t: "Of mandates from returning clients" },
           ].map((x) => (
             <div key={x.t} style={{ borderLeft: `3px solid ${TEAL}`, paddingLeft: 16 }}>
               <p style={{ fontFamily: SERIF, fontSize: 36, color: NAVY, lineHeight: 1.1 }}>{x.v}</p>

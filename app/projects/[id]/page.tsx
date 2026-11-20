@@ -54,6 +54,7 @@ export default function ProjectDetailPage() {
   const services = servicesOf(project);
   const facts: { k: string; v: React.ReactNode }[] = [
     d?.client ? { k: "Client", v: d.client } : null,
+    pf?.sponsor ? { k: "Developer", v: pf.sponsor } : null,
     { k: "Location", v: pf?.location ?? d?.country ?? project.region },
     pf?.capacity || d?.capacity ? { k: "Capacity", v: pf?.capacity ?? d?.capacity } : null,
     { k: "Market", v: mslug ? <Link href={`/markets/${mslug}`} style={{ color: "#416ab3" }}>{market}</Link> : market },
@@ -115,6 +116,16 @@ export default function ProjectDetailPage() {
                   </ul>
                 </>
               )}
+              {pf?.team && pf.team.length > 0 && (
+                <>
+                  <h2 style={{ ...h2, fontSize: 18, marginTop: 16 }}>DKC team</h2>
+                  {pf.team.map((t) => (
+                    <p key={t.name} style={{ ...p, marginBottom: 6 }}>
+                      <Link href="/people" style={{ color: "#0b2545", fontWeight: 700 }}>{t.name}</Link> — {t.role}
+                    </p>
+                  ))}
+                </>
+              )}
             </section>
 
             {pf?.challenge && (
@@ -132,6 +143,12 @@ export default function ProjectDetailPage() {
                   <p style={{ marginTop: 14, fontSize: 14.5, color: "#555", fontFamily: F }}>
                     <b style={{ color: "#0e7c86", letterSpacing: 1, fontSize: 12 }}>WHAT IT MEANS FOR CLIENTS&nbsp;&nbsp;</b>{pf.relevance}
                   </p>
+                )}
+                {pf.nextStep && (
+                  <div style={{ marginTop: 16, borderLeft: "3px solid #0e7c86", background: "#f4f7fb", padding: "14px 18px" }}>
+                    <p style={{ fontSize: 11.5, letterSpacing: 2, color: "#0e7c86", fontWeight: 700, fontFamily: F, marginBottom: 6 }}>NEXT STEP</p>
+                    <p style={{ fontSize: 14.5, lineHeight: "24px", color: "#333", fontFamily: F }}>{pf.nextStep}</p>
+                  </div>
                 )}
               </section>
             )}
