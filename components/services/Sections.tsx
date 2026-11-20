@@ -10,7 +10,7 @@ const EYEBROW: React.CSSProperties = { fontSize: 11.5, letterSpacing: 2.4, color
 const H2: React.CSSProperties = { fontSize: 30, lineHeight: "38px", fontFamily: SERIF, fontWeight: 400, color: NAVY, margin: "0 0 18px" };
 const BODY: React.CSSProperties = { fontSize: 16, lineHeight: "28px", color: "#3d4752", fontFamily: F };
 
-function Intro({ statement, why, outcomes }: { statement: string; why: string[]; outcomes: string[] }) {
+export function Intro({ statement, why, outcomes }: { statement: string; why: string[]; outcomes: string[] }) {
   return (
     <section>
       <div style={{ ...WRAP, paddingBottom: 40 }}>
@@ -36,7 +36,7 @@ function Intro({ statement, why, outcomes }: { statement: string; why: string[];
   );
 }
 
-function Capabilities({ title, items }: { title: string; items: { t: string; d: string }[] }) {
+export function Capabilities({ title, items }: { title: string; items: { t: string; d: string }[] }) {
   return (
     <section style={{ background: "#f6f8fb" }}>
       <div style={WRAP}>
@@ -56,11 +56,11 @@ function Capabilities({ title, items }: { title: string; items: { t: string; d: 
   );
 }
 
-function Steps({ title, intro, steps }: { title: string; intro?: string; steps: { t: string; does: string; out: string; gate: string }[] }) {
+export function Steps({ title, intro, steps, eyebrow = "HOW WE WORK", labels = ["DELIVERABLE", "DECISION GATE"] }: { title: string; intro?: string; steps: { t: string; does: string; out: string; gate: string }[]; eyebrow?: string; labels?: [string, string] }) {
   return (
     <section>
       <div style={WRAP}>
-        <p style={EYEBROW}>HOW WE WORK</p>
+        <p style={EYEBROW}>{eyebrow}</p>
         <h2 style={H2}>{title}</h2>
         {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 26 }}>{intro}</p>}
         <div style={{ display: "grid", gridTemplateColumns: `repeat(${steps.length}, 1fr)`, borderTop: `3px solid ${NAVY}` }}>
@@ -70,9 +70,9 @@ function Steps({ title, intro, steps }: { title: string; intro?: string; steps: 
               <p style={{ fontFamily: F, fontSize: 11.5, letterSpacing: 1.8, color: TEAL, fontWeight: 700, margin: "6px 0 6px" }}>STEP {i + 1}</p>
               <p style={{ fontFamily: F, fontSize: 16, fontWeight: 700, color: NAVY, lineHeight: "22px", marginBottom: 12, minHeight: 44 }}>{s.t}</p>
               <p style={{ fontFamily: F, fontSize: 14, lineHeight: "22px", color: "#55606d", marginBottom: 12 }}>{s.does}</p>
-              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>DELIVERABLE</p>
+              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>{labels[0]}</p>
               <p style={{ fontFamily: F, fontSize: 14, lineHeight: "21px", color: "#333", marginBottom: 12 }}>{s.out}</p>
-              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>DECISION GATE</p>
+              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>{labels[1]}</p>
               <p style={{ fontFamily: F, fontSize: 14, lineHeight: "21px", color: NAVY, marginBottom: 14 }}>{s.gate}</p>
             </div>
           ))}
@@ -82,7 +82,7 @@ function Steps({ title, intro, steps }: { title: string; intro?: string; steps: 
   );
 }
 
-function Matrix({ eyebrow, title, intro, head, rows, note }: { eyebrow: string; title: string; intro?: string; head: string[]; rows: string[][]; note?: string }) {
+export function Matrix({ eyebrow, title, intro, head, rows, note }: { eyebrow: string; title: string; intro?: string; head: string[]; rows: string[][]; note?: string }) {
   return (
     <section style={{ background: "#f6f8fb" }}>
       <div style={WRAP}>
@@ -107,9 +107,9 @@ function Matrix({ eyebrow, title, intro, head, rows, note }: { eyebrow: string; 
   );
 }
 
-function Tiers({ eyebrow, title, intro, tiers }: { eyebrow: string; title: string; intro?: string; tiers: { k: string; t: string; d: string }[] }) {
+export function Tiers({ eyebrow, title, intro, tiers, tint }: { eyebrow: string; title: string; intro?: string; tiers: { k: string; t: string; d: string }[]; tint?: boolean }) {
   return (
-    <section>
+    <section style={tint ? { background: "#f6f8fb" } : undefined}>
       <div style={WRAP}>
         <p style={EYEBROW}>{eyebrow}</p>
         <h2 style={H2}>{title}</h2>
