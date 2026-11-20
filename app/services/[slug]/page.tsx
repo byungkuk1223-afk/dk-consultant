@@ -89,6 +89,15 @@ export default function ServicePage() {
         </div>
       </section>
 
+      <section style={{ background: "#0b2545" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "44px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
+          <p style={{ color: "#fff", fontFamily: "'Libre Baskerville', Georgia, serif", fontSize: 22, lineHeight: "30px", maxWidth: 760 }}>
+            Discuss how DKC can support your project on the owner&apos;s side.
+          </p>
+          <Link href="/contact" style={{ background: "#fff", color: "#0b2545", padding: "13px 26px", fontSize: 12.5, letterSpacing: 1.5, fontWeight: 700, fontFamily: "'Lato', sans-serif" }}>CONTACT US</Link>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
