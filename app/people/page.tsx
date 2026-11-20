@@ -51,10 +51,6 @@ const GROUPS: { title: string; intro: string; people: Person[] }[] = [
     people: [
       { name: "Dae Hyun Jo", title: "Managing Director · Investment Structuring & Financing Strategy", bio: "Mechanical engineer with 22 years in IPP development, EPC sales, and overseas project planning at DL Energy, SK ecoplant, Samsung E&A, and Hyundai Motor." },
       { name: "Eun Young Choi", title: "Managing Director · Project Administration & Budget Control", bio: "About 19 years in project management and business development; at DKC since 2020, managing budgets and supporting feasibility studies." },
-      { name: "Jun Sung Kim", title: "General Manager, Financial Advisory · Financial Analysis & Support", bio: "Financial advisory, project finance, and feasibility analysis for energy and infrastructure projects; at DKC since 2018." },
-      { name: "Ran Kwak", title: "General Manager · Market & Offtake Analysis", bio: "Market analysis for green hydrogen and ammonia, renewable energy, and energy transition studies; formerly at Accenture." },
-      { name: "Chang Gyu Kim", title: "Manager · Financial Modeling & Risk Analysis", bio: "Financial, risk, market, and legal analysis on more than 20 feasibility studies since 2019." },
-      { name: "Jong Yeun Cho", title: "Senior Associate · Documentation & Reporting", bio: "Legal research, business continuity, and international project advisory." },
     ],
   },
 ];
