@@ -1,31 +1,17 @@
-const projects = [
-  {
-    id: 63,
-    title: "Blue Ammonia with Carbon Capture, Alberta, Canada",
-    category: "Feasibility Study · Lead Consultant",
-    img: "https://dk-consultant.com/data/file/04_01_new/1794350696_pFLMX7Jv_93b8c3350ac4cfd9def1ad57513f408c2c281bec.jpg",
-    href: "/projects/63",
-  },
-  {
-    id: 64,
-    title: "Solar PV & BESS Development, Texas, USA",
-    category: "Feasibility Study",
-    img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
-    href: "/projects/64",
-  },
-  {
-    id: 23,
-    title: "Hai Lang 4,500 MW LNG-to-Power, Vietnam",
-    category: "Feasibility Study · Financing Structure",
-    img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    href: "/projects/23",
-  },
-];
+import { caseStudies } from "@/data/projectProfiles";
+import { projects as all, marketOf } from "@/data/projects";
+import { marketBySlug, marketSlugOf } from "@/data/site";
+
+const projects = caseStudies.map((c) => {
+  const p = all.find((x) => x.id === c.id)!;
+  const img = marketBySlug(marketSlugOf(marketOf(p)) ?? "")?.img ?? "/img/power_hero.jpg";
+  return { id: c.id, title: c.headline, category: `${p.detail?.client ?? ""} · ${c.tag}`, img, href: `/projects/${c.id}` };
+});
 
 export default function ProjectsSection() {
   return (
     <section style={{ background: "#f2f3f5", padding: "60px 40px 80px" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         {/* Title */}
         <div style={{ textAlign: "center", marginBottom: 50 }}>
           <p
@@ -50,7 +36,7 @@ export default function ProjectsSection() {
               letterSpacing: 0.5,
             }}
           >
-            Latest Projects
+            Featured Projects
           </h2>
         </div>
 
@@ -58,7 +44,7 @@ export default function ProjectsSection() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(4, 1fr)",
             gap: 24,
           }}
         >
@@ -154,7 +140,7 @@ export default function ProjectsSection() {
               ((e.target as HTMLAnchorElement).style.background = "#416ab3")
             }
           >
-            READ MORE
+            ALL PROJECTS
           </a>
           <a
             href="/clients"

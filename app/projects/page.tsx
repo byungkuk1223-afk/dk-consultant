@@ -4,7 +4,7 @@ import { Suspense, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projects, MARKETS, marketOf, statusOf } from "@/data/projects";
-import { caseStudies } from "@/data/caseStudies";
+import { caseStudies } from "@/data/projectProfiles";
 
 const REGIONS = ["All", "Asia", "Middle East·Africa", "Europe", "Oceania", "Latin America", "Northern America", "Etc."];
 const PER_PAGE = 15;

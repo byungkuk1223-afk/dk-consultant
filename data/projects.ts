@@ -59,42 +59,42 @@ export const projects: Project[] = [
     title: "Blue Ammonia with Carbon Capture in Alberta, Canada",
     category: "Feasibility Study (Lead Consultant)",
     region: "Northern America",
-    detail: {"capacity":"1 Mt/yr ammonia with CCS","sector":"Blue Ammonia & CCS","country":"Canada","client":"KIND","time":"2025.05~2025.10","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_pFLMX7Jv_93b8c3350ac4cfd9def1ad57513f408c2c281bec.jpg"},
+    detail: {"capacity":"1 Mt/yr ammonia with CCS","sector":"Blue Ammonia & CCS","country":"Canada","client":"KIND","time":"2025.05~2025.10","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 62,
     title: "SAF Development Project in Indonesia",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"capacity":"200000t/year","sector":"Renewables","country":"Indonesia","client":"KEXIM","time":"25.03.28~","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_o6OeAQlF_9394ed58204530a97a6c3b2fe492684d33c3b2de.jpg"},
+    detail: {"capacity":"200000t/year","sector":"Renewables","country":"Indonesia","client":"KEXIM","time":"25.03.28~","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 61,
     title: "Pharmaceutical Manufacturing Facility in Kyrgyzstan",
     category: "Business Development",
     region: "Asia",
-    detail: {"sector":"Healthcare","country":"Kyrgyzstan","client":"Private","time":"25.02.28~","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_z7K0tiLO_3223f32c98ac8b73d1edeb8778f6b0c2c2422c45.jpg"},
+    detail: {"sector":"Healthcare","country":"Kyrgyzstan","client":"Private","time":"25.02.28~","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 60,
     title: "Pharmaceutical Manufacturing Facility in Uzbekistan",
     category: "Business Development (BOO)",
     region: "Asia",
-    detail: {"sector":"Healthcare","country":"Uzbekistan","client":"KIND","time":"25.02.05~","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_6OLAmdzJ_7eb5a2bd37f73f6596800e22449cafaf8a35624e.jpg"},
+    detail: {"sector":"Healthcare","country":"Uzbekistan","client":"KIND","time":"25.02.05~","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 59,
     title: "Green Hydrogen Development Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"3000000t/year","sector":"Renewables","country":"Australia","client":"KEITI","time":"2024.11~2025.07","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_Eipyv5Fw_82c342ee21852b98681dcd6f368bd6f81727cee5.png"},
+    detail: {"capacity":"3000000t/year","sector":"Renewables","country":"Australia","client":"KEITI","time":"2024.11~2025.07","hasImage":true,"imgExt":"png"},
   },
   {
     id: 58,
     title: "Jujuy Solar Power and Carbon Credit Acquisition in Argentina",
     category: "Feasibility Study: Market and Carbon Credits",
     region: "Latin America",
-    detail: {"capacity":"Renewable: 210MW / Carbon Credit","sector":"Renewables","country":"Argentina","client":"KEITI","time":"2024.11~2025.06","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1794350696_TsvjzP3h_6929fe381ab89b591124f79234480b94037e4383.jpg"},
+    detail: {"capacity":"Renewable: 210MW / Carbon Credit","sector":"Renewables","country":"Argentina","client":"KEITI","time":"2024.11~2025.06","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 57,
@@ -108,21 +108,21 @@ export const projects: Project[] = [
     title: "Green Hydrogen Ammonia Project in Western Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"Electrolysis: 1.1GW, Renewable: 1.9 GW, Green Ammonia 500000t/year","sector":"Renewables","country":"Australia","client":"KEXIM","time":"2024.05~","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_UXHkaAge_ca25a16b643b4387c9aa7aaa10f85ffc8a0f5d72.png"},
+    detail: {"capacity":"Electrolysis: 1.1GW, Renewable: 1.9 GW, Green Ammonia 500000t/year","sector":"Renewables","country":"Australia","client":"KEXIM","time":"2024.05~","hasImage":true,"imgExt":"png"},
   },
   {
     id: 55,
     title: "Tashkent Medical Waste-to-Energy Project in Uzbekistan",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"capacity":"Power: 4.5 MW, Waste: 22,000 t/year","sector":"Infrastructure","country":"Uzbekistan","client":"KEITI","time":"2024.06~2024.11","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_fw8lM57B_960c43b3af031d608c131562bd2df98e79beac00.png"},
+    detail: {"capacity":"Power: 4.5 MW, Waste: 22,000 t/year","sector":"Infrastructure","country":"Uzbekistan","client":"KEITI","time":"2024.06~2024.11","hasImage":true,"imgExt":"png"},
   },
   {
     id: 54,
     title: "Queensland Green Methanol Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"200MW","sector":"Renewables","country":"Australia","client":"KEITI","time":"2024.04~","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_PqoVBwUt_c93fceca1a51affe65e7de2543af4b7dafe02603.png"},
+    detail: {"capacity":"200MW","sector":"Renewables","country":"Australia","client":"KEITI","time":"2024.04~","hasImage":true,"imgExt":"png"},
   },
   {
     id: 53,
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     title: "Uljin Nuclear Hydrogen Basic Plan in Korea",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"sector":"Infrastructure","country":"Korea","client":"Uljin-gun","time":"2023.08~2024.08","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_uwOpfF6r_b4c3cef712cb28409b5f4c8ca2de0fd017e34f97.png"},
+    detail: {"sector":"Infrastructure","country":"Korea","client":"Uljin-gun","time":"2023.08~2024.08","hasImage":true,"imgExt":"png"},
   },
   {
     id: 67,
@@ -157,14 +157,14 @@ export const projects: Project[] = [
     title: "Dumai Refinery Project in Indonesia",
     category: "Feasibility Study: Market, Financing Structure, Legal and Tax",
     region: "Asia",
-    detail: {"capacity":"Existing refinery, approx. 170,000 bpd","sector":"Petro-Chemical","country":"Indonesia","client":"KEXIM","time":"2023.05~2024.05","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_KC0m3jxu_ac3fce67f21981b3a54abc9eb2d06761287a8039.png"},
+    detail: {"capacity":"Existing refinery, approx. 170,000 bpd","sector":"Petro-Chemical","country":"Indonesia","client":"KEXIM","time":"2023.05~2024.05","hasImage":true,"imgExt":"png"},
   },
   {
     id: 49,
     title: "BESS Construction Project in Ireland",
     category: "Feasibility Study",
     region: "Europe",
-    detail: {"capacity":"63.2MW","sector":"Renewables","country":"Ireland","client":"KEITI","time":"2023.05~2024.03","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_4McKF0Cd_974f30adcdd1dd1eed7206cdafb128d403cb4254.png"},
+    detail: {"capacity":"63.2MW","sector":"Renewables","country":"Ireland","client":"KEITI","time":"2023.05~2024.03","hasImage":true,"imgExt":"png"},
   },
 
   // ── Page 2 (48 ~ 34) ──────────────────────────────────────
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     title: "Hai Lang FS Report Review in Vietnam",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"sector":"Power","country":"Vietnam","client":"KEPCO E&C","time":"2023.03~2023.07","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_dPYmjyKp_d2a0576ece1a1346f6b1f5bb1c4125be4b10ddaa.png"},
+    detail: {"sector":"Power","country":"Vietnam","client":"KEPCO E&C","time":"2023.03~2023.07","hasImage":true,"imgExt":"png"},
   },
   {
     id: 47,
@@ -187,14 +187,14 @@ export const projects: Project[] = [
     title: "BESS Implementation Project in Ireland",
     category: "Feasibility Study",
     region: "Europe",
-    detail: {"capacity":"BESS: 63.2MWh, Synchronous Condenser: 4,000mws","sector":"Renewables","country":"Ireland","client":"KEITI","time":"2023.05~2023.11","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_K5QXTpkC_c1ab3548dee768ff64cbbe7639aa296e1ac84a70.png"},
+    detail: {"capacity":"BESS: 63.2MWh, Synchronous Condenser: 4,000mws","sector":"Renewables","country":"Ireland","client":"KEITI","time":"2023.05~2023.11","hasImage":true,"imgExt":"png"},
   },
   {
     id: 45,
     title: "Renewable Energy Complex Development Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"Electrolysis: 667MW, Renewable: 900MW, Green Hydrogen: 28000t/year, Green Ammonia: 150000t/year","sector":"Renewables","country":"Australia","client":"KEITI","time":"2022.05~2022.12","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_SyVzuOEx_4714d308b2a6263f6a8059a4e336657db31f88c5.png"},
+    detail: {"capacity":"Electrolysis: 667MW, Renewable: 900MW, Green Hydrogen: 28000t/year, Green Ammonia: 150000t/year","sector":"Renewables","country":"Australia","client":"KEITI","time":"2022.05~2022.12","hasImage":true,"imgExt":"png"},
   },
   {
     id: 68,
@@ -208,77 +208,77 @@ export const projects: Project[] = [
     title: "Customs Container Inspection Facility Project in Sri Lanka",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"sector":"Infrastructure","country":"Sri Lanka","client":"KIND","time":"2022.04~2022.11","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_jJyEqtYh_73986d2f396bc9583c965eaaeeda656b9440df68.png"},
+    detail: {"sector":"Infrastructure","country":"Sri Lanka","client":"KIND","time":"2022.04~2022.11","hasImage":true,"imgExt":"png"},
   },
   {
     id: 43,
     title: "School PPP PKG III in Qatar",
     category: "Pre-feasibility Study",
     region: "Middle East·Africa",
-    detail: {"capacity":"14 School","sector":"Education","country":"Qatar","client":"Samil PwC","time":"2021.10~2022","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_iaYAho4s_d904994753a42489cef021af554c989f899261b5.png"},
+    detail: {"capacity":"14 School","sector":"Education","country":"Qatar","client":"Samil PwC","time":"2021.10~2022","hasImage":true,"imgExt":"png"},
   },
   {
     id: 42,
     title: "Sulawesi 30MW Small Hydropower Project in Indonesia",
     category: "Financial, Tax, and Legal Review",
     region: "Asia",
-    detail: {"capacity":"30MW","sector":"Renewables","country":"Indonesia","client":"Dohwa Engineering","time":"2021.12~2022.04","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_TvzAuCLI_a0fd846961e8b268982677df36fc471385d5b785.png"},
+    detail: {"capacity":"30MW","sector":"Renewables","country":"Indonesia","client":"Dohwa Engineering","time":"2021.12~2022.04","hasImage":true,"imgExt":"png"},
   },
   {
     id: 41,
     title: "Alfonso el Sabio Solar PV in Spain",
     category: "Feasibility Study",
     region: "Europe",
-    detail: {"capacity":"600MW","sector":"Renewables","country":"Spain","client":"KEITI","time":"2022.02~2022.08","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/thumb-1926205786_cBq3idUF_c8162e74de2bc14a59d51406a5e6f24c1529eb1d_1200x789.jpg"},
+    detail: {"capacity":"600MW","sector":"Renewables","country":"Spain","client":"KEITI","time":"2022.02~2022.08","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 40,
     title: "Battambang II Hydro Power Project in Cambodia",
     category: "Feasibility Study",
     region: "Asia",
-    detail: {"capacity":"30MW","sector":"Renewables","country":"Cambodia","client":"KIND","time":"2022.08~2023.01","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/thumb-1926205786_D7crajh6_d44acbc730dd88f04cd4edc7a1de65109a13cc3a_1200x800.jpg"},
+    detail: {"capacity":"30MW","sector":"Renewables","country":"Cambodia","client":"KIND","time":"2022.08~2023.01","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 39,
     title: "Duqm Green Ammonia Project in Oman",
     category: "Feasibility Study",
     region: "Middle East·Africa",
-    detail: {"capacity":"1200 kton/yr (3.4 kton/day)","sector":"Renewables","country":"Oman","client":"KEITI","time":"2021.11~2022.08","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/thumb-1926205786_XMrP6vyC_64f6a25eccfcca4abdf74a90e26e5579eb9348e7_1200x800.jpg"},
+    detail: {"capacity":"1200 kton/yr (3.4 kton/day)","sector":"Renewables","country":"Oman","client":"KEITI","time":"2021.11~2022.08","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 38,
     title: "Western Australia Green Ammonia Project in Australia",
     category: "Feasibility Study",
     region: "Oceania",
-    detail: {"capacity":"1200 kton/yr (3.4 kton/day)","sector":"Renewables","country":"Australia","client":"KEITI","time":"2022.07~2022.12","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/thumb-1926205786_cRul7v0d_df8b37ea73df1feb37df4d5ee17b8c437a87874e_1200x800.jpg"},
+    detail: {"capacity":"1200 kton/yr (3.4 kton/day)","sector":"Renewables","country":"Australia","client":"KEITI","time":"2022.07~2022.12","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 37,
     title: "Phou Ngoy Mekong Hydro Power Plant in Laos",
     category: "Financial, Tax, and Legal Review",
     region: "Asia",
-    detail: {"capacity":"728MW","sector":"Renewables","country":"Laos","client":"Dohwa Engineering","time":"2021.11~2022.05","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_ia1wQfv4_4a97491d895ec4dc055af71e56e1a283464c78a0.png"},
+    detail: {"capacity":"728MW","sector":"Renewables","country":"Laos","client":"Dohwa Engineering","time":"2021.11~2022.05","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 36,
     title: "School PPP PKG III in Qatar (Synergy Korea)",
     category: "Pre-feasibility Study",
     region: "Middle East·Africa",
-    detail: {"capacity":"14 Schools","sector":"Education","country":"Qatar","client":"Samil PwC","time":"2021.10~2022","hasImage":true,"imgExt":"jpg","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_GjJrndPV_f624a5b60fe7bc6312c4b87c8d658ad4e4ff691f.png"},
+    detail: {"capacity":"14 Schools","sector":"Education","country":"Qatar","client":"Samil PwC","time":"2021.10~2022","hasImage":true,"imgExt":"jpg"},
   },
   {
     id: 35,
     title: "Texas Supercritical CO2 Power Plant in USA",
     category: "Transaction Advisory Services",
     region: "Northern America",
-    detail: {"capacity":"± 5MW","sector":"sCO2 Power","country":"USA","client":"Hanwha Power Systems","time":"2021.10~2022.02","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_5MHkbBro_3c7d41d070bfb136bb0210e3e3d0cc8ab236de6d.png"},
+    detail: {"capacity":"± 5MW","sector":"sCO2 Power","country":"USA","client":"Hanwha Power Systems","time":"2021.10~2022.02","hasImage":true,"imgExt":"png"},
   },
   {
     id: 34,
     title: "Gas To Power Project in Dominican Republic",
     category: "Feasibility Study",
     region: "Latin America",
-    detail: {"capacity":"350MW~400MW","sector":"Power","country":"Dominican Republic","client":"KOGAS","time":"2021.10~2022.01","hasImage":true,"imgExt":"png","imgUrl":"https://dk-consultant.com/data/file/04_01_new/1926205786_sklMxWA0_5370a453ee53a00366ee98d0acd46d996c070600.png"},
+    detail: {"capacity":"350MW~400MW","sector":"Power","country":"Dominican Republic","client":"KOGAS","time":"2021.10~2022.01","hasImage":true,"imgExt":"png"},
   },
 
   // ── Page 3 (33 ~ 19) ──────────────────────────────────────
@@ -539,4 +539,15 @@ export function statusOf(p: Project): "Ongoing" | "Completed" {
   const y = Number((t.match(/^(\d{2,4})/) ?? ["", "0"])[1]);
   const year = y < 100 ? 2000 + y : y;
   return t.trim().endsWith("~") && year >= 2025 ? "Ongoing" : "Completed";
+}
+
+/** Services a project used, read from its role description (DKC's own mandates only). */
+export function servicesOf(p: Project): ("engineering" | "commercial" | "financial" | "development")[] {
+  const c = p.category.toLowerCase();
+  const out: ("engineering" | "commercial" | "financial" | "development")[] = [];
+  if (/feasibility|study|basic plan|business development|planning|market/.test(c)) out.push("development");
+  if (/financ|bankab|transaction|valuation|m&a|due diligence|bid|tariff|model/.test(c)) out.push("financial");
+  if (/contract|legal|risk allocation|arbitration|structure/.test(c)) out.push("commercial");
+  if (/engineering|technical review|owner/.test(c)) out.push("engineering");
+  return out.length ? out : ["development"];
 }

@@ -53,36 +53,45 @@ export default function Header({ scrolled, solid }: HeaderProps) {
           >
             {[
               {
-                label: "ABOUT US",
-                href: "/about",
+                label: "MARKETS",
+                href: "/markets",
                 sub: [
-                  { label: "About DK Consultants", href: "/about" },
-                  { label: "Our People", href: "/people" },
-                  { label: "Healthcare Unit", href: "/healthcare" },
+                  { label: "Power Generation", href: "/markets/power-generation" },
+                  { label: "Carbon Capture & Low-Carbon Fuels", href: "/markets/carbon-capture" },
+                  { label: "Environmental Infrastructure", href: "/markets/environmental-infrastructure" },
+                  { label: "Industrial & Infrastructure", href: "/markets/industrial-infrastructure" },
                 ],
               },
               {
                 label: "SERVICES",
                 href: "/services",
                 sub: [
-                  { label: "Engineering Management & Technical Advisory", href: "/services#engineering" },
-                  { label: "Commercial & Contract Advisory", href: "/services#commercial" },
-                  { label: "Financial Advisory & Capital Raising", href: "/services#financial" },
-                  { label: "Feasibility & Project Development", href: "/services#development" },
-                  { label: "Markets We Serve", href: "/services#markets" },
+                  { label: "Engineering Management & Technical Advisory", href: "/services/engineering" },
+                  { label: "Commercial & Contract Advisory", href: "/services/commercial" },
+                  { label: "Financial Advisory & Capital Raising", href: "/services/financial" },
+                  { label: "Feasibility & Project Development", href: "/services/development" },
                 ],
               },
-              { label: "HOW WE DELIVER", href: "/delivery", sub: [] },
               {
                 label: "PROJECTS",
                 href: "/projects",
                 sub: [
-                  { label: "DKC Projects", href: "/projects" },
+                  { label: "All Projects", href: "/projects" },
                   { label: "Team Experience", href: "/team-experience" },
                   { label: "Clients", href: "/clients" },
                 ],
               },
-              { label: "CAREER", href: "/career", sub: [] },
+              {
+                label: "ABOUT",
+                href: "/about",
+                sub: [
+                  { label: "About DK Consultants", href: "/about" },
+                  { label: "How We Deliver", href: "/delivery" },
+                  { label: "Our People", href: "/people" },
+                  { label: "Healthcare Unit", href: "/healthcare" },
+                ],
+              },
+              { label: "CAREERS", href: "/career", sub: [] },
             ].map((item) => (
               <li key={item.label} className="nav-item" style={{ position: "relative" }}>
                 <a

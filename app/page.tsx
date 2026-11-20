@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import MarketsSection from "@/components/MarketsSection";
 import InquirySection from "@/components/InquirySection";
 import PeopleSection from "@/components/PeopleSection";
 import HistorySection from "@/components/HistorySection";
@@ -19,9 +20,10 @@ export default function Home() {
 
   return (
     <>
-      <Header scrolled={scrolled} solid />
+      <Header scrolled={scrolled} />
       <main>
         <HeroSection />
+        <MarketsSection />
         <ProjectsSection />
         <InquirySection />
         <PeopleSection />

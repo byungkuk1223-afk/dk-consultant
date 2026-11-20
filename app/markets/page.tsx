@@ -1,0 +1,37 @@
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import PageHero, { sx } from "@/components/PageHero";
+import { MARKET_PAGES } from "@/data/site";
+import { projects, marketOf } from "@/data/projects";
+
+export default function MarketsPage() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 120);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <>
+      <Header scrolled={scrolled} />
+      <PageHero title="Markets" subtitle="Power generation, carbon capture, and environmental and industrial infrastructure." bg="/img/power_hero.jpg" />
+      <div style={{ ...sx.wrap, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 22 }}>
+        {MARKET_PAGES.map((m) => (
+          <Link key={m.slug} href={`/markets/${m.slug}`} style={{ display: "block", border: "1px solid #e5e7eb", background: "#fff" }}>
+            <div style={{ height: 180, backgroundImage: `url('${m.img}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
+            <div style={{ padding: "22px 24px 26px" }}>
+              <p style={{ fontSize: 21, fontFamily: "'Libre Baskerville', Georgia, serif", color: "#0b2545", marginBottom: 8 }}>{m.name}</p>
+              <p style={{ fontSize: 15, lineHeight: "24px", color: "#555", fontFamily: "'Lato', sans-serif", marginBottom: 10 }}>{m.lead}</p>
+              <span style={{ fontSize: 13, color: "#888", fontFamily: "'Lato', sans-serif" }}>{projects.filter((p) => marketOf(p) === m.name).length} projects</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+      <Footer />
+    </>
+  );
+}

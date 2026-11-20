@@ -10,6 +10,7 @@ export default function PageHero({ title, subtitle, bg }: { title: string; subti
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
+        background: "#0b2545",
       }}
     >
       <div
