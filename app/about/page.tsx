@@ -24,7 +24,7 @@ const MILESTONES: { y: string; t: string }[] = [
   { y: "2020–2021", t: "Gas-to-power and LNG-to-power feasibility studies for KEXIM, KIND, and KOGAS in Vietnam, Cameroon, the Philippines, and the Dominican Republic." },
   { y: "2021–2024", t: "Green hydrogen and ammonia feasibility studies in Oman, the UAE, Australia, and Canada; refinery upgrade study at Dumai, Indonesia; district heating modernization in Uzbekistan." },
   { y: "2025", t: "Lead consultant on KIND's feasibility study for blue ammonia with carbon capture in Alberta, Canada." },
-  { y: "2026", t: "Power plant and process engineers from KEPCO E&C and POSCO E&C join to form the engineering management group; DKC completes its first bankable feasibility study for a coal-fired power plant with carbon capture." },
+  { y: "2026", t: "Power plant and process engineers from KEPCO E&C and POSCO E&C join to form the engineering management group; DKC completes a bankable feasibility study for a coal-fired power plant with carbon capture." },
 ];
 
 export default function AboutPage() {

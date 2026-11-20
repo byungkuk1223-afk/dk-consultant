@@ -55,8 +55,6 @@ const GROUPS: { title: string; intro: string; people: Person[] }[] = [
       { name: "Ran Kwak", title: "General Manager · Market & Offtake Analysis", bio: "Market analysis for green hydrogen and ammonia, renewable energy, and energy transition studies; formerly at Accenture." },
       { name: "Chang Gyu Kim", title: "Manager · Financial Modeling & Risk Analysis", bio: "Financial, risk, market, and legal analysis on more than 20 feasibility studies since 2019." },
       { name: "Jong Yeun Cho", title: "Senior Associate · Documentation & Reporting", bio: "Legal research, business continuity, and international project advisory." },
-      { name: "Minkyung Koh", title: "Director", bio: "Feasibility studies and project analysis." },
-      { name: "Kihwan Na", title: "Financial Senior Advisor", bio: "Project finance." },
     ],
   },
 ];
