@@ -1,93 +1,15 @@
 "use client";
+import PageHero from "@/components/PageHero";
 
-const TABS = [
-  { label: "About DK Consultants", href: "/about", key: "about" },
-  { label: "Our People", href: "/people", key: "people" },
-  { label: "Healthcare Unit", href: "/healthcare", key: "healthcare" },
-];
+// About-section pages use the same page hero as the rest of the site (no sub-tab bar; the ABOUT menu links the pages).
+const HEADS = {
+  about: { title: "About DK Consultants", subtitle: "A project development advisor working on the owner's side" },
+  people: { title: "Our People", subtitle: "Leaders, discipline engineers, and financial advisors in one team" },
+  healthcare: { title: "Healthcare Unit", subtitle: "DKC's separate business unit for hospital and pharmaceutical projects" },
+  ppp: { title: "About DK Consultants", subtitle: "A project development advisor working on the owner's side" },
+};
 
 export default function AboutHero({ active }: { active: "about" | "ppp" | "healthcare" | "people" }) {
-  return (
-    <div style={{ position: "relative" }}>
-      {/* Hero banner */}
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          minWidth: 1200,
-          height: 380,
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        {/* Background image with brightness overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: "url('/img/sf_01_bg_n.jpg')",
-            backgroundPosition: "center top",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            filter: "brightness(0.45)",
-          }}
-        />
-        {/* Overlay text */}
-        <div
-          style={{
-            position: "relative",
-            zIndex: 1,
-            paddingLeft: "28%",
-            color: "#fff",
-            fontFamily: "'Lato', sans-serif",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: 50,
-              fontWeight: 400,
-              fontFamily: "'Libre Baskerville', Georgia, serif",
-              margin: "0 0 14px 0",
-              letterSpacing: 1,
-            }}
-          >
-            About Us
-          </h2>
-          <p
-            style={{
-              fontSize: 18,
-              fontWeight: 300,
-              margin: 0,
-              letterSpacing: 0.2,
-              lineHeight: 1.6,
-            }}
-          >
-            A project development advisor working on the owner&apos;s side
-          </p>
-        </div>
-      </div>
-
-      {/* Sub tab navigation */}
-      <div
-        id="dk-sub-tab"
-        style={{ width: "100%", height: 90, position: "absolute", left: 0, top: 330, zIndex: 10 }}
-      >
-        <div style={{ width: 1200, height: 90, backgroundColor: "#fff", margin: "0 auto", boxShadow: "5px 5px 5px rgba(0,0,0,.1)", borderRadius: 3, overflow: "hidden" }}>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, overflow: "hidden" }}>
-            {TABS.map(tab => (
-              <li
-                key={tab.key}
-                className={tab.key === active ? "on" : ""}
-                style={{ width: `${100 / TABS.length}%` }}
-                onClick={() => { window.location.href = tab.href; }}
-              >
-                {tab.label}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
+  const h = HEADS[active];
+  return <PageHero title={h.title} subtitle={h.subtitle} bg="/img/sf_01_bg_n.jpg" />;
 }
