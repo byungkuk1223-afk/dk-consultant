@@ -164,7 +164,7 @@ export default function ProjectDetailPage() {
                   ))}
                 </ul>
                 <p style={{ fontSize: 11.5, color: "#999", fontFamily: F, marginTop: 8 }}>
-                  &quot;About the project&quot; summarizes public sources on the project itself. DKC&apos;s role is described separately above.
+                  &quot;About the project&quot; summarizes published information on the project and its market. It does not describe DKC&apos;s findings; DKC&apos;s role is described separately above.
                 </p>
               </section>
             )}

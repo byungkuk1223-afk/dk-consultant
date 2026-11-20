@@ -6,6 +6,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AboutHero from "@/components/AboutHero";
+import GlobalFootprint from "@/components/GlobalFootprint";
 import { projects } from "@/data/projects";
 import { TEAM_PROJECTS } from "@/data/teamProjects";
 
@@ -59,8 +60,8 @@ export default function AboutPage() {
               <p style={BODY}>
                 The engineering is led by power plant and process engineers who have designed, built, and commissioned plants of the kind
                 our clients develop: ultra-supercritical and circulating fluidized bed coal-fired units, a commercial CO₂ capture and
-                liquefaction plant, and large gas processing facilities. The commercial and financial team has delivered {feasibility} feasibility
-                studies since 2016, most of them for Korea&apos;s public financiers.
+                liquefaction plant, and large gas processing facilities.{" "}
+                {`The commercial and financial team has delivered ${feasibility} feasibility studies since 2016, most of them for Korea's public financiers.`}
               </p>
             </div>
           </div>
@@ -145,6 +146,8 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+
+        <GlobalFootprint />
       </main>
       <Footer />
     </>

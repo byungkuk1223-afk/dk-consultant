@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { HomeHero, KeyFigures, WhoWeAre, ServicesGrid, MarketsGrid, FeaturedProjects, DeliveryBand, ClientStrip, CareersContact } from "@/components/HomeSections";
+import GlobalFootprint from "@/components/GlobalFootprint";
+import { HomeHero, WhoWeAre, ServicesGrid, MarketsGrid, FeaturedProjects, DeliveryBand, ClientStrip, CareersContact } from "@/components/HomeSections";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,10 +18,10 @@ export default function Home() {
       <Header scrolled={scrolled} />
       <main>
         <HomeHero />
-        <KeyFigures />
         <WhoWeAre />
         <ServicesGrid />
         <MarketsGrid />
+        <GlobalFootprint background="#f6f8fb" />
         <FeaturedProjects />
         <DeliveryBand />
         <ClientStrip />

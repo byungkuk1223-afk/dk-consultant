@@ -6,7 +6,6 @@ import { IMG, projectImg } from "@/data/images";
 import { SERVICES, MARKET_PAGES } from "@/data/site";
 import { projects } from "@/data/projects";
 import { caseStudies } from "@/data/projectProfiles";
-import { CLIENT_GROUPS, OTHER_CLIENTS } from "@/data/clients";
 
 const F = "'Lato', sans-serif";
 const SERIF = "'Libre Baskerville', Georgia, serif";
@@ -21,13 +20,6 @@ const CLIENT_LOGOS = [
   "1_1", "1_2", "1_3", "1_4", "2_1", "2_2", "2_3", "2_4", "2_5", "2_6",
   "2_7", "3_1", "3_2", "3_3", "3_4", "3_5", "3_6", "4_1", "4_2", "4_3",
 ].map((k) => `/img/img_04_02_${k}.jpg`);
-
-function countries() {
-  const set = new Set<string>();
-  projects.forEach((p) =>
-    (p.detail?.country ?? "").split(/,|&|\/| and /).map((c) => c.trim()).filter(Boolean).forEach((c) => set.add(c)));
-  return set.size;
-}
 
 function Head({ eyebrow, title, more }: { eyebrow: string; title: string; more?: { href: string; label: string } }) {
   return (
@@ -61,27 +53,6 @@ export function HomeHero() {
           <Link href="/services" style={{ background: "#fff", color: NAVY, padding: "15px 30px", fontSize: 12.5, letterSpacing: 1.6, fontWeight: 700, fontFamily: F, textAlign: "center" }}>OUR SERVICES</Link>
           <Link href="/projects" style={{ border: "1px solid rgba(255,255,255,0.75)", color: "#fff", padding: "15px 30px", fontSize: 12.5, letterSpacing: 1.6, fontWeight: 700, fontFamily: F, textAlign: "center" }}>SELECTED PROJECTS</Link>
         </div>
-      </div>
-    </section>
-  );
-}
-
-export function KeyFigures() {
-  const figs = [
-    { v: "2016", t: "Founded in Korea, in partnership with Synergy Consulting from the start" },
-    { v: String(projects.length), t: "Advisory mandates delivered by DKC and Synergy Korea" },
-    { v: String(countries()), t: "Countries in which those mandates are located" },
-    { v: String(CLIENT_GROUPS.flatMap((g) => g.clients).length + OTHER_CLIENTS.length), t: "Public and private clients, including KEXIM, KIND, KEITI, and KOGAS" },
-  ];
-  return (
-    <section style={{ background: "#fff", borderBottom: "1px solid #e8ecf1" }}>
-      <div className="rg" style={{ maxWidth: 1200, margin: "0 auto", padding: "44px 24px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 28 }}>
-        {figs.map((f) => (
-          <div key={f.t} style={{ borderLeft: `3px solid ${TEAL}`, paddingLeft: 18 }}>
-            <p style={{ fontFamily: SERIF, fontSize: 38, color: NAVY, lineHeight: 1.1 }}>{f.v}</p>
-            <p style={{ fontFamily: F, fontSize: 14, lineHeight: "21px", color: "#55606d", marginTop: 8 }}>{f.t}</p>
-          </div>
-        ))}
       </div>
     </section>
   );
@@ -160,7 +131,7 @@ export function MarketsGrid() {
 export function FeaturedProjects() {
   const items = caseStudies.map((c) => ({ c, p: projects.find((x) => x.id === c.id)! })).filter((x) => x.p);
   return (
-    <section style={{ background: "#f6f8fb" }}>
+    <section>
       <div style={WRAP}>
         <Head eyebrow="FEATURED PROJECTS" title="Recent mandates" more={{ href: "/projects", label: `All ${projects.length} projects` }} />
         <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
