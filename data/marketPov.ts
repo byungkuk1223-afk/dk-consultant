@@ -72,7 +72,7 @@ export const MARKET_POV: MarketPov[] = [
       "Their economics depend less on technology than on tariffs, feedstock, and the strength of the public counterparty.",
     ],
     stats: [
-      { v: "3.4 bn t", n: "Municipal solid waste per year by 2050", src: "World Bank" },
+      { v: "3.86 bn t", n: "Municipal solid waste per year by 2050", src: "World Bank, What a Waste 3.0" },
     ],
     views: [
       { t: "Revenue is a policy decision", d: "Gate fees, power tariffs, and heat prices are set or approved by public authorities. A bankable project shows that the tariff is affordable to the city and its residents and that it adjusts for inflation and currency." },

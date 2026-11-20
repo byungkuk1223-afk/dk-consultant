@@ -1,0 +1,212 @@
+{
+  "slug": "environmental-infrastructure",
+  "dek": "Municipal waste is growing fastest in the regions least equipped to collect and treat it, and the cost of managing it is set to rise sharply by 2050. Heating, cooling and water systems face a parallel challenge: legacy district heating networks lose heat and fail to recover costs, while cooling and desalination are becoming major electricity loads in hot, water-scarce regions. Private capital is returning to infrastructure, but it remains concentrated, and projects proceed where tariffs, feedstock and public counterparty risk are structured to lenders' standards.",
+  "keyFigures": [
+    {
+      "v": "2.56 bn t",
+      "n": "Municipal solid waste generated worldwide in 2022",
+      "src": "World Bank, What a Waste 3.0 (2026)",
+      "url": "https://www.worldbank.org/what-a-waste"
+    },
+    {
+      "v": "+50%",
+      "n": "Projected increase in municipal solid waste by 2050 under business as usual, to 3.86 bn t",
+      "src": "World Bank, What a Waste 3.0 (2026)",
+      "url": "https://www.worldbank.org/what-a-waste"
+    },
+    {
+      "v": "USD 556 bn",
+      "n": "Waste management investment needed in low- and lower-middle-income countries, 2022–2050",
+      "src": "World Bank, What a Waste 3.0 (2026)",
+      "url": "https://www.worldbank.org/what-a-waste"
+    },
+    {
+      "v": "7%",
+      "n": "Renewable share of global district heat production; coal supplies about half",
+      "src": "IEA, Renewables in District Energy (2026)",
+      "url": "https://www.iea.org/reports/renewables-in-district-energy/executive-summary"
+    },
+    {
+      "v": "~40%",
+      "n": "Share of MENA electricity demand growth to 2035 from cooling and desalination",
+      "src": "IEA, The Future of Electricity in the Middle East and North Africa (2025)",
+      "url": "https://www.iea.org/news/electricity-demand-is-surging-across-the-middle-east-and-north-africa-driven-by-cooling-and-desalination-needs"
+    },
+    {
+      "v": "USD 100.7 bn",
+      "n": "Private participation in infrastructure investment in low- and middle-income countries, 2024 (+16%)",
+      "src": "World Bank, PPI Database (2025)",
+      "url": "https://ppi.worldbank.org"
+    }
+  ],
+  "sections": [
+    {
+      "h": "Waste volumes are rising fastest where collection and disposal are weakest",
+      "paras": [
+        "The World Bank's What a Waste 3.0 estimates that the world generated 2.56 billion tonnes of municipal solid waste in 2022 and projects 3.86 billion tonnes by 2050 under business as usual, a 50% increase. That is below the 70% projected in the 2018 edition, but waste is projected to grow 124% in Sub-Saharan Africa and 99% in South Asia by 2050. These are the regions where systems are least developed. Collection rates are about 28% in low-income countries and 61% in lower-middle-income countries, compared with about 89% in upper-middle-income countries. Around 30% of waste globally is dumped or left uncollected, and only 3% of low-income countries have access to controlled disposal facilities. Global spending on municipal waste management exceeds USD 250 billion a year and is projected to reach USD 426 billion by 2050 under existing practices. For many cities, the first investment need is collection and controlled disposal, ahead of energy recovery."
+      ],
+      "cites": [
+        1,
+        2
+      ]
+    },
+    {
+      "h": "Waste-to-energy is proven, but its market is defined by waste composition and the ability to pay",
+      "paras": [
+        "Incineration with energy recovery handles about 20% of the world's municipal waste, against about 29% sent to landfill and 21% recycled, composted or digested, according to What a Waste 3.0 coverage. The technology is mature; the constraint is the waste stream and the revenue behind it. Food waste makes up about 38% of municipal waste globally and about 52% in low-income countries, where composting and anaerobic digestion treat less than 1% of waste. High organic and moisture content lowers the heating value of mixed waste and raises performance risk. At the same time, the World Bank estimates that adequate waste systems require investment of about 0.3% to 0.8% of GDP, a level many municipal budgets cannot sustain without tariff reform or external finance. Waste-to-energy is therefore most bankable where collection is already reliable, waste composition has been measured over time, and a creditworthy authority pays a gate fee or capacity charge that does not depend on power sales alone."
+      ],
+      "cites": [
+        1,
+        2
+      ]
+    },
+    {
+      "h": "District heating is large, carbon-intensive and underused as a channel for clean and waste heat",
+      "paras": [
+        "District energy supplies about 10% of global final energy consumption for heat and serves more than 600 million people through over one million kilometres of networks, according to the IEA. The supply mix has changed little: coal provides around half of global district heat and natural gas close to one third, while renewables supply 7%. Under current policies, renewable district heat grows only about 10% by 2030. The IEA finds that renewable and waste heat could increase up to tenfold within existing networks without major new infrastructure, and that renewables and waste heat already displace more than 190 million barrels of oil equivalent of imported fuel a year, mostly in Europe. Waste-to-energy plants, industrial sites and data centers produce exactly the low-grade heat that networks can use. Where a network exists, selling heat can add a second revenue stream to a waste or power project and reduce dependence on the electricity tariff."
+      ],
+      "cites": [
+        3
+      ]
+    },
+    {
+      "h": "In legacy heating systems, the investment case rests on loss reduction and tariff reform",
+      "paras": [
+        "Across 23 economies in Europe and Central Asia, the World Bank finds that about 30% of the population is served by district heating, that heating accounts for about 24% of regional energy demand and 22% of greenhouse gas emissions, and that about one third of the population struggles to pay heating bills or under-heats homes. Many utilities fail to recover costs, which limits maintenance. Tashkent illustrates both the problem and one route to a solution. Its network was built in the 1960s and 1970s to serve about one million people and now serves a city of about three million; close to 40% of the heat produced is lost before reaching customers. An ADB-advised public-private partnership signed in 2021 uses an affermage model, in which the private operator runs the system and shares user charges with the municipality, as part of a USD 1.5 billion modernization that aims to cut network losses by more than 40%."
+      ],
+      "cites": [
+        4,
+        5
+      ]
+    },
+    {
+      "h": "Cooling and desalination are becoming core power loads in hot, water-scarce regions",
+      "paras": [
+        "The IEA expects electricity consumption in the Middle East and North Africa to rise about 50% by 2035, with cooling and desalination accounting for around 40% of the increase. Globally, space cooling is the fastest-growing source of energy demand in buildings, rising almost 4% a year to 2035 under current policy settings. The effect is sharpest at peak: in India, each 1°C rise in temperature added about 7 GW to peak electricity demand in 2024. This links water and cooling infrastructure directly to power system planning. Desalination plants and district cooling networks are large, predictable loads that can be scheduled or paired with thermal storage, and efficient cooling reduces the generation and grid capacity a system must build. The IEA estimates that power sector investment in the region, USD 44 billion in 2024, will rise a further 50% by 2035, with nearly 40% directed to grids. Projects that reduce peak demand can strengthen their case with offtakers."
+      ],
+      "cites": [
+        6,
+        7
+      ]
+    },
+    {
+      "h": "Carbon revenues and private capital help at the margin; structure decides the rest",
+      "paras": [
+        "Carbon pricing now covers about 28% of global emissions and raised more than USD 100 billion for public budgets in 2024 through 80 instruments, according to the World Bank. Demand for carbon credits from compliance markets almost tripled over the previous year, while growth from voluntary buyers was negligible. For landfill gas and waste projects, this makes the eligibility of credits under compliance and government-backed schemes more relevant than voluntary market prices. Private participation in infrastructure in low- and middle-income countries reached USD 100.7 billion in 2024, up 16% and above USD 100 billion for the first time since the pandemic. The capital is concentrated: six countries accounted for 67% of private infrastructure investment in these economies between 2021 and 2024. Guarantees change outcomes, with 80% private debt participation in guaranteed deals compared with 42% in deals without them. For waste, heat and water projects with municipal counterparties, credit enhancement is often the deciding factor."
+      ],
+      "cites": [
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "regional": [
+    {
+      "region": "Sub-Saharan Africa",
+      "text": "Municipal waste in Sub-Saharan Africa is projected to grow 124% by 2050, the fastest of any region, from a base where only about 31% of waste is collected. Most waste in the lowest-income areas is openly dumped. Debt servicing costs already equal more than 85% of energy investment in Africa, according to the IEA, which leaves little fiscal room for municipalities. Projects typically depend on concessional finance, guarantees and phased programmes that build collection and controlled disposal before energy recovery."
+    },
+    {
+      "region": "South Asia",
+      "text": "South Asia's municipal waste is projected to nearly double by 2050, rising 99%, with collection at about 67%. High food-waste content in lower-income cities affects the design basis for thermal treatment and favours careful feedstock studies. Heat also shapes infrastructure demand: in India each 1°C rise added about 7 GW to peak electricity demand in 2024, which strengthens the case for efficient cooling and for treatment plants that can supply power at peak."
+    },
+    {
+      "region": "Middle East and North Africa",
+      "text": "The IEA projects regional electricity consumption to rise about 50% by 2035, with cooling and desalination responsible for around 40% of the growth. Gas and oil provide over 90% of generation today. District cooling is well established in the region and is now expanding beyond it, according to the IEA. Large desalination and cooling assets are increasingly evaluated alongside power and grid investment, which reached USD 44 billion in 2024."
+    },
+    {
+      "region": "Central Asia",
+      "text": "Central Asia is one of the regions where district energy is deeply embedded, according to the IEA, and many networks combine ageing assets with high losses. Tashkent's system, built in the 1960s and 1970s for one third of today's population, loses close to 40% of the heat it produces; a USD 1.5 billion modernization under an affermage PPP aims to cut losses by more than 40%. The World Bank finds district heating across Europe and Central Asia often fails to recover costs, making tariff reform central to bankability."
+    }
+  ],
+  "implications": [
+    {
+      "t": "Size plants on the waste that will actually arrive",
+      "d": "With collection at 28–61% in lower-income economies and food waste above half of the stream in low-income countries, design capacity and calorific value must be based on measured composition and realistic collection growth. Put-or-pay commitments, minimum calorific value thresholds and the allocation of shortfall risk belong in the concession, and lenders will expect a downside case based on observed data."
+    },
+    {
+      "t": "Treat heat as a revenue line, not a by-product",
+      "d": "District heating networks can absorb far more waste and renewable heat than they do today. Where a network exists or is planned, a heat offtake agreement with indexed pricing and minimum volumes can diversify revenues for waste-to-energy and industrial projects. The heat price, the connection works and the responsibility for network losses should be settled before financing."
+    },
+    {
+      "t": "Make loss reduction contractable",
+      "d": "In legacy heating and water networks, the economic return comes from cutting losses and improving collection. Performance-based PPPs such as affermage or management contracts can work when baselines are measured, targets are verifiable and the tariff path is agreed with the authority in advance, so that operator returns do not rest on political tariff decisions."
+    },
+    {
+      "t": "Price carbon revenues on compliance demand",
+      "d": "Compliance demand for credits is growing while voluntary demand is flat. Landfill gas and waste projects should test credit eligibility under the host country's carbon pricing or Article 6 arrangements and model credit revenues as a separate, sensitized line that the project does not need to service senior debt. Monitoring, verification and registry costs should be included in the base case."
+    },
+    {
+      "t": "Design for guarantors from the start",
+      "d": "Private capital remains concentrated in a few large emerging markets, and guarantees roughly double private debt participation. Projects in smaller or riskier markets should align payment security, termination compensation and environmental and social standards with multilateral guarantee and lender requirements from the feasibility stage, rather than adapting the structure once lenders are engaged."
+    }
+  ],
+  "sources": [
+    {
+      "label": "What a Waste 3.0: A Global Snapshot of Solid Waste Management toward Circularity until 2050",
+      "publisher": "World Bank",
+      "year": "2026",
+      "url": "https://www.worldbank.org/what-a-waste"
+    },
+    {
+      "label": "Global waste generation to rise by 2050: World Bank (coverage of What a Waste 3.0)",
+      "publisher": "Waste Dive",
+      "year": "2026",
+      "url": "https://www.wastedive.com/news/global-waste-generation-to-rise-by-2050-world-bank/816473/"
+    },
+    {
+      "label": "Renewables in District Energy",
+      "publisher": "International Energy Agency",
+      "year": "2026",
+      "url": "https://www.iea.org/reports/renewables-in-district-energy/executive-summary"
+    },
+    {
+      "label": "World Bank warns heating sector across Europe and Central Asia needs urgent overhaul",
+      "publisher": "World Bank",
+      "year": "2023",
+      "url": "https://www.worldbank.org/en/news/press-release/2023/09/20/world-bank-warns-heating-sector-across-europe-and-central-asia-needs-urgent-overhaul"
+    },
+    {
+      "label": "ADB initiative to bring warmth to Tashkent winters",
+      "publisher": "Asian Development Bank",
+      "year": "2024",
+      "url": "https://www.adb.org/results/adb-initiative-bring-warmth-tashkent-winters"
+    },
+    {
+      "label": "Electricity demand is surging across the Middle East and North Africa, driven by cooling and desalination needs (The Future of Electricity in the Middle East and North Africa)",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/news/electricity-demand-is-surging-across-the-middle-east-and-north-africa-driven-by-cooling-and-desalination-needs"
+    },
+    {
+      "label": "Staying cool without overheating the energy system",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/commentaries/staying-cool-without-overheating-the-energy-system"
+    },
+    {
+      "label": "State and Trends of Carbon Pricing 2025 (press release)",
+      "publisher": "World Bank",
+      "year": "2025",
+      "url": "https://www.worldbank.org/en/news/press-release/2025/06/10/global-carbon-pricing-mobilizes-over-100-billion-for-public-budgets"
+    },
+    {
+      "label": "Private Participation in Infrastructure (PPI) Database: 2024 results",
+      "publisher": "World Bank",
+      "year": "2025",
+      "url": "https://ppi.worldbank.org"
+    },
+    {
+      "label": "Private capital for infrastructure: Resilience amid uncertainty, urgency amid gaps (Infrastructure Monitor 2024)",
+      "publisher": "World Bank",
+      "year": "2025",
+      "url": "https://blogs.worldbank.org/en/ppps/private-capital-for-infrastructure--resilience-amid-uncertainty-"
+    },
+    {
+      "label": "World Energy Investment 2025",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/reports/world-energy-investment-2025/executive-summary"
+    }
+  ]
+}

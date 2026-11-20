@@ -1,0 +1,208 @@
+{
+  "slug": "power-generation",
+  "dek": "Electricity demand is growing faster than at any time in the past decade, and the growth is broad: emerging economies, cooling, industry and data centers all add load. Solar now supplies most of the increase in generation, but the projects that keep systems reliable, including gas-fired plants, storage and transmission, face long equipment queues, rising costs and grid connection delays. Bankability depends increasingly on securing scarce equipment and grid access early and on pricing those risks in the contracts.",
+  "keyFigures": [
+    {
+      "v": "485 TWh",
+      "n": "Data center electricity use in 2025, up 17% on 2024; about 950 TWh projected by 2030",
+      "src": "IEA, Key Questions on Energy and AI (2026)",
+      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary"
+    },
+    {
+      "v": ">2,500 GW",
+      "n": "Generation, storage and large-load projects stalled in grid connection queues worldwide",
+      "src": "IEA, Electricity 2026 (2026)",
+      "url": "https://www.iea.org/reports/electricity-2026/executive-summary"
+    },
+    {
+      "v": "75%",
+      "n": "Share of the 2025 increase in global electricity demand met by solar",
+      "src": "Ember, Global Electricity Review 2026 (2026)",
+      "url": "https://ember-energy.org/latest-insights/global-electricity-review-2026/"
+    },
+    {
+      "v": "110 GW",
+      "n": "Global gas turbine orders at end-2025, against 60–70 GW of annual manufacturing capacity",
+      "src": "Wood Mackenzie (2026)",
+      "url": "https://www.woodmac.com/press-releases/gas-turbine-prices-soar-195-as-market-faces-supply-demand-crisis/"
+    },
+    {
+      "v": "USD 1.5 tn",
+      "n": "Global electricity sector investment in 2025, including about USD 400 bn a year on grids",
+      "src": "IEA, World Energy Investment 2025 (2025)",
+      "url": "https://www.iea.org/reports/world-energy-investment-2025/executive-summary"
+    },
+    {
+      "v": "≥2×",
+      "n": "Cost of capital for clean energy projects in Southeast Asia relative to advanced economies or China",
+      "src": "IEA, Southeast Asia Energy Outlook 2024 (2024)",
+      "url": "https://www.iea.org/reports/southeast-asia-energy-outlook-2024/executive-summary"
+    }
+  ],
+  "sections": [
+    {
+      "h": "Demand growth has broadened, and peak loads are rising faster than averages",
+      "paras": [
+        "Global electricity demand rose 3% in 2025 after 4.4% in 2024, and the IEA expects growth over the next five years to run about 50% above the average of the previous decade. Emerging economies account for nearly 80% of the additional consumption to 2030, with China alone close to half. In India and Southeast Asia, economic growth and air conditioning raise both consumption and peak loads. Advanced economies are no longer flat: US demand rose 2.1% in 2025 and is projected to grow nearly 2% a year to 2030. Cooling is the main reason peaks are outrunning energy demand. In India, each 1°C rise in outdoor temperature added about 7 GW to peak demand in 2024, and the IEA estimates this could reach 12 GW per degree by 2030 without further efficiency gains. This shifts the requirement toward capacity available on hot evenings, where firm and storage capacity earn their value."
+      ],
+      "cites": [
+        1,
+        10
+      ]
+    },
+    {
+      "h": "Data centers are a concentrated load that tests grids before it tests generation",
+      "paras": [
+        "Data centers consumed about 485 TWh in 2025, 17% more than a year earlier, and consumption at AI-focused facilities grew about 50%. The IEA projects roughly 950 TWh by 2030, around 3% of global electricity demand. The total is modest in global terms, but the load arrives in large blocks at specific locations. In the United States, data centers account for nearly half of projected demand growth to 2030. Grid access, rather than generation, is often the first constraint. The IEA estimates that around 20% of planned data center projects could be delayed unless grid risks are addressed, notes that new transmission lines take four to eight years in advanced economies, and reports that wait times for transformers and cables have doubled in three years. Slow connections are pushing US developers toward onsite generation: 15–27 GW of onsite gas may serve data centers by 2030, and reliable onsite supply requires overbuilding capacity by 30% to 70% relative to demand."
+      ],
+      "cites": [
+        2,
+        3
+      ]
+    },
+    {
+      "h": "Solar sets the volume of new supply; storage and firm capacity set reliability",
+      "paras": [
+        "In 2025 renewables supplied 33.8% of global electricity, passing coal at 33.0% for the first time, according to Ember. Solar output rose a record 636 TWh to 2,778 TWh and met 75% of the net increase in demand, and fossil generation fell 0.2%. Battery deployment grew 46% to an estimated 250 GWh while battery costs fell 45%, enough to shift about 14% of new solar output to other hours. Thermal generation is not disappearing from the outlook. The IEA expects gas-fired generation to grow 2.6% a year to 2030, up from about 1.4% over the past five years, and coal to remain the single largest source of electricity in 2030 despite a slight decline. Renewables, gas and nuclear together are expected to meet all additional demand between 2026 and 2030. For projects, the practical result is hybrid procurement, where solar, storage and dispatchable capacity are assessed as one portfolio against peak and evening requirements."
+      ],
+      "cites": [
+        5,
+        1
+      ]
+    },
+    {
+      "h": "Gas-fired capacity is supply-constrained, which changes how it is procured",
+      "paras": [
+        "Turbine manufacturing has not kept pace with orders. Wood Mackenzie reports global gas turbine orders of 110 GW at the end of 2025 against manufacturing capacity of 60–70 GW a year, lead times of around six years with order books sold through 2027, and turbine prices forecast to reach USD 600/kW by end-2027, 195% above 2019. Turbines represent an estimated 20–30% of combined-cycle project cost and a larger share for simple-cycle plants. The IEA reports that turbine orders rose 70% in 2025. Demand for new gas capacity is concentrated. The IEA notes that the United States and the Middle East accounted for nearly half of the recent rise in final investment decisions for gas-fired power. In this market, the turbine reservation, its payment terms and its delivery date often determine the project schedule, and EPC pricing has to absorb equipment escalation that earlier procurement rounds did not face."
+      ],
+      "cites": [
+        6,
+        2,
+        4
+      ]
+    },
+    {
+      "h": "Grids are the binding constraint on both supply and demand",
+      "paras": [
+        "Investment in electricity reached about USD 1.5 trillion in 2025, but spending on generation, around USD 1 trillion, is more than double the roughly USD 400 billion a year spent on grids. The IEA estimates that grid investment needs to rise by about 50% by 2030 to meet forecast demand. More than 2,500 GW of projects, including large loads such as data centers, are waiting in connection queues. Part of this backlog can be released without new lines. The IEA estimates that 1,200–1,600 GW of capacity could be connected in the near term, comprising 750–900 GW through non-firm connection agreements and 450–700 GW through grid-enhancing technologies and upgrades. Non-firm connections accept curtailment in exchange for earlier access, which moves risk from the network operator to the project. That risk has to be quantified in the energy yield, the offtake terms and the debt sizing."
+      ],
+      "cites": [
+        1,
+        4
+      ]
+    },
+    {
+      "h": "Capital is available, but its price varies sharply by market",
+      "paras": [
+        "Financing conditions diverge widely between markets. The IEA finds that clean energy projects in Southeast Asia face a cost of capital at least twice that of advanced economies or China, that debt servicing in Africa equals more than 85% of total energy investment in 2025, and that international public finance provides only about 7% of clean energy investment in emerging and developing economies outside China, roughly USD 32 billion a year. Private infrastructure capital remains concentrated. The World Bank reports that six countries, China, India, Brazil, Mexico, Türkiye and Indonesia, accounted for 67% of private infrastructure investment in low- and middle-income countries between 2021 and 2024. Credit enhancement makes a measurable difference: transactions with guarantees showed 80% private debt participation, compared with 42% without. For IPPs outside the core markets, the structure of payment security, currency risk and multilateral support often matters as much to financing as the technical case."
+      ],
+      "cites": [
+        4,
+        7,
+        9
+      ]
+    }
+  ],
+  "regional": [
+    {
+      "region": "North America",
+      "text": "US electricity demand rose 2.1% in 2025 and is projected to grow nearly 2% a year to 2030, with data centers accounting for about half of the increase. The country leads the move to onsite gas generation for data centers, which the IEA puts at 15–27 GW by 2030, mostly in the United States. Together with the Middle East, the US accounted for nearly half of recent final investment decisions for gas-fired power, adding to pressure on turbine supply."
+    },
+    {
+      "region": "Southeast Asia",
+      "text": "The IEA projects electricity demand rising about 4% a year to 2035, from over 1,300 TWh to above 2,000 TWh, with air conditioning raising peak loads. The coal fleet averages under 15 years old, which limits early retirement. The region received only 2% of global clean energy spending in 2023, and its clean energy projects face a cost of capital at least twice that of advanced economies. Network investment needs are projected to more than double to about USD 22 billion a year by 2035."
+    },
+    {
+      "region": "Middle East and North Africa",
+      "text": "The IEA projects electricity consumption rising about 50% by 2035, with cooling and desalination accounting for around 40% of the increase. Natural gas is set to meet half of demand growth, while oil's share of generation falls from about 20% to 5%. Solar PV capacity is projected to grow tenfold and nuclear capacity to triple. Power sector investment reached USD 44 billion in 2024 and is projected to rise a further 50% by 2035, with nearly 40% directed to grids."
+    },
+    {
+      "region": "South Asia",
+      "text": "India's fossil generation fell 52 TWh, or 3.3%, in 2025 as record solar and wind additions, strong hydro output and slower demand growth combined, according to Ember, and India installed more new solar capacity than the United States for the first time. Peak demand remains highly sensitive to heat: each 1°C rise added about 7 GW to India's peak in 2024, and the IEA estimates heatwaves above 4°C anomalies could add 47 GW, which sustains the need for firm and storage capacity."
+    }
+  ],
+  "implications": [
+    {
+      "t": "Secure long-lead equipment before fixing the tariff",
+      "d": "With turbine lead times around six years and transformer waits doubled, the equipment reservation is now a critical-path item. Owners need turbine slot agreements, escalation mechanisms and delivery guarantees in place before tariff bids or PPA pricing are fixed, and lenders will test whether the EPC price and schedule reflect the reservation actually held rather than a nominal market lead time."
+    },
+    {
+      "t": "Treat grid access as a bankability risk",
+      "d": "Non-firm connections and grid-enhancing technologies can bring projects online earlier, but they shift curtailment risk to the project. Energy yield and revenue cases should model curtailment explicitly, connection agreements should define compensation where it exists, and debt sizing should rest on a curtailment case that a lender's technical adviser can reproduce, with sensitivities for delayed network reinforcement."
+    },
+    {
+      "t": "Data-center offtake needs its own contract design",
+      "d": "Supplying large digital loads, especially onsite, involves overbuilding of 30% to 70% for reliability, a buyer whose own planning horizon may be shorter than the plant's life, and grid interconnection that may come later. Offtake terms, take-or-pay levels, buyer credit support and the treatment of surplus capacity need to be agreed before financing, not after."
+    },
+    {
+      "t": "Value hybrid portfolios on peak and evening capacity",
+      "d": "Solar now drives most new supply, while batteries are becoming cheap enough to move a meaningful share of it into the evening. Feasibility studies for hybrid plants should value capacity at the hours when the system needs it, using hourly dispatch and battery degradation assumptions, rather than annual energy totals. Augmentation costs and the split of revenues between energy shifting and capacity payments should be visible in the model."
+    },
+    {
+      "t": "Use credit enhancement where the cost of capital is high",
+      "d": "In markets where capital costs are double those in advanced economies, guarantees and multilateral participation materially widen the pool of private lenders. Structures should be designed from the outset to meet the eligibility rules of guarantors and development lenders, including currency, payment security and termination provisions, so that the project is not restructured when a guarantor joins late in the process."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Electricity 2026: Analysis and forecast to 2030",
+      "publisher": "International Energy Agency",
+      "year": "2026",
+      "url": "https://www.iea.org/reports/electricity-2026/executive-summary"
+    },
+    {
+      "label": "Key Questions on Energy and AI",
+      "publisher": "International Energy Agency",
+      "year": "2026",
+      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary"
+    },
+    {
+      "label": "Energy and AI",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+    },
+    {
+      "label": "World Energy Investment 2025",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/reports/world-energy-investment-2025/executive-summary"
+    },
+    {
+      "label": "Global Electricity Review 2026",
+      "publisher": "Ember",
+      "year": "2026",
+      "url": "https://ember-energy.org/latest-insights/global-electricity-review-2026/"
+    },
+    {
+      "label": "Gas turbine prices soar 195% as market faces supply-demand crisis",
+      "publisher": "Wood Mackenzie",
+      "year": "2026",
+      "url": "https://www.woodmac.com/press-releases/gas-turbine-prices-soar-195-as-market-faces-supply-demand-crisis/"
+    },
+    {
+      "label": "Southeast Asia Energy Outlook 2024",
+      "publisher": "International Energy Agency",
+      "year": "2024",
+      "url": "https://www.iea.org/reports/southeast-asia-energy-outlook-2024/executive-summary"
+    },
+    {
+      "label": "Electricity demand is surging across the Middle East and North Africa, driven by cooling and desalination needs (The Future of Electricity in the Middle East and North Africa)",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/news/electricity-demand-is-surging-across-the-middle-east-and-north-africa-driven-by-cooling-and-desalination-needs"
+    },
+    {
+      "label": "Private capital for infrastructure: Resilience amid uncertainty, urgency amid gaps (Infrastructure Monitor 2024)",
+      "publisher": "World Bank",
+      "year": "2025",
+      "url": "https://blogs.worldbank.org/en/ppps/private-capital-for-infrastructure--resilience-amid-uncertainty-"
+    },
+    {
+      "label": "Staying cool without overheating the energy system",
+      "publisher": "International Energy Agency",
+      "year": "2025",
+      "url": "https://www.iea.org/commentaries/staying-cool-without-overheating-the-energy-system"
+    }
+  ]
+}
