@@ -136,7 +136,7 @@ export function EngineeringSection() {
         statement="DKC manages the engineering for the owner: it sets the design basis, coordinates the packages, reviews every deliverable, and resolves the interfaces between them before they reach the EPC tender."
         why={[
           "On a coal-fired power plant with carbon capture, the capture facility draws steam, power, and cooling water from the host plant and returns a lower net output. Each of these links moves the heat balance, the cost estimate, and the tariff the project needs.",
-          "Left to separate packages, these interfaces are settled late, by contractors, at the owner's cost. DKC holds them on the owner's side from the design basis onward, supported by specialist engineering firms for design and an independent owner's engineer at agreed gates.",
+          "Left to separate packages, these interfaces are settled late, by contractors, at the owner's cost. DKC holds them on the owner's side from the design basis onward, supported by specialist engineering firms for design, with an independent engineer reviewing at agreed gates.",
         ]}
         outcomes={[
           "One approved design basis and battery-limit schedule for plant and capture facility",
@@ -171,12 +171,12 @@ export function EngineeringSection() {
       />
       <Tiers
         eyebrow="QUALITY REVIEW"
-        title="Three levels of review before a deliverable is used"
-        intro="Material review comments are tracked to resolution before a deliverable is approved for its intended use."
+        title="A documented review procedure for every deliverable"
+        intro="Deliverables follow DKC's documented review procedure: review comments are logged and closed before a deliverable is issued for use."
         tiers={[
-          { k: "LEVEL 1", t: "Discipline review", d: "Third-party deliverables are reviewed by DKC's boiler / CFBC, CCS, electrical, I&C, civil, environmental, and cost leads, then checked against the interface register." },
-          { k: "LEVEL 2", t: "Originator, checker, approver", d: "DKC's own documents pass a second professional's check and a director's approval; each issued model carries the cost-estimate revision it reflects." },
-          { k: "LEVEL 3", t: "Independent owner's engineer", d: "At the gates the owner sets, an independent owner's engineer reviews the design and procurement and reports directly to the owner." },
+          { k: "STEP 1", t: "Discipline review", d: "Third-party deliverables are reviewed by DKC's boiler / CFBC, CCS, electrical, I&C, civil, environmental, and cost leads, then checked against the interface register." },
+          { k: "STEP 2", t: "Originator, checker, approver", d: "DKC's own documents pass a second professional's check and a director's approval; each issued model carries the cost-estimate revision it reflects." },
+          { k: "STEP 3", t: "Independent engineer", d: "At the gates the owner or the lenders set, an independent engineer outside DKC reviews the design and procurement and reports directly to them." },
         ]}
       />
       <Steps

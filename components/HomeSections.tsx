@@ -184,7 +184,7 @@ export function DeliveryBand() {
   const pts = [
     { t: "One accountable director", d: "A single project director answers to the owner for the technical, commercial, and financial work." },
     { t: "One project baseline", d: "Design basis, cost estimate, contract terms, and financial model are updated together, never separately." },
-    { t: "Three levels of review", d: "Discipline review, an independent check and approval, and the owner's engineer at the gates the owner sets." },
+    { t: "A documented review procedure", d: "Discipline review, a second check and approval before issue, and independent review by the lenders' engineer at the gates they set." },
   ];
   return (
     <section style={{ background: NAVY, color: "#fff" }}>

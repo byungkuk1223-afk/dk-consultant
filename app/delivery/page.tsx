@@ -28,7 +28,7 @@ export default function DeliveryPage() {
       <Intro
         statement="DKC organizes its work by project stage. Each stage closes with a decision that the owner takes, and every deliverable that supports it has passed DKC's review."
         why={[
-          "A large power or environmental project involves the owner, an advisor on the owner's side, an independent owner's engineer, contractors, and lenders, each with a different job at each stage. Projects slip when those roles blur, or when a decision is taken before the work behind it is complete.",
+          "A large power or environmental project involves the owner, an engineering manager and advisor on the owner's side, contractors, lenders, and the lenders' independent engineer, each with a different job at each stage. Projects slip when those roles blur, or when a decision is taken before the work behind it is complete.",
           "DKC keeps the roles explicit: the owner decides; DKC manages the engineering on the owner's side, from the feasibility study through design, construction, and commissioning; the contractors design and build; and an independent engineer appointed by the lenders reviews the project for them. DKC does not review its own work.",
         ]}
         outcomes={[
@@ -84,19 +84,19 @@ export default function DeliveryPage() {
           { t: "Resolve in the workstream", does: "If the issue sits within one workstream and the current baseline, the workstream lead closes it.", out: "Workstream lead", gate: "5 working days" },
           { t: "Escalate to the project director", does: "If it crosses workstreams or the baseline, the DKC project director resolves it.", out: "DKC project director", gate: "10 working days" },
           { t: "Steering committee", does: "If it changes scope, budget, risk allocation, or a stage date, the owner's steering committee decides.", out: "Owner's steering committee", gate: "Next committee or a special meeting" },
-          { t: "Close-out", does: "Baseline, model, contracts, and schedule are updated; affected parties are notified; the owner's engineer is informed where scoped.", out: "DKC project director", gate: "Recorded in the decision register" },
+          { t: "Close-out", does: "Baseline, model, contracts, and schedule are updated; affected parties are notified; the independent engineer is informed where scoped.", out: "DKC project director", gate: "Recorded in the decision register" },
         ]}
       />
 
       <Tiers
         eyebrow="QUALITY REVIEW"
         tint
-        title="Three levels of review before a deliverable is used"
-        intro="Material review comments are tracked to resolution before a deliverable is approved for its intended use."
+        title="A documented review procedure for every deliverable"
+        intro="Deliverables follow DKC's documented review procedure: review comments are logged and closed before a deliverable is issued for use."
         tiers={[
-          { k: "LEVEL 1", t: "Discipline review", d: "Third-party deliverables are reviewed by DKC's discipline leads and checked against the interface register." },
-          { k: "LEVEL 2", t: "Originator, checker, approver", d: "DKC's own documents pass a second professional's check and a director's approval; each issued model carries the cost-estimate revision it reflects." },
-          { k: "LEVEL 3", t: "Independent engineer", d: "At the gates the owner or the lenders set, an independent engineer reviews the work and reports directly to them." },
+          { k: "STEP 1", t: "Discipline review", d: "Third-party deliverables are reviewed by DKC's discipline leads and checked against the interface register." },
+          { k: "STEP 2", t: "Originator, checker, approver", d: "DKC's own documents pass a second professional's check and a director's approval; each issued model carries the cost-estimate revision it reflects." },
+          { k: "STEP 3", t: "Independent engineer", d: "At the gates the owner or the lenders set, an independent engineer reviews the work and reports directly to them." },
         ]}
       />
 
