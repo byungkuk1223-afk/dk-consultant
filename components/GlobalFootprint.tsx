@@ -62,7 +62,7 @@ export default function GlobalFootprint({ background = "#fff" }: { background?: 
 
         <div style={{ position: "relative", width: "100%", maxWidth: 1100, margin: "0 auto" }}>
           <svg viewBox={`0 0 ${MAP_W} ${MAP_H}`} style={{ width: "100%", height: "auto", display: "block" }} role="img" aria-label={tr("Map of {n} countries where DKC has advised on projects", { n: present.size })}>
-            <image href={lnk(LAND_SVG)} x={0} y={0} width={MAP_W} height={MAP_H} />
+            <image href={LAND_SVG} x={0} y={0} width={MAP_W} height={MAP_H} />
             {markers.map((c) => {
               const [x, y] = COUNTRY_XY[c];
               return (

@@ -32,7 +32,10 @@ export function useI18n() {
     if (vars) for (const [k, v] of Object.entries(vars)) r = r.split(`{${k}}`).join(String(v));
     return r;
   }) as { (s: string, vars?: Vars): string; (s: string | undefined, vars?: Vars): string | undefined };
-  /** Internal link in the current language. */
-  const h = (href: string) => (lang === "ko" && href.startsWith("/") && !href.startsWith("//") ? switchPath(href, "ko") : href);
+  /** Internal page link in the current language. Files (images, PDFs, …) and external URLs are left as they are. */
+  const h = (href: string) =>
+    lang === "ko" && href.startsWith("/") && !href.startsWith("//") && !/\.[a-z0-9]+$/i.test(href.split(/[?#]/)[0])
+      ? switchPath(href, "ko")
+      : href;
   return { lang, tr: t, lnk: h };
 }
