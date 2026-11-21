@@ -56,7 +56,6 @@ export const CLIENT_GROUPS: ClientGroup[] = [
       { name: "Dohwa Engineering", about: "Korean engineering consultancy for water, energy, and infrastructure.", match: ["Dohwa Engineering"] },
       { name: "Samil PwC", about: "Korean member firm of the PwC network.", match: ["Samil PwC", "Daeyoung Engineering, Samil PwC"] },
       { name: "Daeyoung Engineering", about: "Korean engineering consultancy.", match: ["Daeyoung Engineering, Samil PwC"] },
-      { name: "Hwangso Engineering", about: "Korean engineering firm.", match: ["Hwangso Engineering"] },
     ],
   },
   {

@@ -1411,34 +1411,6 @@ export const profiles: ProjectProfile[] = [
     ]
   },
   {
-    "id": 24,
-    "tag": "Gas supply",
-    "headline": "BOT gas supply project, Indonesia",
-    "location": "Indonesia",
-    "delivered": "DKC",
-    "summary": "DKC carried out the feasibility study and financial advisory for Hwangso Engineering on a gas supply project in Indonesia structured as build-operate-transfer.",
-    "about": [
-      "Gas remains part of Indonesia's power expansion. PLN's electricity supply business plan (RUPTL) for 2025 to 2034 adds 69.5 GW of new capacity, of which about 76% is renewables and storage, and includes 9.2 GW of gas-fired plants planned for 2025 to 2030. About 73% of new plants are to be developed by private companies, continuing the role of private build-operate structures in the sector."
-    ],
-    "role": "Feasibility study and financial advisory for Hwangso Engineering.",
-    "scope": [
-      "Feasibility study",
-      "BOT structure review",
-      "Financial model",
-      "Financing advice"
-    ],
-    "challenge": "Hwangso Engineering needed to know whether a gas supply project in Indonesia could work on a build-operate-transfer basis and how it could be financed.",
-    "solution": "DKC carried out the feasibility study, reviewed the BOT structure, and built the financial model on which its financing advice was based.",
-    "result": "Feasibility study and financial advisory delivered to Hwangso Engineering (2021).",
-    "relevance": "A BOT structure tested for feasibility and financing before the developer commits.",
-    "refs": [
-      {
-        "label": "Enerdata — Indonesia aims to add 69.5 GW of new power capacity between 2025 and 2034 (May 2025)",
-        "url": "https://www.enerdata.net/publications/daily-energy-news/indonesia-aims-add-695-gw-new-power-capacity-between-2025-and-2034.html"
-      }
-    ]
-  },
-  {
     "id": 22,
     "tag": "District cooling",
     "headline": "District cooling for South Saad Al Abdullah smart city, Kuwait",

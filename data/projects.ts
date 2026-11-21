@@ -332,13 +332,6 @@ export const projects: Project[] = [
     detail: {"capacity":"3,000MW (Long An I and II)","sector":"Power","country":"Vietnam","client":"KEXIM","time":"2021.02~2021.11","hasImage":true,"imgExt":"png"},
   },
   {
-    id: 24,
-    title: "BOT-based Gas Supply Project in Indonesia",
-    category: "Feasibility Study and Financial Advisory Services",
-    region: "Asia",
-    detail: {"sector":"Gas","country":"Indonesia","client":"Hwangso Engineering","time":"2021","hasImage":true,"imgExt":"png"},
-  },
-  {
     id: 23,
     title: "Hai Lang LNG to Power in Vietnam",
     category: "Feasibility Study (with Synergy Korea): Financing Structure and Project Execution",
