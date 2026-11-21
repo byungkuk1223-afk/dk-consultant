@@ -8,5 +8,6 @@ import marketPov from "./marketPov.json";
 import insights from "./insights.json";
 import teamProjects from "./teamProjects.json";
 import clients from "./clients.json";
+import keep from "./keep.json";
 
-export const KO: Record<string, string> = { ...projects, ...profiles, ...marketPov, ...insights, ...teamProjects, ...clients, ...site, ...ui };
+export const KO: Record<string, string> = { ...projects, ...profiles, ...marketPov, ...insights, ...teamProjects, ...clients, ...site, ...ui, ...keep };

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "i18n:check": "node --no-warnings scripts/i18n-check.mts"
   },
   "dependencies": {
     "next": "16.2.2",
