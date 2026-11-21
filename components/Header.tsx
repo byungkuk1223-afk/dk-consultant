@@ -1,5 +1,30 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useI18n, switchPath, LANG_COOKIE, type Lang } from "@/lib/i18n";
+
+// EN | KO switch: remembers the choice in a cookie so proxy.ts stops auto-detecting.
+function remember(to: Lang) {
+  document.cookie = `${LANG_COOKIE}=${to}; path=/; max-age=31536000; samesite=lax`;
+}
+
+function LangSwitch({ lang }: { lang: Lang }) {
+  const path = usePathname() || "/";
+  return (
+    <span className="hdr-lang">
+      {(["en", "ko"] as Lang[]).map((l, i) => (
+        <span key={l}>
+          {i > 0 && <span aria-hidden style={{ opacity: 0.5, margin: "0 6px" }}>|</span>}
+          {l === lang ? (
+            <b aria-current="true">{l.toUpperCase()}</b>
+          ) : (
+            <a href={switchPath(path, l)} hrefLang={l} lang={l} onClick={() => remember(l)} aria-label={l === "ko" ? "한국어" : "English"}>{l.toUpperCase()}</a>
+          )}
+        </span>
+      ))}
+    </span>
+  );
+}
 
 interface HeaderProps {
   scrolled: boolean;
@@ -49,6 +74,7 @@ const MENU = [
             ];
 
 export default function Header({ scrolled, solid }: HeaderProps) {
+  const { lang, lnk, tr } = useI18n();
   const [open, setOpen] = useState(false);
   const filled = scrolled || !!solid || open;
   return (
@@ -75,10 +101,10 @@ export default function Header({ scrolled, solid }: HeaderProps) {
         }}
       >
         {/* Logo */}
-        <a href="/" style={{ textDecoration: "none" }}>
+        <a href={lnk("/")} style={{ textDecoration: "none" }}>
           <img
             src="/logo-wordmark.png"
-            alt="DK Consultants"
+            alt={tr("DK Consultants")}
             style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)" }}
           />
         </a>
@@ -98,24 +124,24 @@ export default function Header({ scrolled, solid }: HeaderProps) {
             {MENU.map((item) => (
               <li key={item.label} className="nav-item" style={{ position: "relative" }}>
                 <a
-                  href={item.href}
+                  href={lnk(item.href)}
                   style={{
                     color: "#fff",
                     textDecoration: "none",
                     fontSize: 12,
                     fontWeight: 400,
-                    fontFamily: "'Lato', sans-serif",
+                    fontFamily: "'Lato', 'Noto Sans KR', sans-serif",
                     letterSpacing: 1.8,
                     whiteSpace: "nowrap",
                   }}
                 >
-                  {item.label}
+                  {tr(item.label)}
                 </a>
                 {item.sub && item.sub.length > 0 && (
                   <ul className="nav-dropdown">
                     {item.sub.map((s) => (
                       <li key={s.label}>
-                        <a href={s.href}>{s.label}</a>
+                        <a href={lnk(s.href)}>{tr(s.label)}</a>
                       </li>
                     ))}
                   </ul>
@@ -125,9 +151,11 @@ export default function Header({ scrolled, solid }: HeaderProps) {
           </ul>
         </nav>
 
+        <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+        <LangSwitch lang={lang} />
         {/* Contact Button */}
         <a
-          href="/contact"
+          href={lnk("/contact")}
           className="hdr-contact"
           style={{
             color: "#fff",
@@ -136,7 +164,7 @@ export default function Header({ scrolled, solid }: HeaderProps) {
             textDecoration: "none",
             fontSize: 11,
             fontWeight: 400,
-            fontFamily: "'Lato', sans-serif",
+            fontFamily: "'Lato', 'Noto Sans KR', sans-serif",
             letterSpacing: 2,
             border: "1px solid rgba(255,255,255,0.7)",
             background: "transparent",
@@ -149,11 +177,11 @@ export default function Header({ scrolled, solid }: HeaderProps) {
             (e.target as HTMLAnchorElement).style.background = "transparent";
           }}
         >
-          CONTACT
-        </a>
-        <button className="hdr-burger" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>
+          {tr("CONTACT")}</a>
+        <button className="hdr-burger" aria-label={tr("Menu")} aria-expanded={open} onClick={() => setOpen(!open)}>
           <span /><span /><span />
         </button>
+        </div>
       </div>
 
       <style>{`
@@ -178,7 +206,7 @@ export default function Header({ scrolled, solid }: HeaderProps) {
           color: #444;
           text-decoration: none;
           font-size: 13px;
-          font-family: 'Lato', sans-serif;
+          font-family: 'Lato', 'Noto Sans KR', sans-serif;
           font-weight: 400;
           white-space: nowrap;
           transition: background 0.2s, color 0.2s;
@@ -191,13 +219,13 @@ export default function Header({ scrolled, solid }: HeaderProps) {
       <nav className={`hdr-mobile${open ? " open" : ""}`}>
         {MENU.map((item) => (
           <div key={item.label} className="grp">
-            <a href={item.href}>{item.label}</a>
+            <a href={lnk(item.href)}>{tr(item.label)}</a>
             {item.sub.length > 0 && (
-              <div className="sub">{item.sub.map((x) => <a key={x.href} href={x.href}>{x.label}</a>)}</div>
+              <div className="sub">{item.sub.map((x) => <a key={x.href} href={lnk(x.href)}>{tr(x.label)}</a>)}</div>
             )}
           </div>
         ))}
-        <div className="grp"><a href="/contact">CONTACT</a></div>
+        <div className="grp"><a href={lnk("/contact")}>{tr("CONTACT")}</a></div>
       </nav>
     </header>
   );

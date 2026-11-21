@@ -1,8 +1,9 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 // Service page bodies. They carry the brochure's messages (Part C) in web-native layouts: no brochure diagrams are reused.
 
-const F = "'Lato', sans-serif";
-const SERIF = "'Libre Baskerville', Georgia, serif";
+const F = "'Lato', 'Noto Sans KR', sans-serif";
+const SERIF = "'Libre Baskerville', 'Noto Serif KR', Georgia, serif";
 const NAVY = "#0b2545";
 const TEAL = "#0e7c86";
 const WRAP: React.CSSProperties = { maxWidth: 1200, margin: "0 auto", padding: "64px 24px" };
@@ -11,21 +12,22 @@ const H2: React.CSSProperties = { fontSize: 30, lineHeight: "38px", fontFamily: 
 const BODY: React.CSSProperties = { fontSize: 16, lineHeight: "28px", color: "#3d4752", fontFamily: F };
 
 export function Intro({ statement, why, outcomes }: { statement: string; why: string[]; outcomes: string[] }) {
+  const { tr } = useI18n();
   return (
     <section>
       <div style={{ ...WRAP, paddingBottom: 40 }}>
-        <p style={{ fontSize: 24, lineHeight: "36px", fontFamily: SERIF, color: NAVY, maxWidth: 940, marginBottom: 34 }}>{statement}</p>
+        <p style={{ fontSize: 24, lineHeight: "36px", fontFamily: SERIF, color: NAVY, maxWidth: 940, marginBottom: 34 }}>{tr(statement)}</p>
         <div className="rg" style={{ display: "grid", gridTemplateColumns: "minmax(0,1.4fr) minmax(0,1fr)", gap: 56 }}>
           <div>
-            <p style={EYEBROW}>WHY IT MATTERS</p>
-            {why.map((t) => <p key={t} style={{ ...BODY, marginBottom: 14 }}>{t}</p>)}
+            <p style={EYEBROW}>{tr("WHY IT MATTERS")}</p>
+            {why.map((t) => <p key={t} style={{ ...BODY, marginBottom: 14 }}>{tr(t)}</p>)}
           </div>
           <div style={{ background: "#f4f7fb", borderLeft: `3px solid ${NAVY}`, padding: "22px 26px" }}>
-            <p style={EYEBROW}>WHAT THE OWNER GETS</p>
+            <p style={EYEBROW}>{tr("WHAT THE OWNER GETS")}</p>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {outcomes.map((o) => (
                 <li key={o} style={{ ...BODY, fontSize: 15, lineHeight: "24px", padding: "9px 0 9px 26px", position: "relative", borderTop: "1px solid #e1e7ef" }}>
-                  <span style={{ position: "absolute", left: 0, top: 9, color: TEAL, fontWeight: 700 }}>✓</span>{o}
+                  <span style={{ position: "absolute", left: 0, top: 9, color: TEAL, fontWeight: 700 }}>✓</span>{tr(o)}
                 </li>
               ))}
             </ul>
@@ -37,17 +39,18 @@ export function Intro({ statement, why, outcomes }: { statement: string; why: st
 }
 
 export function Capabilities({ title, items }: { title: string; items: { t: string; d: string }[] }) {
+  const { tr } = useI18n();
   return (
     <section style={{ background: "#f6f8fb" }}>
       <div style={WRAP}>
-        <p style={EYEBROW}>WHAT WE DO</p>
-        <h2 style={H2}>{title}</h2>
+        <p style={EYEBROW}>{tr("WHAT WE DO")}</p>
+        <h2 style={H2}>{tr(title)}</h2>
         <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18, marginTop: 10 }}>
           {items.map((c, i) => (
             <div key={c.t} style={{ background: "#fff", border: "1px solid #e3e8ef", padding: "22px 22px 24px" }}>
-              <p style={{ fontFamily: SERIF, fontSize: 15, color: TEAL, marginBottom: 10 }}>{String(i + 1).padStart(2, "0")}</p>
-              <p style={{ fontFamily: F, fontSize: 16.5, fontWeight: 700, color: NAVY, marginBottom: 8, lineHeight: "23px" }}>{c.t}</p>
-              <p style={{ fontFamily: F, fontSize: 14.5, lineHeight: "23px", color: "#55606d" }}>{c.d}</p>
+              <p style={{ fontFamily: SERIF, fontSize: 15, color: TEAL, marginBottom: 10 }}>{tr(String(i + 1).padStart(2, "0"))}</p>
+              <p style={{ fontFamily: F, fontSize: 16.5, fontWeight: 700, color: NAVY, marginBottom: 8, lineHeight: "23px" }}>{tr(c.t)}</p>
+              <p style={{ fontFamily: F, fontSize: 14.5, lineHeight: "23px", color: "#55606d" }}>{tr(c.d)}</p>
             </div>
           ))}
         </div>
@@ -57,23 +60,24 @@ export function Capabilities({ title, items }: { title: string; items: { t: stri
 }
 
 export function Steps({ title, intro, steps, eyebrow = "HOW WE WORK", labels = ["DELIVERABLE", "DECISION GATE"] }: { title: string; intro?: string; steps: { t: string; does: string; out: string; gate: string }[]; eyebrow?: string; labels?: [string, string] }) {
+  const { tr } = useI18n();
   return (
     <section>
       <div style={WRAP}>
-        <p style={EYEBROW}>{eyebrow}</p>
-        <h2 style={H2}>{title}</h2>
-        {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 26 }}>{intro}</p>}
+        <p style={EYEBROW}>{tr(eyebrow)}</p>
+        <h2 style={H2}>{tr(title)}</h2>
+        {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 26 }}>{tr(intro)}</p>}
         <div className="rg" style={{ display: "grid", gridTemplateColumns: `repeat(${steps.length}, 1fr)`, borderTop: `3px solid ${NAVY}` }}>
           {steps.map((s, i) => (
             <div key={s.t} style={{ padding: "20px 18px 6px", borderLeft: i ? "1px solid #e3e8ef" : "none", position: "relative" }}>
               <span style={{ position: "absolute", top: -9, left: i ? 18 : 0, width: 15, height: 15, borderRadius: "50%", background: "#fff", border: `3px solid ${NAVY}` }} />
-              <p style={{ fontFamily: F, fontSize: 11.5, letterSpacing: 1.8, color: TEAL, fontWeight: 700, margin: "6px 0 6px" }}>STEP {i + 1}</p>
-              <p style={{ fontFamily: F, fontSize: 16, fontWeight: 700, color: NAVY, lineHeight: "22px", marginBottom: 12, minHeight: 44 }}>{s.t}</p>
-              <p style={{ fontFamily: F, fontSize: 14, lineHeight: "22px", color: "#55606d", marginBottom: 12 }}>{s.does}</p>
-              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>{labels[0]}</p>
-              <p style={{ fontFamily: F, fontSize: 14, lineHeight: "21px", color: "#333", marginBottom: 12 }}>{s.out}</p>
-              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>{labels[1]}</p>
-              <p style={{ fontFamily: F, fontSize: 14, lineHeight: "21px", color: NAVY, marginBottom: 14 }}>{s.gate}</p>
+              <p style={{ fontFamily: F, fontSize: 11.5, letterSpacing: 1.8, color: TEAL, fontWeight: 700, margin: "6px 0 6px" }}>{tr("STEP {n}", { n: i + 1 })}</p>
+              <p style={{ fontFamily: F, fontSize: 16, fontWeight: 700, color: NAVY, lineHeight: "22px", marginBottom: 12, minHeight: 44 }}>{tr(s.t)}</p>
+              <p style={{ fontFamily: F, fontSize: 14, lineHeight: "22px", color: "#55606d", marginBottom: 12 }}>{tr(s.does)}</p>
+              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>{tr(labels[0])}</p>
+              <p style={{ fontFamily: F, fontSize: 14, lineHeight: "21px", color: "#333", marginBottom: 12 }}>{tr(s.out)}</p>
+              <p style={{ fontFamily: F, fontSize: 11, letterSpacing: 1.4, color: "#8a94a0", fontWeight: 700, marginBottom: 3 }}>{tr(labels[1])}</p>
+              <p style={{ fontFamily: F, fontSize: 14, lineHeight: "21px", color: NAVY, marginBottom: 14 }}>{tr(s.gate)}</p>
             </div>
           ))}
         </div>
@@ -83,43 +87,45 @@ export function Steps({ title, intro, steps, eyebrow = "HOW WE WORK", labels = [
 }
 
 export function Matrix({ eyebrow, title, intro, head, rows, note }: { eyebrow: string; title: string; intro?: string; head: string[]; rows: string[][]; note?: string }) {
+  const { tr } = useI18n();
   return (
     <section style={{ background: "#f6f8fb" }}>
       <div style={WRAP}>
-        <p style={EYEBROW}>{eyebrow}</p>
-        <h2 style={H2}>{title}</h2>
-        {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 22 }}>{intro}</p>}
+        <p style={EYEBROW}>{tr(eyebrow)}</p>
+        <h2 style={H2}>{tr(title)}</h2>
+        {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 22 }}>{tr(intro)}</p>}
         <div className="rscroll"><div style={{ background: "#fff", border: "1px solid #e3e8ef", minWidth: 760 }}>
           <div style={{ display: "grid", gridTemplateColumns: `1.1fr repeat(${head.length - 1}, 1fr)`, background: NAVY }}>
-            {head.map((h) => <p key={h} style={{ color: "#fff", fontFamily: F, fontSize: 11.5, letterSpacing: 1.4, fontWeight: 700, padding: "13px 16px" }}>{h.toUpperCase()}</p>)}
+            {head.map((h) => <p key={h} style={{ color: "#fff", fontFamily: F, fontSize: 11.5, letterSpacing: 1.4, fontWeight: 700, padding: "13px 16px" }}>{tr(h).toUpperCase()}</p>)}
           </div>
           {rows.map((r, i) => (
             <div key={r[0]} style={{ display: "grid", gridTemplateColumns: `1.1fr repeat(${head.length - 1}, 1fr)`, borderTop: i ? "1px solid #edf0f4" : "none" }}>
               {r.map((c, j) => (
-                <p key={j} style={{ fontFamily: j === 0 ? SERIF : F, fontSize: j === 0 ? 15 : 14, lineHeight: "22px", color: j === 0 ? NAVY : "#444", padding: "14px 16px", borderLeft: j ? "1px solid #edf0f4" : "none" }}>{c}</p>
+                <p key={j} style={{ fontFamily: j === 0 ? SERIF : F, fontSize: j === 0 ? 15 : 14, lineHeight: "22px", color: j === 0 ? NAVY : "#444", padding: "14px 16px", borderLeft: j ? "1px solid #edf0f4" : "none" }}>{tr(c)}</p>
               ))}
             </div>
           ))}
         </div></div>
-        {note && <p style={{ fontFamily: F, fontSize: 13.5, color: "#6b7580", marginTop: 12 }}>{note}</p>}
+        {note && <p style={{ fontFamily: F, fontSize: 13.5, color: "#6b7580", marginTop: 12 }}>{tr(note)}</p>}
       </div>
     </section>
   );
 }
 
 export function Tiers({ eyebrow, title, intro, tiers, tint }: { eyebrow: string; title: string; intro?: string; tiers: { k: string; t: string; d: string }[]; tint?: boolean }) {
+  const { tr } = useI18n();
   return (
     <section style={tint ? { background: "#f6f8fb" } : undefined}>
       <div style={WRAP}>
-        <p style={EYEBROW}>{eyebrow}</p>
-        <h2 style={H2}>{title}</h2>
-        {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 24 }}>{intro}</p>}
+        <p style={EYEBROW}>{tr(eyebrow)}</p>
+        <h2 style={H2}>{tr(title)}</h2>
+        {intro && <p style={{ ...BODY, maxWidth: 900, marginBottom: 24 }}>{tr(intro)}</p>}
         <div className="rg" style={{ display: "grid", gridTemplateColumns: `repeat(${tiers.length}, 1fr)`, gap: 18 }}>
           {tiers.map((t) => (
             <div key={t.t} style={{ border: "1px solid #e3e8ef", borderTop: `3px solid ${TEAL}`, padding: "20px 22px 22px" }}>
-              <p style={{ fontFamily: F, fontSize: 11.5, letterSpacing: 1.8, color: TEAL, fontWeight: 700, marginBottom: 8 }}>{t.k}</p>
-              <p style={{ fontFamily: SERIF, fontSize: 18, color: NAVY, marginBottom: 10, lineHeight: "25px" }}>{t.t}</p>
-              <p style={{ fontFamily: F, fontSize: 14.5, lineHeight: "23px", color: "#55606d" }}>{t.d}</p>
+              <p style={{ fontFamily: F, fontSize: 11.5, letterSpacing: 1.8, color: TEAL, fontWeight: 700, marginBottom: 8 }}>{tr(t.k)}</p>
+              <p style={{ fontFamily: SERIF, fontSize: 18, color: NAVY, marginBottom: 10, lineHeight: "25px" }}>{tr(t.t)}</p>
+              <p style={{ fontFamily: F, fontSize: 14.5, lineHeight: "23px", color: "#55606d" }}>{tr(t.d)}</p>
             </div>
           ))}
         </div>

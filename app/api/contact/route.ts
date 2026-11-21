@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
   const { name, email, mobile, title, inquiry } = await req.json();
 
   if (!name || !email || !mobile || !title || !inquiry) {
-    return NextResponse.json({ error: "필수 항목을 모두 입력해주세요." }, { status: 400 });
+    return NextResponse.json({ error: "Please fill in all required fields." }, { status: 400 });
   }
 
   const { error } = await resend.emails.send({
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
   });
 
   if (error) {
-    return NextResponse.json({ error: "전송 실패. 다시 시도해주세요." }, { status: 500 });
+    return NextResponse.json({ error: "Sending failed. Please try again." }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });
