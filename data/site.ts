@@ -9,14 +9,14 @@ export const SERVICES: { slug: ServiceSlug; title: string; short: string; lead: 
     title: "Engineering Management & Technical Advisory",
     short: "Design basis, package coordination, interface management, and independent review of every deliverable.",
     lead: "Owner-side engineering coordination and technical review for coal-fired power plants and carbon capture facilities, with particular emphasis on integration across critical interfaces.",
-    img: "/img/site/svc-engineering.jpg",
+    img: "/img/site/dkc-bc-site-team.jpg",
   },
   {
     slug: "commercial",
     title: "Commercial & Contract Advisory",
     short: "PPA, EPC, supply, CO₂ transport and storage, and O&M agreements reviewed against one risk allocation matrix.",
     lead: "Every project agreement is reviewed against the same technical baseline and the same financial model.",
-    img: "/img/site/svc-commercial.jpg",
+    img: "/img/site/dkc-bc-jetty.jpg",
   },
   {
     slug: "financial",
@@ -61,7 +61,7 @@ export const MARKET_PAGES: {
     text: "Carbon capture is moving into deployment. Its steam, power, and CO₂ interfaces change the host plant's net output and cost, and its revenues depend on carbon policy. DKC screens capture technologies against host-plant constraints, resolves the interfaces before EPC award, and prices capture and carbon-related revenues in the project model.",
     focus: ["Post-combustion capture at power plants", "Blue ammonia with CO₂ capture and storage", "Green hydrogen and ammonia", "CO₂ compression, transport, and storage interfaces", "Carbon-related revenues"],
     services: ["engineering", "commercial", "financial", "development"],
-    img: "/img/site/market-ccs.jpg",
+    img: "/img/site/dkc-alberta-industrial.jpg",
   },
   {
     slug: "environmental-infrastructure",

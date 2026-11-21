@@ -11,6 +11,7 @@ import { SERVICES, MARKET_PAGES } from "../data/site.ts";
 import { MARKET_POV } from "../data/marketPov.ts";
 import { TEAM_PROJECTS } from "../data/teamProjects.ts";
 import * as clients from "../data/clients.ts";
+import { PROJECT_FIGURE } from "../data/projectFigures.ts";
 
 // Kept in English on purpose: identifiers, sources, people's names, numbers.
 const SKIP = new Set(["id", "slug", "url", "img", "logo", "href", "imgUrl", "imgExt", "hasImage", "time", "services", "cites", "match", "key", "refs", "sources", "src", "year", "publisher", "name"]);
@@ -32,6 +33,7 @@ walk({ SERVICES, MARKET_PAGES }, "data/site.ts");
 walk(MARKET_POV, "data/marketPov.ts");
 walk(TEAM_PROJECTS, "data/teamProjects.ts");
 walk(clients, "data/clients.ts");
+walk(PROJECT_FIGURE, "data/projectFigures.ts");
 for (const f of readdirSync("data/insights")) walk(JSON.parse(readFileSync(`data/insights/${f}`, "utf8")), `data/insights/${f}`);
 
 const files: string[] = [];

@@ -8,6 +8,7 @@ import { projects, marketOf, statusOf, servicesOf, type Project } from "@/data/p
 import { profileFor } from "@/data/projectProfiles";
 import { marketBySlug, marketSlugOf, serviceBySlug } from "@/data/site";
 import { projectImg } from "@/data/images";
+import { PROJECT_FIGURE } from "@/data/projectFigures";
 import { useI18n } from "@/lib/i18n";
 
 const F = "'Lato', 'Noto Sans KR', sans-serif";
@@ -129,6 +130,13 @@ export default function ProjectDetailPage() {
                 </>
               )}
             </section>
+
+            {PROJECT_FIGURE[project.id] && (
+              <figure style={{ margin: "0 0 34px" }}>
+                <img src={PROJECT_FIGURE[project.id].src} alt={tr(PROJECT_FIGURE[project.id].caption)} style={{ width: "100%", height: "auto", display: "block" }} />
+                <figcaption style={{ fontSize: 13, color: "#6b7580", fontFamily: F, marginTop: 8, lineHeight: 1.5 }}>{tr(PROJECT_FIGURE[project.id].caption)}</figcaption>
+              </figure>
+            )}
 
             {pf?.challenge && (
               <section style={{ marginBottom: 34 }}>
