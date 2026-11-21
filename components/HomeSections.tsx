@@ -148,37 +148,6 @@ export function FeaturedProjects() {
   );
 }
 
-export function DeliveryBand() {
-  const { lnk, tr } = useI18n();
-  const pts = [
-    { t: "One accountable director", d: "A single project director answers to the owner for the technical, commercial, and financial work." },
-    { t: "One project baseline", d: "Design basis, cost estimate, contract terms, and financial model are updated together, never separately." },
-    { t: "A documented review procedure", d: "Discipline review, a second check and approval before issue, and independent review by the lenders' engineer at the gates they set." },
-  ];
-  return (
-    <section style={{ background: NAVY, color: "#fff" }}>
-      <div style={WRAP}>
-        <div className="rstack" style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, marginBottom: 36 }}>
-          <div style={{ maxWidth: 760 }}>
-            <p style={{ ...EYEBROW, color: "#8fd0d4" }}>{tr("HOW WE DELIVER")}</p>
-            <h2 style={{ ...H2, color: "#fff" }}>{tr("The discipline behind every deliverable")}</h2>
-          </div>
-          <Link href={lnk("/delivery")} style={{ ...MORE, color: "#fff" }}>{tr("How we deliver →")}</Link>
-        </div>
-        <div className="rg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
-          {pts.map((x, i) => (
-            <div key={x.t} style={{ borderTop: "1px solid rgba(255,255,255,0.25)", paddingTop: 20 }}>
-              <p style={{ fontFamily: SERIF, fontSize: 15, color: "#8fd0d4", marginBottom: 10 }}>{tr(String(i + 1).padStart(2, "0"))}</p>
-              <p style={{ fontFamily: SERIF, fontSize: 20, lineHeight: "28px", marginBottom: 10 }}>{tr(x.t)}</p>
-              <p style={{ fontFamily: F, fontSize: 15, lineHeight: "24px", color: "rgba(255,255,255,0.82)" }}>{tr(x.d)}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function ClientStrip() {
   return (
     <section>

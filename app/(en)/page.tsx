@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlobalFootprint from "@/components/GlobalFootprint";
-import { HomeHero, WhoWeAre, ServicesGrid, MarketsGrid, FeaturedProjects, DeliveryBand, ClientStrip, CareersContact } from "@/components/HomeSections";
+import { HomeHero, WhoWeAre, ServicesGrid, MarketsGrid, FeaturedProjects, ClientStrip, CareersContact } from "@/components/HomeSections";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,6 @@ export default function Home() {
         <MarketsGrid />
         <GlobalFootprint background="#f6f8fb" />
         <FeaturedProjects />
-        <DeliveryBand />
         <ClientStrip />
         <CareersContact />
       </main>

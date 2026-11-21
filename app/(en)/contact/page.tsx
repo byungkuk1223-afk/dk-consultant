@@ -211,7 +211,7 @@ export default function ContactPage() {
                       </svg>
                     ),
                     label: "ADDRESS",
-                    value: "#303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil,\nBundang-gu, Seongnam-si, Gyeonggi-do, Korea",
+                    value: "#303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil,\nBundang-gu, Seongnam-si, Gyeonggi-do 13595, Korea",
                   },
                   {
                     icon: (

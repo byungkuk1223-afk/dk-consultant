@@ -16,7 +16,7 @@ export default function Footer() {
         <div>
           <a href={lnk("/")}><img src="/logo-wordmark.png" alt={tr("DK Consultants")} style={{ height: 26, width: "auto", filter: "brightness(0) invert(1)", marginBottom: 20 }} /></a>
           <p style={{ fontSize: 13, lineHeight: 1.8, fontWeight: 300 }}>
-            {tr("#303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil,")}<br />{tr("Bundang-gu, Seongnam-si, Gyeonggi-do, Korea")}</p>
+            {tr("#303, Gana Plaza, 10-7, Hwangsaeul-ro 258 beon-gil,")}<br />{tr("Bundang-gu, Seongnam-si, Gyeonggi-do 13595, Korea")}</p>
           <p style={{ fontSize: 13, lineHeight: 1.8, fontWeight: 300, marginTop: 8 }}>
             {tr("Tel. +82 31 603 4845 · Fax. +82 31 603 0079")}<br />{tr("dkc_info@dk-consultant.com")}</p>
         </div>
